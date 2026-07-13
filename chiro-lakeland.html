@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chiropractic Center of Lakeland | Lakeland, FL — Design Concept</title>
+<meta name="description" content="Chiropractic care, massage therapy, and wellness services in Lakeland, FL. Walk-ins welcome. $149 new patient special. Call (863) 859-0335.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0e8f85;
+  --teal-2:#0b6f68;
+  --mint:#7fd6c9;
+  --ink:#15332f;
+  --bg:#f7fbfa;
+  --muted:#54706b;
+  --dim:#8aa39e;
+  --line:rgba(14,143,133,.12);
+  --line-2:rgba(14,143,133,.22);
+  --grad:linear-gradient(100deg,#0e8f85,#4cc2b3);
+  --radius:20px;
+  --font-display:"Outfit",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,sans-serif;
+  --shadow:0 24px 60px rgba(14,110,102,.13);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:rgba(76,194,179,.35)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.12;letter-spacing:-.015em;color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.noise{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.025;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--grad);z-index:150;width:0}
+.topbar{background:var(--teal-2);color:rgba(255,255,255,.85);font-size:.8rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.topbar b{color:#b8f0e6}
+header{position:sticky;top:0;z-index:100;background:rgba(247,251,250,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow .3s;border-bottom:1px solid transparent}
+header.scrolled{box-shadow:0 10px 34px rgba(14,110,102,.12);border-bottom-color:var(--line)}
+body.menu-open header{z-index:130;box-shadow:none}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:20px}
+.brand img{height:58px;width:auto}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;color:var(--muted);transition:color .2s;position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a::before{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2.5px;border-radius:2px;background:var(--grad);transform:scaleX(0);transform-origin:right;transition:transform .32s cubic-bezier(.2,.6,.2,1)}
+.nav-links a:hover::before,.nav-links a.active::before{transform:scaleX(1);transform-origin:left}
+.nav-cta{font-family:var(--font-display);font-size:.95rem;font-weight:700;padding:12px 24px;border-radius:999px;background:var(--teal);color:#fff;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(14,143,133,.4);background:var(--teal-2)}
+.burger{display:none;background:#fff;border:1px solid var(--line-2);border-radius:12px;width:44px;height:44px;cursor:pointer;place-items:center;z-index:120}
+.burger span,.burger span::before,.burger span::after{content:"";display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s;position:relative}
+.burger span::before{position:absolute;top:-6px}
+.burger span::after{position:absolute;top:6px}
+body.menu-open .burger span{background:transparent}
+body.menu-open .burger span::before{transform:translateY(6px) rotate(45deg)}
+body.menu-open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:110;background:rgba(247,251,250,.98);backdrop-filter:blur(18px);display:flex;flex-direction:column;justify-content:center;padding:36px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+body.menu-open .mobile-menu{opacity:1;visibility:visible}
+.mobile-menu a{font-family:var(--font-display);font-size:1.8rem;font-weight:700;padding:14px 0;color:var(--ink);border-bottom:1px solid var(--line);transform:translateY(12px);opacity:0;transition:transform .4s,opacity .4s}
+body.menu-open .mobile-menu a{transform:translateY(0);opacity:1}
+.mobile-menu a:nth-child(2){transition-delay:.05s}.mobile-menu a:nth-child(3){transition-delay:.1s}
+.mobile-menu a:nth-child(4){transition-delay:.15s}.mobile-menu a:nth-child(5){transition-delay:.2s}
+.mobile-menu a:nth-child(6){transition-delay:.25s}
+.mobile-menu .tag{font-size:.85rem;color:var(--dim);margin-bottom:8px}
+.mobile-menu a.call{color:var(--teal)}
+
+.hero{position:relative;overflow:hidden;background:var(--teal-2);color:#fff}
+.hero .bgimg{position:absolute;inset:0}
+.hero .bgimg img{width:100%;height:100%;object-fit:cover;opacity:.3}
+.hero .bgimg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(9,84,78,.96) 25%,rgba(9,84,78,.7) 60%,rgba(9,84,78,.42))}
+.hero .inner{position:relative;padding:100px 0 90px;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.crumb{display:inline-flex;align-items:center;gap:9px;font-size:.83rem;font-weight:500;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:8px 18px;margin-bottom:28px;background:rgba(255,255,255,.07);backdrop-filter:blur(8px)}
+.crumb .dot{width:8px;height:8px;border-radius:50%;background:var(--mint);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(2.3rem,4.8vw,3.7rem);font-weight:800;max-width:16ch;margin-bottom:22px;color:#fff}
+.hero h1 .g{background:linear-gradient(100deg,#b8f0e6,#7fd6c9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .ln span{display:inline-block;transform:translateY(112%);animation:rise .95s cubic-bezier(.16,.7,.2,1) forwards}
+.hero h1 .ln:nth-child(2) span{animation-delay:.12s}
+@keyframes rise{to{transform:none}}
+.hero p.lead{font-size:clamp(1rem,1.4vw,1.14rem);color:rgba(255,255,255,.85);max-width:52ch;margin-bottom:36px}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:.98rem;padding:15px 30px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .55s ease}
+.btn:hover::after{left:135%}
+.btn-mint{background:var(--mint);color:#0b3f3a;box-shadow:0 12px 32px rgba(127,214,201,.4)}
+.btn-mint:hover{transform:translateY(-2px);background:#98e2d7}
+.btn-line{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.special{
+  background:#fff;color:var(--ink);border-radius:24px;padding:38px 34px;box-shadow:0 34px 80px rgba(0,0,0,.35);
+  position:relative;overflow:hidden;
+}
+.special::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad)}
+.special .tag{font-family:var(--font-display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.special .price{font-family:var(--font-display);font-weight:800;font-size:3.4rem;line-height:1.1;margin:10px 0 4px}
+.special .price small{font-size:1.1rem;font-weight:600;color:var(--muted)}
+.special p{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.special ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:26px}
+.special ul li{display:flex;gap:9px;align-items:center;font-size:.92rem;font-weight:500}
+.special ul li::before{content:"✓";flex:0 0 20px;height:20px;border-radius:6px;background:rgba(14,143,133,.14);color:var(--teal);font-weight:700;display:grid;place-items:center;font-size:.72rem}
+.special .note{font-size:.72rem;color:var(--dim);margin-top:14px}
+.special .btn{width:100%;justify-content:center;background:var(--teal);color:#fff}
+.special .btn:hover{background:var(--teal-2)}
+
+.band{background:var(--mint);padding:15px 0;overflow:hidden}
+.band .track{display:flex;gap:44px;align-items:center;animation:scroll 26s linear infinite;flex-shrink:0;width:max-content}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.band span{font-family:var(--font-display);font-weight:700;font-size:.92rem;color:#0b3f3a;white-space:nowrap;display:flex;align-items:center;gap:44px}
+.band span::after{content:"✦";font-size:.8em}
+
+section{padding:100px 0;position:relative}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;display:flex;align-items:center;gap:10px;font-family:var(--font-display)}
+.kicker::before{content:"";width:26px;height:3px;border-radius:2px;background:var(--grad)}
+.sec-title{font-size:clamp(1.9rem,3.9vw,2.7rem);margin-bottom:18px;max-width:24ch;font-weight:800}
+.sec-sub{color:var(--muted);max-width:62ch;font-size:1.02rem}
+
+.s-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.sc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;display:block}
+.sc::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);opacity:0;transition:opacity .3s}
+.sc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line-2)}
+.sc:hover::before{opacity:1}
+.sc .ic{width:52px;height:52px;border-radius:14px;background:rgba(14,143,133,.1);border:1px solid rgba(14,143,133,.25);display:grid;place-items:center;font-size:1.35rem;margin-bottom:18px}
+.sc h3{font-size:1.12rem;margin-bottom:8px}
+.sc p{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.sc .rl{font-family:var(--font-display);font-weight:700;font-size:.87rem;color:var(--teal);display:inline-flex;gap:6px;transition:gap .25s}
+.sc:hover .rl{gap:11px}
+
+.why{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.tick-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+.tick{display:flex;gap:12px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-weight:500;font-size:.92rem}
+.tick::before{content:"✓";flex:0 0 24px;height:24px;border-radius:8px;background:rgba(14,143,133,.14);color:var(--teal);font-weight:700;display:grid;place-items:center;font-size:.8rem}
+.award-chip{
+  display:inline-flex;align-items:center;gap:12px;background:var(--teal-2);color:#fff;border-radius:16px;
+  padding:16px 22px;margin-top:30px;font-family:var(--font-display);font-weight:600;font-size:.95rem;
+  box-shadow:0 18px 44px rgba(11,111,104,.3);
+}
+.award-chip .tr{font-size:1.5rem}
+
+.hours-card{background:var(--teal-2);color:#fff;border-radius:24px;padding:44px 40px;box-shadow:var(--shadow)}
+.hours-card h3{color:#fff;font-size:1.3rem;margin-bottom:22px}
+.hours-card table{width:100%;border-collapse:collapse;font-size:.94rem}
+.hours-card td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.85)}
+.hours-card td:last-child{text-align:right;color:#b8f0e6;font-weight:600}
+.hours-card .walk{margin-top:20px;font-family:var(--font-display);font-weight:700;color:var(--mint)}
+
+.cta{padding:116px 0}
+.cta-box{position:relative;border-radius:30px;overflow:hidden;color:#fff;background:var(--teal-2);box-shadow:0 40px 90px rgba(11,111,104,.35);padding:80px 44px;text-align:center}
+.cta-box::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 120% at 85% 0%,rgba(127,214,201,.35),transparent 55%);pointer-events:none}
+.cta-box h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:16px;color:#fff;font-weight:800;position:relative}
+.cta-box p{color:rgba(255,255,255,.85);max-width:52ch;margin:0 auto 38px;position:relative}
+.cta-box .btn-row{justify-content:center;position:relative}
+
+footer{background:var(--teal-2);color:rgba(255,255,255,.78);padding:72px 0 40px}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:52px}
+.f-grid img{height:64px;width:auto;background:#fff;border-radius:12px;padding:8px}
+.f-grid p{font-size:.9rem;max-width:36ch;margin-top:18px;color:rgba(255,255,255,.65)}
+.f-grid h4{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#b8f0e6;margin-bottom:18px;font-family:var(--font-display)}
+.f-grid ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.f-grid ul a,.f-grid ul li{font-size:.92rem;color:rgba(255,255,255,.75)}
+.f-grid ul a:hover{color:#fff}
+.watermark{font-family:var(--font-display);font-weight:800;text-align:center;user-select:none;font-size:clamp(2rem,6.6vw,5.4rem);line-height:.95;letter-spacing:-.03em;background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,0) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;margin:44px 0 -8px;white-space:nowrap;overflow:hidden}
+.f-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.84rem;color:rgba(255,255,255,.55)}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .hero h1 .ln span{transform:none}
+  html{scroll-behavior:auto}
+}
+@media (max-width:1000px){
+  .hero .inner{grid-template-columns:1fr;gap:48px}
+  .s-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr;gap:56px}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:840px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:grid}
+  .topbar{display:none}
+}
+@media (max-width:600px){
+  section{padding:76px 0}
+  .hero .inner{padding:72px 0 64px}
+  .s-grid{grid-template-columns:1fr}
+  .tick-grid{grid-template-columns:1fr}
+  .btn{width:100%;justify-content:center}
+  .cta-box{padding:56px 24px}
+  .f-grid{grid-template-columns:1fr;gap:36px}
+  .f-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>📍 2390 Griffin Rd, Lakeland, FL &nbsp;·&nbsp; <b>Walk-ins welcome · Same-day appointments</b></span>
+    <span>The natural way to better health</span>
+  </div>
+</div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Chiropractic Center of Lakeland home">
+      <img src="https://le-cdn.hibuwebsites.com/c73f5f448fe74ae58e6ad7aada039512/dms3rep/multi/opt/chiropractic-center-lakeland-logo-1920w.png" alt="Chiropractic Center of Lakeland">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#special">$149 Special</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+    </ul>
+    <a href="tel:+18638590335" class="nav-cta">📞 (863) 859-0335</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <div class="tag">Menu</div>
+  <a href="#services">Services</a>
+  <a href="#why">Why Us</a>
+  <a href="#special">$149 Special</a>
+  <a href="#visit">Visit Us</a>
+  <a href="tel:+18638590335" class="call">📞 (863) 859-0335</a>
+</nav>
+
+<main id="top">
+
+  <section class="hero" id="special">
+    <div class="bgimg" aria-hidden="true">
+      <img src="https://le-cdn.hibuwebsites.com/c73f5f448fe74ae58e6ad7aada039512/dms3rep/multi/opt/chiropractic-center-of-lakeland-hero-home-f70e3243-1920w.jpg" alt="">
+    </div>
+    <div class="wrap inner">
+      <div>
+        <div class="crumb reveal"><span class="dot"></span> Lakeland, FL · Serving patients since 1999</div>
+        <h1>
+          <span class="ln"><span>Feel better,</span></span>
+          <span class="ln"><span><span class="g">the natural way.</span></span></span>
+        </h1>
+        <p class="lead reveal d2">Expert chiropractic care, restorative massage therapy, and advanced wellness treatments — reducing pain and restoring mobility for the Lakeland community for over 25 years.</p>
+        <div class="btn-row reveal d3">
+          <a href="https://www.cclchiro.com/request-appointment" class="btn btn-mint">Request appointment</a>
+          <a href="tel:+18638590335" class="btn btn-line">📞 (863) 859-0335</a>
+        </div>
+      </div>
+      <div class="special reveal d2">
+        <div class="tag">New patient special · self-pay</div>
+        <div class="price">$149</div>
+        <p>Everything you need to get started:</p>
+        <ul>
+          <li>History &amp; examination</li>
+          <li>X-rays</li>
+          <li>Chiropractic treatment</li>
+        </ul>
+        <a href="tel:+18638590335" class="btn">Claim the special</a>
+        <div class="note">Not valid with other offers. Restrictions apply. Mention this offer when scheduling. Inquire about insurance rates.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="band" aria-hidden="true">
+    <div class="track">
+      <span>Walk-ins welcome</span><span>Same-day appointments</span><span>4.9 stars · 476 Google reviews</span><span>35+ years of experience</span><span>Family owned</span><span>Insurance paperwork support</span>
+      <span>Walk-ins welcome</span><span>Same-day appointments</span><span>4.9 stars · 476 Google reviews</span><span>35+ years of experience</span><span>Family owned</span><span>Insurance paperwork support</span>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="kicker reveal">01 · Wellness services</div>
+      <h2 class="sec-title reveal">Comprehensive care, personalized to you</h2>
+      <p class="sec-sub reveal d1">From expert adjustments to restorative therapies — one team, one plan, built around your recovery.</p>
+      <div class="s-grid">
+        <a class="sc reveal" href="https://www.cclchiro.com/chiropractic-care"><div class="ic">🦴</div><h3>Chiropractic Care</h3><p>Diagnosing and treating musculoskeletal issues to relieve pain and restore function.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal" href="https://www.cclchiro.com/massage-therapy"><div class="ic">💆</div><h3>Massage Therapy</h3><p>Relieve tension, improve circulation, and speed up recovery alongside your adjustments.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d1" href="https://www.cclchiro.com/sport-or-athletic-injury"><div class="ic">🏃</div><h3>Sports Injury</h3><p>Targeted therapies that reduce pain, restore function, and prevent re-injury.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d1" href="https://www.cclchiro.com/advanced-therapies"><div class="ic">⚡</div><h3>Advanced Therapies</h3><p>Cutting-edge techniques and equipment that enhance treatment outcomes.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d2" href="https://www.cclchiro.com/spinal-decompression"><div class="ic">🩻</div><h3>Spinal Decompression</h3><p>Non-surgical relief for herniated discs, sciatica, and chronic back pain.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d2" href="https://www.cclchiro.com/accident-or-personal-injury"><div class="ic">🚗</div><h3>Accident &amp; Personal Injury</h3><p>Thorough evaluations and personalized treatment plans after an accident.</p><span class="rl">Learn more →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="why">
+    <div class="wrap why-grid">
+      <div>
+        <div class="kicker reveal">02 · Why patients choose us</div>
+        <h2 class="sec-title reveal">Unparalleled experience, personal care</h2>
+        <p class="sec-sub reveal d1">With over 35 years of experience, our family-owned practice combines advanced therapies with the kind of personal attention that earns a 4.9-star rating across 476 Google reviews.</p>
+        <div class="tick-grid reveal d2">
+          <div class="tick">Serving patients since 1999</div>
+          <div class="tick">Over 35 years of experience</div>
+          <div class="tick">Same-day appointments</div>
+          <div class="tick">Walk-ins welcome</div>
+          <div class="tick">Insurance paperwork support</div>
+          <div class="tick">Local &amp; family-owned</div>
+        </div>
+        <div class="award-chip reveal d3"><span class="tr">🏆</span> Excellence in Patient Education &amp; Communication Award</div>
+      </div>
+      <div class="hours-card reveal d2" id="visit">
+        <h3>Visit us</h3>
+        <table>
+          <tr><td>Mon, Wed, Fri</td><td>8–12 · 1–5:30</td></tr>
+          <tr><td>Thursday</td><td>8:00 – 12:00</td></tr>
+          <tr><td>Tuesday</td><td>Closed</td></tr>
+          <tr><td>Sat – Sun</td><td>Closed</td></tr>
+        </table>
+        <div class="walk">Walk-ins welcome</div>
+        <div style="margin-top:22px;font-size:.92rem;color:rgba(255,255,255,.85)">📍 2390 Griffin Rd, Lakeland, FL 33810<br>📞 (863) 859-0335</div>
+        <div class="btn-row" style="margin-top:26px">
+          <a href="https://maps.google.com/maps?q=2390+Griffin+Rd%2C+Lakeland%2C+FL+33810%2C+US" class="btn btn-mint" style="width:100%;justify-content:center">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <h2>Your back will thank you.</h2>
+        <p>Same-day appointments, walk-ins welcome, and a $149 new patient special that includes examination, X-rays, and your first treatment.</p>
+        <div class="btn-row">
+          <a href="https://www.cclchiro.com/request-appointment" class="btn btn-mint">Request appointment</a>
+          <a href="tel:+18638590335" class="btn btn-line">📞 (863) 859-0335</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img src="https://le-cdn.hibuwebsites.com/c73f5f448fe74ae58e6ad7aada039512/dms3rep/multi/opt/chiropractic-center-lakeland-logo-1920w.png" alt="Chiropractic Center of Lakeland">
+        <p>Chiropractic care, massage, athletic injury and personal injury treatment in Lakeland, FL. The natural way to better health.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://www.cclchiro.com/chiropractic-care">Chiropractic Care</a></li>
+          <li><a href="https://www.cclchiro.com/massage-therapy">Massage Therapy</a></li>
+          <li><a href="https://www.cclchiro.com/spinal-decompression">Spinal Decompression</a></li>
+          <li><a href="https://www.cclchiro.com/veteran-community-care">Veteran Community Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+18638590335">📞 (863) 859-0335</a></li>
+          <li>📍 2390 Griffin Rd, Lakeland, FL</li>
+          <li><a href="https://facebook.com/chiropracticcenteroflakeland">Facebook</a></li>
+          <li><a href="https://www.cclchiro.com/request-appointment">Request appointment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="watermark" aria-hidden="true">Better Health</div>
+    <div class="f-bottom">
+      <span>© 2026 Chiropractic Center of Lakeland. All rights reserved.</span>
+      <span>Serving patients since 1999</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://jbaventures.co" style="position:fixed;left:16px;bottom:16px;z-index:400;background:rgba(11,111,104,.92);color:#fff;font-family:Inter,sans-serif;font-size:12px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.3);backdrop-filter:blur(8px);text-decoration:none;letter-spacing:.02em">✦ Design concept by <b style="color:#7fd6c9">JBA Ventures</b></a>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>10),{passive:true});
+const burger=document.getElementById('burger');
+const menu=document.getElementById('mobileMenu');
+function toggleMenu(force){
+  const open=force!==undefined?force:!document.body.classList.contains('menu-open');
+  document.body.classList.toggle('menu-open',open);
+  burger.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+burger.addEventListener('click',()=>toggleMenu());
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')toggleMenu(false)});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const bar=document.getElementById('progress');
+const setBar=()=>{const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%'};
+addEventListener('scroll',setBar,{passive:true});setBar();
+</script>
+</body>
+</html>

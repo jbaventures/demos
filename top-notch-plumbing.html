@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Notch Plumbing &amp; Drain | Gilbert, AZ Plumbers — Design Concept</title>
+<meta name="description" content="24-hour plumbers in Gilbert, AZ. Water heaters, sewer, gas lines, water treatment. Licensed, insured, family owned. Call (602) 859-5365.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0c4a7e;
+  --blue-2:#093a64;
+  --aqua:#17b3cf;
+  --aqua-2:#0e97b0;
+  --bg:#f9fbfc;
+  --ink:#122a40;
+  --muted:#53687d;
+  --dim:#8899aa;
+  --line:rgba(12,74,126,.10);
+  --line-2:rgba(12,74,126,.18);
+  --grad:linear-gradient(100deg,#17b3cf,#5ad2e6);
+  --radius:20px;
+  --font-display:"Outfit",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,sans-serif;
+  --shadow:0 24px 60px rgba(12,74,126,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:rgba(23,179,207,.35)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.12;letter-spacing:-.015em;color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.noise{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.028;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--grad);z-index:150;width:0}
+
+.topbar{background:var(--blue-2);color:rgba(255,255,255,.8);font-size:.8rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.topbar b{color:#7fe0ef}
+
+header{position:sticky;top:0;z-index:100;background:rgba(249,251,252,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow .3s;border-bottom:1px solid transparent}
+header.scrolled{box-shadow:0 10px 34px rgba(12,74,126,.12);border-bottom-color:var(--line)}
+body.menu-open header{z-index:130;box-shadow:none}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px;gap:20px}
+.brand img{height:56px;width:auto}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;color:var(--muted);transition:color .2s;position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a::before{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2.5px;border-radius:2px;background:var(--grad);transform:scaleX(0);transform-origin:right;transition:transform .32s cubic-bezier(.2,.6,.2,1)}
+.nav-links a:hover::before,.nav-links a.active::before{transform:scaleX(1);transform-origin:left}
+.nav-cta{font-family:var(--font-display);font-size:.95rem;font-weight:700;padding:12px 24px;border-radius:999px;background:var(--blue);color:#fff;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(12,74,126,.4);background:var(--aqua-2)}
+.burger{display:none;background:#fff;border:1px solid var(--line-2);border-radius:12px;width:44px;height:44px;cursor:pointer;place-items:center;z-index:120}
+.burger span,.burger span::before,.burger span::after{content:"";display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s;position:relative}
+.burger span::before{position:absolute;top:-6px}
+.burger span::after{position:absolute;top:6px}
+body.menu-open .burger span{background:transparent}
+body.menu-open .burger span::before{transform:translateY(6px) rotate(45deg)}
+body.menu-open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:110;background:rgba(249,251,252,.98);backdrop-filter:blur(18px);display:flex;flex-direction:column;justify-content:center;padding:36px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+body.menu-open .mobile-menu{opacity:1;visibility:visible}
+.mobile-menu a{font-family:var(--font-display);font-size:1.8rem;font-weight:700;padding:14px 0;color:var(--ink);border-bottom:1px solid var(--line);transform:translateY(12px);opacity:0;transition:transform .4s,opacity .4s}
+body.menu-open .mobile-menu a{transform:translateY(0);opacity:1}
+.mobile-menu a:nth-child(2){transition-delay:.05s}.mobile-menu a:nth-child(3){transition-delay:.1s}
+.mobile-menu a:nth-child(4){transition-delay:.15s}.mobile-menu a:nth-child(5){transition-delay:.2s}
+.mobile-menu a:nth-child(6){transition-delay:.25s}
+.mobile-menu .tag{font-size:.85rem;color:var(--dim);margin-bottom:8px}
+.mobile-menu a.call{color:var(--aqua-2)}
+
+/* hero */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--blue-2)}
+.hero .bgimg{position:absolute;inset:0}
+.hero .bgimg img{width:100%;height:100%;object-fit:cover;opacity:.32}
+.hero .bgimg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(9,58,100,.97) 25%,rgba(9,58,100,.7) 60%,rgba(9,58,100,.45))}
+.hero .inner{position:relative;padding:104px 0 92px}
+.crumb{display:inline-flex;align-items:center;gap:9px;font-size:.83rem;font-weight:500;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:8px 18px;margin-bottom:28px;background:rgba(255,255,255,.07);backdrop-filter:blur(8px)}
+.crumb .dot{width:8px;height:8px;border-radius:50%;background:var(--aqua);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4rem);font-weight:800;max-width:17ch;margin-bottom:24px;color:#fff}
+.hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .ln span{display:inline-block;transform:translateY(112%);animation:rise .95s cubic-bezier(.16,.7,.2,1) forwards}
+.hero h1 .ln:nth-child(2) span{animation-delay:.12s}
+@keyframes rise{to{transform:none}}
+.hero p.lead{font-size:clamp(1rem,1.5vw,1.16rem);color:rgba(255,255,255,.85);max-width:56ch;margin-bottom:38px}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:700;font-size:.98rem;padding:15px 30px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .55s ease}
+.btn:hover::after{left:135%}
+.btn-aqua{background:var(--aqua);color:#06283d;box-shadow:0 12px 32px rgba(23,179,207,.4)}
+.btn-aqua:hover{transform:translateY(-2px);background:#3ec6de}
+.btn-line{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:60px;max-width:740px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);overflow:hidden}
+.stat{background:rgba(9,58,100,.75);backdrop-filter:blur(8px);padding:24px 28px}
+.stat b{display:block;font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:#7fe0ef}
+.stat span{font-size:.84rem;color:rgba(255,255,255,.75)}
+.hero .van{position:absolute;right:2%;bottom:0;width:34%;max-width:460px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.4))}
+
+/* promise band */
+.band{background:var(--aqua);padding:16px 0;overflow:hidden}
+.band .track{display:flex;gap:44px;align-items:center;animation:scroll 26s linear infinite;flex-shrink:0;width:max-content}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.band span{font-family:var(--font-display);font-weight:700;font-size:.95rem;color:#06283d;white-space:nowrap;display:flex;align-items:center;gap:44px}
+.band span::after{content:"✦";font-size:.8em}
+
+section{padding:104px 0;position:relative}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-2);margin-bottom:16px;display:flex;align-items:center;gap:10px;font-family:var(--font-display)}
+.kicker::before{content:"";width:26px;height:3px;border-radius:2px;background:var(--grad)}
+.sec-title{font-size:clamp(1.9rem,3.9vw,2.8rem);margin-bottom:18px;max-width:24ch;font-weight:800}
+.sec-sub{color:var(--muted);max-width:62ch;font-size:1.03rem}
+
+/* services */
+.services{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.s-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.sc{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;display:block}
+.sc::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);opacity:0;transition:opacity .3s}
+.sc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line-2)}
+.sc:hover::before{opacity:1}
+.sc .ic{width:50px;height:50px;border-radius:14px;background:rgba(23,179,207,.12);border:1px solid rgba(23,179,207,.3);display:grid;place-items:center;font-size:1.3rem;margin-bottom:16px}
+.sc h3{font-size:1.05rem;margin-bottom:6px}
+.sc p{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.sc .rl{font-family:var(--font-display);font-weight:700;font-size:.86rem;color:var(--aqua-2);display:inline-flex;gap:6px;transition:gap .25s}
+.sc:hover .rl{gap:11px}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split.rev .txt{order:-1}
+.split .imgs{position:relative}
+.split .imgs .i1{border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.split .imgs .i1 img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.split .imgs .i2{position:absolute;right:-6%;bottom:-10%;width:46%;border-radius:16px;overflow:hidden;border:6px solid #fff;box-shadow:0 20px 48px rgba(12,74,126,.25)}
+.split .imgs .i2 img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.split .imgs .seal{position:absolute;top:-6%;left:-5%;background:var(--blue);color:#fff;border-radius:16px;padding:14px 20px;font-family:var(--font-display);font-weight:700;font-size:.9rem;line-height:1.3;box-shadow:0 18px 40px rgba(9,58,100,.35);animation:float 6.5s ease-in-out infinite}
+.split .imgs .seal b{color:#7fe0ef;display:block;font-size:1.3rem}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.check-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-top:28px;list-style:none}
+.check-list li{display:flex;gap:10px;align-items:center;font-size:.94rem;font-weight:500}
+.check-list li::before{content:"✓";flex:0 0 22px;height:22px;border-radius:7px;background:rgba(23,179,207,.18);color:var(--aqua-2);font-weight:700;display:grid;place-items:center;font-size:.8rem}
+
+/* award */
+.award{background:var(--blue-2);color:#fff;overflow:hidden}
+.award .kicker{color:#7fe0ef}
+.award .sec-title{color:#fff}
+.award .sec-sub{color:rgba(255,255,255,.78)}
+.award-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.award-grid .badge-box{background:#fff;border-radius:24px;padding:44px;display:grid;place-items:center;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.award-grid .badge-box img{max-width:280px}
+
+/* faq */
+.faq-list{margin-top:52px;display:grid;grid-template-columns:1fr;gap:12px;max-width:860px}
+.fq{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;transition:box-shadow .3s}
+.fq:hover{box-shadow:0 14px 36px rgba(12,74,126,.08)}
+.fq button{all:unset;display:flex;justify-content:space-between;align-items:center;gap:14px;width:100%;padding:20px 24px;cursor:pointer;font-family:var(--font-display);font-weight:600;font-size:.98rem;box-sizing:border-box}
+.fq button .pm{flex:0 0 28px;height:28px;border-radius:9px;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--aqua-2);transition:transform .3s,background .3s,color .3s;font-family:var(--font-body)}
+.fq.open button .pm{transform:rotate(45deg);background:var(--blue);color:#fff;border-color:var(--blue)}
+.fq .body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.fq .body-in{padding:0 24px 22px;color:var(--muted);font-size:.93rem}
+
+/* reviews band */
+.rev{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.rev .num{font-family:var(--font-display);font-weight:800;font-size:4.4rem;line-height:1}
+.rev .stars{color:#f2b01e;font-size:1.6rem;letter-spacing:4px;margin:10px 0}
+.rev p{color:var(--muted);max-width:52ch;margin:0 auto 34px}
+
+/* areas */
+.areas{display:flex;gap:10px;flex-wrap:wrap;margin-top:44px}
+.areas span{border:1px solid var(--line-2);border-radius:999px;padding:9px 19px;font-size:.88rem;font-weight:500;background:#fff;transition:all .25s}
+.areas span:hover{border-color:var(--aqua);background:rgba(23,179,207,.08)}
+
+/* cta */
+.cta{padding:120px 0}
+.cta-box{position:relative;border-radius:30px;overflow:hidden;color:#fff;background:var(--blue-2);display:grid;grid-template-columns:1.1fr .9fr;align-items:stretch;box-shadow:0 40px 90px rgba(9,58,100,.4)}
+.cta-box .txt{padding:76px 56px;position:relative}
+.cta-box .txt::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(70% 120% at 90% 0%,rgba(23,179,207,.25),transparent 55%)}
+.cta-box h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:16px;color:#fff;font-weight:800;position:relative}
+.cta-box p{color:rgba(255,255,255,.8);max-width:46ch;margin-bottom:38px;position:relative}
+.cta-box .btn-row{position:relative}
+.cta-box .pic{position:relative;min-height:320px}
+.cta-box .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cta-box .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--blue-2),transparent 45%)}
+
+/* footer */
+footer{background:var(--blue-2);color:rgba(255,255,255,.75);padding:72px 0 40px}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:52px}
+.f-grid img{height:64px;width:auto;background:#fff;border-radius:12px;padding:8px}
+.f-grid p{font-size:.9rem;max-width:36ch;margin-top:18px;color:rgba(255,255,255,.65)}
+.f-grid h4{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#7fe0ef;margin-bottom:18px;font-family:var(--font-display)}
+.f-grid ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.f-grid ul a,.f-grid ul li{font-size:.92rem;color:rgba(255,255,255,.72)}
+.f-grid ul a:hover{color:#fff}
+.watermark{font-family:var(--font-display);font-weight:800;text-align:center;user-select:none;font-size:clamp(2.4rem,8vw,6.6rem);line-height:.95;letter-spacing:-.03em;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;margin:44px 0 -8px;white-space:nowrap;overflow:hidden}
+.f-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.84rem;color:rgba(255,255,255,.5)}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .hero h1 .ln span{transform:none}
+  html{scroll-behavior:auto}
+}
+@media (max-width:1000px){
+  .s-grid{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr;gap:64px}
+  .split.rev .txt{order:0}
+  .award-grid{grid-template-columns:1fr;gap:48px}
+  .cta-box{grid-template-columns:1fr}
+  .cta-box .pic{min-height:240px;order:-1}
+  .cta-box .pic::after{background:linear-gradient(0deg,var(--blue-2),transparent 60%)}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .hero .van{display:none}
+}
+@media (max-width:840px){
+  .nav-links,.nav .nav-cta{display:none}
+  .burger{display:grid}
+  .topbar{display:none}
+}
+@media (max-width:600px){
+  section{padding:78px 0}
+  .hero .inner{padding:80px 0 68px}
+  .hero-stats{grid-template-columns:1fr 1fr 1fr}
+  .stat{padding:18px 14px}
+  .stat b{font-size:1.25rem}
+  .stat span{font-size:.72rem}
+  .s-grid{grid-template-columns:1fr}
+  .btn{width:100%;justify-content:center}
+  .check-list{grid-template-columns:1fr}
+  .cta-box .txt{padding:52px 26px}
+  .f-grid{grid-template-columns:1fr;gap:36px}
+  .f-bottom{flex-direction:column;text-align:center}
+  .split .imgs .i2{right:0}
+  .split .imgs .seal{left:0}
+}
+</style>
+</head>
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>📍 Gilbert, Arizona &nbsp;·&nbsp; <b>Available 24/7 for emergencies</b></span>
+    <span>Licensed &amp; insured · ROC# 320403</span>
+  </div>
+</div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Top Notch Plumbing and Drain home">
+      <img src="https://lirp.cdn-website.com/15f3315d/dms3rep/multi/opt/Logo.2204211015239-1920w.png" alt="Top Notch Plumbing &amp; Drain LLC">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#water">Why Us</a></li>
+      <li><a href="#award">Top Plumber 2024</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#areas">Areas</a></li>
+    </ul>
+    <a href="tel:+16028595365" class="nav-cta">📞 (602) 859-5365</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <div class="tag">Menu</div>
+  <a href="#services">Services</a>
+  <a href="#water">Why Us</a>
+  <a href="#award">Top Plumber 2024</a>
+  <a href="#faq">FAQ</a>
+  <a href="tel:+16028595365" class="call">📞 (602) 859-5365</a>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="bgimg" aria-hidden="true">
+      <img src="https://lirp.cdn-website.com/15f3315d/dms3rep/multi/opt/expert+plumbers+in+gilbert+az-1920w.jpg" alt="">
+    </div>
+    <div class="wrap inner">
+      <div class="crumb reveal"><span class="dot"></span> Gilbert, AZ · 24-hour emergency plumbers</div>
+      <h1>
+        <span class="ln"><span>Fixed right,</span></span>
+        <span class="ln"><span><span class="g">the first time.</span></span></span>
+      </h1>
+      <p class="lead reveal d2">Reliable 24-hour plumbing for homes and businesses across Gilbert and the East Valley. Stubborn clogs, leaking pipes, water heaters, gas lines — licensed local plumbers who treat every job like it's our own home.</p>
+      <div class="btn-row reveal d3">
+        <a href="tel:+16028595365" class="btn btn-aqua">📞 Call (602) 859-5365</a>
+        <a href="https://www.topnotchplumbinganddrain.com/contact" class="btn btn-line">Request service online</a>
+      </div>
+      <div class="hero-stats reveal d3">
+        <div class="stat"><b>5.0 ★</b><span>499 Google reviews</span></div>
+        <div class="stat"><b>30 yrs</b><span>Combined experience</span></div>
+        <div class="stat"><b>24/7</b><span>Emergency response</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- promise ticker -->
+  <div class="band" aria-hidden="true">
+    <div class="track">
+      <span>Available 24/7 for emergencies</span><span>Same-day appointments</span><span>Quality products &amp; service</span><span>Easy, fast booking</span><span>Family owned &amp; operated</span><span>Licensed &amp; insured · ROC# 320403</span>
+      <span>Available 24/7 for emergencies</span><span>Same-day appointments</span><span>Quality products &amp; service</span><span>Easy, fast booking</span><span>Family owned &amp; operated</span><span>Licensed &amp; insured · ROC# 320403</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="wrap">
+      <div class="kicker reveal">01 · No job too big or small</div>
+      <h2 class="sec-title reveal">Our service is Top Notch</h2>
+      <p class="sec-sub reveal d1">Our team is highly trained to handle any job that comes our way — quality work that's meant to last.</p>
+      <div class="s-grid">
+        <a class="sc reveal" href="https://www.topnotchplumbinganddrain.com/plumbing-services/water-treatment"><div class="ic">💧</div><h3>Water Treatment</h3><p>Clean, safe water for desert living.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal" href="https://www.topnotchplumbinganddrain.com/plumbing-services/water-heaters"><div class="ic">🔥</div><h3>Water Heaters</h3><p>Repair, replacement and upgrades.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d1" href="https://www.topnotchplumbinganddrain.com/plumbing-services/sewer-services"><div class="ic">🕳️</div><h3>Sewer Services</h3><p>Camera inspections to full repairs.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d1" href="https://www.topnotchplumbinganddrain.com/plumbing-services/water-lines"><div class="ic">🚿</div><h3>Water Lines</h3><p>Secure lines, fewer surprises.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d2" href="https://www.topnotchplumbinganddrain.com/plumbing-services/gas-line-plumbing"><div class="ic">⚠️</div><h3>Gas Line Plumbing</h3><p>Safe, code-compliant gas work.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d2" href="https://www.topnotchplumbinganddrain.com/plumbing-services/plumbing-repairs"><div class="ic">🔧</div><h3>Plumbing Repairs</h3><p>Leaks and clogs, fixed fast.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d3" href="https://www.topnotchplumbinganddrain.com/plumbing-services/plumbing-installation"><div class="ic">🛠️</div><h3>Installation</h3><p>Done right from day one.</p><span class="rl">Learn more →</span></a>
+        <a class="sc reveal d3" href="https://www.topnotchplumbinganddrain.com/commercial-plumbing"><div class="ic">🏢</div><h3>Commercial</h3><p>Keep your business flowing.</p><span class="rl">Learn more →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WATER / WHY -->
+  <section id="water">
+    <div class="wrap split">
+      <div>
+        <div class="kicker reveal">02 · Why Gilbert trusts us</div>
+        <h2 class="sec-title reveal">Providing clean water for our desert community</h2>
+        <p class="sec-sub reveal d1">Living in the desert air of Gilbert and the East Valley, we know exactly how vital a reliable water supply is. We keep your water safe with outstanding installation, excellent repairs, and honest communication — and we teach you the warning signs so small problems never become big ones.</p>
+        <ul class="check-list reveal d2">
+          <li>Available 24/7 for emergencies</li>
+          <li>Same-day appointments</li>
+          <li>Licensed &amp; insured (ROC# 320403)</li>
+          <li>Family owned &amp; operated</li>
+          <li>Quality products &amp; workmanship</li>
+          <li>Easy, fast, convenient booking</li>
+        </ul>
+        <div class="btn-row reveal d3" style="margin-top:36px">
+          <a href="https://www.topnotchplumbinganddrain.com/about" class="btn btn-aqua" style="box-shadow:0 10px 26px rgba(23,179,207,.3)">About the Top Notch team</a>
+        </div>
+      </div>
+      <div class="imgs reveal d2">
+        <div class="i1"><img src="https://lirp.cdn-website.com/15f3315d/dms3rep/multi/opt/expert+plumbers+gilbert+az-750h.jpg" alt="Top Notch plumber working on a pipe"></div>
+        <div class="i2"><img src="https://lirp.cdn-website.com/15f3315d/dms3rep/multi/opt/plumbers+gilbert+az-750h.jpg" alt="Plumber fixing a faucet"></div>
+        <div class="seal"><b>5.0 ★</b>499 Google<br>reviews</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARD -->
+  <section id="award" class="award">
+    <div class="wrap award-grid">
+      <div class="badge-box reveal">
+        <img src="https://lirp.cdn-website.com/15f3315d/dms3rep/multi/opt/professional+plumbers+gilbert+az-479w.png" alt="Top Plumber 2024 award badge">
+      </div>
+      <div>
+        <div class="kicker reveal">03 · Recognition</div>
+        <h2 class="sec-title reveal">Top Plumber 2024 — Gilbert area</h2>
+        <p class="sec-sub reveal d1">Named a top plumber in the Gilbert area for 2024 by InstantPlumbers, which rigorously evaluates providers on service quality, reliability, and customer feedback. The recognition reflects what our customers already know: every project completed with precision and professionalism, from routine maintenance to complex repairs.</p>
+        <div class="btn-row reveal d2" style="margin-top:36px">
+          <a href="tel:+16028595365" class="btn btn-aqua">📞 Call the award winners</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="rev">
+    <div class="wrap">
+      <div class="num reveal">5.0</div>
+      <div class="stars reveal">★★★★★</div>
+      <p class="reveal d1">A perfect five stars across 499 Google reviews — earned one honest job at a time across Gilbert, Chandler, Mesa and the East Valley.</p>
+      <div class="btn-row reveal d2" style="justify-content:center">
+        <a href="https://www.google.com/maps/place/Top+Notch+Plumbing+and+Drain/@33.5621739,-111.9523551,10z/data=!4m5!3m4!1s0x0:0xe49b7de47d658846!8m2!3d33.5621739!4d-111.9523551" class="btn btn-aqua" style="box-shadow:0 10px 26px rgba(23,179,207,.3)">Read our reviews on Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="kicker reveal">04 · Questions we hear a lot</div>
+      <h2 class="sec-title reveal">Frequently asked questions</h2>
+      <div class="faq-list">
+        <div class="fq open reveal"><button><span>When should I call an emergency plumber in Gilbert, AZ?</span><span class="pm">+</span></button>
+          <div class="body"><div class="body-in">Call an emergency plumber if you notice sudden water leaks, sewage backups, lack of hot water, strong odors from drains, or unusual noises in your pipes. Delaying repairs can lead to costly water damage or health hazards.</div></div>
+        </div>
+        <div class="fq reveal"><button><span>How quickly can you provide same-day service?</span><span class="pm">+</span></button>
+          <div class="body"><div class="body-in">We offer same-day plumbing services for urgent issues, including leaks, drain clogs, and water heater failures. Our 24/7 emergency plumbers are available to resolve your plumbing problems as quickly as possible.</div></div>
+        </div>
+        <div class="fq reveal"><button><span>What services do you provide for homeowners and businesses?</span><span class="pm">+</span></button>
+          <div class="body"><div class="body-in">We specialize in plumbing installation, maintenance, and repairs, including water heaters, sewer line repairs, drain cleaning, leak detection, gas line services, and water treatment solutions. Our licensed plumbers ensure quality workmanship on every job.</div></div>
+        </div>
+        <div class="fq reveal"><button><span>How do I know if my sewer line needs repair or replacement?</span><span class="pm">+</span></button>
+          <div class="body"><div class="body-in">Warning signs include slow drains, foul odors, gurgling noises, and sewage backups. If you suspect a problem, our experienced plumbers use advanced camera inspections to diagnose and fix the issue efficiently.</div></div>
+        </div>
+        <div class="fq reveal"><button><span>Why choose Top Notch Plumbing and Drain?</span><span class="pm">+</span></button>
+          <div class="body"><div class="body-in">With 30 years of combined experience, our licensed and insured team provides reliable, high-quality plumbing solutions. We are locally owned, highly rated, and committed to excellent service for homes and businesses in Gilbert and surrounding areas.</div></div>
+        </div>
+      </div>
+
+      <div id="areas" style="margin-top:88px">
+        <div class="kicker reveal">05 · Areas we serve</div>
+        <h2 class="sec-title reveal">Gilbert and the entire East Valley</h2>
+        <div class="areas reveal d1">
+          <span>Gilbert</span><span>Chandler</span><span>Queen Creek</span><span>East Valley</span><span>Tempe</span><span>Mesa</span><span>San Tan Valley</span><span>Ahwatukee</span><span>Phoenix</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <div class="txt">
+          <div class="kicker" style="color:#7fe0ef">Request an estimate</div>
+          <h2>Plumbing problem? Consider it handled.</h2>
+          <p>Call now for immediate help or request service online — your trusted Gilbert plumbers are ready to fix it right the first time.</p>
+          <div class="btn-row">
+            <a href="tel:+16028595365" class="btn btn-aqua">📞 (602) 859-5365</a>
+            <a href="https://www.topnotchplumbinganddrain.com/contact" class="btn btn-line">Request an estimate</a>
+          </div>
+        </div>
+        <div class="pic" aria-hidden="true">
+          <img src="https://lirp.cdn-website.com/15f3315d/dms3rep/multi/opt/plumbers+in+gilbert+az-546h.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img src="https://lirp.cdn-website.com/15f3315d/dms3rep/multi/opt/plumber+gilbert+az-290w.png" alt="Top Notch Plumbing and Drain">
+        <p>Plumbing and drain services in Gilbert, Arizona. Family owned, licensed &amp; insured. ROC# 320403.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://www.topnotchplumbinganddrain.com/plumbing-services/plumbing-installation">Plumbing Installation</a></li>
+          <li><a href="https://www.topnotchplumbinganddrain.com/plumbing-services/gas-line-plumbing">Gas Line Plumbing</a></li>
+          <li><a href="https://www.topnotchplumbinganddrain.com/plumbing-services/water-treatment">Water Treatment</a></li>
+          <li><a href="https://www.topnotchplumbinganddrain.com/plumbing-services/water-heaters">Water Heaters</a></li>
+          <li><a href="https://www.topnotchplumbinganddrain.com/plumbing-services/sewer-services">Sewer Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+16028595365">📞 (602) 859-5365</a></li>
+          <li><a href="mailto:info@topnotchplumbinganddrain.com">✉️ info@topnotchplumbinganddrain.com</a></li>
+          <li>📍 Gilbert, Arizona</li>
+          <li>🕗 24/7 emergency service</li>
+        </ul>
+      </div>
+    </div>
+    <div class="watermark" aria-hidden="true">Top Notch</div>
+    <div class="f-bottom">
+      <span>© 2026 Top Notch Plumbing and Drain, LLC. All rights reserved.</span>
+      <span><a href="https://facebook.com/topnotchplumbinganddrain">Facebook</a> · <a href="https://instagram.com/topnotchplumbinganddrain">Instagram</a> · <a href="https://yelp.com/biz/top-notch-plumbing-and-drain-gilbert-2">Yelp</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://jbaventures.co" style="position:fixed;left:16px;bottom:16px;z-index:400;background:rgba(9,58,100,.92);color:#fff;font-family:Inter,sans-serif;font-size:12px;font-weight:500;padding:9px 16px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);backdrop-filter:blur(8px);text-decoration:none;letter-spacing:.02em">✦ Design concept by <b style="color:#17b3cf">JBA Ventures</b></a>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>10),{passive:true});
+const burger=document.getElementById('burger');
+const menu=document.getElementById('mobileMenu');
+function toggleMenu(force){
+  const open=force!==undefined?force:!document.body.classList.contains('menu-open');
+  document.body.classList.toggle('menu-open',open);
+  burger.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+burger.addEventListener('click',()=>toggleMenu());
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')toggleMenu(false)});
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const bar=document.getElementById('progress');
+const setBar=()=>{const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%'};
+addEventListener('scroll',setBar,{passive:true});setBar();
+document.querySelectorAll('.fq').forEach(fq=>{
+  const btn=fq.querySelector('button'),body=fq.querySelector('.body');
+  const set=()=>{body.style.maxHeight=fq.classList.contains('open')?body.scrollHeight+'px':'0'};
+  btn.addEventListener('click',()=>{fq.classList.toggle('open');set()});
+  set();
+});
+</script>
+</body>
+</html>
