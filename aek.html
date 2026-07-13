@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>АЕК — Агенција за електронски комуникации | Регулатор на Република Северна Македонија</title>
+<meta name="description" content="Агенција за електронски комуникации — независен регулатор на пазарот на електронски комуникации во Република Северна Македонија.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16181d;
+  --ink2:#3c414b;
+  --mut:#6d7480;
+  --blue:#d5202c;
+  --blue-d:#a8161f;
+  --cyan:#ef4136;
+  --bg:#f2f3f5;
+  --card:#ffffff;
+  --line:#e3e5e9;
+  --hero:#15171c;
+  --grad:linear-gradient(100deg,#d5202c,#ef4136);
+  --r:18px;
+  --sh:0 20px 50px -22px rgba(20,22,28,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Unbounded',sans-serif;line-height:1.18;letter-spacing:-.01em}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+::selection{background:#d5202c;color:#fff}
+
+/* ---------- progress ---------- */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:400}
+
+/* ---------- topbar ---------- */
+.topbar{background:var(--hero);color:#a6adba;font-size:12.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:16px}
+.topbar a{transition:color .2s}
+.topbar a:hover{color:#fff}
+.tb-l{display:flex;gap:18px;align-items:center;white-space:nowrap;overflow:hidden}
+.tb-r{display:flex;gap:14px;align-items:center;flex-shrink:0}
+.lang a{padding:2px 7px;border-radius:6px;font-weight:600;letter-spacing:.04em}
+.lang a.on{background:rgba(255,255,255,.14);color:#fff}
+.tb-dot{width:6px;height:6px;border-radius:50%;background:#2fd66f;display:inline-block;margin-right:6px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:300;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.sc{box-shadow:0 8px 30px -14px rgba(20,22,28,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand img{height:44px;width:auto}
+.brand .bt{display:flex;flex-direction:column;line-height:1.15}
+.brand .bt b{font-family:'Unbounded';font-size:19px;letter-spacing:.02em}
+.brand .bt span{font-size:9.5px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+nav.menu{display:flex;gap:2px;align-items:center}
+.mi{position:relative}
+.mi>a{display:flex;align-items:center;gap:5px;padding:10px 12px;font-size:13.5px;font-weight:600;color:var(--ink2);border-radius:10px;transition:.2s}
+.mi>a:hover{color:var(--blue);background:#fbeded}
+.mi>a svg{width:9px;height:9px;opacity:.5;transition:transform .25s}
+.mi:hover>a svg{transform:rotate(180deg)}
+.dd{position:absolute;top:100%;left:50%;transform:translate(-50%,10px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh);padding:18px;opacity:0;visibility:hidden;transition:.25s;min-width:280px;z-index:310}
+.mi:hover .dd{opacity:1;visibility:visible;transform:translate(-50%,4px)}
+.dd.wide{display:grid;grid-template-columns:repeat(2,240px);gap:4px 22px}
+.dd.xwide{display:grid;grid-template-columns:repeat(3,230px);gap:4px 22px}
+.dd a{display:block;padding:7px 10px;font-size:13px;color:var(--ink2);border-radius:8px;transition:.15s;font-weight:500}
+.dd a:hover{background:#fbeded;color:var(--blue);padding-left:14px}
+.dd .grp{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700;padding:10px 10px 4px;font-family:'IBM Plex Mono'}
+.dd a.sub{font-size:12.5px;color:var(--mut);padding-left:20px}
+.dd a.sub:hover{padding-left:24px}
+.cta{background:var(--grad);color:#fff;padding:11px 20px;border-radius:12px;font-size:13.5px;font-weight:700;box-shadow:0 10px 24px -10px rgba(213,32,44,.55);transition:.25s;white-space:nowrap}
+.cta:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(213,32,44,.6)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:360}
+.burger span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.3s}
+body.mo .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.mo .burger span:nth-child(2){opacity:0}
+body.mo .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* mobile menu */
+.mnav{position:fixed;inset:0;background:#fff;z-index:340;padding:100px 26px 40px;overflow-y:auto;transform:translateX(100%);transition:transform .38s cubic-bezier(.7,0,.3,1);display:none}
+body.mo .mnav{transform:translateX(0)}
+body.mo{overflow:hidden}
+body.mo header{z-index:350}
+.mnav .acc{border-bottom:1px solid var(--line)}
+.mnav .acc>button{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:0;padding:16px 4px;font:600 16px 'Inter';color:var(--ink);cursor:pointer}
+.mnav .acc>button i{font-style:normal;transition:transform .3s;color:var(--mut)}
+.mnav .acc.open>button i{transform:rotate(45deg)}
+.mnav .pan{max-height:0;overflow:hidden;transition:max-height .35s}
+.mnav .pan a{display:block;padding:9px 14px;font-size:14px;color:var(--ink2)}
+.mnav .pan a.sub{padding-left:28px;font-size:13px;color:var(--mut)}
+.mnav>.lone{display:block;padding:16px 4px;font-weight:600;font-size:16px;border-bottom:1px solid var(--line)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(900px 500px at 85% -10%,rgba(213,32,44,.35),transparent 60%),
+ radial-gradient(700px 420px at -10% 110%,rgba(239,65,54,.18),transparent 60%)}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 60% 40%,#000 30%,transparent 75%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;padding-top:88px;padding-bottom:70px}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#ffb0ab;border:1px solid rgba(255,176,171,.35);padding:7px 14px;border-radius:100px;margin-bottom:26px}
+.kick::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:pulse 2s infinite}
+.hero h1{font-size:clamp(30px,4.6vw,56px);font-weight:600}
+.hero h1 .gl{background:linear-gradient(100deg,#f2545b,#ff8a80);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{margin:22px 0 34px;font-size:17px;color:#b4b8c2;max-width:560px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+.b1{background:var(--grad);color:#fff;padding:15px 28px;border-radius:13px;font-weight:700;font-size:15px;box-shadow:0 14px 34px -12px rgba(213,32,44,.65);transition:.25s}
+.b1:hover{transform:translateY(-3px)}
+.b2{border:1px solid rgba(255,255,255,.25);color:#fff;padding:15px 26px;border-radius:13px;font-weight:600;font-size:15px;transition:.25s;background:rgba(255,255,255,.05)}
+.b2:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.spectrum{display:flex;align-items:flex-end;gap:3px;height:64px;margin-top:52px;opacity:.85}
+.spectrum i{flex:1;background:linear-gradient(to top,#d5202c,#ef4136);border-radius:3px 3px 0 0;animation:eq 1.6s ease-in-out infinite alternate;min-width:3px}
+@keyframes eq{from{height:12%}to{height:100%}}
+.slbl{font-family:'IBM Plex Mono';font-size:10px;color:#7c8393;letter-spacing:.12em;display:flex;justify-content:space-between;margin-top:10px}
+
+/* hero card */
+.hcard{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:30px;backdrop-filter:blur(8px);position:relative}
+.hcard .hc-k{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#ffb0ab;margin-bottom:20px;display:flex;justify-content:space-between}
+.gauge{position:relative;width:210px;height:120px;margin:0 auto}
+.gauge svg{width:100%;height:auto;overflow:visible}
+.gval{position:absolute;left:0;right:0;bottom:-6px;text-align:center}
+.gval b{font-family:'Unbounded';font-size:34px;font-weight:700}
+.gval span{display:block;font-size:11px;color:#9aa0ad;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+.hstats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1);border-radius:14px;overflow:hidden;margin-top:28px}
+.hstats div{background:rgba(21,23,28,.75);padding:16px 18px}
+.hstats b{font-family:'Unbounded';font-size:21px;display:block}
+.hstats span{font-size:11.5px;color:#9aa0ad}
+.hc-cta{display:block;text-align:center;margin-top:22px;background:rgba(239,65,54,.14);border:1px solid rgba(239,65,54,.4);color:#ffb0ab;padding:13px;border-radius:12px;font-weight:700;font-size:14px;transition:.25s}
+.hc-cta:hover{background:rgba(239,65,54,.28)}
+
+/* ---------- ticker ---------- */
+.ticker{background:#fff;border-bottom:1px solid var(--line);overflow:hidden;position:relative}
+.ticker .lbl{position:absolute;left:0;top:0;bottom:0;display:flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:0 18px;font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.12em;z-index:2;font-weight:600}
+.tk{display:flex;gap:60px;white-space:nowrap;padding:13px 0;animation:mq 40s linear infinite;padding-left:150px}
+.tk span{font-size:13.5px;color:var(--ink2)}
+.tk span b{color:var(--blue);font-family:'IBM Plex Mono';font-weight:500;margin-right:8px;font-size:12px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:88px 0}
+.shead{max-width:760px;margin-bottom:52px}
+.eyebrow{font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--grad);border-radius:2px}
+.shead h2{font-size:clamp(24px,3.2vw,38px);font-weight:600}
+.shead p{color:var(--mut);margin-top:14px;font-size:15.5px}
+.srow{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.more{font-weight:700;font-size:14px;color:var(--blue);display:inline-flex;align-items:center;gap:7px;transition:gap .2s}
+.more:hover{gap:11px}
+
+/* services */
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sv{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;transition:.3s;position:relative;overflow:hidden;display:block}
+.sv::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.sv:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:transparent}
+.sv:hover::after{transform:scaleX(1)}
+.sv .ic{width:48px;height:48px;border-radius:13px;background:#fdeaea;display:grid;place-items:center;margin-bottom:18px;color:var(--blue)}
+.sv .ic svg{width:23px;height:23px}
+.sv h3{font-size:15px;font-weight:600;margin-bottom:8px}
+.sv p{font-size:13px;color:var(--mut)}
+.sv .num{position:absolute;top:20px;right:22px;font-family:'IBM Plex Mono';font-size:11px;color:#c9ccd3}
+
+/* news */
+.news{background:#fff}
+.ngrid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:22px}
+.nfeat{background:var(--hero);color:#fff;border-radius:22px;padding:36px;display:flex;flex-direction:column;justify-content:flex-end;min-height:380px;position:relative;overflow:hidden;transition:.3s}
+.nfeat::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 80% 0%,rgba(213,32,44,.5),transparent 65%)}
+.nfeat:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.nfeat *{position:relative}
+.nfeat h3{font-size:21px;font-weight:600;margin:14px 0 12px}
+.nfeat p{color:#b4b8c2;font-size:14px}
+.ncol{display:flex;flex-direction:column;gap:22px}
+.ncard{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:24px;flex:1;transition:.3s;display:flex;flex-direction:column}
+.ncard:hover{transform:translateY(-4px);box-shadow:var(--sh);background:#fff}
+.ncard h3{font-size:15px;font-weight:600;margin:12px 0 8px;line-height:1.45}
+.ncard p{font-size:13px;color:var(--mut);flex:1}
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--blue);background:#fdeaea;padding:4px 10px;border-radius:100px;align-self:flex-start}
+.nfeat .tag{background:rgba(239,65,54,.16);color:#ffb0ab}
+.ndate{font-family:'IBM Plex Mono';font-size:11px;color:var(--mut);margin-top:14px}
+.nfeat .ndate{color:#8b93a3}
+
+/* rasprava */
+.rasp{background:var(--hero);color:#fff;position:relative;overflow:hidden}
+.rasp::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 10% 0%,rgba(213,32,44,.3),transparent 60%)}
+.rasp .wrap{position:relative}
+.rasp .shead h2{color:#fff}
+.rasp .shead p{color:#b4b8c2}
+.ritem{display:grid;grid-template-columns:110px 1fr auto;gap:26px;align-items:center;padding:26px 8px;border-top:1px solid rgba(255,255,255,.12);transition:.25s}
+.ritem:last-of-type{border-bottom:1px solid rgba(255,255,255,.12)}
+.ritem:hover{background:rgba(255,255,255,.045);padding-left:18px}
+.ritem .rd{font-family:'IBM Plex Mono';font-size:12px;color:#ffb0ab}
+.ritem h3{font-size:16px;font-weight:500;font-family:'Inter';line-height:1.5}
+.ritem .st{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(47,214,111,.5);color:#5ee394;padding:5px 12px;border-radius:100px;white-space:nowrap}
+
+/* counters */
+.stats{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.st b{font-family:'Unbounded';font-size:clamp(30px,3.6vw,46px);font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
+.st span{font-size:13.5px;color:var(--mut);margin-top:8px;display:block}
+
+/* portals */
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pt{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:.3s;display:block;position:relative}
+.pt:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.pt .mono{font-size:10.5px;color:var(--mut);letter-spacing:.12em;text-transform:uppercase}
+.pt h3{font-size:16px;font-weight:600;margin:10px 0 8px}
+.pt p{font-size:13px;color:var(--mut)}
+.pt .arr{position:absolute;top:24px;right:24px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.25s;color:var(--mut)}
+.pt:hover .arr{background:var(--blue);border-color:var(--blue);color:#fff;transform:rotate(45deg)}
+
+/* IRC band */
+.irc{background:linear-gradient(100deg,#a8161f,#ef4136);color:#fff;border-radius:26px;padding:50px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.irc::before{content:"IRC";position:absolute;right:-30px;bottom:-70px;font-family:'Unbounded';font-size:230px;font-weight:700;color:rgba(255,255,255,.07);line-height:1}
+.irc h2{font-size:clamp(22px,2.8vw,32px);font-weight:600;margin-bottom:14px}
+.irc p{color:#ffd9d5;font-size:15px}
+.iyears{display:flex;flex-wrap:wrap;gap:12px;position:relative}
+.iyears a{border:1px solid rgba(255,255,255,.4);padding:12px 22px;border-radius:12px;font-family:'IBM Plex Mono';font-weight:500;font-size:14px;transition:.25s;background:rgba(255,255,255,.08)}
+.iyears a:hover{background:#fff;color:var(--blue-d);transform:translateY(-3px)}
+.iyears a.hot{background:#fff;color:var(--blue-d);font-weight:600}
+
+/* mission */
+.mis{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.mis blockquote{font-family:'Unbounded';font-size:clamp(18px,2.2vw,25px);font-weight:400;line-height:1.55;color:var(--ink)}
+.mis blockquote em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mlinks{display:flex;flex-direction:column;gap:12px}
+.mlinks a{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);padding:17px 22px;border-radius:14px;font-weight:600;font-size:14.5px;transition:.25s}
+.mlinks a:hover{border-color:var(--blue);color:var(--blue);transform:translateX(6px)}
+.mlinks a span{color:var(--mut);font-weight:400;font-size:12px;font-family:'IBM Plex Mono'}
+
+/* footer */
+footer{background:var(--hero);color:#9aa1ad;padding:70px 0 30px;position:relative;overflow:hidden}
+footer .wm{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);font-family:'Unbounded';font-size:200px;font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);white-space:nowrap;pointer-events:none;line-height:1}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:44px;position:relative}
+.fgrid h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;font-family:'IBM Plex Mono';font-weight:500}
+.fgrid a{display:block;font-size:13.5px;padding:5px 0;transition:.2s}
+.fgrid a:hover{color:#fff;padding-left:5px}
+.fbrand img{height:46px;margin-bottom:18px;background:#fff;border-radius:10px;padding:6px}
+.fbrand p{font-size:13px;max-width:300px}
+.soc{display:flex;gap:10px;margin-top:22px}
+.soc a{width:38px;height:38px;border-radius:10px;border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;transition:.25s;padding:0}
+.soc a:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-3px)}
+.soc svg{width:16px;height:16px;fill:#c8ccd6}
+.fbot{border-top:1px solid rgba(255,255,255,.1);margin-top:54px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;position:relative}
+.badge{position:fixed;bottom:18px;right:18px;z-index:500;background:rgba(21,23,28,.92);color:#d6d9e0;font-size:11px;padding:8px 14px;border-radius:100px;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);font-family:'IBM Plex Mono'}
+.badge b{color:#ffb0ab}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:1100px){
+  nav.menu,.cta{display:none}
+  .burger{display:flex}
+  .mnav{display:block}
+  .sgrid,.pgrid{grid-template-columns:repeat(2,1fr)}
+  .ngrid{grid-template-columns:1fr 1fr}
+  .nfeat{grid-column:1/-1;min-height:280px}
+  .hero .wrap{grid-template-columns:1fr;gap:44px}
+  .hcard{max-width:480px}
+}
+@media(max-width:640px){
+  .tb-l span.hide-m{display:none}
+  .sgrid,.pgrid,.ngrid{grid-template-columns:1fr}
+  .stgrid{grid-template-columns:1fr 1fr;gap:34px 10px}
+  .mis,.irc{grid-template-columns:1fr}
+  .irc{padding:34px 26px}
+  .ritem{grid-template-columns:1fr;gap:10px}
+  .fgrid{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .hero .wrap{padding-top:60px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- topbar -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l">
+      <span><span class="tb-dot"></span>Регулатор на електронски комуникации на Република Северна Македонија</span>
+      <span class="hide-m mono" style="font-size:11px">+389 2 3289 200</span>
+    </div>
+    <div class="tb-r">
+      <a href="https://e-agencija.aek.mk/" class="hide-m">Е-Агенција</a>
+      <a href="https://nettest.aek.mk/nettest" class="hide-m">nettest</a>
+      <div class="lang">
+        <a class="on" href="https://aek.mk/">МК</a><a href="https://aek.mk/sq/">SQ</a><a href="https://aek.mk/en/">EN</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- header -->
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="https://aek.mk/">
+      <img src="https://aek.mk/wp-content/uploads/2024/07/logo_aek-1.png" alt="АЕК лого" onerror="this.style.display='none'">
+      <div class="bt"><b>АЕК</b><span>Агенција за електронски комуникации</span></div>
+    </a>
+    <nav class="menu">
+      <div class="mi"><a href="https://aek.mk/%d0%b7%d0%b0-%d0%bd%d0%b0%d1%81/">За нас <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd wide">
+          <div>
+            <a href="https://aek.mk/misija/">Мисија</a>
+            <a href="https://aek.mk/direktor/">Директор</a>
+            <a href="https://aek.mk/%d0%bc%d0%b8%d1%81%d0%b8%d1%98%d0%b0/">Комисија на АЕК</a>
+            <a class="sub" href="https://aek.mk/category/zapisnici-aek/">Записници</a>
+            <a href="https://aek.mk/strucna-sluzba/">Стручна служба</a>
+            <a class="sub" href="https://aek.mk/%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%bd%d0%b8%d0%ba-%d0%b7%d0%b0-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0%d1%82%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%98%d0%b0-%d0%bd%d0%b0-%d1%80%d0%b0%d0%b1%d0%be/">Систематизација и органограм</a>
+          </div>
+          <div>
+            <a href="https://aek.mk/category/nastani/">Настани</a>
+            <a href="https://aek.mk/category/sostanoci/">Состаноци</a>
+            <a href="https://aek.mk/category/soopshtenija/">Соопштенија</a>
+            <a href="https://aek.mk/zastita-na-licni-podatoci/">Заштита на лични податоци</a>
+            <a class="sub" href="https://aek.mk/category/%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%d1%86%d0%b8%d1%98%d0%b0-%d0%b7%d0%b0-%d0%b7%d0%b0%d1%88%d1%82%d0%b8%d1%82%d0%b0-%d0%bd%d0%b0-%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d0%bf%d0%be%d0%b4/">Документација</a>
+            <a href="https://aek.mk/category/%d0%be%d0%b3%d0%bb%d0%b0%d1%81%d0%b8/">Огласи</a>
+            <a href="https://aek.mk/kontakt/">Контакт</a>
+          </div>
+        </div>
+      </div>
+      <div class="mi"><a href="#">Документи <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd wide">
+          <div>
+            <a href="https://aek.mk/category/legislativa/">Легислатива</a>
+            <a href="https://aek.mk/category/odluki-i-reshenija/">Одлуки и решенија</a>
+            <a href="https://aek.mk/category/javna-rasprava/">Јавна расправа</a>
+            <a href="https://aek.mk/category/planovi/">Планови</a>
+            <a href="https://aek.mk/category/zapisnici-aek/">Записници</a>
+            <a href="https://aek.mk/%d1%84%d0%be%d1%80%d0%bc%d1%83%d0%bb%d0%b0%d1%80%d0%b8/">Формулари</a>
+            <a href="https://aek.mk/category/univerzalna-usluga/">Универзална услуга</a>
+          </div>
+          <div>
+            <a href="https://aek.mk/%d0%b8%d0%b7%d0%b2%d0%b5%d1%88%d1%82%d0%b0%d0%b8/">Извештаи</a>
+            <a class="sub" href="https://aek.mk/category/kvartalni-izveshtai-za-analiza-na-pazar/">Квартални — анализа на пазар</a>
+            <a class="sub" href="https://aek.mk/category/godisni-izveshtai-za-analiza-na-pazar/">Годишни — анализа на пазар</a>
+            <a class="sub" href="https://aek.mk/category/godishni-izveshtai-za-rabota-na-aek/">Годишни — работа на АЕК</a>
+            <a class="sub" href="https://aek.mk/category/ispituvanje-na-javno-mislenje/">Испитување на јавно мислење</a>
+            <a class="sub" href="https://aek.mk/category/izveshtai-od-cullen-international/">Cullen International</a>
+            <a href="https://aek.mk/podatoci-za-pazarot-na-elektronski-komunikacii/">Податоци за пазарот</a>
+            <a class="sub" href="https://aek.mk/podatoci-za-pazarot-mobilna-telefonija/">Мобилна телефонија</a>
+          </div>
+        </div>
+      </div>
+      <div class="mi"><a href="https://aek.mk/rf-spektar-2/">РФ спектар <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd wide">
+          <div>
+            <a href="https://aek.mk/%d0%be%d0%b4%d0%be%d0%b1%d1%80%d0%b5%d0%bd%d0%b8%d1%98%d0%b0-%d1%80%d1%84-%d1%81%d0%bf%d0%b5%d0%ba%d1%82%d0%b0%d1%80/">Одобренија</a>
+            <a class="sub" href="https://aek.mk/postapka-za-izdavanje-odobrenija/">Постапка за издавање</a>
+            <a class="sub" href="https://aek.mk/prodolzhuvanje-na-odobrenie/">Продолжување</a>
+            <a class="sub" href="https://aek.mk/prenos-na-odobrenie-2/">Пренос</a>
+            <a class="sub" href="https://aek.mk/izmena-na-odobrenie-2/">Измена</a>
+            <a class="sub" href="https://aek.mk/otpovikuvanje-na-odobrenie/">Отповикување</a>
+            <a class="sub" href="https://aek.mk/nadomestok-za-koristenje-na-rf-2/">Надоместок за РФ</a>
+          </div>
+          <div>
+            <a href="https://aek.mk/%d1%81%d0%bf%d0%be%d0%b3%d0%be%d0%b4%d0%b1%d0%b8-%d0%b7%d0%b0-%d0%ba%d0%be%d0%be%d1%80%d0%b4%d0%b8%d0%bd%d0%b0%d1%86%d0%b8%d1%98%d0%b0/">Спогодби за координација</a>
+            <a href="https://aek.mk/%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%98%d0%b0/">Решенија</a>
+            <a class="sub" href="https://aek.mk/%d0%b8%d0%b7%d0%b4%d0%b0%d0%b4%d0%b5%d0%bd%d0%b8-%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%98%d0%b0-%d0%b7%d0%b0-%d0%bf%d1%80%d0%b5%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%ba-%d0%bd%d0%b0-%d0%b2%d0%b0%d0%b6/">Престанок и отповикување</a>
+            <a href="https://aek.mk/sektor-za-kontrola-i-monitoring-4/">Контрола и мониторинг</a>
+            <a href="https://aek.mk/%d1%80%d0%b5%d0%b3%d0%b8%d1%81%d1%82%d1%80%d0%b8-2/">Регистри</a>
+            <a href="https://aek.mk/%d1%80%d0%b0%d0%b4%d0%b8%d0%be-%d0%be%d0%bf%d1%80%d0%b5%d0%bc%d0%b0/">Радио опрема</a>
+          </div>
+        </div>
+      </div>
+      <div class="mi"><a href="https://aek.mk/telekomunikacii/">Телекомуникации <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd wide">
+          <div>
+            <a href="https://aek.mk/%d0%b1%d1%80%d0%b7%d0%b8%d0%bd%d0%b0-%d0%bd%d0%b0-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%bd%d0%b5%d1%82/">Мерење на брзина на интернет</a>
+            <a class="sub" href="https://aek.mk/%d1%83%d0%bf%d0%b0%d1%82%d1%81%d1%82%d0%b2%d0%be-%d0%b7%d0%b0-%d0%b2%d0%b5%d0%b1-%d0%b0%d0%bf%d0%bb%d0%b8%d0%ba%d0%b0%d1%86%d0%b8%d1%98%d0%b0%d1%82%d0%b0/">Упатство — веб апликација</a>
+            <a class="sub" href="https://aek.mk/%d1%83%d0%bf%d0%b0%d1%82%d1%81%d1%82%d0%b2%d0%be-%d0%b7%d0%b0-%d0%b4%d0%b5%d1%81%d0%ba%d1%82%d0%be%d0%bf-%d0%b0%d0%bf%d0%bb%d0%b8%d0%ba%d0%b0%d1%86%d0%b8%d1%98%d0%b0%d1%82%d0%b0/">Упатство — десктоп апликација</a>
+            <a href="https://aek.mk/bezbednost-i-integritet-na-mrezhi-i-uslugi/">Мрежи и услуги</a>
+            <a href="https://aek.mk/%d0%bd%d1%83%d0%bc%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d1%98%d0%b0/">Нумерација</a>
+          </div>
+          <div>
+            <a href="https://aek.mk/univerzalna-usluga/">Универзална услуга</a>
+            <a href="https://aek.mk/%d0%bf%d1%80%d0%b5%d0%bd%d0%be%d1%81%d0%bb%d0%b8%d0%b2%d0%be%d1%81%d1%82-%d0%bd%d0%b0-%d0%b1%d1%80%d0%be%d0%b5%d0%b2%d0%b8/">Преносливост на броеви</a>
+            <a href="https://aek.mk/telekomunikaciska-infrastruktura-2/">Телеком инфраструктура</a>
+            <a href="https://aek.mk/bezbednost-i-integritet-na-mrezni-uslugi/">Безбедност и интегритет</a>
+            <a href="https://aek.mk/mrezno-pokrivanje-so-sledna-generacija-pristapni-mrezi/">NGA мрежно покривање</a>
+          </div>
+        </div>
+      </div>
+      <div class="mi"><a href="https://aek.mk/%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7%d0%b0-%d0%bd%d0%b0-%d0%bf%d0%b0%d0%b7%d0%b0%d1%80/">Анализа на пазар <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd xwide">
+          <div>
+            <div class="grp">Регулација на цени</div>
+            <a href="https://aek.mk/regulacija-na-ceni/">Преглед</a>
+            <a class="sub" href="https://aek.mk/regulacija-na-maloprodazhni-ceni/">Малопродажни цени</a>
+            <a class="sub" href="https://aek.mk/category/regulacija-na-golemoprodazhni-ceni/">Големопродажни цени</a>
+            <a class="sub" href="https://aek.mk/bu-lric-%d0%b8%d0%b7%d0%bd%d0%b0%d1%98%d0%bc%d0%b5%d0%bd%d0%b8-%d0%bb%d0%b8%d0%bd%d0%b8%d0%b8/">BU LRIC изнајмени линии</a>
+            <a class="sub" href="https://aek.mk/bu-lric-%d0%b1%d0%b8%d1%82%d1%81%d1%82%d1%80%d0%b8%d0%bc-%d1%83%d1%81%d0%bb%d1%83%d0%b3%d0%b8/">BU LRIC битстрим</a>
+            <a class="sub" href="https://aek.mk/bu-lric-fiksna-mrezha/">BU LRIC фиксна мрежа</a>
+            <a class="sub" href="https://aek.mk/bu-lric-mobilna-mrezha-2/">BU LRIC мобилна мрежа</a>
+          </div>
+          <div>
+            <div class="grp">WACC и ERT</div>
+            <a href="https://aek.mk/%d1%80%d0%b5%d0%b3%d1%83%d0%bb%d0%b0%d1%86%d0%b8%d1%98%d0%b0-%d0%bd%d0%b0-%d1%86%d0%b5%d0%bd%d0%b8-%d0%b7%d0%b0-wacc-%d1%84%d0%b8%d0%ba%d1%81%d0%bd%d0%b0-%d0%bc%d1%80%d0%b5%d0%b6%d0%b0/">WACC — фиксна мрежа</a>
+            <a href="https://aek.mk/%d1%80%d0%b5%d0%b3%d1%83%d0%bb%d0%b0%d1%86%d0%b8%d1%98%d0%b0-%d0%bd%d0%b0-%d1%86%d0%b5%d0%bd%d0%b8-%d0%b7%d0%b0-wacc-%d0%bc%d0%be%d0%b1%d0%b8%d0%bb%d0%bd%d0%b0-%d0%bc%d1%80%d0%b5%d0%b6%d0%b0/">WACC — мобилна мрежа</a>
+            <a href="https://aek.mk/category/ert/">ERT</a>
+            <div class="grp">Анализи</div>
+            <a href="https://aek.mk/pregled-na-analizi/">Преглед на анализи</a>
+            <a class="sub" href="https://aek.mk/category/maloprodazhba/">Малопродажба</a>
+            <a class="sub" href="https://aek.mk/category/golemoprodazhba/">Големопродажба</a>
+          </div>
+          <div>
+            <div class="grp">Пазар</div>
+            <a href="https://aek.mk/relevantni-pazari/">Релевантни пазари</a>
+            <a href="https://aek.mk/proekt-madrid/">Проект МАДРИД</a>
+            <a href="https://aek.mk/formulari-analiza-na-pazar/">Формулари</a>
+            <a href="https://aek.mk/%d0%bf%d0%be%d0%b4%d0%b0%d1%82%d0%be%d1%86%d0%b8-%d0%b7%d0%b0-%d0%bf%d0%b0%d0%b7%d0%b0%d1%80/">Податоци за пазар</a>
+            <a href="https://aek.mk/category/%d1%80%d0%be%d0%b0%d0%bc%d0%b8%d0%bd%d0%b3-%d0%b7%d0%b0%d0%bf%d0%b0%d0%b4%d0%b5%d0%bd-%d0%b1%d0%b0%d0%bb%d0%ba%d0%b0%d0%bd/">Роаминг — Западен Балкан</a>
+            <a class="sub" href="https://aek.mk/prashanja-odgovori-roaming-wb/">Прашања и одговори</a>
+          </div>
+        </div>
+      </div>
+      <div class="mi"><a href="https://aek.mk/zashtita-na-pravata-na-krajnite-korisnici/">Корисници <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd">
+          <a href="https://aek.mk/zashtita-na-pravata-na-krajnite-korisnici/">Грижа за корисници</a>
+          <a href="https://aek.mk/grizha-za-korisnici-2/">Формулари</a>
+          <a href="https://aek.mk/%d0%bf%d1%80%d0%b0%d1%88%d0%b0%d1%9a%d0%b0-%d0%b8-%d0%be%d0%b4%d0%b3%d0%be%d0%b2%d0%be%d1%80%d0%b8/">Прашања и одговори</a>
+          <a href="https://aek.mk/%d0%ba%d0%be%d1%80%d0%b8%d1%81%d0%bd%d0%b8-%d0%bb%d0%b8%d0%bd%d0%ba%d0%be%d0%b2%d0%b8/">Корисни линкови</a>
+        </div>
+      </div>
+      <div class="mi"><a href="https://aek.mk/%d1%98%d0%b0%d0%b2%d0%bd%d0%b8-%d0%bd%d0%b0%d0%b1%d0%b0%d0%b2%d0%ba%d0%b8/">Набавки <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd">
+          <a href="https://aek.mk/%d0%bf%d0%bb%d0%b0%d0%bd%d0%b8%d1%80%d0%b0%d0%bd%d0%b8-%d0%bd%d0%b0%d0%b1%d0%b0%d0%b2%d0%ba%d0%b8/">Планирани набавки</a>
+          <a href="https://aek.mk/oglasi/">Објавени огласи</a>
+          <a href="https://aek.mk/%d1%81%d0%ba%d0%bb%d1%83%d1%87%d0%b5%d0%bd%d0%b8-%d0%b4%d0%be%d0%b3%d0%be%d0%b2%d0%be%d1%80%d0%b8/">Склучени договори</a>
+          <a href="https://aek.mk/%d1%80%d0%b5%d0%b0%d0%bb%d0%b8%d0%b7%d0%b8%d1%80%d0%b0%d0%bd%d0%b8-%d0%b4%d0%be%d0%b3%d0%be%d0%b2%d0%be%d1%80%d0%b8/">Реализирани договори</a>
+        </div>
+      </div>
+    </nav>
+    <a class="cta" href="https://nettest.aek.mk/nettest">Измери брзина</a>
+    <button class="burger" aria-label="Мени" onclick="document.body.classList.toggle('mo')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- mobile nav -->
+<div class="mnav">
+  <div class="acc"><button>За нас <i>+</i></button><div class="pan">
+    <a href="https://aek.mk/misija/">Мисија</a><a href="https://aek.mk/direktor/">Директор</a><a href="https://aek.mk/%d0%bc%d0%b8%d1%81%d0%b8%d1%98%d0%b0/">Комисија на АЕК</a><a class="sub" href="https://aek.mk/category/zapisnici-aek/">Записници</a><a href="https://aek.mk/strucna-sluzba/">Стручна служба</a><a href="https://aek.mk/category/nastani/">Настани</a><a href="https://aek.mk/category/sostanoci/">Состаноци</a><a href="https://aek.mk/category/soopshtenija/">Соопштенија</a><a href="https://aek.mk/zastita-na-licni-podatoci/">Заштита на лични податоци</a><a href="https://aek.mk/category/%d0%be%d0%b3%d0%bb%d0%b0%d1%81%d0%b8/">Огласи</a><a href="https://aek.mk/kontakt/">Контакт</a>
+  </div></div>
+  <div class="acc"><button>Документи <i>+</i></button><div class="pan">
+    <a href="https://aek.mk/category/legislativa/">Легислатива</a><a href="https://aek.mk/category/odluki-i-reshenija/">Одлуки и решенија</a><a href="https://aek.mk/category/javna-rasprava/">Јавна расправа</a><a href="https://aek.mk/category/planovi/">Планови</a><a href="https://aek.mk/%d0%b8%d0%b7%d0%b2%d0%b5%d1%88%d1%82%d0%b0%d0%b8/">Извештаи</a><a href="https://aek.mk/%d1%84%d0%be%d1%80%d0%bc%d1%83%d0%bb%d0%b0%d1%80%d0%b8/">Формулари</a><a href="https://aek.mk/podatoci-za-pazarot-na-elektronski-komunikacii/">Податоци за пазарот</a><a href="https://aek.mk/category/univerzalna-usluga/">Универзална услуга</a>
+  </div></div>
+  <div class="acc"><button>РФ спектар <i>+</i></button><div class="pan">
+    <a href="https://aek.mk/%d0%be%d0%b4%d0%be%d0%b1%d1%80%d0%b5%d0%bd%d0%b8%d1%98%d0%b0-%d1%80%d1%84-%d1%81%d0%bf%d0%b5%d0%ba%d1%82%d0%b0%d1%80/">Одобренија</a><a href="https://aek.mk/%d1%81%d0%bf%d0%be%d0%b3%d0%be%d0%b4%d0%b1%d0%b8-%d0%b7%d0%b0-%d0%ba%d0%be%d0%be%d1%80%d0%b4%d0%b8%d0%bd%d0%b0%d1%86%d0%b8%d1%98%d0%b0/">Спогодби за координација</a><a href="https://aek.mk/%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%98%d0%b0/">Решенија</a><a href="https://aek.mk/sektor-za-kontrola-i-monitoring-4/">Контрола и мониторинг</a><a href="https://aek.mk/%d1%80%d0%b5%d0%b3%d0%b8%d1%81%d1%82%d1%80%d0%b8-2/">Регистри</a><a href="https://aek.mk/%d1%80%d0%b0%d0%b4%d0%b8%d0%be-%d0%be%d0%bf%d1%80%d0%b5%d0%bc%d0%b0/">Радио опрема</a>
+  </div></div>
+  <div class="acc"><button>Телекомуникации <i>+</i></button><div class="pan">
+    <a href="https://aek.mk/%d0%b1%d1%80%d0%b7%d0%b8%d0%bd%d0%b0-%d0%bd%d0%b0-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%bd%d0%b5%d1%82/">Мерење на брзина</a><a href="https://aek.mk/bezbednost-i-integritet-na-mrezhi-i-uslugi/">Мрежи и услуги</a><a href="https://aek.mk/%d0%bd%d1%83%d0%bc%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d1%98%d0%b0/">Нумерација</a><a href="https://aek.mk/univerzalna-usluga/">Универзална услуга</a><a href="https://aek.mk/%d0%bf%d1%80%d0%b5%d0%bd%d0%be%d1%81%d0%bb%d0%b8%d0%b2%d0%be%d1%81%d1%82-%d0%bd%d0%b0-%d0%b1%d1%80%d0%be%d0%b5%d0%b2%d0%b8/">Преносливост на броеви</a><a href="https://aek.mk/telekomunikaciska-infrastruktura-2/">Инфраструктура</a><a href="https://aek.mk/mrezno-pokrivanje-so-sledna-generacija-pristapni-mrezi/">NGA покривање</a>
+  </div></div>
+  <div class="acc"><button>Анализа на пазар <i>+</i></button><div class="pan">
+    <a href="https://aek.mk/regulacija-na-ceni/">Регулација на цени</a><a href="https://aek.mk/pregled-na-analizi/">Преглед на анализи</a><a href="https://aek.mk/relevantni-pazari/">Релевантни пазари</a><a href="https://aek.mk/proekt-madrid/">Проект МАДРИД</a><a href="https://aek.mk/formulari-analiza-na-pazar/">Формулари</a><a href="https://aek.mk/%d0%bf%d0%be%d0%b4%d0%b0%d1%82%d0%be%d1%86%d0%b8-%d0%b7%d0%b0-%d0%bf%d0%b0%d0%b7%d0%b0%d1%80/">Податоци за пазар</a><a href="https://aek.mk/category/%d1%80%d0%be%d0%b0%d0%bc%d0%b8%d0%bd%d0%b3-%d0%b7%d0%b0%d0%bf%d0%b0%d0%b4%d0%b5%d0%bd-%d0%b1%d0%b0%d0%bb%d0%ba%d0%b0%d0%bd/">Роаминг — Западен Балкан</a>
+  </div></div>
+  <div class="acc"><button>Грижа за корисници <i>+</i></button><div class="pan">
+    <a href="https://aek.mk/grizha-za-korisnici-2/">Формулари</a><a href="https://aek.mk/%d0%bf%d1%80%d0%b0%d1%88%d0%b0%d1%9a%d0%b0-%d0%b8-%d0%be%d0%b4%d0%b3%d0%be%d0%b2%d0%be%d1%80%d0%b8/">Прашања и одговори</a><a href="https://aek.mk/%d0%ba%d0%be%d1%80%d0%b8%d1%81%d0%bd%d0%b8-%d0%bb%d0%b8%d0%bd%d0%ba%d0%be%d0%b2%d0%b8/">Корисни линкови</a>
+  </div></div>
+  <div class="acc"><button>Јавни набавки <i>+</i></button><div class="pan">
+    <a href="https://aek.mk/%d0%bf%d0%bb%d0%b0%d0%bd%d0%b8%d1%80%d0%b0%d0%bd%d0%b8-%d0%bd%d0%b0%d0%b1%d0%b0%d0%b2%d0%ba%d0%b8/">Планирани набавки</a><a href="https://aek.mk/oglasi/">Објавени огласи</a><a href="https://aek.mk/%d1%81%d0%ba%d0%bb%d1%83%d1%87%d0%b5%d0%bd%d0%b8-%d0%b4%d0%be%d0%b3%d0%be%d0%b2%d0%be%d1%80%d0%b8/">Склучени договори</a><a href="https://aek.mk/%d1%80%d0%b5%d0%b0%d0%bb%d0%b8%d0%b7%d0%b8%d1%80%d0%b0%d0%bd%d0%b8-%d0%b4%d0%be%d0%b3%d0%be%d0%b2%d0%be%d1%80%d0%b8/">Реализирани договори</a>
+  </div></div>
+  <a class="lone" href="https://nettest.aek.mk/nettest" style="color:var(--blue)">→ Измери брзина на интернет</a>
+  <a class="lone" href="https://aek.mk/kontakt/">Контакт</a>
+</div>
+
+<!-- hero -->
+<div class="hero">
+  <div class="hgrid"></div>
+  <div class="wrap">
+    <div>
+      <div class="kick">Независен регулатор · Основана 2005</div>
+      <h1>Отворен и конкурентен пазар на <span class="gl">електронски комуникации</span></h1>
+      <p class="sub">АЕК создава услови за ефективна и одржлива конкуренција, управува со радиофреквенцискиот спектар и ги штити правата на корисниците во Република Северна Македонија.</p>
+      <div class="hbtns">
+        <a class="b1" href="https://nettest.aek.mk/nettest">Измери ја твојата брзина</a>
+        <a class="b2" href="https://aek.mk/zashtita-na-pravata-na-krajnite-korisnici/">Поднеси приговор</a>
+      </div>
+      <div class="spectrum" id="spec" aria-hidden="true"></div>
+      <div class="slbl"><span>87.5 MHz</span><span>800 MHz</span><span>1800 MHz</span><span>2600 MHz</span><span>3.6 GHz</span><span>26 GHz</span></div>
+    </div>
+    <div class="hcard rv">
+      <div class="hc-k"><span>АЕК nettest</span><span>LIVE</span></div>
+      <div class="gauge">
+        <svg viewBox="0 0 210 120">
+          <path d="M15 110 A 90 90 0 0 1 195 110" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="14" stroke-linecap="round"/>
+          <path id="garc" d="M15 110 A 90 90 0 0 1 195 110" fill="none" stroke="url(#gg)" stroke-width="14" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"/>
+          <defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d5202c"/><stop offset="1" stop-color="#ff8a80"/></linearGradient></defs>
+        </svg>
+        <div class="gval"><b><span data-cnt="94" data-dec="1">0</span></b><span>Mbps — преземање</span></div>
+      </div>
+      <div class="hstats">
+        <div><b><span data-cnt="3">0</span></b><span>јазици — МК / SQ / EN</span></div>
+        <div><b><span data-cnt="7">0</span></b><span>области на регулација</span></div>
+        <div><b>ISO</b><span>9001:2015 сертифицирана</span></div>
+        <div><b>24/7</b><span>мониторинг на спектар</span></div>
+      </div>
+      <a class="hc-cta" href="https://nettest.aek.mk/nettest">Отвори nettest.aek.mk →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ticker -->
+<div class="ticker">
+  <div class="lbl">АКТУЕЛНО</div>
+  <div class="tk" id="tk">
+    <span><b>13.07.2026</b>Состанок по јавна расправа — Правилник за општите услови за пристап и користење</span>
+    <span><b>09.07.2026</b>Делегација на АЕК на WSIS 2026</span>
+    <span><b>07.07.2026</b>Директорот на АЕК на AI for Good Global Summit во Женева</span>
+    <span><b>06.07.2026</b>Одлука за максимални цени на услугите во роаминг</span>
+    <span><b>26.06.2026</b>Предлог листа на критични компоненти на електронските комуникации</span>
+  </div>
+</div>
+
+<!-- services -->
+<section id="uslugi">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Услуги од АЕК</div>
+      <h2>Сè што ви треба, на едно место</h2>
+      <p>Најбарaните услуги за граѓани и оператори — дигитални, брзи и транспарентни.</p>
+    </div>
+    <div class="sgrid">
+      <a class="sv rv" href="https://aek.mk/%d0%b1%d1%80%d0%b7%d0%b8%d0%bd%d0%b0-%d0%bd%d0%b0-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%bd%d0%b5%d1%82/">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0-2 5-8M5 13a8 8 0 0 1 14-1M2 10a12 12 0 0 1 20-1"/></svg></div>
+        <h3>Мерење на брзина</h3><p>Проверете ја реалната брзина на вашиот интернет со АЕК nettest.</p>
+      </a>
+      <a class="sv rv" href="https://aek.mk/%d0%bf%d1%80%d0%b5%d0%bd%d0%be%d1%81%d0%bb%d0%b8%d0%b2%d0%be%d1%81%d1%82-%d0%bd%d0%b0-%d0%b1%d1%80%d0%be%d0%b5%d0%b2%d0%b8/">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 2h10v20H7zM11 18h2"/><path d="M3 8l-1 4 3 1M21 16l1-4-3-1"/></svg></div>
+        <h3>Преносливост на број</h3><p>Сменете оператор, задржете го вашиот телефонски број.</p>
+      </a>
+      <a class="sv rv" href="https://aek.mk/zashtita-na-pravata-na-krajnite-korisnici/">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-3 8-10V5l-8-3-8 3v7c0 7 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Грижа за корисници</h3><p>Приговори, права на крајни корисници, прашања и одговори.</p>
+      </a>
+      <a class="sv rv" href="https://aek.mk/%d0%be%d0%b4%d0%be%d0%b1%d1%80%d0%b5%d0%bd%d0%b8%d1%98%d0%b0-%d1%80%d1%84-%d1%81%d0%bf%d0%b5%d0%ba%d1%82%d0%b0%d1%80/">
+        <span class="num">04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 12m-2 0a2 2 0 1 0 4 0 2 2 0 1 0-4 0M12 14v8M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4"/></svg></div>
+        <h3>РФ одобренија</h3><p>Издавање, пренос, измена и продолжување на одобренија за спектар.</p>
+      </a>
+      <a class="sv rv" href="https://aek.mk/%d1%84%d0%be%d1%80%d0%bc%d1%83%d0%bb%d0%b0%d1%80%d0%b8/">
+        <span class="num">05</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
+        <h3>Формулари и регистри</h3><p>Преглед на внесени формулари и јавни регистри на АЕК.</p>
+      </a>
+      <a class="sv rv" href="https://aek.mk/regulacija-na-ceni/">
+        <span class="num">06</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+        <h3>Регулација на цени</h3><p>Малопродажни и големопродажни цени, BU LRIC и WACC модели.</p>
+      </a>
+      <a class="sv rv" href="https://aek.mk/category/%d1%80%d0%be%d0%b0%d0%bc%d0%b8%d0%bd%d0%b3-%d0%b7%d0%b0%d0%bf%d0%b0%d0%b4%d0%b5%d0%bd-%d0%b1%d0%b0%d0%bb%d0%ba%d0%b0%d0%bd/">
+        <span class="num">07</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg></div>
+        <h3>Роаминг — Западен Балкан</h3><p>Комуницирајте во регионот без дополнителни трошоци.</p>
+      </a>
+      <a class="sv rv" href="https://aek.mk/%d1%98%d0%b0%d0%b2%d0%bd%d0%b8-%d0%bd%d0%b0%d0%b1%d0%b0%d0%b2%d0%ba%d0%b8/">
+        <span class="num">08</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h3>Јавни набавки</h3><p>Планирани набавки, огласи, склучени и реализирани договори.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- news -->
+<section class="news" id="novosti">
+  <div class="wrap">
+    <div class="srow shead rv" style="max-width:none">
+      <div>
+        <div class="eyebrow">Новости</div>
+        <h2>Последни активности</h2>
+      </div>
+      <a class="more" href="https://aek.mk/site-novosti/">Сите новости →</a>
+    </div>
+    <div class="ngrid">
+      <a class="nfeat rv" href="https://aek.mk/%d0%b4%d0%b5%d0%bb%d0%b5%d0%b3%d0%b0%d1%86%d0%b8%d1%98%d0%b0-%d0%bd%d0%b0-%d0%b0%d0%b5%d0%ba-%d0%bd%d0%b0-wsis-2026/">
+        <span class="tag">Настани</span>
+        <h3>Делегација на АЕК на WSIS 2026</h3>
+        <p>Делегација предводена од Проф. д-р Орце Симов, претседател на Комисијата на АЕК, Д-р Адмирим Алити, член на Комисијата, и директорот на Агенцијата.</p>
+        <div class="ndate">09.07.2026 · Женева</div>
+      </a>
+      <div class="ncol">
+        <a class="ncard rv" href="https://aek.mk/sostanok-po-javna-rasprava-po-predlog-5-2/">
+          <span class="tag">Состаноци</span>
+          <h3>Состанок по јавна расправа — Правилник за општите услови за пристап и користење на јавните комуникациски услуги</h3>
+          <div class="ndate">13.07.2026</div>
+        </a>
+        <a class="ncard rv" href="https://aek.mk/%d0%bf%d0%be%d1%81%d0%b5%d1%82%d0%b0-%d0%bd%d0%b0-%d0%b4%d0%b8%d1%80%d0%b5%d0%ba%d1%82%d0%be%d1%80%d0%be%d1%82-%d0%bd%d0%b0-%d0%b0%d0%b5%d0%ba-%d0%b2%d0%be-%d0%b6%d0%b5%d0%bd%d0%b5%d0%b2%d0%b0-%d0%bd/">
+          <span class="tag">Настани</span>
+          <h3>Директорот на АЕК на AI for Good Global Summit и WSIS+20 во Женева</h3>
+          <div class="ndate">07.07.2026</div>
+        </a>
+      </div>
+      <div class="ncol">
+        <a class="ncard rv" href="https://aek.mk/%d0%b8%d0%bd%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%86%d0%b8%d0%b8-%d0%b7%d0%b0-%d1%81%d0%be%d1%81%d1%82%d0%be%d1%98%d0%b1%d0%b0%d1%82%d0%b0-%d0%bd%d0%b0-%d0%bf%d0%b0%d0%b7%d0%b0%d1%80%d0%be%d1%82-%d0%b7-26/">
+          <span class="tag">Извештаи</span>
+          <h3>Состојба на пазарот — мобилна и фиксна телефонија, Q1 2026</h3>
+          <div class="ndate">07.07.2026</div>
+        </a>
+        <a class="ncard rv" href="https://aek.mk/%d0%be%d0%b4%d0%bb%d1%83%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%83%d1%82%d0%b2%d1%80%d0%b4%d1%83%d0%b2%d0%b0%d1%9a%d0%b5-%d0%bd%d0%b0-%d0%bc%d0%b0%d0%ba%d1%81%d0%b8%d0%bc%d0%b0%d0%bb%d0%bd%d0%b8%d1%82%d0%b5/">
+          <span class="tag">Одлуки</span>
+          <h3>Одлука за максимални цени на услугите во роаминг во јавни мобилни мрежи</h3>
+          <div class="ndate">06.07.2026</div>
+        </a>
+        <a class="ncard rv" href="https://aek.mk/odrzan-nastan-na-tema-sajber-bezbedn/">
+          <span class="tag">MKD-CIRT</span>
+          <h3>Сајбер безбедност и MKD-CIRT — заштита на критичната инфраструктура</h3>
+          <div class="ndate">12.03.2026</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- stats -->
+<section class="stats">
+  <div class="wrap stgrid">
+    <div class="st rv"><b><span data-cnt="20">0</span>+</b><span>години регулација на пазарот</span></div>
+    <div class="st rv"><b><span data-cnt="3">0</span></b><span>национални портали за граѓани</span></div>
+    <div class="st rv"><b><span data-cnt="6">0</span></b><span>земји во роаминг зоната Западен Балкан</span></div>
+    <div class="st rv"><b><span data-cnt="5">0</span></b><span>меѓународни регулаторни конференции</span></div>
+  </div>
+</section>
+
+<!-- rasprava -->
+<section class="rasp" id="rasprava">
+  <div class="wrap">
+    <div class="srow shead rv" style="max-width:none">
+      <div>
+        <div class="eyebrow" style="color:#ffb0ab">Јавна расправа</div>
+        <h2>Отворени консултации</h2>
+        <p>Вашиот глас ја обликува регулативата. Учествувајте во отворените јавни расправи.</p>
+      </div>
+      <a class="more" style="color:#ffb0ab" href="https://aek.mk/category/javna-rasprava/">Сите расправи →</a>
+    </div>
+    <a class="ritem rv" href="https://aek.mk/%d1%98%d0%b0%d0%b2%d0%bd%d0%b0-%d1%80%d0%b0%d1%81%d0%bf%d1%80%d0%b0%d0%b2%d0%b0-%d0%bf%d0%be-%d0%bf%d1%80%d0%b5%d0%b4%d0%bb%d0%be%d0%b3-%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%bd%d0%b8%d0%ba-%d0%b7-7/">
+      <span class="rd">06.07.2026</span>
+      <h3>Предлог Правилник за содржината и формата на нотификацијата, потребната документација и потврдата за регистрација</h3>
+      <span class="st">Отворена</span>
+    </a>
+    <a class="ritem rv" href="https://aek.mk/javna-rasprava-po-predlog-pravilnik-3/">
+      <span class="rd">03.07.2026</span>
+      <h3>Предлог Правилник за параметрите за квалитет на јавните електронски комуникациски услуги преку јавна радиокомуникациска мрежа</h3>
+      <span class="st">Отворена</span>
+    </a>
+    <a class="ritem rv" href="https://aek.mk/predlog-pravilnik-za-nacinot-na-sprov/">
+      <span class="rd">03.07.2026</span>
+      <h3>Предлог Правилник за начинот на спроведување на посредувањето во Агенцијата за електронски комуникации</h3>
+      <span class="st">Отворена</span>
+    </a>
+    <a class="ritem rv" href="https://aek.mk/%d0%bf%d1%80%d0%b5%d0%b4%d0%bb%d0%be%d0%b3-%d0%bb%d0%b8%d1%81%d1%82%d0%b0-%d0%bd%d0%b0-%d0%ba%d1%80%d0%b8%d1%82%d0%b8%d1%87%d0%bd%d0%b8-%d0%ba%d0%be%d0%bc%d0%bf%d0%be%d0%bd%d0%b5%d0%bd%d1%82%d0%b8/">
+      <span class="rd">26.06.2026</span>
+      <h3>Предлог листа на критични компоненти и чувствителни делови на електронските комуникации</h3>
+      <span class="st">Отворена</span>
+    </a>
+  </div>
+</section>
+
+<!-- mission -->
+<section id="misija">
+  <div class="wrap mis">
+    <div class="rv">
+      <div class="eyebrow">Мисија</div>
+      <blockquote>„Поволни услови за <em>ефективна и одржлива конкуренција</em> — во служба на корисниците, стопанството и индустријата за комуникации, преку транспарентна и проактивна примена на регулаторните алатки."</blockquote>
+    </div>
+    <div class="mlinks rv">
+      <a href="https://aek.mk/misija/">Мисија на АЕК <span>ЗА НАС</span></a>
+      <a href="https://aek.mk/direktor/">Директор <span>РАКОВОДСТВО</span></a>
+      <a href="https://aek.mk/%d0%bc%d0%b8%d1%81%d0%b8%d1%98%d0%b0/">Комисија на АЕК <span>ОРГАН</span></a>
+      <a href="https://aek.mk/strucna-sluzba/">Стручна служба <span>ОРГАНИЗАЦИЈА</span></a>
+      <a href="https://aek.mk/category/soopshtenija/">Соопштенија <span>ЈАВНОСТ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- IRC -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="irc rv">
+      <div>
+        <div class="eyebrow" style="color:#ffd9d5">Меѓународна соработка</div>
+        <h2>International Regulatory Conference</h2>
+        <p>Регулатори, оператори и експерти од целиот регион — секоја година, во организација на АЕК со поддршка на ITU.</p>
+      </div>
+      <div class="iyears">
+        <a class="hot" href="https://aek.mk/international-regulatory-conference-2026-%d0%bc%d0%b5%d1%93%d1%83%d0%bd%d0%b0%d1%80%d0%be%d0%b4%d0%bd%d0%b0-%d1%80%d0%b5%d0%b3%d1%83%d0%bb%d0%b0%d1%82%d0%be%d1%80%d0%bd%d0%b0-%d0%ba%d0%be%d0%bd/">IRC 2026</a>
+        <a href="https://aek.mk/international-regulatory-conference-2025/">2025</a>
+        <a href="https://aek.mk/international-regulatory-conference-2024/">2024</a>
+        <a href="https://aek.mk/international-regulatory-conference-2023-%d0%bc%d0%b5%d1%93%d1%83%d0%bd%d0%b0%d1%80%d0%be%d0%b4%d0%bd%d0%b0-%d1%80%d0%b5%d0%b3%d1%83%d0%bb%d0%b0%d1%82%d0%be%d1%80%d0%bd%d0%b0-%d0%ba%d0%be%d0%bd/">2023</a>
+        <a href="https://aek.mk/irc2022/">2022</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- portals -->
+<section style="padding-top:0" id="portali">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Портали на АЕК</div>
+      <h2>Дигитални сервиси</h2>
+    </div>
+    <div class="pgrid">
+      <a class="pt rv" href="https://komuniciraj.mk/">
+        <span class="arr">↗</span>
+        <span class="mono">komuniciraj.mk</span>
+        <h3>Комуницирај.мк</h3>
+        <p>Споредба на тарифи, квалитет на услуга и одобрени претплатнички договори.</p>
+      </a>
+      <a class="pt rv" href="https://e-agencija.aek.mk/">
+        <span class="arr">↗</span>
+        <span class="mono">e-agencija.aek.mk</span>
+        <h3>Е-Агенција</h3>
+        <p>Електронски услуги на АЕК за оператори и граѓани, достапни 24/7.</p>
+      </a>
+      <a class="pt rv" href="http://tto.aek.mk/">
+        <span class="arr">↗</span>
+        <span class="mono">tto.aek.mk</span>
+        <h3>Регистар ТТО</h3>
+        <p>Регистар за телекомуникациска терминална опрема.</p>
+      </a>
+      <a class="pt rv" href="http://fm.aek.mk">
+        <span class="arr">↗</span>
+        <span class="mono">fm.aek.mk</span>
+        <h3>Прекини во фиксна мрежа</h3>
+        <p>Регистар за пријавени прекини во фиксната мрежа.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wm">AEK</div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <img src="https://aek.mk/wp-content/uploads/2024/07/logo_aek-1.png" alt="АЕК" onerror="this.style.display='none'">
+        <p>Агенција за електронски комуникации — независен регулатор на пазарот на електронски комуникации на Република Северна Македонија.</p>
+        <div class="soc">
+          <a href="https://www.facebook.com/aecmk" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.2-1.5 1.5-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.3H7.5V13h2.8v8h3.2Z"/></svg></a>
+          <a href="http://www.youtube.com/user/aecmkd/videos" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15.2V8.8L15.6 12 10 15.2Z"/></svg></a>
+          <a href="https://twitter.com/aecmk" aria-label="Twitter/X"><svg viewBox="0 0 24 24"><path d="M17.8 3h3l-6.6 7.6L22 21h-6.1l-4.8-6.3L5.6 21h-3l7.1-8.1L2 3h6.3l4.3 5.7L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Важни врски</h4>
+        <a href="https://aek.mk/wp-content/uploads/2021/11/20211118-Q1114_AEK_ISO-9001_web-cert.pdf">ISO 9001:2015 сертификација</a>
+        <a href="https://aek.mk/anketen-prashalnik-za-qms/">Анкета за QMS ISO 9001</a>
+        <a href="https://aek.mk/wp-content/uploads/2021/10/20211014-Politika-za-kvalitet.pdf">Политика за квалитет</a>
+        <a href="https://aek.mk/wp-content/uploads/2025/07/20250721-Politika-za-zastita-na-zivotna-sredina.pdf">Политика за животна средина</a>
+        <a href="https://aek.mk/wp-content/uploads/2025/07/20250721-Politika-za-bezbednost.pdf">Здравје и безбедност при работа</a>
+        <a href="https://aek.mk/zastita-na-licni-podatoci/">Заштита на лични податоци</a>
+      </div>
+      <div>
+        <h4>Институции и портали</h4>
+        <a href="http://www.mioa.gov.mk/">Министерство за информатичко општество</a>
+        <a href="https://azlp.mk/">Агенција за заштита на лични податоци</a>
+        <a href="https://komuniciraj.mk">Комуницирај.мк</a>
+        <a href="https://e-agencija.aek.mk/">Е-Агенција</a>
+        <a href="https://nettest.aek.mk/nettest">АЕК nettest</a>
+        <a href="https://komuniciraj.mk/izmereni-parametri-za-kvalitet-2020/">Извештаи за QoS</a>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <a href="https://maps.app.goo.gl/mSgyo46NHvKXMVAZ6">Ул. Димитар Влахов бр. 21<br>1000 Скопје</a>
+        <a href="tel:+38923289200">+389 2 3289 200</a>
+        <a href="tel:+38923289203">+389 2 3289 203</a>
+        <a href="https://aek.mk/kontakt/">Факс: +389 2 3224 611</a>
+        <a href="https://aek.mk/kontakt/" style="color:#ffb0ab;font-weight:600">Контакт формулар →</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Агенција за електронски комуникации. Сите права се задржани.</span>
+      <span>Пристапност · МК / SQ / EN</span>
+    </div>
+  </div>
+</footer>
+
+<div class="badge">Design concept by <b>JBA Ventures</b></div>
+
+<script>
+// progress
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  document.getElementById('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  document.getElementById('hd').classList.toggle('sc',h.scrollTop>10);
+},{passive:true});
+
+// spectrum bars
+const spec=document.getElementById('spec');
+for(let i=0;i<64;i++){
+  const b=document.createElement('i');
+  b.style.animationDuration=(0.9+Math.random()*1.4)+'s';
+  b.style.animationDelay=(-Math.random()*2)+'s';
+  b.style.opacity=.35+Math.random()*.65;
+  spec.appendChild(b);
+}
+
+// ticker duplicate
+const tk=document.getElementById('tk');
+tk.innerHTML+=tk.innerHTML;
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,end=parseFloat(el.dataset.cnt),dec=+(el.dataset.dec||0),t0=performance.now();
+  const step=t=>{const p=Math.min((t-t0)/1600,1),v=end*(1-Math.pow(1-p,3));
+    el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+}),{threshold:.5});
+document.querySelectorAll('[data-cnt]').forEach(el=>cio.observe(el));
+
+// gauge arc
+const garc=document.getElementById('garc');
+const gio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){garc.style.transition='stroke-dashoffset 1.8s cubic-bezier(.3,.8,.3,1)';garc.style.strokeDashoffset='45';gio.unobserve(e.target)}
+}),{threshold:.4});
+gio.observe(garc);
+
+// mobile accordions
+document.querySelectorAll('.mnav .acc>button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const acc=btn.parentElement,pan=acc.querySelector('.pan'),open=acc.classList.toggle('open');
+    pan.style.maxHeight=open?pan.scrollHeight+'px':'0';
+  });
+});
+</script>
+</body>
+</html>
