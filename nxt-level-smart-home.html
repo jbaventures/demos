@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>NXT Level Smart Home | Home Automation, Theater & Security — Houston, TX — Design Concept</title>
+<meta name="description" content="Home automation, security and surveillance, home theater, networking and smart lighting — designed and installed in Houston, Texas since 2018.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1117; --ink2:#39414d; --mut:#6b7480;
+  --vio:#7c5cff; --cy:#37e0ff;
+  --grad:linear-gradient(100deg,#7c5cff,#37e0ff);
+  --bg:#f4f5f9; --line:#e1e4ec; --dark:#0b0e16;
+  --r:18px; --sh:0 22px 55px -24px rgba(13,17,23,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Outfit',sans-serif;line-height:1.12;letter-spacing:-.02em;font-weight:700}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+::selection{background:var(--vio);color:#fff}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:400}
+
+.topbar{background:var(--dark);color:#8d97ab;font-size:12.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:16px}
+.topbar a:hover{color:#fff}
+.tb-l{display:flex;gap:18px;white-space:nowrap;overflow:hidden}
+.tb-l b{color:#a48bff}
+.tb-r a b{color:#fff}
+
+header{position:sticky;top:0;z-index:300;background:rgba(244,245,249,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.sc{box-shadow:0 8px 30px -14px rgba(13,17,23,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:18px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{height:42px;width:auto}
+.brand b{font-family:'Outfit';font-size:18px;display:none}
+.brand img[data-f]+b{display:block}
+nav.menu{display:flex;gap:2px;align-items:center}
+.mi{position:relative}
+.mi>a{display:flex;align-items:center;gap:5px;padding:10px 13px;font-size:13.5px;font-weight:600;color:var(--ink2);border-radius:10px;transition:.2s}
+.mi>a:hover{color:var(--vio);background:#ece8ff}
+.mi>a svg{width:9px;height:9px;opacity:.5}
+.dd{position:absolute;top:100%;left:50%;transform:translate(-50%,10px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh);padding:16px;opacity:0;visibility:hidden;transition:.25s;min-width:270px;z-index:310}
+.mi:hover .dd{opacity:1;visibility:visible;transform:translate(-50%,4px)}
+.dd a{display:block;padding:7px 12px;font-size:13px;color:var(--ink2);border-radius:8px;font-weight:500;transition:.15s}
+.dd a:hover{background:#ece8ff;color:var(--vio);padding-left:16px}
+.cta{background:var(--grad);color:#fff;padding:12px 20px;border-radius:12px;font-size:13.5px;font-weight:700;box-shadow:0 10px 24px -10px rgba(124,92,255,.5);transition:.25s;white-space:nowrap}
+.cta:hover{transform:translateY(-2px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:360}
+.burger span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.3s}
+body.mo .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.mo .burger span:nth-child(2){opacity:0}
+body.mo .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;background:#fff;z-index:340;padding:100px 26px 40px;overflow-y:auto;transform:translateX(100%);transition:transform .38s cubic-bezier(.7,0,.3,1);display:none}
+body.mo .mnav{transform:translateX(0)}
+body.mo{overflow:hidden}
+body.mo header{z-index:350}
+.mnav a{display:block;padding:13px 4px;font-weight:600;font-size:16px;border-bottom:1px solid var(--line)}
+
+.hero{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(900px 500px at 85% -10%,rgba(124,92,255,.3),transparent 60%),
+ radial-gradient(700px 420px at 0% 115%,rgba(55,224,255,.16),transparent 60%)}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(ellipse at 60% 40%,#000 30%,transparent 75%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding-top:84px;padding-bottom:76px}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:#a48bff;border:1px solid rgba(164,139,255,.35);padding:7px 15px;border-radius:100px;margin-bottom:24px}
+.kick::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cy);animation:pl 2s infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(34px,4.8vw,56px)}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{margin:20px 0 30px;font-size:16.5px;color:#9aa5b8;max-width:540px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+.b1{background:var(--grad);color:#fff;padding:15px 28px;border-radius:13px;font-weight:700;font-size:15px;box-shadow:0 14px 34px -12px rgba(124,92,255,.6);transition:.25s}
+.b1:hover{transform:translateY(-3px)}
+.b2{border:1px solid rgba(255,255,255,.25);color:#fff;padding:15px 26px;border-radius:13px;font-weight:600;font-size:15px;background:rgba(255,255,255,.05);transition:.25s}
+.b2:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.hstats{display:flex;margin-top:44px;border-top:1px solid rgba(255,255,255,.14)}
+.hstat{padding:20px 30px 0 0;margin-right:30px;border-right:1px solid rgba(255,255,255,.1)}
+.hstat:last-child{border-right:0}
+.hstat b{font-family:'Outfit';font-size:30px;font-weight:800;color:#a48bff}
+.hstat span{display:block;font-size:12px;color:#77839a;margin-top:2px}
+/* scene panel */
+.panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:24px;padding:26px;backdrop-filter:blur(8px)}
+.panel .pk{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a48bff;margin-bottom:16px;display:flex;justify-content:space-between}
+.panel .pk i{font-style:normal;color:#5ee394}
+.scenes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.scene{background:rgba(11,14,22,.75);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;cursor:pointer;transition:.25s;user-select:none}
+.scene:hover{border-color:rgba(124,92,255,.6);transform:translateY(-2px)}
+.scene.on{border-color:var(--vio);background:rgba(124,92,255,.14)}
+.scene b{font-size:13.5px;display:block}
+.scene span{font-size:11px;color:#77839a}
+.scene .dot{float:right;width:9px;height:9px;border-radius:50%;background:#3a4152;margin-top:4px;transition:.25s}
+.scene.on .dot{background:#5ee394;box-shadow:0 0 10px rgba(94,227,148,.8)}
+.panel .note{margin-top:16px;font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#5b6678;text-align:center}
+
+section{padding:86px 0}
+.shead{max-width:760px;margin-bottom:46px}
+.eyebrow{font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--vio);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--grad)}
+.shead h2{font-size:clamp(26px,3.4vw,40px)}
+.shead p{color:var(--mut);margin-top:12px;font-size:15px}
+
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sv{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.3s;position:relative;overflow:hidden;display:block}
+.sv::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.sv:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.sv:hover::after{transform:scaleX(1)}
+.sv .ic{width:48px;height:48px;border-radius:13px;background:#ece8ff;display:grid;place-items:center;margin-bottom:16px;color:var(--vio);font-size:20px}
+.sv h3{font-size:17px;margin-bottom:8px}
+.sv p{font-size:13px;color:var(--mut)}
+.sv .more{margin-top:12px;display:inline-block;font-weight:700;font-size:13px;color:var(--vio)}
+
+.brands{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}
+.bmar{overflow:hidden;position:relative;margin-top:24px}
+.bmar::before,.bmar::after{content:"";position:absolute;top:0;bottom:0;width:110px;z-index:2;pointer-events:none}
+.bmar::before{left:0;background:linear-gradient(to right,#fff,transparent)}
+.bmar::after{right:0;background:linear-gradient(to left,#fff,transparent)}
+.btrack{display:flex;gap:60px;align-items:center;animation:mq 46s linear infinite;width:max-content;padding:8px 0}
+@keyframes mq{to{transform:translateX(-50%)}}
+.btrack img{height:34px;width:auto;max-width:130px;object-fit:contain;filter:grayscale(1) opacity(.5);transition:.3s}
+.btrack img:hover{filter:none}
+.btrack .bw{font-family:'Outfit';font-weight:700;font-size:16px;color:#a3aab6;white-space:nowrap}
+
+.why{background:var(--dark);color:#fff}
+.why .shead h2{color:#fff}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.wc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px;transition:.25s}
+.wc:hover{background:rgba(255,255,255,.09);transform:translateY(-4px)}
+.wc b{font-family:'Outfit';font-size:16px;display:block;margin-bottom:6px;color:#a48bff}
+.wc p{font-size:13px;color:#9aa5b8}
+
+.golf{background:linear-gradient(100deg,#123c2a,#1d5c40);border-radius:24px;padding:44px 48px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
+.golf::before{content:"⛳";position:absolute;right:20px;bottom:-20px;font-size:130px;opacity:.12}
+.golf h3{font-size:25px;margin-bottom:8px}
+.golf p{color:#bfe3cf;font-size:14px;max-width:540px}
+.golf a{background:#fff;color:#123c2a;padding:13px 24px;border-radius:12px;font-weight:700;font-size:14px;transition:.25s}
+.golf a:hover{transform:translateY(-2px)}
+
+.fin{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.fin blockquote{font-family:'Outfit';font-size:clamp(20px,2.4vw,28px);line-height:1.45;font-weight:600}
+.fin blockquote em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cinfo{background:var(--dark);color:#fff;border-radius:20px;padding:32px}
+.cinfo h3{font-size:19px;margin-bottom:16px;font-family:'Outfit'}
+.cinfo div{display:flex;gap:10px;font-size:14px;color:#9aa5b8;padding:6px 0}
+.cinfo b{color:#fff;font-weight:600}
+.cinfo .q{display:block;text-align:center;margin-top:20px;background:var(--grad);color:#fff;padding:13px;border-radius:12px;font-weight:700;font-size:14px;transition:.25s}
+.cinfo .q:hover{transform:translateY(-2px)}
+
+footer{background:var(--dark);color:#8d97ab;padding:60px 0 26px;position:relative;overflow:hidden}
+footer .wm{position:absolute;left:50%;bottom:-38px;transform:translateX(-50%);font-family:'Outfit';font-weight:800;font-size:170px;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);white-space:nowrap;line-height:1;pointer-events:none}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;position:relative}
+.fgrid h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;font-family:'IBM Plex Mono';font-weight:500}
+.fgrid a{display:block;font-size:13.5px;padding:5px 0;transition:.2s}
+.fgrid a:hover{color:#fff;padding-left:5px}
+.fbot{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;position:relative}
+.badge{position:fixed;bottom:18px;right:18px;z-index:500;background:rgba(11,14,22,.92);color:#cfd6e4;font-size:11px;padding:8px 14px;border-radius:100px;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);font-family:'IBM Plex Mono'}
+.badge b{color:#a48bff}
+
+.rv0{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv0.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}.rv0{opacity:1;transform:none}}
+@media(max-width:1100px){
+  nav.menu,.cta{display:none}.burger{display:flex}.mnav{display:block}
+  .hero .wrap,.fin{grid-template-columns:1fr;gap:40px}
+  .sgrid,.wgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .sgrid,.wgrid,.scenes{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .hero .wrap{padding-top:54px;padding-bottom:50px}
+  .hstats{flex-wrap:wrap;gap:14px 0}
+  .golf{padding:30px 24px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l"><span><b>Houston, TX</b> · Since 2018 · Control4 & Lutron dealer</span></div>
+    <div class="tb-r"><a href="tel:8327570632">Call <b>(832) 757 0632</b></a></div>
+  </div>
+</div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="https://www.nxtlevelsmarthome.com">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Untitled-design-2-e1693401122549.png" alt="NXT Level Smart Home" onerror="this.setAttribute('data-f','1');this.style.display='none'">
+      <b>NXT Level Smart Home</b>
+    </a>
+    <nav class="menu">
+      <div class="mi"><a href="https://www.nxtlevelsmarthome.com/residential/">Residential <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd">
+          <a href="https://www.nxtlevelsmarthome.com/smart-home/">Smart Home</a>
+          <a href="https://www.nxtlevelsmarthome.com/home-theater/">Home Theater</a>
+          <a href="https://www.nxtlevelsmarthome.com/security-and-surveillance/">Security & Surveillance</a>
+          <a href="https://www.nxtlevelsmarthome.com/home-network/">Home Network</a>
+          <a href="https://www.nxtlevelsmarthome.com/smart-lighting/">Smart Lighting</a>
+          <a href="https://www.nxtlevelsmarthome.com/multi-room-audio/">Multi Room Audio</a>
+          <a href="https://www.nxtlevelsmarthome.com/smart-shades-blinds/">Smart Shades & Blinds</a>
+          <a href="https://www.nxtlevelsmarthome.com/golf-simulator/">Indoor Golf Simulators</a>
+          <a href="https://www.nxtlevelsmarthome.com/pre-wire/">Pre-Wiring</a>
+          <a href="https://www.nxtlevelsmarthome.com/tv-mounting/">TV Mounting</a>
+        </div>
+      </div>
+      <div class="mi"><a href="https://www.nxtlevelsmarthome.com/commercial/">Commercial <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd">
+          <a href="https://www.nxtlevelsmarthome.com/commercial/security/">Security</a>
+          <a href="https://www.nxtlevelsmarthome.com/commercial/surveillance/">Surveillance</a>
+          <a href="https://www.nxtlevelsmarthome.com/commercial/structured-wiring/">Structured Wiring</a>
+          <a href="https://www.nxtlevelsmarthome.com/commercial/networking/">Networking</a>
+          <a href="https://www.nxtlevelsmarthome.com/commercial/audio-video/">Audio-Video</a>
+        </div>
+      </div>
+      <div class="mi"><a href="https://www.nxtlevelsmarthome.com/nxt-level-perks/">Perks</a></div>
+      <div class="mi"><a href="https://www.nxtlevelsmarthome.com/blog/">Blog</a></div>
+      <div class="mi"><a href="https://www.nxtlevelsmarthome.com/about-nxt-level-smart-home/">About</a></div>
+    </nav>
+    <a class="cta" href="https://www.nxtlevelsmarthome.com/meet">Free Consultation</a>
+    <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('mo')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav">
+  <a href="https://www.nxtlevelsmarthome.com/smart-home/">Smart Home</a>
+  <a href="https://www.nxtlevelsmarthome.com/home-theater/">Home Theater</a>
+  <a href="https://www.nxtlevelsmarthome.com/security-and-surveillance/">Security & Surveillance</a>
+  <a href="https://www.nxtlevelsmarthome.com/home-network/">Home Network</a>
+  <a href="https://www.nxtlevelsmarthome.com/smart-lighting/">Smart Lighting</a>
+  <a href="https://www.nxtlevelsmarthome.com/golf-simulator/">Indoor Golf Simulators</a>
+  <a href="https://www.nxtlevelsmarthome.com/commercial/">Commercial</a>
+  <a href="https://www.nxtlevelsmarthome.com/about-nxt-level-smart-home/">About Us</a>
+  <a href="https://www.nxtlevelsmarthome.com/meet" style="color:var(--vio)">→ Free Consultation</a>
+</div>
+
+<div class="hero">
+  <div class="hgrid"></div>
+  <div class="wrap">
+    <div>
+      <div class="kick">Your home. Your rules.</div>
+      <h1>One tap. <em>Whole home.</em></h1>
+      <p class="sub">Home automation, theater, security, lighting and rock-solid networking — designed, installed and supported by Houston's smart home specialists since 2018.</p>
+      <div class="hbtns">
+        <a class="b1" href="https://www.nxtlevelsmarthome.com/meet">Get a free consultation</a>
+        <a class="b2" href="tel:8327570632">(832) 757 0632</a>
+      </div>
+      <div class="hstats">
+        <div class="hstat"><b>2018</b><span>NXT Level's first year</span></div>
+        <div class="hstat"><b><span data-cnt="1000">0</span>+</b><span>installation & integration hours</span></div>
+        <div class="hstat"><b>5★</b><span>Google reviews</span></div>
+      </div>
+    </div>
+    <div class="panel rv0">
+      <div class="pk"><span>NXT LEVEL · LIVE DEMO</span><i>● ONLINE</i></div>
+      <div class="scenes">
+        <div class="scene on"><span class="dot"></span><b>🎬 Movie Night</b><span>Lights 10% · projector on · shades down</span></div>
+        <div class="scene"><span class="dot"></span><b>🌅 Good Morning</b><span>Shades up · thermostat 72° · playlist on</span></div>
+        <div class="scene on"><span class="dot"></span><b>🔒 Away & Armed</b><span>Locks set · cameras live · alerts on</span></div>
+        <div class="scene"><span class="dot"></span><b>🎉 Entertain</b><span>Multi-room audio · patio lights · pool on</span></div>
+      </div>
+      <div class="note">Tap the scenes — this is how simple your home gets</div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="shead rv0">
+      <div class="eyebrow">Smart solutions for you</div>
+      <h2>Everything connected. Nothing complicated.</h2>
+    </div>
+    <div class="sgrid">
+      <a class="sv rv0" href="https://www.nxtlevelsmarthome.com/smart-home/">
+        <div class="ic">🏠</div><h3>Smart Home & Integration</h3><p>Lighting, temperature and entertainment controlled by phone or voice — unified through Control4, Josh.ai and URC.</p><span class="more">Explore →</span>
+      </a>
+      <a class="sv rv0" href="https://www.nxtlevelsmarthome.com/security-and-surveillance/">
+        <div class="ic">🛡️</div><h3>Security & Surveillance</h3><p>State-of-the-art cameras, smart locks and alarm systems that keep watch so you don't have to.</p><span class="more">Explore →</span>
+      </a>
+      <a class="sv rv0" href="https://www.nxtlevelsmarthome.com/home-theater/">
+        <div class="ic">🎬</div><h3>Home Theater</h3><p>Cinematic rooms with stunning visuals and crystal-clear sound — projectors, screens and reference audio.</p><span class="more">Explore →</span>
+      </a>
+      <a class="sv rv0" href="https://www.nxtlevelsmarthome.com/home-network/">
+        <div class="ic">📶</div><h3>Home Network</h3><p>High-speed, whole-home Wi-Fi that never drops a call, a stream or a security feed.</p><span class="more">Explore →</span>
+      </a>
+      <a class="sv rv0" href="https://www.nxtlevelsmarthome.com/lutron-smart-lighting/">
+        <div class="ic">💡</div><h3>Smart Lighting & Shades</h3><p>Lutron lighting and motorized shades that set the mood on schedule, by scene, or by voice.</p><span class="more">Explore →</span>
+      </a>
+      <a class="sv rv0" href="https://www.nxtlevelsmarthome.com/commercial/">
+        <div class="ic">🏢</div><h3>Commercial</h3><p>Security, surveillance, structured wiring, networking and AV for Houston businesses.</p><span class="more">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="brands">
+  <div class="wrap">
+    <div class="eyebrow rv0">Brands we partner with</div>
+  </div>
+  <div class="bmar">
+    <div class="btrack" id="bt">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Klipsch-logo-for-site.png" alt="Klipsch">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/KEF-logo-for-website.png" alt="KEF">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Sonance-logo-for-site.png" alt="Sonance">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Martin-Logan-logo-for-site.png" alt="Martin Logan">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2024/01/marantz-logo-jpg.webp" alt="Marantz">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2024/01/Denon-logo-jpg.webp" alt="Denon">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Ring-logo-for-site.png" alt="Ring">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Yale-Lock-for-Website.png" alt="Yale">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Samsung-logo-for-website.png" alt="Samsung">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Sony-logo-for-site.png" alt="Sony">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/LG-logo-for-site.png" alt="LG">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2023/12/Google_Nest_logo.svg.png" alt="Google Nest">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Eeros-logo-for-site.png" alt="eero">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/Araknis-logo-for-site.png" alt="Araknis">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2024/01/epson-logo-jpg.webp" alt="Epson">
+      <img src="https://www.nxtlevelsmarthome.com/wp-content/uploads/2020/09/JVC-Logo-for-site.png" alt="JVC">
+    </div>
+  </div>
+</div>
+
+<section class="why">
+  <div class="wrap">
+    <div class="shead rv0">
+      <div class="eyebrow" style="color:#a48bff">Why choose us</div>
+      <h2>Built for how you actually live</h2>
+    </div>
+    <div class="wgrid">
+      <div class="wc rv0"><b>Expertise that matters</b><p>Meticulous, professional installation — every component working seamlessly, as you'd expect.</p></div>
+      <div class="wc rv0"><b>Tailored to you</b><p>Every home is unique. Systems customized to your lifestyle and preferences, guaranteed to fit.</p></div>
+      <div class="wc rv0"><b>Reliable performance</b><p>Engineered for enduring excellence — peace of mind and comfort for years to come.</p></div>
+      <div class="wc rv0"><b>Unparalleled support</b><p>From installation to ongoing support, top-notch assistance whenever you need it.</p></div>
+      <div class="wc rv0"><b>Future-proof tech</b><p>Upgrade easily and stay ahead in the rapidly evolving world of smart technology.</p></div>
+      <div class="wc rv0"><b>NXT Level Perks</b><p>Member perks and seasonal offers that make going smarter even sweeter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="golf rv0">
+      <div>
+        <div class="eyebrow" style="color:#bfe3cf">New: Indoor golf simulators</div>
+        <h3>Play Pebble Beach in your garage</h3>
+        <p>The ultimate home upgrade — professional golf simulators designed, wired and calibrated by the same team that builds your theater.</p>
+      </div>
+      <a href="https://www.nxtlevelsmarthome.com/golf-simulator/">Explore simulators</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap fin">
+    <blockquote class="rv0">"With smart systems integration you can effortlessly control your home, <em>save money on energy,</em> feel safer, and set the perfect mood."</blockquote>
+    <div class="cinfo rv0">
+      <h3>Talk to the team</h3>
+      <div><b>Address</b> 10801 Hammerly Blvd, Ste 222, Houston, TX 77043</div>
+      <div><b>Phone</b> (832) 757 0632</div>
+      <div><b>Email</b> sales@nxtlevelsmarthome.com</div>
+      <a class="q" href="https://www.nxtlevelsmarthome.com/meet">Book a free consultation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wm">NXT LEVEL</div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>NXT Level Smart Home</h4>
+        <p style="font-size:13px;max-width:300px">Home automation, security, theater, networking and smart lighting — Houston, Texas, since 2018.</p>
+      </div>
+      <div>
+        <h4>Residential</h4>
+        <a href="https://www.nxtlevelsmarthome.com/smart-home/">Smart Home</a>
+        <a href="https://www.nxtlevelsmarthome.com/home-theater/">Home Theater</a>
+        <a href="https://www.nxtlevelsmarthome.com/security-and-surveillance/">Security</a>
+        <a href="https://www.nxtlevelsmarthome.com/home-network/">Home Network</a>
+        <a href="https://www.nxtlevelsmarthome.com/control4/">Control4</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="https://www.nxtlevelsmarthome.com/about-nxt-level-smart-home/">About Us</a>
+        <a href="https://www.nxtlevelsmarthome.com/nxt-level-perks/">NXT Level Perks</a>
+        <a href="https://www.nxtlevelsmarthome.com/financing/">Financing</a>
+        <a href="https://www.nxtlevelsmarthome.com/warranty/">Warranty</a>
+        <a href="https://www.nxtlevelsmarthome.com/blog/">Blog</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="https://maps.app.goo.gl/wc7tRxJvEa3QoF2r6">10801 Hammerly Blvd Ste 222<br>Houston, TX 77043</a>
+        <a href="tel:8327570632">(832) 757 0632</a>
+        <a href="mailto:sales@nxtlevelsmarthome.com">sales@nxtlevelsmarthome.com</a>
+        <a href="https://www.instagram.com/nxtlevelsmarthome/">Instagram</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2018 – 2026 NXT Level Smart Home LLC. All rights reserved.</span>
+      <span>Control4 · Josh.ai · Lutron · URC dealer</span>
+    </div>
+  </div>
+</footer>
+
+<div class="badge">Design concept by <b>JBA Ventures</b></div>
+
+<script>
+addEventListener('scroll',()=>{const h=document.documentElement;
+document.getElementById('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+document.getElementById('hd').classList.toggle('sc',h.scrollTop>10);},{passive:true});
+const bt=document.getElementById('bt');bt.innerHTML+=bt.innerHTML;
+document.querySelectorAll('#bt img').forEach(im=>{
+  const swap=()=>{const s=document.createElement('span');s.className='bw';s.textContent=im.alt;im.replaceWith(s)};
+  im.addEventListener('error',swap);
+  if(im.complete&&im.naturalWidth===0)swap();
+});
+document.querySelectorAll('.scene').forEach(s=>s.addEventListener('click',()=>s.classList.toggle('on')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv0').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);
+const el=e.target,end=parseFloat(el.dataset.cnt),t0=performance.now();
+const step=t=>{const p=Math.min((t-t0)/1600,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
+requestAnimationFrame(step);}),{threshold:.5});
+document.querySelectorAll('[data-cnt]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>

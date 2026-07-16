@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Blue Sky Tint | 3M Window Tint, Clear Bra & Ceramic Coating — Lafayette, CO — Design Concept</title>
+<meta name="description" content="Family owned 3M window tint, paint protection film and ceramic coating studio in Lafayette, Colorado. 5.0 stars across 147 Google reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e1420; --ink2:#37404f; --mut:#68717f;
+  --blue:#1e7fe0; --sky:#39b6ff; --deep:#0a1626;
+  --grad:linear-gradient(100deg,#1e7fe0,#39b6ff);
+  --bg:#f4f7fa; --line:#e0e6ee;
+  --r:18px; --sh:0 22px 55px -24px rgba(10,22,38,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.12;letter-spacing:-.015em;font-weight:700}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+::selection{background:var(--sky);color:#fff}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:400}
+
+.topbar{background:var(--deep);color:#8fa3bd;font-size:12.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:16px}
+.topbar a:hover{color:#fff}
+.tb-l{display:flex;gap:18px;white-space:nowrap;overflow:hidden}
+.tb-l b{color:#ffd166}
+.tb-r a b{color:#fff}
+
+header{position:sticky;top:0;z-index:300;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.sc{box-shadow:0 8px 30px -14px rgba(10,22,38,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:18px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{height:44px;width:auto}
+.brand b{font-family:'Space Grotesk';font-size:19px}
+nav.menu{display:flex;gap:2px;align-items:center}
+.mi{position:relative}
+.mi>a{display:flex;align-items:center;gap:5px;padding:10px 13px;font-size:14px;font-weight:600;color:var(--ink2);border-radius:10px;transition:.2s}
+.mi>a:hover{color:var(--blue);background:#e8f2fc}
+.mi>a svg{width:9px;height:9px;opacity:.5}
+.dd{position:absolute;top:100%;left:50%;transform:translate(-50%,10px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh);padding:14px;opacity:0;visibility:hidden;transition:.25s;min-width:230px;z-index:310}
+.mi:hover .dd{opacity:1;visibility:visible;transform:translate(-50%,4px)}
+.dd a{display:block;padding:8px 12px;font-size:13.5px;color:var(--ink2);border-radius:8px;font-weight:500;transition:.15s}
+.dd a:hover{background:#e8f2fc;color:var(--blue);padding-left:16px}
+.cta{background:var(--grad);color:#fff;padding:12px 20px;border-radius:12px;font-size:13.5px;font-weight:700;box-shadow:0 10px 24px -10px rgba(30,127,224,.5);transition:.25s;white-space:nowrap}
+.cta:hover{transform:translateY(-2px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:360}
+.burger span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.3s}
+body.mo .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.mo .burger span:nth-child(2){opacity:0}
+body.mo .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;background:#fff;z-index:340;padding:100px 26px 40px;overflow-y:auto;transform:translateX(100%);transition:transform .38s cubic-bezier(.7,0,.3,1);display:none}
+body.mo .mnav{transform:translateX(0)}
+body.mo{overflow:hidden}
+body.mo header{z-index:350}
+.mnav a{display:block;padding:14px 4px;font-weight:600;font-size:16px;border-bottom:1px solid var(--line)}
+
+.hero{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(900px 500px at 85% -10%,rgba(57,182,255,.25),transparent 60%),
+ radial-gradient(700px 400px at 0% 115%,rgba(30,127,224,.25),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding-top:80px;padding-bottom:72px}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:#ffd166;border:1px solid rgba(255,209,102,.35);padding:7px 15px;border-radius:100px;margin-bottom:24px}
+.hero h1{font-size:clamp(32px,4.6vw,54px)}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{margin:20px 0 30px;font-size:16.5px;color:#9db0c8;max-width:520px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+.b1{background:var(--grad);color:#fff;padding:15px 28px;border-radius:13px;font-weight:700;font-size:15px;box-shadow:0 14px 34px -12px rgba(30,127,224,.6);transition:.25s}
+.b1:hover{transform:translateY(-3px)}
+.b2{border:1px solid rgba(255,255,255,.25);color:#fff;padding:15px 26px;border-radius:13px;font-weight:600;font-size:15px;background:rgba(255,255,255,.05);transition:.25s}
+.b2:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.stars{display:flex;align-items:center;gap:12px;margin-top:36px}
+.stars .s{color:#ffd166;font-size:18px;letter-spacing:2px}
+.stars span{font-size:13px;color:#9db0c8}
+.stars b{color:#fff}
+
+/* slider */
+.cmp{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.7);aspect-ratio:16/10;background:#152238;user-select:none}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp .after{clip-path:inset(0 0 0 50%);filter:brightness(.5) saturate(1.15) contrast(1.08)}
+.cmp .bar{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 20px rgba(0,0,0,.5);transform:translateX(-50%);pointer-events:none}
+.cmp .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;color:var(--deep);display:grid;place-items:center;font-weight:800;font-size:15px;pointer-events:none;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.cmp .tag{position:absolute;top:16px;font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:rgba(10,22,38,.75);backdrop-filter:blur(6px);color:#fff;padding:6px 12px;border-radius:100px;pointer-events:none}
+.cmp .tag.l{left:16px}
+.cmp .tag.r{right:16px;color:#8fd4ff}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.cnote{text-align:center;font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7d93b0;margin-top:12px}
+
+section{padding:86px 0}
+.shead{max-width:740px;margin-bottom:46px}
+.eyebrow{font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--grad)}
+.shead h2{font-size:clamp(26px,3.4vw,40px)}
+.shead p{color:var(--mut);margin-top:12px;font-size:15px}
+
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sv{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.sv:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.sv .im{height:130px;overflow:hidden;background:linear-gradient(120deg,#12263f,#1e4d7a);position:relative}
+.sv .im img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.sv:hover .im img{transform:scale(1.06)}
+.sv .im span{position:absolute;inset:0;display:grid;place-items:center;font-family:'Space Grotesk';font-size:18px;color:rgba(255,255,255,.9);opacity:0;padding:10px;text-align:center}
+.sv .im.noimg span{opacity:1}
+.sv .im.noimg img{opacity:0}
+.sv .bd{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.sv h3{font-size:16px;margin-bottom:6px}
+.sv p{font-size:12.5px;color:var(--mut);flex:1}
+.sv .more{margin-top:12px;font-weight:700;font-size:12.5px;color:var(--blue)}
+
+.m3{background:var(--deep);color:#fff}
+.m3 .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.m3 h2{font-size:clamp(26px,3.4vw,40px);margin-bottom:16px}
+.m3 h2 em{font-style:normal;color:#8fd4ff}
+.m3 p{color:#9db0c8;font-size:15px;margin-bottom:14px}
+.m3l{display:flex;flex-direction:column;gap:12px}
+.m3l div{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 22px;font-size:14px;display:flex;gap:12px}
+.m3l b{color:#8fd4ff}
+
+.rev{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rc{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:.3s;display:flex;flex-direction:column}
+.rc:hover{transform:translateY(-5px);box-shadow:var(--sh);background:#fff}
+.rc .s{color:#f0b429;letter-spacing:2px;margin-bottom:12px}
+.rc p{font-size:13.5px;color:var(--ink2);flex:1;font-style:italic}
+.rc b{margin-top:14px;font-size:13px}
+.rc span{font-size:11.5px;color:var(--mut)}
+.rbig{text-align:center;margin-bottom:40px}
+.rbig b{font-family:'Space Grotesk';font-size:56px;display:block;line-height:1}
+.rbig .s{color:#f0b429;font-size:22px;letter-spacing:4px}
+.rbig span{color:var(--mut);font-size:13.5px}
+
+.fam{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.fam blockquote{font-family:'Space Grotesk';font-size:clamp(19px,2.3vw,26px);line-height:1.5;font-weight:500}
+.fam blockquote em{font-style:normal;color:var(--blue)}
+.finfo{background:var(--deep);color:#fff;border-radius:20px;padding:32px}
+.finfo h3{font-size:19px;margin-bottom:16px}
+.finfo div{display:flex;gap:10px;font-size:14px;color:#9db0c8;padding:6px 0}
+.finfo b{color:#fff;font-weight:600}
+.finfo .q{display:block;text-align:center;margin-top:20px;background:var(--grad);color:#fff;padding:13px;border-radius:12px;font-weight:700;font-size:14px;transition:.25s}
+.finfo .q:hover{transform:translateY(-2px)}
+
+footer{background:var(--deep);color:#8fa3bd;padding:60px 0 26px;position:relative;overflow:hidden}
+footer .wm{position:absolute;left:50%;bottom:-36px;transform:translateX(-50%);font-family:'Space Grotesk';font-weight:700;font-size:170px;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);white-space:nowrap;line-height:1;pointer-events:none}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;position:relative}
+.fgrid h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;font-family:'IBM Plex Mono';font-weight:500}
+.fgrid a{display:block;font-size:13.5px;padding:5px 0;transition:.2s}
+.fgrid a:hover{color:#fff;padding-left:5px}
+.fbot{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;position:relative}
+.badge{position:fixed;bottom:18px;right:18px;z-index:500;background:rgba(10,22,38,.92);color:#cfe0f5;font-size:11px;padding:8px 14px;border-radius:100px;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);font-family:'IBM Plex Mono'}
+.badge b{color:#8fd4ff}
+
+.rv0{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv0.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}.rv0{opacity:1;transform:none}}
+@media(max-width:1100px){
+  nav.menu,.cta{display:none}.burger{display:flex}.mnav{display:block}
+  .hero .wrap,.m3 .wrap,.fam{grid-template-columns:1fr;gap:40px}
+  .sgrid{grid-template-columns:repeat(2,1fr)}
+  .rgrid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .sgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .hero .wrap{padding-top:54px;padding-bottom:50px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l"><span><b>★ 5.0</b> · 147 Google reviews</span><span>1747 Panorama Point Unit B, Lafayette, CO</span></div>
+    <div class="tb-r"><a href="tel:303-635-6251">Call <b>303-635-6251</b></a></div>
+  </div>
+</div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="https://www.blueskytint.com/">
+      <img src="https://www.blueskytint.com/wp-content/uploads/2023/06/Blue-Sky-Tint-Logo.webp" alt="Blue Sky Tint" onerror="this.style.display='none'">
+      <b>Blue Sky Tint</b>
+    </a>
+    <nav class="menu">
+      <div class="mi"><a href="https://www.blueskytint.com/services/">Services <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd">
+          <a href="https://www.blueskytint.com/tint/">Window Tint</a>
+          <a href="https://www.blueskytint.com/clear-bra/">Clear Bra / PPF</a>
+          <a href="https://www.blueskytint.com/ceramic-coating/">Ceramic Coating</a>
+          <a href="https://www.blueskytint.com/paint-correction/">Paint Correction</a>
+          <a href="https://www.blueskytint.com/vinyl-wraps/">Vinyl Wraps</a>
+          <a href="https://www.blueskytint.com/detail/">Detailing</a>
+        </div>
+      </div>
+      <div class="mi"><a href="https://www.blueskytint.com/about-us/">About Us</a></div>
+      <div class="mi"><a href="https://www.blueskytint.com/contact-us/">Contact</a></div>
+      <div class="mi"><a href="tel:303-635-6251">303-635-6251</a></div>
+    </nav>
+    <a class="cta" href="https://www.blueskytint.com/contact-us/">Free Quote</a>
+    <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('mo')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav">
+  <a href="https://www.blueskytint.com/tint/">Window Tint</a>
+  <a href="https://www.blueskytint.com/clear-bra/">Clear Bra / PPF</a>
+  <a href="https://www.blueskytint.com/ceramic-coating/">Ceramic Coating</a>
+  <a href="https://www.blueskytint.com/paint-correction/">Paint Correction</a>
+  <a href="https://www.blueskytint.com/vinyl-wraps/">Vinyl Wraps</a>
+  <a href="https://www.blueskytint.com/detail/">Detailing</a>
+  <a href="https://www.blueskytint.com/about-us/">About Us</a>
+  <a href="https://www.blueskytint.com/contact-us/" style="color:var(--blue)">→ Free Quote</a>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kick">Family owned · 3M Certified · Lafayette, CO</div>
+      <h1>Colorado sun, <em>meet 3M tint.</em></h1>
+      <p class="sub">Window tint, clear bra, ceramic coating and paint correction — installed by a family shop that Boulder County trusts with everything from daily drivers to matte-finish exotics.</p>
+      <div class="hbtns">
+        <a class="b1" href="https://www.blueskytint.com/contact-us/">Get a free quote</a>
+        <a class="b2" href="tel:303-635-6251">303-635-6251</a>
+      </div>
+      <div class="stars"><span class="s">★★★★★</span><span><b>5.0 out of 5</b> · 147 Google reviews</span></div>
+    </div>
+    <div class="rv0">
+      <div class="cmp" id="cmp">
+        <img src="https://www.blueskytint.com/wp-content/uploads/2023/08/blue-sky-tint-window-tinting-near-you.jpg" alt="Window tint" onerror="this.parentElement.style.background='linear-gradient(120deg,#12263f,#1e4d7a)'">
+        <img class="after" src="https://www.blueskytint.com/wp-content/uploads/2023/08/blue-sky-tint-window-tinting-near-you.jpg" alt="" aria-hidden="true" onerror="this.style.display='none'">
+        <div class="bar"></div><div class="knob">⇔</div>
+        <span class="tag l">Before</span><span class="tag r">With 3M Ceramic IR</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Before and after slider">
+      </div>
+      <div class="cnote">Drag to compare — simulated tint preview</div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="shead rv0">
+      <div class="eyebrow">What we do</div>
+      <h2>Protection for every surface of your car</h2>
+    </div>
+    <div class="sgrid">
+      <a class="sv rv0" href="https://www.blueskytint.com/tint/">
+        <div class="im"><img src="https://www.blueskytint.com/wp-content/uploads/2023/06/Screenshot-2023-06-21-150535.jpg" alt="" onerror="this.parentElement.classList.add('noimg')"><span>Window Tint</span></div>
+        <div class="bd"><h3>Window Tint</h3><p>3M Automotive Window Film in every style and shade — heat, UV, glare and privacy handled.</p><span class="more">Explore →</span></div>
+      </a>
+      <a class="sv rv0" href="https://www.blueskytint.com/clear-bra/">
+        <div class="im"><img src="https://www.blueskytint.com/wp-content/uploads/2023/06/Screenshot-2023-06-21-150620.jpg" alt="" onerror="this.parentElement.classList.add('noimg')"><span>Clear Bra / PPF</span></div>
+        <div class="bd"><h3>Clear Bra / PPF</h3><p>3M Scotchgard Pro Series film — nearly invisible protection against chips, scratches and UV.</p><span class="more">Explore →</span></div>
+      </a>
+      <a class="sv rv0" href="https://www.blueskytint.com/ceramic-coating/">
+        <div class="im"><img src="https://www.blueskytint.com/wp-content/uploads/2023/06/Screenshot-2023-06-21-150710.jpg" alt="" onerror="this.parentElement.classList.add('noimg')"><span>Ceramic Coating</span></div>
+        <div class="bd"><h3>Ceramic Coating</h3><p>Ceramic Pro nanoceramic protection that keeps your paint shining and easy to clean.</p><span class="more">Explore →</span></div>
+      </a>
+      <a class="sv rv0" href="https://www.blueskytint.com/paint-correction/">
+        <div class="im"><img src="https://www.blueskytint.com/wp-content/uploads/2023/06/Screenshot-2023-06-21-150651.jpg" alt="" onerror="this.parentElement.classList.add('noimg')"><span>Paint Correction</span></div>
+        <div class="bd"><h3>Paint Correction</h3><p>Swirls, water spots and fine scratches delicately removed for crystal clarity.</p><span class="more">Explore →</span></div>
+      </a>
+      <a class="sv rv0" href="https://www.blueskytint.com/vinyl-wraps/">
+        <div class="im"><img src="https://www.blueskytint.com/wp-content/uploads/2023/07/Mercedes-Benz-AMG-GT-R-min-scaled.jpg" alt="" onerror="this.parentElement.classList.add('noimg')"><span>Vinyl Wraps</span></div>
+        <div class="bd"><h3>Vinyl Wraps</h3><p>From sleek to bold — flawless wraps and business fleet graphics that turn heads.</p><span class="more">Explore →</span></div>
+      </a>
+      <a class="sv rv0" href="https://www.blueskytint.com/detail/">
+        <div class="im"><img src="https://www.blueskytint.com/wp-content/uploads/2023/06/Screenshot-2023-06-21-150730.jpg" alt="" onerror="this.parentElement.classList.add('noimg')"><span>Interior Detail</span></div>
+        <div class="bd"><h3>Interior Detail</h3><p>Gentle, thorough steam cleaning — including ozone treatment for stubborn odors.</p><span class="more">Explore →</span></div>
+      </a>
+      <a class="sv rv0" href="https://www.blueskytint.com/detail/">
+        <div class="im"><img src="https://www.blueskytint.com/wp-content/uploads/2023/06/Screenshot-2023-06-21-150752.jpg" alt="" onerror="this.parentElement.classList.add('noimg')"><span>Exterior Detail</span></div>
+        <div class="bd"><h3>Exterior Detail</h3><p>Hand wash and hand dry for a spot-free, high quality shine — Colorado or Platinum.</p><span class="more">Explore →</span></div>
+      </a>
+      <a class="sv rv0" href="https://www.blueskytint.com/detail/">
+        <div class="im"><img src="https://www.blueskytint.com/wp-content/uploads/2023/06/Screenshot-2023-06-21-150831.jpg" alt="" onerror="this.parentElement.classList.add('noimg')"><span>Headlight Restoration</span></div>
+        <div class="bd"><h3>Headlight Restoration</h3><p>Clear headlights lengthen your line of sight and save you from costly replacements.</p><span class="more">Explore →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="m3">
+  <div class="wrap">
+    <div class="rv0">
+      <div class="eyebrow" style="color:#8fd4ff">Why 3M</div>
+      <h2>We only install <em>the best.</em></h2>
+      <p>Blue Sky Tint is a 3M authorized installer. That means industry-leading film, professional installation and manufacturer-backed warranties — no shortcuts, no off-brand rolls.</p>
+    </div>
+    <div class="m3l rv0">
+      <div><b>✓</b> 3M Ceramic IR film — up to 66% heat rejection without darkening your view</div>
+      <div><b>✓</b> 3M Scotchgard PPF Pro Series — self-healing, stain resistant, nearly invisible</div>
+      <div><b>✓</b> Ceramic Pro — the global leader in nanoceramic surface protection</div>
+      <div><b>✓</b> Spotless studio, meticulous prep, and a touch-up promise if anything settles wrong</div>
+    </div>
+  </div>
+</section>
+
+<section class="rev">
+  <div class="wrap">
+    <div class="rbig rv0">
+      <b>5.0</b>
+      <div class="s">★★★★★</div>
+      <span>out of 5 across 147 Google reviews</span>
+    </div>
+    <div class="rgrid">
+      <div class="rc rv0"><div class="s">★★★★★</div><p>"Best customer service you will find. Their facility is impeccable! They did an amazing job on my tint and I was very happy. I will definitely be recommending them to family and friends."</p><b>Tam All</b><span>Google review</span></div>
+      <div class="rc rv0"><div class="s">★★★★★</div><p>"What you'll find at Blue Sky Tint is a professional, clean, smart, responsive, educational, caring crew that values attention to detail, perfect results, and supreme customer service. I'll bring every vehicle I ever own to them."</p><b>Clayton Cammon</b><span>Google review</span></div>
+      <div class="rc rv0"><div class="s">★★★★★</div><p>"They educated me on what I might want and never told me what I need. They explained all the different options until I was able to make a rational decision. Came highly recommended by the sales guy that sold us our car."</p><b>Dan Powers</b><span>Google review</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap fam">
+    <blockquote class="rv0">"Amazing <em>family based business.</em> Shawn and Laurie treat every car like it's their own — from daily drivers to matte-finish AMGs."</blockquote>
+    <div class="finfo rv0">
+      <h3>Visit the studio</h3>
+      <div><b>Address</b> 1747 Panorama Point Unit B, Lafayette, CO 80026</div>
+      <div><b>Phone</b> 303-635-6251</div>
+      <div><b>Email</b> bluesky@blueskytint.com</div>
+      <a class="q" href="https://www.blueskytint.com/contact-us/">Request a free quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wm">BLUE SKY</div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Blue Sky Tint</h4>
+        <p style="font-size:13px;max-width:300px">Family owned 3M window tint, paint protection and ceramic coating studio in Lafayette, Colorado.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="https://www.blueskytint.com/tint/">Window Tint</a>
+        <a href="https://www.blueskytint.com/clear-bra/">Clear Bra / PPF</a>
+        <a href="https://www.blueskytint.com/ceramic-coating/">Ceramic Coating</a>
+        <a href="https://www.blueskytint.com/paint-correction/">Paint Correction</a>
+        <a href="https://www.blueskytint.com/vinyl-wraps/">Vinyl Wraps</a>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <a href="https://maps.google.com/?q=Blue+Sky+Tint+Lafayette+CO">1747 Panorama Point Unit B<br>Lafayette, CO 80026</a>
+        <a href="tel:303-635-6251">303-635-6251</a>
+        <a href="mailto:bluesky@blueskytint.com">bluesky@blueskytint.com</a>
+        <a href="https://www.instagram.com/blueskytint/">Instagram</a>
+        <a href="https://www.facebook.com/BlueSkyTint">Facebook</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Blue Sky Tint, LLC. All rights reserved.</span>
+      <span><a href="https://www.blueskytint.com/privacy-terms/">Privacy & Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="badge">Design concept by <b>JBA Ventures</b></div>
+
+<script>
+addEventListener('scroll',()=>{const h=document.documentElement;
+document.getElementById('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+document.getElementById('hd').classList.toggle('sc',h.scrollTop>10);},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv0').forEach(el=>io.observe(el));
+// slider
+const cmp=document.getElementById('cmp');
+const rng=cmp.querySelector('input'),aft=cmp.querySelector('.after'),bar=cmp.querySelector('.bar'),knob=cmp.querySelector('.knob');
+rng.addEventListener('input',()=>{const v=rng.value;
+aft.style.clipPath=`inset(0 0 0 ${v}%)`;bar.style.left=v+'%';knob.style.left=v+'%';});
+</script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Buckley's Auto Care | Family Owned Since 1966 — Wilmington & Millsboro, DE — Design Concept</title>
+<meta name="description" content="One of Delaware's oldest family owned auto repair shops. AAA approved, NAPA AutoCare, 3 year / 36,000 mile nationwide warranty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16181c; --ink2:#3c4148; --mut:#71767e;
+  --red:#c8102e; --red-d:#9d0c24;
+  --grad:linear-gradient(100deg,#c8102e,#ef3b2d);
+  --bg:#f7f5f0; --card:#fff; --line:#e6e2d9;
+  --dark:#14161a;
+  --r:18px; --sh:0 22px 55px -24px rgba(20,22,26,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Archivo',sans-serif;line-height:1.1;letter-spacing:-.015em;font-weight:800}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+::selection{background:var(--red);color:#fff}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:400}
+
+.topbar{background:var(--dark);color:#9aa0a9;font-size:12.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:16px}
+.topbar a:hover{color:#fff}
+.tb-l{display:flex;gap:18px;white-space:nowrap;overflow:hidden;align-items:center}
+.tb-l b{color:#ffd166;font-weight:600}
+.tb-r{display:flex;gap:16px;flex-shrink:0}
+.tb-r a b{color:#fff}
+
+header{position:sticky;top:0;z-index:300;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.sc{box-shadow:0 8px 30px -14px rgba(20,22,26,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand img{height:46px;width:auto}
+.brand .bt{display:flex;flex-direction:column;line-height:1.1}
+.brand .bt b{font-family:'Archivo';font-size:19px;font-weight:800}
+.brand .bt span{font-size:9px;color:var(--red);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+nav.menu{display:flex;gap:2px;align-items:center}
+.mi{position:relative}
+.mi>a{display:flex;align-items:center;gap:5px;padding:10px 12px;font-size:13.5px;font-weight:600;color:var(--ink2);border-radius:10px;transition:.2s}
+.mi>a:hover{color:var(--red);background:#f8ecec}
+.mi>a svg{width:9px;height:9px;opacity:.5}
+.dd{position:absolute;top:100%;left:50%;transform:translate(-50%,10px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh);padding:16px;opacity:0;visibility:hidden;transition:.25s;min-width:260px;z-index:310;max-height:70vh;overflow:auto}
+.mi:hover .dd{opacity:1;visibility:visible;transform:translate(-50%,4px)}
+.dd a{display:block;padding:7px 12px;font-size:13px;color:var(--ink2);border-radius:8px;font-weight:500;transition:.15s}
+.dd a:hover{background:#f8ecec;color:var(--red);padding-left:16px}
+.cta{background:var(--grad);color:#fff;padding:12px 20px;border-radius:12px;font-size:13.5px;font-weight:700;box-shadow:0 10px 24px -10px rgba(200,16,46,.5);transition:.25s;white-space:nowrap}
+.cta:hover{transform:translateY(-2px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:360}
+.burger span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.3s}
+body.mo .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.mo .burger span:nth-child(2){opacity:0}
+body.mo .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;background:#fff;z-index:340;padding:100px 26px 40px;overflow-y:auto;transform:translateX(100%);transition:transform .38s cubic-bezier(.7,0,.3,1);display:none}
+body.mo .mnav{transform:translateX(0)}
+body.mo{overflow:hidden}
+body.mo header{z-index:350}
+.mnav a{display:block;padding:14px 4px;font-weight:600;font-size:16px;border-bottom:1px solid var(--line)}
+
+.hero{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(900px 500px at 90% -10%,rgba(200,16,46,.28),transparent 60%),
+ radial-gradient(600px 400px at -5% 110%,rgba(255,209,102,.1),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:84px;padding-bottom:76px}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:#ffd166;border:1px solid rgba(255,209,102,.35);padding:7px 15px;border-radius:100px;margin-bottom:24px}
+.hero h1{font-size:clamp(34px,4.8vw,58px)}
+.hero h1 span{color:transparent;-webkit-text-stroke:1.5px #ffd166}
+.hero p.sub{margin:20px 0 32px;font-size:16.5px;color:#aab0ba;max-width:540px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+.b1{background:var(--grad);color:#fff;padding:15px 28px;border-radius:13px;font-weight:700;font-size:15px;box-shadow:0 14px 34px -12px rgba(200,16,46,.6);transition:.25s}
+.b1:hover{transform:translateY(-3px)}
+.b2{border:1px solid rgba(255,255,255,.25);color:#fff;padding:15px 26px;border-radius:13px;font-weight:600;font-size:15px;background:rgba(255,255,255,.05);transition:.25s}
+.b2:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.trust{display:flex;gap:26px;align-items:center;margin-top:40px;flex-wrap:wrap}
+.trust span{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#7d838d;border:1px solid rgba(255,255,255,.16);padding:8px 14px;border-radius:10px}
+.hphoto{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.7);min-height:420px;background:#22252c}
+.hphoto img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.hphoto .yr{position:absolute;left:22px;bottom:22px;background:rgba(20,22,26,.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:14px 20px}
+.hphoto .yr b{font-family:'Archivo';font-size:26px;color:#ffd166;display:block;line-height:1.1}
+.hphoto .yr span{font-size:11px;color:#aab0ba;letter-spacing:.08em;text-transform:uppercase}
+
+.stats{background:#fff;border-bottom:1px solid var(--line)}
+.stgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;padding:46px 0}
+.st b{font-family:'Archivo';font-size:clamp(28px,3.4vw,42px);font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
+.st>span{font-size:13px;color:var(--mut);margin-top:6px;display:block}
+.st b span{font:inherit;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline;margin:0}
+
+section{padding:88px 0}
+.shead{max-width:760px;margin-bottom:48px}
+.eyebrow{font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--grad)}
+.shead h2{font-size:clamp(26px,3.4vw,40px)}
+.shead p{color:var(--mut);margin-top:12px;font-size:15px}
+.srow{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:48px}
+.srow .shead{margin-bottom:0}
+.more{font-weight:700;font-size:14px;color:var(--red);display:inline-flex;gap:7px;transition:gap .2s}
+.more:hover{gap:11px}
+
+.ph3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.phc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;transition:.3s;position:relative;overflow:hidden}
+.phc::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.phc:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.phc:hover::after{transform:scaleX(1)}
+.phc .n{font-family:'Archivo';font-weight:900;font-size:38px;color:#eee9de;position:absolute;top:14px;right:20px}
+.phc h3{font-size:18px;margin-bottom:8px}
+.phc p{font-size:13.5px;color:var(--mut)}
+
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sv{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;font-weight:600;font-size:13.5px;display:flex;align-items:center;gap:12px;transition:.25s}
+.sv:hover{border-color:var(--red);color:var(--red);transform:translateY(-4px);box-shadow:var(--sh)}
+.sv i{font-style:normal;color:var(--red)}
+
+.loc{background:var(--dark);color:#fff}
+.loc .shead h2{color:#fff}
+.locgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.lc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:32px;transition:.3s}
+.lc:hover{background:rgba(255,255,255,.09);transform:translateY(-5px)}
+.lc h3{font-size:24px;margin-bottom:6px}
+.lc .mono{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#ffd166}
+.lc p{color:#aab0ba;font-size:14px;margin:14px 0 20px}
+.lc .tel{font-family:'Archivo';font-size:24px;font-weight:800;color:#fff;display:inline-block;margin-bottom:16px}
+.lc .lb{display:flex;gap:10px;flex-wrap:wrap}
+.lc .lb a{border:1px solid rgba(255,255,255,.25);padding:10px 18px;border-radius:11px;font-size:13px;font-weight:600;transition:.25s}
+.lc .lb a:hover{background:#fff;color:var(--dark)}
+.lc .lb a.hot{background:var(--grad);border:0}
+.lc .lb a.hot:hover{color:#fff;transform:translateY(-2px)}
+
+.pod{background:linear-gradient(100deg,#1d2026,#2a2e37);border-radius:24px;padding:44px 48px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
+.pod::before{content:"ON AIR";position:absolute;right:20px;top:-30px;font-family:'Archivo';font-weight:900;font-size:110px;color:rgba(255,255,255,.04)}
+.pod h3{font-size:24px;margin-bottom:8px}
+.pod p{color:#aab0ba;font-size:14px;max-width:520px}
+.pod .pb{display:flex;gap:12px;flex-wrap:wrap}
+.pod .pb a{border:1px solid rgba(255,255,255,.3);padding:12px 20px;border-radius:12px;font-weight:600;font-size:13.5px;transition:.25s;background:rgba(255,255,255,.06)}
+.pod .pb a:hover{background:#fff;color:var(--dark)}
+
+.warr{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.warr .big{font-family:'Archivo';font-weight:900;font-size:clamp(50px,7vw,92px);line-height:.95;color:transparent;-webkit-text-stroke:1.5px var(--red)}
+.warr .big b{color:var(--red);-webkit-text-stroke:0}
+.wlist{display:flex;flex-direction:column;gap:12px}
+.wlist div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 22px;font-size:14px;display:flex;gap:12px;align-items:center}
+.wlist b{color:var(--red)}
+
+footer{background:var(--dark);color:#9aa0a9;padding:64px 0 28px;position:relative;overflow:hidden}
+footer .wm{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);font-family:'Archivo';font-weight:900;font-size:190px;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);white-space:nowrap;line-height:1;pointer-events:none}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;position:relative}
+.fgrid h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;font-family:'IBM Plex Mono';font-weight:500}
+.fgrid a{display:block;font-size:13.5px;padding:5px 0;transition:.2s}
+.fgrid a:hover{color:#fff;padding-left:5px}
+.fbot{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;position:relative}
+.badge{position:fixed;bottom:18px;right:18px;z-index:500;background:rgba(20,22,26,.92);color:#d3d7de;font-size:11px;padding:8px 14px;border-radius:100px;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);font-family:'IBM Plex Mono'}
+.badge b{color:#ffd166}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}.rv{opacity:1;transform:none}}
+@media(max-width:1100px){
+  nav.menu,.cta{display:none}.burger{display:flex}.mnav{display:block}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .ph3,.sgrid{grid-template-columns:repeat(2,1fr)}
+  .locgrid,.warr{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .tb-l span.hide-m{display:none}
+  .ph3,.sgrid{grid-template-columns:1fr}
+  .stgrid{grid-template-columns:1fr 1fr;gap:30px 10px}
+  .fgrid{grid-template-columns:1fr}
+  section{padding:62px 0}
+  .hero .wrap{padding-top:56px;padding-bottom:52px}
+  .pod{padding:30px 24px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l"><span><b>Mon – Fri</b> 8:00 AM – 5:30 PM</span><span class="hide-m">AAA Approved · NAPA AutoCare</span></div>
+    <div class="tb-r">
+      <a href="tel:302-600-1740">Wilmington <b>302-600-1740</b></a>
+      <a href="tel:302-554-9070">Millsboro <b>302-554-9070</b></a>
+    </div>
+  </div>
+</div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="https://www.buckleysautocare.com">
+      <img src="https://d2if3j13w19mqs.cloudfront.net/6a48a87ad7378f9c545f97cb/www.buckleysautocare.com/images/3cb6afa46d9dcba1231356c1ed689dbb56481b3fc8707ed68734d9b6b6b15ba3.webp" alt="Buckley's Auto Care" onerror="this.style.display='none'">
+      <div class="bt"><b>Buckley's Auto Care</b><span>Since 1966</span></div>
+    </a>
+    <nav class="menu">
+      <div class="mi"><a href="https://www.buckleysautocare.com/services/">Services <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd">
+          <a href="https://www.buckleysautocare.com/services/oil-changes/">Oil Changes</a>
+          <a href="https://www.buckleysautocare.com/services/brake-repair/">Brake Repair</a>
+          <a href="https://www.buckleysautocare.com/services/check-engine-light/">Check Engine Light</a>
+          <a href="https://www.buckleysautocare.com/services/air-conditioning-repair/">AC Repair</a>
+          <a href="https://www.buckleysautocare.com/services/battery-inspections-replacements/">Battery Service</a>
+          <a href="https://www.buckleysautocare.com/services/tire-repair-replacement/">Tires & Alignment</a>
+          <a href="https://www.buckleysautocare.com/services/transmission-repair-replacement/">Transmission Repair</a>
+          <a href="https://www.buckleysautocare.com/services/factory-scheduled-maintenance-services/">Factory Maintenance</a>
+          <a href="https://www.buckleysautocare.com/services/fleet-service/">Fleet Services</a>
+          <a href="https://www.buckleysautocare.com/services/">All services →</a>
+        </div>
+      </div>
+      <div class="mi"><a href="https://www.buckleysautocare.com/vehicles/">Vehicles</a></div>
+      <div class="mi"><a href="https://www.buckleysautocare.com/specials/">Coupons</a></div>
+      <div class="mi"><a href="https://www.buckleysautocare.com/rewards/">Rewards</a></div>
+      <div class="mi"><a href="https://www.buckleysautocare.com/reviews/">Reviews</a></div>
+      <div class="mi"><a href="https://www.buckleysautocare.com/financing/">Financing</a></div>
+      <div class="mi"><a href="https://www.buckleysautocare.com/about-us/">About</a></div>
+    </nav>
+    <a class="cta" href="https://www.buckleysautocare.com/appointments">Make an Appointment</a>
+    <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('mo')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav">
+  <a href="https://www.buckleysautocare.com/services/">Services</a>
+  <a href="https://www.buckleysautocare.com/vehicles/">Vehicles</a>
+  <a href="https://www.buckleysautocare.com/specials/">Coupons</a>
+  <a href="https://www.buckleysautocare.com/rewards/">Rewards</a>
+  <a href="https://www.buckleysautocare.com/reviews/">Reviews</a>
+  <a href="https://www.buckleysautocare.com/financing/">Financing</a>
+  <a href="https://www.buckleysautocare.com/about-us/">About Us</a>
+  <a href="https://www.buckleysautocare.com/appointments" style="color:var(--red)">→ Make an Appointment</a>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kick">Family owned & operated since 1966</div>
+      <h1>Delaware's auto shop for <span>59 years</span> and counting</h1>
+      <p class="sub">One of the oldest family owned repair centers in the state. AAA approved, NAPA AutoCare certified, and every repair backed by a 3 year / 36,000 mile nationwide warranty.</p>
+      <div class="hbtns">
+        <a class="b1" href="https://www.buckleysautocare.com/appointments">Make an appointment</a>
+        <a class="b2" href="tel:302-600-1740">Call Wilmington</a>
+      </div>
+      <div class="trust">
+        <span>AAA Approved</span><span>NAPA AutoCare</span><span>ASA Member</span><span>3yr / 36k Warranty</span>
+      </div>
+    </div>
+    <div class="hphoto rv">
+      <img src="https://www.buckleysautocare.com/wp-content/uploads/2025/05/TechTeamBuckleysAutoCareMillsboro-1920w.jpeg" alt="The Buckley's Auto Care team" onerror="this.style.display='none'">
+      <div class="yr"><b>1966</b><span>The year it all started</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap stgrid">
+    <div class="st rv"><b><span data-cnt="59">0</span>+</b><span>years serving Delaware</span></div>
+    <div class="st rv"><b><span data-cnt="2">0</span></b><span>locations — Wilmington & Millsboro</span></div>
+    <div class="st rv"><b><span data-cnt="36">0</span>k</b><span>mile nationwide warranty</span></div>
+    <div class="st rv"><b><span data-cnt="23">0</span>+</b><span>services under one roof</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Our philosophy</div>
+      <h2>Efficient. Reliable. Cost-effective.</h2>
+    </div>
+    <div class="ph3">
+      <div class="phc rv"><span class="n">01</span><h3>Efficient</h3><p>You have more to tend to than your car. We get you in and out in a snap, with online booking and status updates a phone call away.</p></div>
+      <div class="phc rv"><span class="n">02</span><h3>Reliable</h3><p>When we complete a job, we do it right the first time. That's why we can back it with a 36 month / 36,000 mile warranty.</p></div>
+      <div class="phc rv"><span class="n">03</span><h3>Cost-effective</h3><p>Fixing and maintaining your vehicle shouldn't break the bank. Typically more affordable than the dealership, with coupons and financing available.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="srow">
+      <div class="shead rv">
+        <div class="eyebrow">Services</div>
+        <h2>Everything your car needs</h2>
+      </div>
+      <a class="more rv" href="https://www.buckleysautocare.com/services/">All 23 services →</a>
+    </div>
+    <div class="sgrid">
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/oil-changes/"><i>●</i>Oil Changes</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/brake-repair/"><i>●</i>Brake Repair</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/check-engine-light/"><i>●</i>Check Engine Light</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/air-conditioning-repair/"><i>●</i>AC Repair</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/battery-inspections-replacements/"><i>●</i>Battery Inspection</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/suspension-steering-repairs/"><i>●</i>Suspension & Steering</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/tire-repair-replacement/"><i>●</i>Tires & Wheel Alignment</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/transmission-repair-replacement/"><i>●</i>Transmission Repair</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/cooling-system-radiators-repair-replacement/"><i>●</i>Cooling System</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/exhaust-system-services/"><i>●</i>Exhaust System</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/factory-scheduled-maintenance-services/"><i>●</i>Factory Maintenance</a>
+      <a class="sv rv" href="https://www.buckleysautocare.com/services/fleet-service/"><i>●</i>Fleet Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="loc" id="locations">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow" style="color:#ffd166">Two locations</div>
+      <h2>North or south, we've got you</h2>
+    </div>
+    <div class="locgrid">
+      <div class="lc rv">
+        <span class="mono">New Castle County · Since 1966</span>
+        <h3>Wilmington</h3>
+        <p>1604 E Newport Pike, Wilmington, DE 19804<br>Near the I-95 and 141 interchanges. Serving Wilmington, Hockessin, Newport, Elsmere, Newark and New Castle.</p>
+        <a class="tel" href="tel:302-600-1740">302-600-1740</a>
+        <div class="lb">
+          <a class="hot" href="https://www.buckleysautocare.com/appointments">Book now</a>
+          <a href="https://maps.app.goo.gl/QWzUVgBs2FQrzyW66">Directions</a>
+        </div>
+      </div>
+      <div class="lc rv">
+        <span class="mono">Sussex County</span>
+        <h3>Millsboro</h3>
+        <p>28858 Harmons Hill Rd, Millsboro, DE 19966<br>Just off Route 5 and Harmons Hill Road. Serving Millsboro, Georgetown, Longneck and the surrounding communities.</p>
+        <a class="tel" href="tel:302-554-9070">302-554-9070</a>
+        <div class="lb">
+          <a class="hot" href="https://www.buckleysautocare.com/appointments">Book now</a>
+          <a href="https://maps.app.goo.gl/qiKpe1QHQNAXgsWU7">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap warr">
+    <div class="rv">
+      <div class="eyebrow">The Buckley's promise</div>
+      <div class="big"><b>3 yr</b> / 36,000 mile warranty</div>
+    </div>
+    <div class="wlist rv">
+      <div><b>✓</b> NAPA AutoCare Nationwide Warranty honored at 17,000+ locations</div>
+      <div><b>✓</b> AAA Approved Auto Repair at both shops</div>
+      <div><b>✓</b> All makes and models — domestic, Asian and European</div>
+      <div><b>✓</b> Rewards program: earn points on every visit</div>
+      <div><b>✓</b> Financing available for larger repairs</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="pod rv">
+      <div>
+        <div class="eyebrow" style="color:#ffd166">DriveSafe. DriveSmart.</div>
+        <h3>The only auto shop in Delaware with its own podcast</h3>
+        <p>Car care tips from the Buckley's team, plus 302.fm streaming from the shop. Listen while you wait, or on the road.</p>
+      </div>
+      <div class="pb">
+        <a href="https://open.spotify.com/show/3XbGlELgv5p3In7BP3tJt2">Listen on Spotify</a>
+        <a href="https://podcasts.apple.com/us/podcast/drive-safe-drive-smart/id1766774494">Apple Podcasts</a>
+        <a href="https://www.buckleysautocare.com/podcasts/">All episodes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wm">SINCE 1966</div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Buckley's Auto Care</h4>
+        <p style="font-size:13px;max-width:300px">One of Delaware's oldest family owned and operated auto repair centers. Efficient, reliable and cost-effective since 1966.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="https://www.buckleysautocare.com/about-us">About Us</a>
+        <a href="https://www.buckleysautocare.com/specials/">Coupons & Specials</a>
+        <a href="https://www.buckleysautocare.com/rewards/">Rewards</a>
+        <a href="https://www.buckleysautocare.com/reviews">Reviews</a>
+        <a href="https://www.buckleysautocare.com/careers">Careers</a>
+        <a href="https://www.buckleysautocare.com/blog">Blog</a>
+      </div>
+      <div>
+        <h4>Wilmington</h4>
+        <a href="https://maps.app.goo.gl/QWzUVgBs2FQrzyW66">1604 E Newport Pike<br>Wilmington, DE 19804</a>
+        <a href="tel:302-600-1740">302-600-1740</a>
+      </div>
+      <div>
+        <h4>Millsboro</h4>
+        <a href="https://maps.app.goo.gl/qiKpe1QHQNAXgsWU7">28858 Harmons Hill Rd<br>Millsboro, DE 19966</a>
+        <a href="tel:302-554-9070">302-554-9070</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Buckley's Auto Care. Mon – Fri: 8:00 AM – 5:30 PM.</span>
+      <span><a href="https://facebook.com/buckleysautocare/">Facebook</a> · <a href="https://yelp.com/biz/buckleys-auto-care-wilmington">Yelp</a> · <a href="https://youtube.com/user/BuckleysAutoCare">YouTube</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="badge">Design concept by <b>JBA Ventures</b></div>
+
+<script>
+addEventListener('scroll',()=>{const h=document.documentElement;
+document.getElementById('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+document.getElementById('hd').classList.toggle('sc',h.scrollTop>10);},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);
+const el=e.target,end=parseFloat(el.dataset.cnt),t0=performance.now();
+const step=t=>{const p=Math.min((t-t0)/1500,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
+requestAnimationFrame(step);}),{threshold:.5});
+document.querySelectorAll('[data-cnt]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>

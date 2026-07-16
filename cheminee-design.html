@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Cheminée Design Co. | Exotic Scagliola & Cast Stone — Design Concept</title>
+<meta name="description" content="Cheminée Design Co. designs, manufactures and installs the finest architectural elements in exotic Scagliola and cast stone — mantels, kitchen hoods, columns and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#26211b; --ink2:#514a40; --mut:#847b6e;
+  --gold:#b0895a; --gold-d:#8f6c41;
+  --bg:#f6f3ec; --card:#fdfcf8; --line:#e7e1d4; --dark:#1f1b15;
+  --sh:0 24px 60px -26px rgba(38,33,27,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:15px}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;line-height:1.1;letter-spacing:.005em;font-weight:500}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+::selection{background:var(--gold);color:#fff}
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--gold);z-index:400}
+
+header{position:sticky;top:0;z-index:300;background:rgba(246,243,236,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.sc{box-shadow:0 8px 30px -14px rgba(38,33,27,.15)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:18px}
+.brand{display:flex;flex-direction:column;line-height:1.05}
+.brand b{font-family:'Cormorant Garamond';font-size:24px;font-weight:600;letter-spacing:.04em}
+.brand span{font-family:'IBM Plex Mono';font-size:8.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-d)}
+nav.menu{display:flex;gap:4px;align-items:center}
+.mi{position:relative}
+.mi>a{display:flex;align-items:center;gap:5px;padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);transition:.2s}
+.mi>a:hover{color:var(--gold-d)}
+.mi>a svg{width:9px;height:9px;opacity:.5}
+.dd{position:absolute;top:100%;left:50%;transform:translate(-50%,10px);background:var(--card);border:1px solid var(--line);border-radius:4px;box-shadow:var(--sh);padding:14px;opacity:0;visibility:hidden;transition:.25s;min-width:250px;z-index:310}
+.mi:hover .dd{opacity:1;visibility:visible;transform:translate(-50%,4px)}
+.dd a{display:block;padding:8px 14px;font-size:13px;color:var(--ink2);transition:.15s;border-left:1px solid transparent}
+.dd a:hover{color:var(--gold-d);border-left-color:var(--gold);padding-left:18px}
+.cta{border:1px solid var(--ink);padding:12px 24px;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:.25s;white-space:nowrap}
+.cta:hover{background:var(--ink);color:#fff}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:360}
+.burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
+body.mo .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.mo .burger span:nth-child(2){opacity:0}
+body.mo .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;background:var(--bg);z-index:340;padding:110px 30px 40px;overflow-y:auto;transform:translateX(100%);transition:transform .38s cubic-bezier(.7,0,.3,1);display:none}
+body.mo .mnav{transform:translateX(0)}
+body.mo{overflow:hidden}
+body.mo header{z-index:350}
+.mnav a{display:block;padding:14px 4px;font-family:'Cormorant Garamond';font-size:22px;border-bottom:1px solid var(--line)}
+
+.hero{position:relative;overflow:hidden;background:var(--dark);color:#f2ede2}
+.hero .bgimg{position:absolute;inset:0;opacity:.5}
+.hero .bgimg img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(31,27,21,.95) 0%,rgba(31,27,21,.35) 55%,rgba(31,27,21,.6) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:130px;padding-bottom:110px;text-align:center;max-width:900px}
+.hero .k{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.4em;text-transform:uppercase;color:#d8b98c;margin-bottom:26px;display:block}
+.hero h1{font-size:clamp(46px,7.5vw,96px);font-weight:500}
+.hero h1 em{font-style:italic;color:#d8b98c}
+.hero p{margin:24px auto 38px;font-size:16px;color:#c9c0b0;max-width:560px}
+.hbtns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.b1{background:#f2ede2;color:var(--ink);padding:15px 32px;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:.25s}
+.b1:hover{background:var(--gold);color:#fff}
+.b2{border:1px solid rgba(242,237,226,.4);color:#f2ede2;padding:15px 30px;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:.25s}
+.b2:hover{background:rgba(242,237,226,.12)}
+.hero .rule{width:1px;height:70px;background:linear-gradient(to bottom,#d8b98c,transparent);margin:56px auto 0}
+
+section{padding:96px 0}
+.eyebrow{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-d);display:block;margin-bottom:16px}
+.shead{max-width:700px;margin-bottom:56px}
+.shead h2{font-size:clamp(32px,4vw,52px)}
+.shead p{color:var(--mut);margin-top:14px}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about blockquote{font-family:'Cormorant Garamond';font-size:clamp(24px,2.8vw,34px);line-height:1.4;font-weight:500}
+.about blockquote em{font-style:italic;color:var(--gold-d)}
+.about .txt p{color:var(--ink2);margin-bottom:16px}
+.about .sig{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+
+.prods{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.pr{position:relative;overflow:hidden;background:var(--dark);aspect-ratio:16/10.5;display:block}
+.pr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .8s,opacity .4s}
+.pr:hover img{transform:scale(1.05);opacity:1}
+.pr::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(31,27,21,.85),transparent 55%)}
+.pr .lb{position:absolute;left:26px;bottom:22px;z-index:2;color:#f2ede2}
+.pr .lb .n{font-family:'IBM Plex Mono';font-size:9.5px;letter-spacing:.3em;color:#d8b98c;display:block;margin-bottom:6px}
+.pr .lb h3{font-size:27px;font-weight:500}
+.pr .lb p{font-size:12.5px;color:#c9c0b0;max-width:340px;margin-top:4px;opacity:0;transform:translateY(6px);transition:.35s}
+.pr:hover .lb p{opacity:1;transform:none}
+.pr .arr{position:absolute;right:24px;bottom:24px;z-index:2;width:40px;height:40px;border:1px solid rgba(242,237,226,.4);border-radius:50%;display:grid;place-items:center;color:#f2ede2;transition:.3s}
+.pr:hover .arr{background:var(--gold);border-color:var(--gold);transform:rotate(45deg)}
+.pr .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:'Cormorant Garamond';font-size:30px;color:rgba(242,237,226,.7);opacity:0}
+.pr.noimg .ph{opacity:1}
+.pr.noimg img{opacity:0}
+
+.projects{background:var(--dark);color:#f2ede2}
+.projects .shead h2{color:#f2ede2}
+.pj{display:grid;grid-template-columns:70px 1fr auto;gap:26px;align-items:baseline;padding:22px 6px;border-top:1px solid rgba(242,237,226,.14);transition:.25s}
+.pj:last-of-type{border-bottom:1px solid rgba(242,237,226,.14)}
+.pj:hover{background:rgba(242,237,226,.05);padding-left:16px}
+.pj .n{font-family:'IBM Plex Mono';font-size:11px;color:#d8b98c}
+.pj h3{font-size:26px;font-weight:500}
+.pj span{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8f867a}
+.pj i{font-style:normal;color:#d8b98c;opacity:0;transition:.25s}
+.pj:hover i{opacity:1}
+
+.mats{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.mt{background:var(--card);border:1px solid var(--line);padding:36px 32px;transition:.3s;position:relative}
+.mt::before{content:"";position:absolute;top:0;left:32px;right:32px;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .4s}
+.mt:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.mt:hover::before{transform:scaleX(1)}
+.mt h3{font-size:24px;margin-bottom:10px}
+.mt p{font-size:13.5px;color:var(--mut)}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact h2{font-size:clamp(32px,4vw,52px);margin-bottom:18px}
+.contact p{color:var(--mut);max-width:440px}
+.cinfo{background:var(--dark);color:#f2ede2;padding:42px}
+.cinfo .row{padding:14px 0;border-bottom:1px solid rgba(242,237,226,.12);display:flex;justify-content:space-between;gap:20px;font-size:14px;flex-wrap:wrap}
+.cinfo .row span{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#d8b98c}
+.cinfo a.q{display:block;text-align:center;margin-top:26px;background:#f2ede2;color:var(--ink);padding:15px;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:.25s}
+.cinfo a.q:hover{background:var(--gold);color:#fff}
+
+footer{background:var(--dark);color:#9a9184;padding:64px 0 28px;position:relative;overflow:hidden}
+footer .wm{position:absolute;left:50%;bottom:-48px;transform:translateX(-50%);font-family:'Cormorant Garamond';font-size:210px;color:transparent;-webkit-text-stroke:1px rgba(242,237,226,.06);white-space:nowrap;line-height:1;pointer-events:none}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;position:relative}
+.fgrid h4{color:#f2ede2;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:18px;font-family:'IBM Plex Mono';font-weight:500}
+.fgrid a{display:block;font-size:13.5px;padding:5px 0;transition:.2s}
+.fgrid a:hover{color:#f2ede2;padding-left:5px}
+.fbot{border-top:1px solid rgba(242,237,226,.1);margin-top:48px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;position:relative}
+.badge{position:fixed;bottom:18px;right:18px;z-index:500;background:rgba(31,27,21,.92);color:#e5dccb;font-size:11px;padding:8px 14px;border-radius:100px;border:1px solid rgba(242,237,226,.2);backdrop-filter:blur(8px);font-family:'IBM Plex Mono'}
+.badge b{color:#d8b98c}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}.rv{opacity:1;transform:none}}
+@media(max-width:1100px){
+  nav.menu,.cta{display:none}.burger{display:flex}.mnav{display:block}
+  .about,.contact{grid-template-columns:1fr;gap:44px}
+  .prods{grid-template-columns:1fr}
+  .mats{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  section{padding:64px 0}
+  .hero .wrap{padding-top:80px;padding-bottom:70px}
+  .pj{grid-template-columns:1fr;gap:6px}
+  .fgrid{grid-template-columns:1fr}
+  .cinfo{padding:30px 24px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="https://www.chemineedesignco.com">
+      <b>Cheminée Design Co.</b>
+      <span>Exotic Scagliola · Cast Stone</span>
+    </a>
+    <nav class="menu">
+      <div class="mi"><a href="https://www.chemineedesignco.com">Products <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd">
+          <a href="https://www.chemineedesignco.com/mantels-overmantels">Mantels & Overmantels</a>
+          <a href="https://www.chemineedesignco.com/kitchen-hoods">Kitchen Hoods</a>
+          <a href="https://www.chemineedesignco.com/architectural-elements">Architectural Elements</a>
+          <a href="https://www.chemineedesignco.com/outdoor-concrete-furniture">Outdoor Furniture</a>
+          <a href="https://www.chemineedesignco.com/concrete-marble-pavers">Custom Pavers</a>
+          <a href="https://www.chemineedesignco.com/concrete-vanities">Concrete Vanities</a>
+        </div>
+      </div>
+      <div class="mi"><a href="https://www.chemineedesignco.com">Projects <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <div class="dd">
+          <a href="https://www.chemineedesignco.com/venice-cast-stone-project">Palladio</a>
+          <a href="https://www.chemineedesignco.com/isle-of-sicily-cast-stone-project">Isle of Sicily</a>
+          <a href="https://www.chemineedesignco.com/windermere-archtectural-elements">Windermere</a>
+          <a href="https://www.chemineedesignco.com/manalapan-scagliola-fireplace">Manalapan</a>
+          <a href="https://www.chemineedesignco.com/palm-beach-scagliola-project">Palm Beach Island</a>
+          <a href="https://www.chemineedesignco.com/winter-park-modern-cast-stone">Winter Park</a>
+          <a href="https://www.chemineedesignco.com/golden-oak-lake-nona-scagliola">Golden Oak & Lake Nona</a>
+          <a href="https://www.chemineedesignco.com/various-home-examples">Custom Home Examples</a>
+        </div>
+      </div>
+      <div class="mi"><a href="https://www.chemineedesignco.com">About</a></div>
+      <div class="mi"><a href="https://www.instagram.com/chemineedesignco/">Instagram</a></div>
+    </nav>
+    <a class="cta" href="tel:+14074540464">407 454 0464</a>
+    <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('mo')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav">
+  <a href="https://www.chemineedesignco.com/mantels-overmantels">Mantels & Overmantels</a>
+  <a href="https://www.chemineedesignco.com/kitchen-hoods">Kitchen Hoods</a>
+  <a href="https://www.chemineedesignco.com/architectural-elements">Architectural Elements</a>
+  <a href="https://www.chemineedesignco.com/outdoor-concrete-furniture">Outdoor Furniture</a>
+  <a href="https://www.chemineedesignco.com/concrete-marble-pavers">Custom Pavers</a>
+  <a href="https://www.chemineedesignco.com/concrete-vanities">Concrete Vanities</a>
+  <a href="https://www.chemineedesignco.com/various-home-examples">Projects</a>
+  <a href="tel:+14074540464" style="color:var(--gold-d)">→ 407 454 0464</a>
+</div>
+
+<div class="hero">
+  <div class="bgimg"><img src="https://static.wixstatic.com/media/b66fb2_1a607e5609544f20bfe86f5e2c59b2e1~mv2_d_4826_2619_s_4_2.jpg/v1/fill/w_1800,h_1000,al_c,q_85,enc_avif,quality_auto/b66fb2_1a607e5609544f20bfe86f5e2c59b2e1~mv2_d_4826_2619_s_4_2.jpg" alt="" onerror="this.style.display='none'"></div>
+  <div class="wrap">
+    <span class="k">Cheminée Design Co. · Est. Boca Raton, Florida</span>
+    <h1>Dream <em>in stone.</em></h1>
+    <p>The finest architectural elements in exotic Scagliola and cast stone — designed, hand crafted and installed for the most extraordinary homes in Florida and beyond.</p>
+    <div class="hbtns">
+      <a class="b1" href="#contact">Request a consultation</a>
+      <a class="b2" href="#products">Explore the work</a>
+    </div>
+    <div class="rule"></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap about">
+    <blockquote class="rv">"From modern to traditional, interior to exterior — we design, manufacture and install <em>the most breathtaking hand crafted products</em> you have ever seen."</blockquote>
+    <div class="txt rv">
+      <span class="eyebrow">The atelier</span>
+      <p>Cheminée Design Co. develops products and finishes unseen in the industry. Every piece begins as a drawing, becomes a mould in our Boca Raton studio, and ends as the focal point of a room.</p>
+      <p>Our proprietary stone blends and exotic Scagliola technique — a 17th century Italian art — let us match any marble, any color, any period.</p>
+      <div class="sig">Scagliola · Cast Stone · Since 2011</div>
+    </div>
+  </div>
+</section>
+
+<section id="products" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Products</span>
+      <h2>Four ways to make a statement</h2>
+    </div>
+    <div class="prods">
+      <a class="pr rv" href="https://www.chemineedesignco.com/mantels-overmantels">
+        <img src="https://static.wixstatic.com/media/b66fb2_6522d0082ac54176b18d53ab5a11f003~mv2_d_3264_2448_s_4_2.jpg/v1/fill/w_1000,h_660,al_c,q_85,enc_avif,quality_auto/b66fb2_6522d0082ac54176b18d53ab5a11f003~mv2_d_3264_2448_s_4_2.jpg" alt="" onerror="this.parentElement.classList.add('noimg')">
+        <div class="ph">Mantels</div>
+        <div class="lb"><span class="n">I</span><h3>Mantels & Overmantels</h3><p>The heart of your home — 18th century or strikingly modern, always the focal point.</p></div>
+        <span class="arr">↗</span>
+      </a>
+      <a class="pr rv" href="https://www.chemineedesignco.com/kitchen-hoods">
+        <img src="https://static.wixstatic.com/media/b66fb2_0ad3c20adf47443a859fb7840defcff3~mv2.jpg/v1/fill/w_1000,h_660,al_c,q_85,enc_avif,quality_auto/b66fb2_0ad3c20adf47443a859fb7840defcff3~mv2.jpg" alt="" onerror="this.parentElement.classList.add('noimg')">
+        <div class="ph">Kitchen Hoods</div>
+        <div class="lb"><span class="n">II</span><h3>Kitchen Hoods</h3><p>Everyone gathers in the kitchen. A Scagliola hood makes sure they remember it.</p></div>
+        <span class="arr">↗</span>
+      </a>
+      <a class="pr rv" href="https://www.chemineedesignco.com/architectural-elements">
+        <img src="https://static.wixstatic.com/media/b66fb2_64f88b0c53f74027bcb2b2ba21d60af0~mv2_d_3246_2424_s_4_2.jpg/v1/fill/w_1000,h_660,al_c,q_85,enc_avif,quality_auto/b66fb2_64f88b0c53f74027bcb2b2ba21d60af0~mv2_d_3246_2424_s_4_2.jpg" alt="" onerror="this.parentElement.classList.add('noimg')">
+        <div class="ph">Architectural Elements</div>
+        <div class="lb"><span class="n">III</span><h3>Architectural Elements</h3><p>Columns, moldings, brackets, window and door surrounds that elevate a project above the rest.</p></div>
+        <span class="arr">↗</span>
+      </a>
+      <a class="pr rv" href="https://www.chemineedesignco.com/outdoor-concrete-furniture">
+        <img src="https://static.wixstatic.com/media/b66fb2_5d3e6f3d1dfc4aa4ae73a149b54cbee8~mv2_d_2804_2138_s_2.jpg/v1/fill/w_1000,h_660,al_c,q_85,enc_avif,quality_auto/b66fb2_5d3e6f3d1dfc4aa4ae73a149b54cbee8~mv2_d_2804_2138_s_2.jpg" alt="" onerror="this.parentElement.classList.add('noimg')">
+        <div class="ph">Furniture</div>
+        <div class="lb"><span class="n">IV</span><h3>Outdoor Furniture</h3><p>Bold pieces for lanai or living room, cast in finishes no one else can make.</p></div>
+        <span class="arr">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="projects">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" style="color:#d8b98c">Selected projects</span>
+      <h2>From Palm Beach to Palladio</h2>
+    </div>
+    <a class="pj rv" href="https://www.chemineedesignco.com/venice-cast-stone-project"><span class="n">01</span><h3>Palladio</h3><span>Cast stone <i>↗</i></span></a>
+    <a class="pj rv" href="https://www.chemineedesignco.com/isle-of-sicily-cast-stone-project"><span class="n">02</span><h3>Isle of Sicily</h3><span>Cast stone <i>↗</i></span></a>
+    <a class="pj rv" href="https://www.chemineedesignco.com/windermere-archtectural-elements"><span class="n">03</span><h3>Windermere</h3><span>Architectural elements <i>↗</i></span></a>
+    <a class="pj rv" href="https://www.chemineedesignco.com/manalapan-scagliola-fireplace"><span class="n">04</span><h3>Manalapan</h3><span>Scagliola fireplace <i>↗</i></span></a>
+    <a class="pj rv" href="https://www.chemineedesignco.com/palm-beach-scagliola-project"><span class="n">05</span><h3>Palm Beach Island</h3><span>Scagliola <i>↗</i></span></a>
+    <a class="pj rv" href="https://www.chemineedesignco.com/winter-park-modern-cast-stone"><span class="n">06</span><h3>Winter Park</h3><span>Modern cast stone <i>↗</i></span></a>
+    <a class="pj rv" href="https://www.chemineedesignco.com/golden-oak-lake-nona-scagliola"><span class="n">07</span><h3>Golden Oak & Lake Nona</h3><span>Scagliola <i>↗</i></span></a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead center rv">
+      <span class="eyebrow">Also in the collection</span>
+      <h2>Beyond the mantel</h2>
+    </div>
+    <div class="mats">
+      <a class="mt rv" href="https://www.chemineedesignco.com/concrete-marble-pavers"><h3>Custom Pavers</h3><p>Concrete and marble pavers cast to your pattern, for drives, pools and courtyards.</p></a>
+      <a class="mt rv" href="https://www.chemineedesignco.com/concrete-vanities"><h3>Concrete Vanities</h3><p>Sculptural vanities in our proprietary blends — a bathroom's quiet centerpiece.</p></a>
+      <a class="mt rv" href="https://www.chemineedesignco.com/various-home-examples"><h3>Custom Home Examples</h3><p>Full residences where every stone element carries one hand, one standard.</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap contact">
+    <div class="rv">
+      <span class="eyebrow">Contact</span>
+      <h2>Have a project in mind?</h2>
+      <p>Residential or commercial, bid or consultation — tell us what you're dreaming of, and we'll put it in stone.</p>
+    </div>
+    <div class="cinfo rv">
+      <div class="row"><span>Studio</span><div>4180 NW 5th Ave, Boca Raton, FL 33431</div></div>
+      <div class="row"><span>Telephone</span><div>407 454 0464</div></div>
+      <div class="row"><span>Email</span><div>contact@chemineedesignco.com</div></div>
+      <div class="row"><span>Elsewhere</span><div>Instagram · Pinterest · Houzz</div></div>
+      <a class="q" href="mailto:contact@chemineedesignco.com?subject=Project inquiry">Request a quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wm">Cheminée</div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Cheminée Design Co.</h4>
+        <p style="font-size:13px;max-width:300px">The finest architectural elements in exotic Scagliola and cast stone — designed, manufactured and installed.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="https://www.chemineedesignco.com/mantels-overmantels">Mantels & Overmantels</a>
+        <a href="https://www.chemineedesignco.com/kitchen-hoods">Kitchen Hoods</a>
+        <a href="https://www.chemineedesignco.com/architectural-elements">Architectural Elements</a>
+        <a href="https://www.chemineedesignco.com/outdoor-concrete-furniture">Outdoor Furniture</a>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <a href="tel:+14074540464">407 454 0464</a>
+        <a href="mailto:contact@chemineedesignco.com">contact@chemineedesignco.com</a>
+        <a href="https://www.instagram.com/chemineedesignco/">Instagram</a>
+        <a href="https://www.houzz.com/pro/chemineedesignco/cheminee-design-co">Houzz</a>
+        <a href="https://www.pinterest.com/chemineedesignco/">Pinterest</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Cheminée Design Co. All rights reserved.</span>
+      <span>Boca Raton · Palm Beach · Orlando</span>
+    </div>
+  </div>
+</footer>
+
+<div class="badge">Design concept by <b>JBA Ventures</b></div>
+
+<script>
+addEventListener('scroll',()=>{const h=document.documentElement;
+document.getElementById('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+document.getElementById('hd').classList.toggle('sc',h.scrollTop>10);},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
