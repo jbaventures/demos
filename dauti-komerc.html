@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Даути Комерц АД | Традиција, Доверба и Безбедност — од 1990 — Design Concept</title>
+<meta name="description" content="Даути Комерц АД — регионален лидер во дистрибуција на стоки за широка потрошувачка. Северна Македонија, Косово, Црна Гора и Албанија.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1415; --ink2:#453a3b; --mut:#7a6e6f;
+  --grn:#d1202a; --grn-d:#a3131f; --amb:#f2a51a;
+  --grad:linear-gradient(100deg,#d1202a,#ef4048);
+  --bg:#f6f4f3; --line:#e8e2e0; --dark:#131011;
+  --r:18px; --sh:0 22px 55px -24px rgba(26,20,21,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Manrope',sans-serif;line-height:1.12;letter-spacing:-.02em;font-weight:800}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1230px;margin:0 auto;padding:0 24px}
+::selection{background:var(--grn);color:#fff}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:400}
+
+.topbar{background:var(--dark);color:#a8a0a0;font-size:12.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:16px}
+.topbar a:hover{color:#fff}
+.tb-l{display:flex;gap:18px;white-space:nowrap;overflow:hidden}
+.tb-l b{color:#f2a51a}
+.tb-r{display:flex;gap:14px;align-items:center;flex-shrink:0}
+.lang a{padding:2px 7px;border-radius:6px;font-weight:600}
+.lang a.on{background:rgba(239,64,72,.25);color:#ffa5a0}
+
+header{position:sticky;top:0;z-index:300;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.sc{box-shadow:0 8px 30px -14px rgba(26,20,21,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:46px;width:auto}
+.brand .bt{display:none;flex-direction:column;line-height:1.1}
+.brand .bt b{font-family:'Manrope';font-size:19px;font-weight:800}
+.brand .bt span{font-size:9px;color:var(--grn);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.brand img[data-f]+.bt{display:flex}
+nav.menu{display:flex;gap:1px;align-items:center}
+.mi>a{display:flex;padding:10px 12px;font-size:13px;font-weight:600;color:var(--ink2);border-radius:10px;transition:.2s}
+.mi>a:hover{color:var(--grn-d);background:#fdecec}
+.cta{background:var(--amb);color:#221a05;padding:12px 20px;border-radius:12px;font-size:13.5px;font-weight:800;transition:.25s;white-space:nowrap;box-shadow:0 10px 24px -10px rgba(242,165,26,.55)}
+.cta:hover{transform:translateY(-2px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:360}
+.burger span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.3s}
+body.mo .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.mo .burger span:nth-child(2){opacity:0}
+body.mo .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;background:#fff;z-index:340;padding:100px 26px 40px;overflow-y:auto;transform:translateX(100%);transition:transform .38s cubic-bezier(.7,0,.3,1);display:none}
+body.mo .mnav{transform:translateX(0)}
+body.mo{overflow:hidden}
+body.mo header{z-index:350}
+.mnav a{display:block;padding:13px 4px;font-weight:600;font-size:16px;border-bottom:1px solid var(--line)}
+
+.hero{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(950px 520px at 88% -10%,rgba(209,32,42,.35),transparent 60%),
+ radial-gradient(600px 400px at -5% 115%,rgba(242,165,26,.12),transparent 60%)}
+.routes{position:absolute;inset:0;opacity:.5}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;padding-top:88px;padding-bottom:80px}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:#ffa5a0;border:1px solid rgba(255,165,160,.35);padding:7px 15px;border-radius:100px;margin-bottom:24px}
+.kick::before{content:"";width:7px;height:7px;border-radius:50%;background:#ffa5a0;animation:pl 2s infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(33px,4.7vw,55px)}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,#ef4048,#ffb3ae);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{margin:20px 0 30px;font-size:16.5px;color:#b3a9aa;max-width:540px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+.b1{background:var(--grad);color:#fff;padding:15px 28px;border-radius:13px;font-weight:800;font-size:15px;box-shadow:0 14px 34px -12px rgba(209,32,42,.6);transition:.25s}
+.b1:hover{transform:translateY(-3px)}
+.b2{border:1px solid rgba(255,255,255,.25);color:#fff;padding:15px 26px;border-radius:13px;font-weight:600;font-size:15px;background:rgba(255,255,255,.05);transition:.25s}
+.b2:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.hstats{display:flex;margin-top:46px;border-top:1px solid rgba(255,255,255,.14);flex-wrap:wrap}
+.hstat{padding:20px 28px 0 0;margin-right:28px;border-right:1px solid rgba(255,255,255,.1)}
+.hstat:last-child{border-right:0}
+.hstat b{font-family:'Manrope';font-size:30px;font-weight:800;color:#ffa5a0}
+.hstat span{display:block;font-size:12px;color:#8a7c7d;margin-top:2px}
+/* region card */
+.rcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:24px;padding:26px;backdrop-filter:blur(8px)}
+.rcard .rk{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#ffa5a0;margin-bottom:16px;display:flex;justify-content:space-between}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rg{background:rgba(19,16,17,.75);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;transition:.25s}
+.rg:hover{border-color:rgba(239,64,72,.6);transform:translateY(-2px)}
+.rg .cc{font-family:'IBM Plex Mono';font-size:10px;color:#f2a51a;letter-spacing:.14em}
+.rg b{font-size:14.5px;display:block;margin:3px 0 2px}
+.rg span{font-size:11px;color:#8a7c7d}
+.rcard .note{margin-top:14px;text-align:center;font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6e5c5d}
+
+.ticker{background:#fff;border-bottom:1px solid var(--line);overflow:hidden;position:relative}
+.ticker .lbl{position:absolute;left:0;top:0;bottom:0;display:flex;align-items:center;background:var(--grad);color:#fff;padding:0 18px;font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.12em;z-index:2;font-weight:600}
+.tk{display:flex;gap:60px;white-space:nowrap;padding:13px 0;animation:mq 45s linear infinite;padding-left:130px}
+.tk span{font-size:13.5px;color:var(--ink2)}
+.tk span b{color:var(--grn-d);font-family:'IBM Plex Mono';font-weight:500;margin-right:8px;font-size:12px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:88px 0}
+.shead{max-width:760px;margin-bottom:48px}
+.eyebrow{font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--grn-d);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:3px;background:var(--grad)}
+.shead h2{font-size:clamp(26px,3.4vw,40px)}
+.shead p{color:var(--mut);margin-top:12px;font-size:15px}
+.srow{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:48px}
+.srow .shead{margin-bottom:0}
+.more{font-weight:700;font-size:14px;color:var(--grn-d);display:inline-flex;gap:7px;transition:gap .2s}
+.more:hover{gap:11px}
+
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dj{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.3s;position:relative;overflow:hidden;display:block}
+.dj::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.dj:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.dj:hover::after{transform:scaleX(1)}
+.dj .ic{width:48px;height:48px;border-radius:13px;background:#fdecec;display:grid;place-items:center;margin-bottom:16px;font-size:21px}
+.dj h3{font-size:17px;margin-bottom:8px}
+.dj p{font-size:13px;color:var(--mut)}
+
+.moto{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.moto::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 12% 0%,rgba(209,32,42,.25),transparent 60%)}
+.moto .wrap{position:relative}
+.moto blockquote{font-family:'Manrope';font-size:clamp(28px,4.4vw,52px);font-weight:800;text-align:center;max-width:900px;margin:0 auto 50px}
+.moto blockquote em{font-style:normal;color:#ffa5a0}
+.moto blockquote i{font-style:normal;color:#f2a51a}
+.pil{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px;transition:.25s;text-align:center}
+.pc:hover{background:rgba(255,255,255,.09);transform:translateY(-4px)}
+.pc b{font-family:'Manrope';font-size:19px;display:block;margin-bottom:8px}
+.pc p{font-size:13.5px;color:#b3a9aa}
+
+.hist{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hist .ph{border-radius:22px;overflow:hidden;box-shadow:var(--sh);aspect-ratio:16/11;background:linear-gradient(120deg,#3a1518,#6e2228);position:relative}
+.hist .ph img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.hist .ph .tag{position:absolute;left:18px;bottom:18px;background:rgba(19,16,17,.85);color:#fff;border-radius:12px;padding:10px 16px;font-size:12px;z-index:2}
+.hist .ph .tag b{color:#ffa5a0;font-family:'Manrope';font-size:16px;display:block}
+.tl{display:flex;flex-direction:column;gap:0;margin-top:26px}
+.tle{display:grid;grid-template-columns:86px 1fr;gap:18px;padding:14px 0;border-top:1px solid var(--line)}
+.tle b{font-family:'IBM Plex Mono';font-weight:500;color:var(--grn-d);font-size:14px}
+.tle p{font-size:13.5px;color:var(--ink2)}
+
+.news .ngrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.nc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;transition:.3s;display:flex;flex-direction:column}
+.nc:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.nc .d{font-family:'IBM Plex Mono';font-size:11px;color:var(--grn-d);margin-bottom:10px}
+.nc h3{font-size:14.5px;font-weight:700;font-family:'Inter';line-height:1.5;flex:1}
+.nc span{margin-top:14px;font-weight:700;font-size:12.5px;color:var(--grn-d)}
+
+.bmar-sec{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}
+.bmar{overflow:hidden;position:relative;margin-top:20px}
+.bmar::before,.bmar::after{content:"";position:absolute;top:0;bottom:0;width:110px;z-index:2;pointer-events:none}
+.bmar::before{left:0;background:linear-gradient(to right,#fff,transparent)}
+.bmar::after{right:0;background:linear-gradient(to left,#fff,transparent)}
+.btrack{display:flex;gap:56px;align-items:center;animation:mq 40s linear infinite;width:max-content;padding:6px 0}
+.btrack span{font-family:'Manrope';font-weight:800;font-size:22px;color:#b3a8a9;white-space:nowrap;transition:.3s}
+.btrack span:hover{color:var(--grn-d)}
+.btrack i{font-style:normal;color:#e0d6d5;font-size:14px}
+
+.shop{background:linear-gradient(100deg,#a3131f,#d1202a);border-radius:26px;padding:50px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
+.shop::before{content:"SHOP";position:absolute;right:-20px;bottom:-50px;font-family:'Manrope';font-weight:800;font-size:170px;color:rgba(255,255,255,.07)}
+.shop h3{font-size:clamp(22px,2.8vw,32px);margin-bottom:10px}
+.shop p{color:#ffd9d7;font-size:15px;max-width:520px}
+.shop a{background:#fff;color:#a3131f;padding:15px 28px;border-radius:13px;font-weight:800;font-size:15px;transition:.25s;position:relative}
+.shop a:hover{transform:translateY(-3px)}
+
+.certs{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center}
+.certs img{height:64px;width:auto;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;transition:.25s}
+.certs img:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+
+footer{background:var(--dark);color:#a8a0a0;padding:64px 0 28px;position:relative;overflow:hidden}
+footer .wm{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);font-family:'Manrope';font-weight:800;font-size:170px;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);white-space:nowrap;line-height:1;pointer-events:none}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;position:relative}
+.fgrid h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;font-family:'IBM Plex Mono';font-weight:500}
+.fgrid a{display:block;font-size:13.5px;padding:5px 0;transition:.2s}
+.fgrid a:hover{color:#fff;padding-left:5px}
+.fbot{border-top:1px solid rgba(255,255,255,.1);margin-top:46px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;position:relative}
+.badge{position:fixed;bottom:18px;right:18px;z-index:500;background:rgba(19,16,17,.92);color:#ddd4d4;font-size:11px;padding:8px 14px;border-radius:100px;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);font-family:'IBM Plex Mono'}
+.badge b{color:#ffa5a0}
+
+/* hero commerce visual */
+.hviz{position:relative}
+.hviz .photo{border-radius:24px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.75);aspect-ratio:4/2.9;position:relative;background:linear-gradient(120deg,#2a1113,#4d181d)}
+.hviz .photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.hviz .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,16,17,.85),transparent 55%)}
+.hviz .chip{position:absolute;top:16px;right:16px;background:rgba(19,16,17,.8);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.16);color:#fff;font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;padding:8px 13px;border-radius:100px;z-index:2}
+.hviz .cap{position:absolute;left:20px;bottom:16px;z-index:2;color:#fff}
+.hviz .cap b{font-family:'Manrope';font-size:18px;display:block}
+.hviz .cap span{font-size:12px;color:#dccfcf}
+.route{margin-top:16px;background:#fff;border-radius:18px;padding:18px 22px 16px;box-shadow:0 24px 60px -28px rgba(0,0,0,.65);color:var(--ink)}
+.route .rl{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:4px;display:flex;justify-content:space-between}
+.route .rl i{font-style:normal;color:var(--grn-d)}
+.rline{position:relative;height:4px;background:#f0e4e3;border-radius:4px;margin:22px 8px 12px}
+.rline::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--grn),#ef4048);border-radius:4px;opacity:.85}
+.truck{position:absolute;top:-15px;left:0;font-size:17px;animation:drive 8s linear infinite}
+@keyframes drive{from{left:0}to{left:calc(100% - 22px)}}
+.stops{display:flex;justify-content:space-between}
+.stop{text-align:center;flex:1}
+.stop i{font-style:normal;display:block;width:10px;height:10px;border-radius:50%;background:var(--grn);margin:0 auto 6px;box-shadow:0 0 0 4px rgba(209,32,42,.14)}
+.stop b{display:block;font-family:'Manrope';font-size:12.5px}
+.stop span{font-size:10px;color:var(--mut)}
+
+/* brand logos */
+.btrack img{height:46px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1) opacity(.6);transition:.3s}
+.btrack img:hover{filter:none}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal a{border-radius:18px;overflow:hidden;aspect-ratio:4/2.9;position:relative;background:linear-gradient(120deg,#3a1518,#6e2228);display:block;box-shadow:var(--sh)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s;position:absolute;inset:0}
+.gal a:hover img{transform:scale(1.06)}
+.gal .glbl{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-size:12.5px;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+.gal a::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,16,17,.6),transparent 50%)}
+.gal a.cta-tile{display:grid;place-items:center;background:linear-gradient(100deg,#a3131f,#d1202a)}
+.gal a.cta-tile::after{display:none}
+.gal a.cta-tile b{color:#fff;font-family:'Manrope';font-size:19px;text-align:center;padding:0 20px}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}.rv{opacity:1;transform:none}}
+@media(max-width:1100px){
+  nav.menu,.cta{display:none}.burger{display:flex}.mnav{display:block}
+  .hero .wrap,.hist{grid-template-columns:1fr;gap:40px}
+  .dgrid,.pil{grid-template-columns:1fr 1fr}
+  .news .ngrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .dgrid,.pil,.news .ngrid,.rgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  section{padding:62px 0}
+  .hero .wrap{padding-top:56px;padding-bottom:52px}
+  .hstats{gap:14px 0}
+  .shop{padding:32px 26px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l"><span>Семејна компанија од <b>1990</b> · Сарај, Скопје</span></div>
+    <div class="tb-r">
+      <a href="tel:+38922550124">02 2550 124</a>
+      <a href="https://shop.dauti.com.mk"><b style="color:#f2a51a">Dauti Shop →</b></a>
+      <div class="lang">
+        <a class="on" href="http://dauti.com.mk/Default.aspx">МК</a><a href="http://dauti.com.mk/DefaultAL/Ballina.aspx">AL</a><a href="http://dauti.com.mk/DefaultEN.aspx">EN</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="http://dauti.com.mk/">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/portal-img/dauti.png" alt="Даути Комерц" onerror="this.setAttribute('data-f','1');this.style.display='none'">
+      <div class="bt"><b>Даути Комерц</b><span>АД · од 1990</span></div>
+    </a>
+    <nav class="menu">
+      <div class="mi"><a href="http://dauti.com.mk/Dauti_Komerc/ЗА_НАС.aspx">За нас</a></div>
+      <div class="mi"><a href="http://dauti.com.mk/Dauti_Komerc/ДЕЈНОСТИ.aspx">Дејности</a></div>
+      <div class="mi"><a href="http://dauti.com.mk/Dauti_Komerc/БРЕНДОВИ.aspx">Брендови</a></div>
+      <div class="mi"><a href="http://dauti.com.mk/Dauti_Komerc/КАТАЛОЗИ.aspx">Каталози</a></div>
+      <div class="mi"><a href="http://dauti.com.mk/Dauti_Komerc/НОВОСТИ.aspx">Новости</a></div>
+      <div class="mi"><a href="http://dauti.com.mk/Dauti_Komerc/ГАЛЕРИЈА.aspx">Галерија</a></div>
+      <div class="mi"><a href="http://dauti.com.mk/Dauti_Komerc/КОНТАКТ.aspx">Контакт</a></div>
+    </nav>
+    <a class="cta" href="https://shop.dauti.com.mk">🛒 Dauti Shop</a>
+    <button class="burger" aria-label="Мени" onclick="document.body.classList.toggle('mo')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav">
+  <a href="http://dauti.com.mk/Dauti_Komerc/ЗА_НАС.aspx">За нас</a>
+  <a href="http://dauti.com.mk/Dauti_Komerc/ДЕЈНОСТИ.aspx">Дејности</a>
+  <a href="http://dauti.com.mk/Dauti_Komerc/БРЕНДОВИ.aspx">Брендови</a>
+  <a href="http://dauti.com.mk/Dauti_Komerc/КАТАЛОЗИ.aspx">Каталози</a>
+  <a href="http://dauti.com.mk/Dauti_Komerc/НОВОСТИ.aspx">Новости</a>
+  <a href="http://dauti.com.mk/Dauti_Komerc/ГАЛЕРИЈА.aspx">Галерија</a>
+  <a href="http://dauti.com.mk/Dauti_Komerc/КОНТАКТ.aspx">Контакт</a>
+  <a href="https://shop.dauti.com.mk" style="color:var(--grn-d)">→ Dauti Shop</a>
+</div>
+
+<div class="hero">
+  <svg class="routes" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-50 560 Q 350 380 720 430 T 1450 300" fill="none" stroke="rgba(239,64,72,.14)" stroke-width="1.5" stroke-dasharray="6 10"/>
+    <path d="M-50 640 Q 420 520 800 540 T 1450 420" fill="none" stroke="rgba(242,165,26,.1)" stroke-width="1.5" stroke-dasharray="6 10"/>
+    <path d="M-50 470 Q 300 300 760 330 T 1450 200" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1.5" stroke-dasharray="6 10"/>
+  </svg>
+  <div class="wrap">
+    <div>
+      <div class="kick">36 години · Регионален лидер во дистрибуција</div>
+      <h1>Од Сарај до <em>целиот Балкан.</em></h1>
+      <p class="sub">Даути Комерц АД — семејна компанија основана во 1990 од браќата Даути, денес акционерско друштво со дистрибутивни центри во четири држави и Cash&Carry мрежа низ Северна Македонија.</p>
+      <div class="hbtns">
+        <a class="b1" href="http://dauti.com.mk/Dauti_Komerc/БРЕНДОВИ.aspx">Нашите брендови</a>
+        <a class="b2" href="http://dauti.com.mk/Dauti_Komerc/КОНТАКТ.aspx">Станете партнер</a>
+      </div>
+      <div class="hstats">
+        <div class="hstat"><b>1990</b><span>основана, 29 мај</span></div>
+        <div class="hstat"><b><span data-cnt="4">0</span></b><span>држави во регионот</span></div>
+        <div class="hstat"><b><span data-cnt="3">0</span></b><span>Cash&Carry центри</span></div>
+        <div class="hstat"><b><span data-cnt="36">0</span></b><span>години без стагнација</span></div>
+      </div>
+    </div>
+    <div class="hviz rv">
+      <div class="photo">
+        <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/sliderimg/0-02-05-a30a635385386fdef15ad3551a9492b7a02d8f601b48041fbb7f34f8471b037a_a3ac850c0480a24c.jpg" alt="Даути Комерц" onerror="this.style.display='none'">
+        <span class="chip">AEO · ИЗВОЗ КОН ЕУ</span>
+        <div class="cap"><b>Стоката е веќе на пат</b><span>Секојдневна дистрибуција од Сарај, Скопје</span></div>
+      </div>
+      <div class="route">
+        <div class="rl"><span>Дневна дистрибутивна рута</span><i>● АКТИВНА</i></div>
+        <div class="rline"><span class="truck">🚚</span></div>
+        <div class="stops">
+          <div class="stop"><i></i><b>Македонија</b><span>Сарај · 3× Cash&Carry</span></div>
+          <div class="stop"><i></i><b>Косово</b><span>дистр. центар</span></div>
+          <div class="stop"><i></i><b>Црна Гора</b><span>дистр. центар</span></div>
+          <div class="stop"><i></i><b>Албанија</b><span>присуство</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ticker">
+  <div class="lbl">НОВОСТИ</div>
+  <div class="tk" id="tk">
+    <span><b>25.06</b>Ресторанот ARCUS му оддаде признание на претседателот Џемаил Даути</span>
+    <span><b>14.06</b>Одобрение за царинска постапка увоз за облагородување</span>
+    <span><b>13.06</b>Безбедноста на храната — континуиран приоритет</span>
+    <span><b>12.06</b>36-годишен јубилеј одбележан со свечен настан</span>
+  </div>
+</div>
+
+<section id="dejnosti">
+  <div class="wrap">
+    <div class="srow">
+      <div class="shead rv">
+        <div class="eyebrow">Дејности</div>
+        <h2>Од увоз до последната полица</h2>
+      </div>
+      <a class="more rv" href="http://dauti.com.mk/Dauti_Komerc/ДЕЈНОСТИ.aspx">Сите дејности →</a>
+    </div>
+    <div class="dgrid">
+      <a class="dj rv" href="http://dauti.com.mk/distribution.aspx"><div class="ic">🚛</div><h3>Дистрибуција</h3><p>Стоки за широка потрошувачка до секој продажен објект — брзо, безбедно, секој ден.</p></a>
+      <a class="dj rv" href="http://dauti.com.mk/Dauti_Komerc/ДЕЈНОСТИ.aspx"><div class="ic">🌍</div><h3>Увоз — извоз</h3><p>Регионални производители од Западен Балкан кон европските и пошироките пазари.</p></a>
+      <a class="dj rv" href="http://dauti.com.mk/Dauti_Komerc/ДЕЈНОСТИ.aspx"><div class="ic">🏬</div><h3>Cash & Carry</h3><p>Мрежа во Скопје, Тетово и Струга — големопродажба на дофат на секој трговец.</p></a>
+      <a class="dj rv" href="http://dauti.com.mk/distribution.aspx"><div class="ic">📦</div><h3>Дистрибутивни центри</h3><p>Модерни магацински капацитети во четири држави во регионот.</p></a>
+      <a class="dj rv" href="http://dauti.com.mk/Dauti_Komerc/БРЕНДОВИ.aspx"><div class="ic">🤝</div><h3>Застапување брендови</h3><p>Ексклузивно застапување на реномирани домашни и светски производители.</p></a>
+      <a class="dj rv" href="https://shop.dauti.com.mk"><div class="ic">🛒</div><h3>Dauti Shop</h3><p>Онлајн продавница — асортиманот на Даути Комерц достапен со неколку клика.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="moto">
+  <div class="wrap">
+    <blockquote class="rv">„<em>Традиција</em>, <i>Доверба</i> и Безбедност"</blockquote>
+    <div class="pil">
+      <div class="pc rv"><b>Традиција</b><p>Семејна компанија од 1990, трансформирана во акционерско друштво со корпоративно управување — без да изгуби ниту ден од семејниот дух.</p></div>
+      <div class="pc rv"><b>Доверба</b><p>Доверба кај соработниците, партнерите, добавувачите и купувачите — градена испорака по испорака, 36 години.</p></div>
+      <div class="pc rv"><b>Безбедност</b><p>Безбедни производи и безбедна дистрибуција до крајниот потрошувач, потврдена со меѓународни сертификати и AEO статус.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap hist">
+    <div class="ph rv">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/sliderimg/slika%20magacin.jpg" alt="Дистрибутивен центар" onerror="this.style.display='none'">
+      <div class="tag"><b>29 мај 1990</b>Основана од браќата Даути</div>
+    </div>
+    <div class="rv">
+      <div class="eyebrow">Историја</div>
+      <h2 style="font-size:clamp(24px,3vw,36px)">Раст без ниту една година стагнација</h2>
+      <div class="tl">
+        <div class="tle"><b>1990</b><p>Браќата Даути ја основаат компанијата — дистрибуција на стоки од домашни производители.</p></div>
+        <div class="tle"><b>2000-те</b><p>Ширење во регионот: Косово, Црна Гора, подоцна и Албанија. Cash&Carry мрежата расте.</p></div>
+        <div class="tle"><b>Денес</b><p>Акционерско друштво со корпоративно управување, AEO статус и извоз кон европските пазари.</p></div>
+        <div class="tle"><b>Утре</b><p>Планирано ширење во регионот, Европа и пошироко — со истото мото од првиот ден.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bmar-sec">
+  <div class="wrap"><div class="eyebrow rv">Брендови што ги застапуваме</div></div>
+  <div class="bmar">
+    <div class="btrack" id="bt">
+      <img src="https://logo.clearbit.com/divella.it" alt="DIVELLA">
+      <i>●</i>
+      <img src="https://logo.clearbit.com/alkaloid.com.mk" alt="ALKALOID">
+      <i>●</i>
+      <img src="https://logo.clearbit.com/meggle.com" alt="MEGGLE">
+      <i>●</i>
+      <span>FRUTEX</span>
+      <i>●</i>
+      <span>и уште десетици домашни и светски брендови</span>
+      <i>●</i>
+    </div>
+  </div>
+</div>
+
+<section id="galerija" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="srow">
+      <div class="shead rv">
+        <div class="eyebrow">Галерија</div>
+        <h2>Луѓето и стоката зад бројките</h2>
+      </div>
+      <a class="more rv" href="http://dauti.com.mk/Dauti_Komerc/ГАЛЕРИЈА.aspx">Цела галерија →</a>
+    </div>
+    <div class="gal">
+      <a class="rv" href="http://dauti.com.mk/Dauti_Komerc/ГАЛЕРИЈА.aspx">
+        <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/galeria//dve_spoenicopy.jpg.jpg" alt="" onerror="this.remove()">
+        <span class="glbl">Растеме од 1990 — без прекин</span>
+      </a>
+      <a class="rv" href="http://dauti.com.mk/Dauti_Komerc/ГАЛЕРИЈА.aspx">
+        <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/novosti/2222.jpg" alt="" onerror="this.remove()">
+        <span class="glbl">Тимот на Даути Комерц</span>
+      </a>
+      <a class="rv cta-tile" href="http://dauti.com.mk/Dauti_Komerc/ГАЛЕРИЈА.aspx">
+        <b>Погледни ја целата галерија →</b>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="novosti">
+  <div class="wrap">
+    <div class="srow">
+      <div class="shead rv">
+        <div class="eyebrow">Новости</div>
+        <h2>Што се случува во Даути Комерц</h2>
+      </div>
+      <a class="more rv" href="http://dauti.com.mk/Dauti_Komerc/НОВОСТИ.aspx">Сите новости →</a>
+    </div>
+    <div class="ngrid">
+      <a class="nc rv" href="http://dauti.com.mk/Новости.aspx/Id=2494"><span class="d">25.06.2026</span><h3>Ресторанот ARCUS му оддаде признание на претседателот Џемаил Даути за неговото лидерство</h3><span>Прочитај →</span></a>
+      <a class="nc rv" href="http://dauti.com.mk/Новости.aspx/Id=2492"><span class="d">14.06.2026</span><h3>Одобрение за користење на царинската постапка увоз за облагородување</h3><span>Прочитај →</span></a>
+      <a class="nc rv" href="http://dauti.com.mk/Новости.aspx/Id=2490"><span class="d">13.06.2026</span><h3>Безбедноста на храната — континуиран приоритет на Dauti Komerc</h3><span>Прочитај →</span></a>
+      <a class="nc rv" href="http://dauti.com.mk/Новости.aspx/Id=2488"><span class="d">12.06.2026</span><h3>36-годишниот јубилеј одбележан со свечен настан и благодарност до вработените</h3><span>Прочитај →</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="shop rv">
+      <div>
+        <div class="eyebrow" style="color:#ffd9d7">Онлајн</div>
+        <h3>Целиот асортиман, во вашиот кошничка</h3>
+        <p>Dauti Shop — нарачајте од асортиманот на Даути Комерц онлајн, со испорака до вашиот објект.</p>
+      </div>
+      <a href="https://shop.dauti.com.mk">Посети shop.dauti.com.mk</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="shead rv" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow" style="justify-content:center">Сертификати и стандарди</div>
+      <h2 style="font-size:clamp(22px,2.6vw,30px)">AEO статус и меѓународни сертификати</h2>
+    </div>
+    <div class="certs rv">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/Certifikat/AEO.jpg" alt="AEO" onerror="this.remove()">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/Certifikat/2.png" alt="Сертификат" onerror="this.remove()">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/Certifikat/3.png" alt="Сертификат" onerror="this.remove()">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/Certifikat/4.png" alt="Сертификат" onerror="this.remove()">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/Certifikat/5.png" alt="Сертификат" onerror="this.remove()">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/Certifikat/6.png" alt="Сертификат" onerror="this.remove()">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/Certifikat/7.png" alt="Сертификат" onerror="this.remove()">
+      <img src="http://dauti.com.mk/CMS/Upload/CMS_Upload/Certifikat/8.png" alt="Сертификат" onerror="this.remove()">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wm">DAUTI</div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Даути Комерц АД</h4>
+        <p style="font-size:13px;max-width:320px">Увоз-извоз и дистрибуција на стоки за широка потрошувачка — Северна Македонија, Косово, Црна Гора и Албанија. Од 1990.</p>
+      </div>
+      <div>
+        <h4>Компанија</h4>
+        <a href="http://dauti.com.mk/Dauti_Komerc/ЗА_НАС.aspx">За нас</a>
+        <a href="http://dauti.com.mk/Dauti_Komerc/БРЕНДОВИ.aspx">Брендови</a>
+        <a href="http://dauti.com.mk/Futer/Услуги.aspx">Услуги</a>
+        <a href="http://dauti.com.mk/Futer/Вработување.aspx">Вработување</a>
+        <a href="http://dauti.com.mk/Dauti_Komerc/НОВОСТИ.aspx">Новости</a>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <a href="http://dauti.com.mk/Dauti_Komerc/КОНТАКТ.aspx">ул. 1723 бр. 20, Сарај<br>1000 Скопје</a>
+        <a href="tel:+38922550124">02 2550 124</a>
+        <a href="mailto:info@dauti.com.mk">info@dauti.com.mk</a>
+        <a href="https://www.facebook.com/dautikomerc1990/">Facebook</a>
+        <a href="https://shop.dauti.com.mk">Dauti Shop</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Даути Комерц АД. Сите права се задржани.</span>
+      <span>МК · AL · EN</span>
+    </div>
+  </div>
+</footer>
+
+<div class="badge">Design concept by <b>JBA Ventures</b></div>
+
+<script>
+addEventListener('scroll',()=>{const h=document.documentElement;
+document.getElementById('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+document.getElementById('hd').classList.toggle('sc',h.scrollTop>10);},{passive:true});
+const tk=document.getElementById('tk');tk.innerHTML+=tk.innerHTML;
+const bt=document.getElementById('bt');bt.innerHTML+=bt.innerHTML;
+document.querySelectorAll('#bt img').forEach(im=>{
+  const swap=()=>{const s=document.createElement('span');s.textContent=im.alt;im.replaceWith(s)};
+  im.addEventListener('error',swap);
+  if(im.complete&&im.naturalWidth===0)swap();
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);
+const el=e.target,end=parseFloat(el.dataset.cnt),t0=performance.now();
+const step=t=>{const p=Math.min((t-t0)/1500,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
+requestAnimationFrame(step);}),{threshold:.5});
+document.querySelectorAll('[data-cnt]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
