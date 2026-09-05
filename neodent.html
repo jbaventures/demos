@@ -206,6 +206,101 @@ footer a:hover{color:#fff}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
 .reveal.in{opacity:1;transform:none}
 
+/* ============ Klinika booking module ============ */
+.kbook{background:linear-gradient(150deg,#12498f,#0b2f63);border-radius:14px;padding:24px;margin-bottom:22px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.kbook::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:rgba(192,138,46,.22)}
+.kbook>*{position:relative;z-index:2}
+.kbook .kb-lab{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:5px 12px;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:13px}
+.kbook h4{font-family:var(--head);font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;color:#fff}
+.kbook p{font-size:13.5px;color:#b7c9e4;margin-bottom:16px;line-height:1.5}
+.kbtn{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;background:var(--amber);color:#fff;font-weight:800;font-size:15.5px;padding:14px 20px;border-radius:10px;transition:.2s;font-family:var(--body);box-shadow:0 10px 24px rgba(192,138,46,.34)}
+.kbtn:hover{background:#a97722;transform:translateY(-1px)}
+.kbtn.ghost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);box-shadow:none;font-size:13.5px;padding:11px 18px;margin-top:9px;font-weight:700}
+.kbtn.ghost:hover{background:rgba(255,255,255,.18)}
+
+.kmask{position:fixed;inset:0;z-index:200;background:rgba(8,22,48,.74);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+.kmask.open{display:flex}
+body.kopen{overflow:hidden}
+.kmodal{background:#fff;border-radius:20px;width:100%;max-width:560px;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 40px 90px rgba(8,22,48,.5)}
+.khead{display:flex;align-items:center;gap:11px;padding:18px 22px;border-bottom:1px solid var(--line);flex:none}
+.klogo{width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#17356b,#0b2f63);display:flex;align-items:center;justify-content:center;flex:none}
+.khead .kn{font-family:var(--head);font-weight:800;font-size:16px;letter-spacing:-.02em;line-height:1.1}
+.khead .ks{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.kx{margin-left:auto;width:34px;height:34px;border-radius:9px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:.2s;flex:none}
+.kx:hover{background:var(--cream);color:var(--ink)}
+.kprog{display:flex;gap:6px;padding:14px 22px 0;flex:none}
+.kprog i{flex:1;height:4px;border-radius:9px;background:var(--line);transition:.3s}
+.kprog i.on{background:var(--navy)}
+.kprog i.done{background:var(--amber)}
+.kbody{padding:20px 22px 22px;overflow-y:auto;flex:1}
+.kstep-t{font-family:var(--head);font-size:20px;font-weight:800;letter-spacing:-.02em;margin-bottom:5px}
+.kstep-s{font-size:13.5px;color:var(--muted);margin-bottom:18px}
+.kopt{display:flex;align-items:center;gap:13px;width:100%;text-align:left;border:1.5px solid var(--line);border-radius:11px;padding:14px 16px;margin-bottom:9px;transition:.18s;background:#fff}
+.kopt:hover{border-color:var(--navy);background:var(--blue-l)}
+.kopt.sel{border-color:var(--navy);background:var(--blue-l)}
+.kopt .kr{width:19px;height:19px;border-radius:50%;border:2px solid var(--line);flex:none;position:relative;transition:.18s}
+.kopt.sel .kr{border-color:var(--navy)}
+.kopt.sel .kr::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--navy)}
+.kopt b{display:block;font-size:14.5px;font-weight:700}
+.kopt span{font-size:12.5px;color:var(--muted)}
+.kcal{border:1px solid var(--line);border-radius:13px;padding:16px}
+.kcal-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.kcal-h b{font-family:var(--head);font-size:15.5px;font-weight:800}
+.kcal-h button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.kcal-h button:hover{background:var(--cream);color:var(--ink)}
+.kdow{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:6px}
+.kdow span{text-align:center;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding:4px 0}
+.kdays{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.kday{aspect-ratio:1;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:600;transition:.15s;border:1.5px solid transparent}
+.kday.pick{background:#fff;color:var(--ink);cursor:pointer;border-color:var(--line)}
+.kday.pick:hover{border-color:var(--navy);background:var(--blue-l)}
+.kday.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+.kday.off{color:#c3ccdb;cursor:default}
+.kday.blank{border:0}
+.kslots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kslot{padding:11px 4px;border-radius:9px;border:1.5px solid var(--line);font-size:13.5px;font-weight:700;transition:.15s;background:#fff}
+.kslot:hover:not(.taken){border-color:var(--navy);background:var(--blue-l)}
+.kslot.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+.kslot.taken{color:#c3ccdb;text-decoration:line-through;cursor:default;background:#fafbfd}
+.klegend{display:flex;gap:16px;margin-top:14px;font-size:12px;color:var(--muted)}
+.klegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.kf{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+.kf label{font-size:11.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.kf input{font-family:inherit;font-size:15px;padding:12px 14px;border:1.5px solid var(--line);border-radius:9px;width:100%;transition:.2s}
+.kf input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 4px var(--blue-l)}
+.ksum{background:var(--cream);border:1px solid var(--line);border-radius:11px;padding:15px;margin-bottom:16px}
+.ksum div{display:flex;justify-content:space-between;gap:14px;font-size:13.5px;padding:5px 0}
+.ksum div span{color:var(--muted)}
+.ksum div b{font-weight:700;text-align:right}
+.kfoot{display:flex;gap:10px;padding:16px 22px;border-top:1px solid var(--line);flex:none;background:#fff}
+.kback{padding:12px 18px;border-radius:9px;border:1.5px solid var(--line);font-weight:700;font-size:14.5px;color:var(--muted);transition:.2s}
+.kback:hover{border-color:var(--navy);color:var(--ink)}
+.knext{flex:1;padding:12px 18px;border-radius:9px;background:var(--navy);color:#fff;font-weight:800;font-size:14.5px;transition:.2s}
+.knext:hover:not(:disabled){background:var(--navy-d)}
+.knext:disabled{opacity:.42;cursor:not-allowed}
+.kok{text-align:center;padding:14px 0 4px}
+.kok .kcheck{width:62px;height:62px;border-radius:50%;background:#e8f7ef;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.kok h4{font-family:var(--head);font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px}
+.kok p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.knote{display:flex;gap:10px;align-items:flex-start;background:var(--amber-l);border:1px solid #f0e2c4;border-radius:10px;padding:12px 14px;font-size:12.5px;color:#6b5320;text-align:left;line-height:1.5}
+.knote svg{flex:none;margin-top:2px}
+/* clinic side */
+.kdash{background:#0d264f;border-radius:13px;padding:18px;color:#fff}
+.kdash-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;gap:12px}
+.kdash-h b{font-family:var(--head);font-size:14.5px;font-weight:800}
+.kdash-h span{font-size:11px;color:#93a9cc;font-weight:600}
+.kstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:15px}
+.kstats div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:11px 8px;text-align:center}
+.kstats b{display:block;font-family:var(--head);font-size:19px;font-weight:800;line-height:1}
+.kstats span{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#93a9cc;font-weight:700;margin-top:4px;display:block}
+.kappt{display:flex;gap:11px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:10px 12px;margin-bottom:7px}
+.kappt.new{background:rgba(192,138,46,.18);border-color:rgba(192,138,46,.5)}
+.kappt .kt{font-family:var(--head);font-size:13px;font-weight:800;width:44px;flex:none}
+.kappt .kinfo b{display:block;font-size:13px;font-weight:700}
+.kappt .kinfo span{font-size:11.5px;color:#93a9cc}
+.kappt .ktag{margin-left:auto;font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--amber);color:#fff;padding:3px 8px;border-radius:99px;flex:none}
+.kdash-f{font-size:12.5px;color:#93a9cc;margin-top:13px;line-height:1.5}
+
 @media(max-width:1040px){
   .hero-grid,.split,.bgrid{grid-template-columns:1fr;gap:38px}
   .sgrid,.cgrid{grid-template-columns:repeat(2,1fr)}
@@ -241,6 +336,13 @@ footer a:hover{color:#fff}
   .cpanel{padding:22px}
   .callbox{padding:22px}
   .procnote{flex-direction:column;text-align:center}
+  .kmask{padding:0;align-items:flex-end}
+  .kmodal{max-width:none;max-height:94vh;border-radius:18px 18px 0 0}
+  .kslots{grid-template-columns:repeat(3,1fr)}
+  .kbody{padding:18px}
+  .khead,.kfoot{padding:15px 18px}
+  .kprog{padding:13px 18px 0}
+  .kstats{grid-template-columns:repeat(3,1fr)}
 }
 </style>
 </head>
@@ -273,7 +375,7 @@ footer a:hover{color:#fff}
       </nav>
       <div class="nav-r">
         <div class="langs"><button data-lang="mk" class="on">МК</button><button data-lang="sq">SQ</button></div>
-        <a href="#contact" class="btn btn-p" data-i18n="cta_book">Закажи термин</a>
+        <button class="btn btn-p js-kopen" data-i18n="cta_book">Закажи онлајн</button>
         <button class="burger" id="burger" aria-label="Menu"><i></i></button>
       </div>
     </div>
@@ -401,8 +503,8 @@ footer a:hover{color:#fff}
     <div class="bgrid reveal">
       <div>
         <div class="kicker" data-i18n="bk_kicker">Контакт</div>
-        <h2 data-i18n="bk_h2">Јавете се — одговараме истиот ден.</h2>
-        <p class="lead" style="margin:16px 0 26px" data-i18n="bk_p">Термините се закажуваат по телефон или на Viber и WhatsApp. За итни случаи, јавете се директно.</p>
+        <h2 data-i18n="bk_h2">Закажете сами, во секое време.</h2>
+        <p class="lead" style="margin:16px 0 26px" data-i18n="bk_p">Изберете слободен термин онлајн за половина минута, или јавете се — како ви одговара. За итни случаи, јавете се директно.</p>
         <div class="cinfo">
           <div class="ci">
             <div class="ic"><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><path d="M17.5 14.2v2.3a1.4 1.4 0 0 1-1.5 1.4 13.8 13.8 0 0 1-6-2.1 13.6 13.6 0 0 1-4.2-4.2 13.8 13.8 0 0 1-2.1-6.1A1.4 1.4 0 0 1 5 4h2.3a1.4 1.4 0 0 1 1.4 1.2c.1.7.3 1.3.5 2a1.4 1.4 0 0 1-.3 1.5l-1 1a11.2 11.2 0 0 0 4.2 4.2l1-1a1.4 1.4 0 0 1 1.5-.3c.6.2 1.3.4 2 .5a1.4 1.4 0 0 1 1.2 1.4Z" stroke="#17356b" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
@@ -425,6 +527,15 @@ footer a:hover{color:#fff}
         </div>
       </div>
       <div class="cpanel">
+        <div class="kbook">
+          <span class="kb-lab">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4.5h8M3.6 1.5v2M8.4 1.5v2" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><rect x="1.6" y="2.6" width="8.8" height="7.8" rx="1.8" stroke="#fff" stroke-width="1.5"/></svg>
+            Klinika
+          </span>
+          <h4 data-i18n="kb_h">Закажете онлајн, 24 часа</h4>
+          <p data-i18n="kb_p">Изберете услуга, ден и слободен термин — без телефонски повик и без чекање одговор.</p>
+          <button class="kbtn js-kopen" data-i18n="kb_cta">Закажи термин онлајн</button>
+        </div>
         <div class="callbox">
           <span data-i18n="cb_label">За термин, јавете се</span>
           <a href="tel:+38970279310">070 279 310</a>
@@ -490,7 +601,20 @@ footer a:hover{color:#fff}
 <div class="mobar">
   <a href="tel:+38970279310"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M17.5 14.2v2.3a1.4 1.4 0 0 1-1.5 1.4 13.8 13.8 0 0 1-6-2.1 13.6 13.6 0 0 1-4.2-4.2 13.8 13.8 0 0 1-2.1-6.1A1.4 1.4 0 0 1 5 4h2.3a1.4 1.4 0 0 1 1.4 1.2c.1.7.3 1.3.5 2a1.4 1.4 0 0 1-.3 1.5l-1 1a11.2 11.2 0 0 0 4.2 4.2l1-1a1.4 1.4 0 0 1 1.5-.3c.6.2 1.3.4 2 .5a1.4 1.4 0 0 1 1.2 1.4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span data-i18n="mb1">Јави се</span></a>
   <a href="https://wa.me/38970279310" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.3 8.3 0 1 1 7.2 3.9Zm4.5-5.9c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7l1.3.5c.6.2 1.1.2 1.5.1.4-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.6-.4Z"/></svg>WhatsApp</a>
-  <a href="#contact" class="acc"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="4.5" width="14" height="13" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 8.5h14M7 2.5v3M13 2.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span data-i18n="mb3">Закажи</span></a>
+  <a href="#" class="acc js-kopen"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="4.5" width="14" height="13" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 8.5h14M7 2.5v3M13 2.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span data-i18n="mb3">Закажи</span></a>
+</div>
+
+<div class="kmask" id="kmask">
+  <div class="kmodal" role="dialog" aria-modal="true">
+    <div class="khead">
+      <div class="klogo"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2.4" y="3.9" width="13.2" height="11.7" rx="2.6" stroke="#fff" stroke-width="1.6"/><path d="M2.4 7.4h13.2M5.6 2.4v2.6M12.4 2.4v2.6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="11.4" r="1.5" fill="#c08a2e"/></svg></div>
+      <div><div class="kn">Klinika</div><div class="ks" data-i18n="k_sub">Онлајн закажување</div></div>
+      <button class="kx" id="kx" aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 2.5l9 9M11.5 2.5l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="kprog" id="kprog"></div>
+    <div class="kbody" id="kbody"></div>
+    <div class="kfoot" id="kfoot"></div>
+  </div>
 </div>
 
 <script>
@@ -499,7 +623,7 @@ mk:{
  tb_addr:"ул. ЈНА 32, Тетово", tb_hours:"Пон–Пет 08:00–20:00",
  brand_sub:"Тетово · од 2002", brand_sub2:"Тетово · од 2002",
  nav_lab:"Лабораторија", nav_svc:"Услуги", nav_certs:"Сертификати", nav_ortho:"Ортодонција", nav_contact:"Контакт",
- cta_book:"Закажи термин",
+ cta_book:"Закажи онлајн",
  hero_kicker:"ПЗУ Неодент · Тетово · од 2002",
  hero_h1a:"Вашата коронка се изработува", hero_h1b:"овде.", hero_h1c:"Не се испраќа никаде.",
  hero_p:"Од 2005 година имаме сопствена забнотехничка лабораторија во ординацијата — опремена за металкерамички мостови и коронки, како и тотални и парцијални протези. Тоа значи пократок рок, поточна боја и поправка истиот ден.",
@@ -530,14 +654,38 @@ mk:{
  qb_label3:"Основање", qb_p3:"ПЗУ Неодент отвора врати на ул. ЈНА 32 во Тетово како ординација по општа стоматологија.",
  fz_h:"Работиме со здравствени и сини картони",
  fz_p:"ПЗУ Неодент има договор со Фондот за здравствено осигурување за услугите од општа стоматологија. Понесете ја здравствената книшка на прегледот.",
- bk_kicker:"Контакт", bk_h2:"Јавете се — одговараме истиот ден.",
- bk_p:"Термините се закажуваат по телефон или на Viber и WhatsApp. За итни случаи, јавете се директно.",
+ bk_kicker:"Контакт", bk_h2:"Закажете сами, во секое време.",
+ bk_p:"Изберете слободен термин онлајн за половина минута, или јавете се — како ви одговара. За итни случаи, јавете се директно.",
  ci_phone:"Телефон", ci_phone_s:"Повици и Viber во работно време",
  ci_addr:"Адреса", ci_addr_s:"Ординација и лабораторија на иста локација",
  ci_hours:"Работно време", ci_hours_v:"Пон–Пет 08:00–20:00", ci_hours_s:"Сабота по договор · Недела затворено",
- cb_label:"За термин, јавете се",
- cb_note:"Термините се закажуваат по телефон или на Viber, во работно време. За протетика ви кажуваме и приближен рок веднаш.",
+ cb_label:"Или јавете се",
+ cb_note:"Термините може да се закажат и по телефон или на Viber, во работно време. За протетика ви кажуваме и приближен рок веднаш.",
  hrs_h:"Работно време", bring_h:"Понесете со себе",
+ kb_h:"Закажете онлајн, 24 часа",
+ kb_p:"Изберете услуга, ден и слободен термин — без телефонски повик и без чекање одговор.",
+ kb_cta:"Закажи термин онлајн",
+ k_sub:"Онлајн закажување",
+ k_s1t:"Која услуга ви треба?", k_s1s:"Изберете една — времетраењето се пресметува автоматски.",
+ k_s2t:"Изберете ден", k_s2s:"Прикажани се само деновите кога ординацијата работи.",
+ k_s3t:"Изберете слободен термин", k_s3s:"Зафатените термини се затемнети — веќе се резервирани.",
+ k_s4t:"Вашите податоци", k_s4s:"Само име и телефон. Ништо повеќе не ни треба.",
+ k_name:"Име и презиме", k_phone:"Телефон",
+ k_sum_svc:"Услуга", k_sum_date:"Датум", k_sum_time:"Час", k_sum_dur:"Времетраење",
+ k_back:"Назад", k_next:"Понатаму", k_confirm:"Потврди го терминот",
+ k_okh:"Терминот е закажан",
+ k_okp:"Добивате SMS потврда веднаш и потсетник еден ден претходно.",
+ k_note:"Ако ви се смени планот, терминот се откажува со еден клик од SMS-от — местото веднаш се ослободува за друг пациент.",
+ k_seeclinic:"Види како го гледа ординацијата →",
+ k_dash_t:"Календар на ординацијата", k_dash_s:"Денес",
+ k_st1:"Термини денес", k_st2:"Слободни", k_st3:"Пополнетост",
+ k_new:"Ново",
+ k_dashf:"Терминот слета во календарот во истата секунда. Без тетратка, без двојно закажување, без пропуштен повик додека сте кај пациент.",
+ k_close:"Затвори",
+ legend_free:"слободно", legend_taken:"зафатено",
+ mins:"мин",
+ dow:["Пон","Вто","Сре","Чет","Пет","Саб","Нед"],
+ months:["јануари","февруари","март","април","мај","јуни","јули","август","септември","октомври","ноември","декември"],
  ft_p:"Ординација по општа стоматологија со сопствена забнотехничка лабораторија. ул. ЈНА 32, Тетово.",
  ft_h1:"Услуги", ft_a1:"Општа стоматологија", ft_a2:"Протетика", ft_a3:"Импланти", ft_a4:"Ортодонција", ft_a5:"Забнотехничка лабораторија",
  ft_h2:"Установа", ft_b1:"За нас", ft_b2:"Сертификати", ft_b3:"Контакт",
@@ -550,7 +698,7 @@ sq:{
  tb_addr:"rr. JNA 32, Tetovë", tb_hours:"Hën–Pre 08:00–20:00",
  brand_sub:"Tetovë · që nga 2002", brand_sub2:"Tetovë · që nga 2002",
  nav_lab:"Laboratori", nav_svc:"Shërbimet", nav_certs:"Certifikatat", nav_ortho:"Ortodonci", nav_contact:"Kontakt",
- cta_book:"Cakto terminin",
+ cta_book:"Rezervo online",
  hero_kicker:"ISHP Neodent · Tetovë · që nga 2002",
  hero_h1a:"Kurora juaj punohet", hero_h1b:"këtu.", hero_h1c:"Nuk dërgohet askund.",
  hero_p:"Që nga viti 2005 kemi laborator tonin dentar brenda ordinancës — të pajisur për ura dhe kurora metalo-qeramike, si dhe proteza totale e parciale. Kjo do të thotë afat më i shkurtër, ngjyrë më e saktë dhe korrigjim po atë ditë.",
@@ -581,14 +729,38 @@ sq:{
  qb_label3:"Themelimi", qb_p3:"ISHP Neodent hap dyert në rr. JNA 32 në Tetovë si ordinancë e stomatologjisë së përgjithshme.",
  fz_h:"Punojmë me kartela shëndetësore dhe blu",
  fz_p:"ISHP Neodent ka marrëveshje me Fondin e Sigurimit Shëndetësor për shërbimet e stomatologjisë së përgjithshme. Merrni me vete librezën shëndetësore.",
- bk_kicker:"Kontakt", bk_h2:"Telefononi — përgjigjemi po atë ditë.",
- bk_p:"Terminët caktohen me telefon ose në Viber dhe WhatsApp. Për raste urgjente, telefononi direkt.",
+ bk_kicker:"Kontakt", bk_h2:"Rezervoni vetë, në çdo kohë.",
+ bk_p:"Zgjidhni një termin të lirë online për gjysmë minute, ose telefononi — si ju konvenon. Për raste urgjente, telefononi direkt.",
  ci_phone:"Telefoni", ci_phone_s:"Telefonata dhe Viber gjatë orarit",
  ci_addr:"Adresa", ci_addr_s:"Ordinanca dhe laboratori në të njëjtin lokacion",
  ci_hours:"Orari i punës", ci_hours_v:"Hën–Pre 08:00–20:00", ci_hours_s:"E shtunë me marrëveshje · E diel mbyllur",
- cb_label:"Për termin, telefononi",
- cb_note:"Terminët caktohen me telefon ose në Viber, gjatë orarit. Për protetikë ju themi edhe afatin e përafërt menjëherë.",
+ cb_label:"Ose telefononi",
+ cb_note:"Terminët mund të caktohen edhe me telefon ose në Viber, gjatë orarit. Për protetikë ju themi edhe afatin e përafërt menjëherë.",
  hrs_h:"Orari i punës", bring_h:"Merrni me vete",
+ kb_h:"Rezervoni online, 24 orë",
+ kb_p:"Zgjidhni shërbimin, ditën dhe një termin të lirë — pa telefonatë dhe pa pritur përgjigje.",
+ kb_cta:"Rezervo terminin online",
+ k_sub:"Rezervim online",
+ k_s1t:"Cilin shërbim ju nevojitet?", k_s1s:"Zgjidhni një — kohëzgjatja llogaritet automatikisht.",
+ k_s2t:"Zgjidhni ditën", k_s2s:"Shfaqen vetëm ditët kur ordinanca punon.",
+ k_s3t:"Zgjidhni një termin të lirë", k_s3s:"Terminët e zëna janë të errëta — tashmë të rezervuara.",
+ k_s4t:"Të dhënat tuaja", k_s4s:"Vetëm emri dhe telefoni. Asgjë më shumë nuk na duhet.",
+ k_name:"Emri dhe mbiemri", k_phone:"Telefoni",
+ k_sum_svc:"Shërbimi", k_sum_date:"Data", k_sum_time:"Ora", k_sum_dur:"Kohëzgjatja",
+ k_back:"Prapa", k_next:"Vazhdo", k_confirm:"Konfirmo terminin",
+ k_okh:"Termini u rezervua",
+ k_okp:"Merrni menjëherë një SMS konfirmimi dhe një kujtesë një ditë përpara.",
+ k_note:"Nëse ju ndryshon plani, termini anulohet me një klik nga SMS-i — vendi lirohet menjëherë për një pacient tjetër.",
+ k_seeclinic:"Shiko si e sheh ordinanca →",
+ k_dash_t:"Kalendari i ordinancës", k_dash_s:"Sot",
+ k_st1:"Terminë sot", k_st2:"Të lira", k_st3:"Mbushja",
+ k_new:"I ri",
+ k_dashf:"Termini zbriti në kalendar në të njëjtin sekond. Pa fletore, pa rezervim të dyfishtë, pa telefonata të humbura ndërsa jeni me pacient.",
+ k_close:"Mbyll",
+ legend_free:"i lirë", legend_taken:"i zënë",
+ mins:"min",
+ dow:["Hën","Mar","Mër","Enj","Pre","Sht","Die"],
+ months:["janar","shkurt","mars","prill","maj","qershor","korrik","gusht","shtator","tetor","nëntor","dhjetor"],
  ft_p:"Ordinancë e stomatologjisë së përgjithshme me laborator dentar të vetin. rr. JNA 32, Tetovë.",
  ft_h1:"Shërbimet", ft_a1:"Stomatologji e përgjithshme", ft_a2:"Protetikë", ft_a3:"Implante", ft_a4:"Ortodonci", ft_a5:"Laborator dentar",
  ft_h2:"Institucioni", ft_b1:"Rreth nesh", ft_b2:"Certifikatat", ft_b3:"Kontakt",
@@ -668,12 +840,152 @@ function setLang(l){
   });
   document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
   renderTrack();renderSvcs();renderCerts();renderPanel();
+  if(typeof K!=='undefined' && K.open) kRender();
 }
 document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
 document.getElementById('burger').onclick=()=>document.getElementById('menu').classList.toggle('open');
 document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>document.getElementById('menu').classList.remove('open'));
 const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ================= Klinika booking demo ================= */
+const KDUR=[30,60,90,45,45,60];                  // minutes per service (matches SVCS order)
+const KSLOTS=["09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00","19:30"];
+const KTAKEN=["10:00","11:30","12:30","17:00","18:30"];
+const KDAY=[
+ {t:"09:00",mk:["Ана С.","Контрола + чистење"],sq:["Ana S.","Kontroll + pastrim"]},
+ {t:"10:00",mk:["Бесник И.","Металкерамичка коронка — проба"],sq:["Besnik I.","Kurorë metalo-qeramike — provë"]},
+ {t:"11:30",mk:["Марија П.","Композитна пломба"],sq:["Marija P.","Mbushje kompozite"]},
+ {t:"12:30",mk:["Фатон Р.","Ортодонтска контрола"],sq:["Faton R.","Kontroll ortodontik"]}
+];
+let K={open:false,step:0,svc:null,date:null,slot:null,name:"",phone:"",month:null,clinic:false};
+
+function kFmtDate(d){
+  const t=T[LANG];
+  return d.getDate()+" "+t.months[d.getMonth()]+" "+d.getFullYear();
+}
+function kOpen(){
+  const now=new Date();
+  K={open:true,step:0,svc:null,date:null,slot:null,name:"",phone:"",
+     month:new Date(now.getFullYear(),now.getMonth(),1),clinic:false};
+  document.getElementById('kmask').classList.add('open');
+  document.body.classList.add('kopen');
+  kRender();
+}
+function kClose(){
+  K.open=false;
+  document.getElementById('kmask').classList.remove('open');
+  document.body.classList.remove('kopen');
+}
+function kRender(){
+  const t=T[LANG], body=document.getElementById('kbody'), foot=document.getElementById('kfoot');
+  document.getElementById('kprog').innerHTML=[0,1,2,3].map(i=>
+    '<i class="'+(K.step>i?'done':K.step===i?'on':'')+'"></i>').join('');
+  document.getElementById('kprog').style.display=K.step>3?'none':'flex';
+
+  if(K.step===0){
+    body.innerHTML='<div class="kstep-t">'+t.k_s1t+'</div><div class="kstep-s">'+t.k_s1s+'</div>'+
+      SVCS.map((s,i)=>'<button class="kopt'+(K.svc===i?' sel':'')+'" data-k="'+i+'"><span class="kr"></span>'+
+        '<span><b>'+s[LANG][0]+'</b><span>'+KDUR[i]+' '+t.mins+'</span></span></button>').join('');
+    body.querySelectorAll('.kopt').forEach(b=>b.onclick=()=>{K.svc=+b.dataset.k;kRender();});
+    foot.innerHTML='<button class="knext" id="kn"'+(K.svc===null?' disabled':'')+'>'+t.k_next+'</button>';
+  }
+  else if(K.step===1){
+    const y=K.month.getFullYear(), m=K.month.getMonth();
+    const first=new Date(y,m,1), lead=(first.getDay()+6)%7, dim=new Date(y,m+1,0).getDate();
+    const today=new Date(); today.setHours(0,0,0,0);
+    let cells='';
+    for(let i=0;i<lead;i++) cells+='<div class="kday blank"></div>';
+    for(let d=1;d<=dim;d++){
+      const dt=new Date(y,m,d), dow=(dt.getDay()+6)%7;
+      const ok = dt>=today && dow<5;
+      const sel = K.date && K.date.getTime()===dt.getTime();
+      cells+='<div class="kday '+(ok?(sel?'pick sel':'pick'):'off')+'"'+(ok?' data-d="'+d+'"':'')+'>'+d+'</div>';
+    }
+    body.innerHTML='<div class="kstep-t">'+t.k_s2t+'</div><div class="kstep-s">'+t.k_s2s+'</div>'+
+      '<div class="kcal"><div class="kcal-h">'+
+        '<button id="kprev"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M9 2.5 4.5 7 9 11.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
+        '<b>'+t.months[m].charAt(0).toUpperCase()+t.months[m].slice(1)+' '+y+'</b>'+
+        '<button id="knextm"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M5 2.5 9.5 7 5 11.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
+      '</div><div class="kdow">'+t.dow.map(d=>'<span>'+d+'</span>').join('')+'</div>'+
+      '<div class="kdays">'+cells+'</div></div>';
+    body.querySelectorAll('.kday[data-d]').forEach(c=>c.onclick=()=>{K.date=new Date(y,m,+c.dataset.d);K.slot=null;kRender();});
+    document.getElementById('kprev').onclick=()=>{K.month=new Date(y,m-1,1);kRender();};
+    document.getElementById('knextm').onclick=()=>{K.month=new Date(y,m+1,1);kRender();};
+    foot.innerHTML='<button class="kback" id="kb">'+t.k_back+'</button><button class="knext" id="kn"'+(K.date?'':' disabled')+'>'+t.k_next+'</button>';
+  }
+  else if(K.step===2){
+    body.innerHTML='<div class="kstep-t">'+t.k_s3t+'</div><div class="kstep-s">'+t.k_s3s+'</div>'+
+      '<div class="kslots">'+KSLOTS.map(s=>{
+        const taken=KTAKEN.includes(s);
+        return '<button class="kslot'+(taken?' taken':'')+(K.slot===s?' sel':'')+'"'+(taken?' disabled':' data-s="'+s+'"')+'>'+s+'</button>';
+      }).join('')+'</div>'+
+      '<div class="klegend"><span><i style="background:#fff;border:1.5px solid var(--line)"></i>'+t.legend_free+'</span>'+
+      '<span><i style="background:#fafbfd;border:1.5px solid var(--line)"></i>'+t.legend_taken+'</span></div>';
+    body.querySelectorAll('.kslot[data-s]').forEach(b=>b.onclick=()=>{K.slot=b.dataset.s;kRender();});
+    foot.innerHTML='<button class="kback" id="kb">'+t.k_back+'</button><button class="knext" id="kn"'+(K.slot?'':' disabled')+'>'+t.k_next+'</button>';
+  }
+  else if(K.step===3){
+    body.innerHTML='<div class="kstep-t">'+t.k_s4t+'</div><div class="kstep-s">'+t.k_s4s+'</div>'+
+      '<div class="ksum">'+
+        '<div><span>'+t.k_sum_svc+'</span><b>'+SVCS[K.svc][LANG][0]+'</b></div>'+
+        '<div><span>'+t.k_sum_date+'</span><b>'+kFmtDate(K.date)+'</b></div>'+
+        '<div><span>'+t.k_sum_time+'</span><b>'+K.slot+'</b></div>'+
+        '<div><span>'+t.k_sum_dur+'</span><b>'+KDUR[K.svc]+' '+t.mins+'</b></div>'+
+      '</div>'+
+      '<div class="kf"><label>'+t.k_name+'</label><input type="text" id="kname" value="'+K.name+'"></div>'+
+      '<div class="kf"><label>'+t.k_phone+'</label><input type="tel" id="kphone" placeholder="07x xxx xxx" value="'+K.phone+'"></div>';
+    const nm=document.getElementById('kname'), ph=document.getElementById('kphone');
+    const sync=()=>{K.name=nm.value;K.phone=ph.value;
+      document.getElementById('kn').disabled=!(K.name.trim()&&K.phone.trim());};
+    nm.oninput=sync; ph.oninput=sync;
+    foot.innerHTML='<button class="kback" id="kb">'+t.k_back+'</button><button class="knext" id="kn"'+
+      ((K.name.trim()&&K.phone.trim())?'':' disabled')+'>'+t.k_confirm+'</button>';
+  }
+  else if(K.step===4 && !K.clinic){
+    body.innerHTML='<div class="kok">'+
+      '<div class="kcheck"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M8 15.5 13 20.5 22 10" stroke="#1c9a63" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'+
+      '<h4>'+t.k_okh+'</h4><p>'+t.k_okp+'</p>'+
+      '<div class="ksum" style="text-align:left">'+
+        '<div><span>'+t.k_sum_svc+'</span><b>'+SVCS[K.svc][LANG][0]+'</b></div>'+
+        '<div><span>'+t.k_sum_date+'</span><b>'+kFmtDate(K.date)+'</b></div>'+
+        '<div><span>'+t.k_sum_time+'</span><b>'+K.slot+'</b></div>'+
+      '</div>'+
+      '<div class="knote"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#c08a2e" stroke-width="1.5"/><path d="M7 4v3.4M7 9.6v.1" stroke="#c08a2e" stroke-width="1.6" stroke-linecap="round"/></svg><span>'+t.k_note+'</span></div>'+
+      '</div>';
+    foot.innerHTML='<button class="kback" id="kdone">'+t.k_close+'</button><button class="knext" id="kclinic">'+t.k_seeclinic+'</button>';
+    document.getElementById('kdone').onclick=kClose;
+    document.getElementById('kclinic').onclick=()=>{K.clinic=true;kRender();};
+    return;
+  }
+  else {
+    const total=KDAY.length+1, free=KSLOTS.length-KTAKEN.length-1;
+    const rows=KDAY.concat([{t:K.slot,mk:[K.name||"Нов пациент",SVCS[K.svc].mk[0]],sq:[K.name||"Pacient i ri",SVCS[K.svc].sq[0]],neu:1}])
+      .sort((a,b)=>a.t.localeCompare(b.t));
+    body.innerHTML='<div class="kdash">'+
+      '<div class="kdash-h"><b>'+t.k_dash_t+'</b><span>'+t.k_dash_s+' · '+kFmtDate(K.date)+'</span></div>'+
+      '<div class="kstats">'+
+        '<div><b>'+total+'</b><span>'+t.k_st1+'</span></div>'+
+        '<div><b>'+free+'</b><span>'+t.k_st2+'</span></div>'+
+        '<div><b>'+Math.round(total/(total+free)*100)+'%</b><span>'+t.k_st3+'</span></div>'+
+      '</div>'+
+      rows.map(r=>'<div class="kappt'+(r.neu?' new':'')+'"><span class="kt">'+r.t+'</span>'+
+        '<span class="kinfo"><b>'+r[LANG][0]+'</b><span>'+r[LANG][1]+'</span></span>'+
+        (r.neu?'<span class="ktag">'+t.k_new+'</span>':'')+'</div>').join('')+
+      '<div class="kdash-f">'+t.k_dashf+'</div></div>';
+    foot.innerHTML='<button class="kback" id="kb">'+t.k_back+'</button><button class="knext" id="kdone2">'+t.k_close+'</button>';
+    document.getElementById('kb').onclick=()=>{K.clinic=false;kRender();};
+    document.getElementById('kdone2').onclick=kClose;
+    return;
+  }
+  const bk=document.getElementById('kb'); if(bk) bk.onclick=()=>{K.step--;kRender();};
+  const nx=document.getElementById('kn'); if(nx) nx.onclick=()=>{if(!nx.disabled){K.step++;kRender();}};
+}
+document.querySelectorAll('.js-kopen').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();kOpen();}));
+document.getElementById('kx').onclick=kClose;
+document.getElementById('kmask').addEventListener('click',e=>{if(e.target.id==='kmask')kClose();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&K.open)kClose();});
+
 setLang('mk');
 </script>
 </body>
