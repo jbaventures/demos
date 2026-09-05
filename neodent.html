@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>НЕОДЕНТ Тетово — стоматологија со сопствена забнотехничка лабораторија</title>
+<meta name="description" content="ПЗУ Неодент, Тетово — општа стоматологија, протетика, импланти и ортодонција. Сопствена забнотехничка лабораторија од 2005. Договор со ФЗО. ул. ЈНА 32.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1c33; --navy:#17356b; --navy-d:#0b1c3d; --blue-l:#eef3fb;
+  --amber:#c08a2e; --amber-l:#fbf4e6; --cream:#faf8f4; --paper:#fff;
+  --line:#e3e8f0; --muted:#5a6b85;
+  --head:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --sh:0 1px 2px rgba(15,28,51,.04),0 10px 30px rgba(15,28,51,.07);
+  --sh-lg:0 2px 8px rgba(15,28,51,.06),0 28px 64px rgba(15,28,51,.13);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.62;font-size:16.5px;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:92px 0;position:relative}
+h1,h2,h3,h4{font-family:var(--head);font-weight:800;line-height:1.14;letter-spacing:-.02em}
+h2{font-size:clamp(27px,3.8vw,40px)}
+h3{font-size:19px;font-weight:700}
+.kicker{font-size:11.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:15px;font-family:var(--body)}
+.lead{font-size:17px;color:var(--muted);max-width:60ch}
+
+/* header */
+.topbar{background:var(--navy-d);color:#a9bcdb;font-size:12.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:14px}
+.topbar a{color:#fff;font-weight:600}
+.topbar .dm{color:var(--amber);font-weight:700;letter-spacing:.04em}
+header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:22px;height:74px}
+.brand{display:flex;align-items:center;gap:11px;flex:none}
+.brand .mark{width:42px;height:42px;flex:none}
+.brand b{font-family:var(--head);font-size:20px;font-weight:800;letter-spacing:.04em;display:block;line-height:1.05}
+.brand i{font-style:normal;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;display:block}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{font-size:14.5px;font-weight:600;color:var(--ink);padding:6px 0;position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--amber);transition:width .25s}
+.menu a:hover::after{width:100%}
+.nav-r{display:flex;align-items:center;gap:12px;flex:none}
+.langs{display:flex;background:var(--blue-l);border-radius:8px;padding:3px;gap:2px}
+.langs button{font-size:11.5px;font-weight:800;padding:6px 11px;border-radius:6px;color:var(--muted);transition:.2s}
+.langs button.on{background:var(--navy);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;padding:13px 24px;border-radius:8px;transition:.22s;white-space:nowrap;font-family:var(--body)}
+.btn-p{background:var(--amber);color:#fff;box-shadow:0 8px 20px rgba(192,138,46,.28)}
+.btn-p:hover{background:#a97722;transform:translateY(-1px)}
+.btn-n{background:var(--navy);color:#fff}
+.btn-n:hover{background:var(--navy-d)}
+.btn-o{border:1.5px solid rgba(255,255,255,.32);color:#fff}
+.btn-o:hover{background:rgba(255,255,255,.1)}
+.btn-g{border:1.5px solid var(--line);color:var(--ink)}
+.btn-g:hover{border-color:var(--navy)}
+.burger{display:none;width:42px;height:42px;border-radius:8px;border:1px solid var(--line);align-items:center;justify-content:center}
+.burger i{display:block;width:17px;height:2px;background:var(--ink);position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:17px;height:2px;background:var(--ink)}
+.burger i::before{top:-5.5px}.burger i::after{top:5.5px}
+
+/* hero */
+.hero{background:var(--navy-d);color:#fff;overflow:hidden;position:relative;padding:0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 500px at 88% 18%,rgba(192,138,46,.18),transparent 62%),
+  radial-gradient(760px 460px at 8% 84%,rgba(23,53,107,.75),transparent 60%)}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;padding:84px 0;min-height:588px}
+.hero h1{font-size:clamp(32px,4.7vw,54px);margin-bottom:20px}
+.hero h1 u{text-decoration:none;color:var(--amber)}
+.hero p{color:#b3c5e0;font-size:17.5px;max-width:50ch;margin-bottom:30px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);padding:8px 13px;border-radius:7px;font-size:12.5px;font-weight:600;color:#cfdcef}
+.dot{width:6px;height:6px;border-radius:9px;background:var(--amber);flex:none}
+/* crown build visual */
+.crownbox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:28px;position:relative}
+.crownbox .cap{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#8fa8cc}
+.layer{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:11px;padding:13px 15px;margin-bottom:9px}
+.layer:last-child{margin-bottom:0}
+.layer .n{width:26px;height:26px;border-radius:7px;background:var(--amber);color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.layer b{display:block;font-size:14px;font-weight:700;color:#fff}
+.layer span{font-size:12.5px;color:#9fb4d3}
+.stamp{position:absolute;top:-15px;right:-12px;background:var(--amber);color:#fff;border-radius:12px;padding:11px 17px;text-align:center;box-shadow:0 14px 32px rgba(192,138,46,.4)}
+.stamp span{display:block;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;opacity:.9}
+.stamp b{display:block;font-family:var(--head);font-size:24px;line-height:1}
+
+/* stats */
+.strip{background:var(--cream);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.sv{padding:34px 20px;text-align:center;border-right:1px solid var(--line)}
+.sv:last-child{border-right:0}
+.sv b{display:block;font-family:var(--head);font-size:clamp(26px,3.4vw,38px);color:var(--navy);line-height:1}
+.sv span{display:block;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-top:9px}
+
+/* process */
+.proc{background:var(--paper)}
+.track{margin-top:52px;position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.track::before{content:"";position:absolute;top:29px;left:6%;right:6%;height:2px;background:linear-gradient(90deg,var(--blue-l),var(--amber),var(--blue-l))}
+.node{position:relative;text-align:center}
+.node .b{width:58px;height:58px;border-radius:50%;background:#fff;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;position:relative;z-index:2;font-family:var(--head);font-weight:800;color:var(--navy);font-size:17px;transition:.3s}
+.node:hover .b{border-color:var(--amber);background:var(--amber-l);transform:translateY(-3px)}
+.node h3{font-size:16px;margin-bottom:6px}
+.node p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.node.hi .b{background:var(--navy);border-color:var(--navy);color:#fff}
+.procnote{margin-top:44px;background:var(--amber-l);border:1px solid #f0e2c4;border-radius:14px;padding:22px 26px;display:flex;gap:18px;align-items:center}
+.procnote .ic{width:46px;height:46px;border-radius:11px;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:var(--sh)}
+.procnote p{font-size:15px;color:#6b5320}
+.procnote b{color:var(--ink)}
+
+/* services */
+.svc{background:var(--cream)}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;transition:.28s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);border-color:transparent}
+.card .ic{width:46px;height:46px;border-radius:11px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card h3{margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--muted)}
+.card ul{list-style:none;margin-top:12px;display:grid;gap:6px}
+.card li{font-size:13.5px;color:var(--muted);padding-left:16px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:9px;background:var(--amber)}
+
+/* certs */
+.certs{background:var(--navy-d);color:#fff}
+.certs h2{color:#fff}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.cert{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:28px;transition:.28s}
+.cert:hover{background:rgba(255,255,255,.09);transform:translateY(-3px)}
+.cert .sealwrap{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.cert .seal{width:44px;height:44px;border-radius:50%;border:2px solid var(--amber);display:flex;align-items:center;justify-content:center;flex:none}
+.cert .org{font-family:var(--head);font-weight:800;font-size:16px;letter-spacing:.02em}
+.cert .loc{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:700}
+.cert p{font-size:14.5px;color:#a9bcdb}
+
+/* ortho split */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+.qbox{background:var(--blue-l);border-radius:16px;padding:32px;border-left:4px solid var(--navy)}
+.qbox .yr{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+.qbox .yr b{font-family:var(--head);font-size:34px;color:var(--navy);line-height:1}
+.qbox .yr span{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.qbox p{font-size:15.5px;color:var(--ink)}
+.olist{display:grid;gap:11px;margin-top:24px}
+.olist div{display:flex;gap:12px;align-items:flex-start;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.olist svg{flex:none;margin-top:3px}
+
+/* fzo band */
+.band{background:var(--navy);color:#fff}
+.band .wrap{display:flex;align-items:center;gap:24px;padding:30px 24px}
+.band .ic{width:54px;height:54px;border-radius:13px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex:none}
+.band h3{font-size:19px;margin-bottom:4px;color:#fff}
+.band p{font-size:14.5px;color:#b3c5e0}
+
+/* booking */
+.book{background:var(--cream)}
+.bgrid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+.cpanel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:var(--sh)}
+.callbox{background:linear-gradient(150deg,var(--navy),var(--navy-d));border-radius:13px;padding:26px;text-align:center;color:#fff;margin-bottom:24px}
+.callbox span{display:block;font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:9px}
+.callbox a{display:block;font-family:var(--head);font-size:clamp(27px,3.4vw,35px);font-weight:800;letter-spacing:-.02em;color:#fff;line-height:1.1}
+.callbox p{font-size:13.5px;color:#b3c5e0;margin-top:12px;line-height:1.5}
+.pblock+.pblock{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+.pblock h4{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:14px;font-family:var(--body)}
+.hrow{display:flex;justify-content:space-between;gap:16px;padding:9px 0;font-size:14.5px;border-bottom:1px dashed var(--line)}
+.hrow:last-child{border:0}
+.hrow b{font-weight:700}
+.hrow span{color:var(--muted)}
+.hrow.off span{color:#b0472f}
+.blist{list-style:none;display:grid;gap:9px}
+.blist li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--ink)}
+.blist li svg{flex:none;margin-top:4px}
+.cinfo{display:grid;gap:12px}
+.ci{background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px;display:flex;gap:15px}
+.ci .ic{width:42px;height:42px;border-radius:10px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;flex:none}
+.ci b{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:4px}
+.ci p,.ci a{font-size:15.5px;font-weight:600}
+.ci a:hover{color:var(--navy)}
+.ci small{display:block;font-size:13.5px;color:var(--muted);font-weight:500;margin-top:2px}
+.msgbtns{display:flex;gap:10px}
+.msgbtn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:10px;font-weight:700;font-size:14.5px;color:#fff;transition:.2s}
+.wa{background:#25d366}.wa:hover{background:#1eb457}
+.vb{background:#7360f2}.vb:hover{background:#5f4de0}
+
+/* footer */
+footer{background:var(--navy-d);color:#9db1d0;padding:64px 0 0}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.15fr;gap:40px;padding-bottom:46px}
+footer h4{font-family:var(--body);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:16px;font-weight:800}
+footer a{display:block;font-size:14.5px;padding:5px 0;color:#9db1d0}
+footer a:hover{color:#fff}
+.fbrand p{font-size:14.5px;margin:15px 0;max-width:34ch}
+.newdom{display:inline-flex;align-items:center;gap:8px;background:rgba(192,138,46,.16);border:1px solid rgba(192,138,46,.4);color:var(--amber);border-radius:8px;padding:9px 14px;font-size:13px;font-weight:700;margin-top:6px}
+.fbot{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px}
+.jba{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:8px 15px;font-size:12.5px;font-weight:700;color:#fff}
+.jba em{font-style:normal;color:var(--amber)}
+
+.mobar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:90;background:#fff;border-top:1px solid var(--line);padding:8px;gap:8px;box-shadow:0 -6px 22px rgba(15,28,51,.1)}
+.mobar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;border-radius:9px;font-size:11px;font-weight:700;color:var(--ink)}
+.mobar a.acc{background:var(--amber);color:#fff}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:1040px){
+  .hero-grid,.split,.bgrid{grid-template-columns:1fr;gap:38px}
+  .sgrid,.cgrid{grid-template-columns:repeat(2,1fr)}
+  .track{grid-template-columns:repeat(2,1fr);gap:26px}
+  .track::before{display:none}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  section{padding:58px 0}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 24px 18px;border-bottom:1px solid var(--line);box-shadow:var(--sh)}
+  .menu.open{display:flex}
+  .menu a{padding:13px 0;border-bottom:1px solid var(--line);width:100%}
+  .burger{display:flex}
+  .nav{position:relative;height:64px;gap:10px}
+  .nav-r{gap:8px}
+  .nav-r .btn-p{display:none}
+  .brand{flex:1 1 auto;min-width:0}
+  .brand>span{min-width:0;overflow:hidden}
+  .brand b{font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand i{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .langs{padding:2px}.langs button{padding:6px 8px;font-size:11px}
+  .topbar .tl{display:none}
+  .topbar .wrap{justify-content:center}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .sv{border-right:0;border-bottom:1px solid var(--line);padding:26px 12px}
+  .sgrid,.cgrid,.track{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr;gap:28px}
+  .band .wrap{flex-direction:column;text-align:center}
+  .mobar{display:flex}
+  body{padding-bottom:72px}
+  .hero-grid{min-height:0;padding:50px 0}
+  .stamp{top:-11px;right:0;padding:9px 14px}
+  .cpanel{padding:22px}
+  .callbox{padding:22px}
+  .procnote{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tl"><span data-i18n="tb_addr">ул. ЈНА 32, Тетово</span> · <span class="dm">neodent.mk</span></div>
+    <div><span data-i18n="tb_hours">Пон–Пет 08:00–20:00</span> · <a href="tel:+38970279310">070 279 310</a></div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <a href="#" class="brand">
+        <svg class="mark" viewBox="0 0 42 42" fill="none">
+          <rect width="42" height="42" rx="10" fill="#17356b"/>
+          <path d="M21 9.6c-2.4-1.5-6-1.9-7.8.4-2.1 2.6-1.5 6.9.3 11.4.9 2.4.9 4.3 1.4 6.5.4 1.8.9 3.1 2 3.1 1.5 0 1.6-2.3 1.9-4.4.2-1.7.5-3.1 2.2-3.1s2 1.4 2.2 3.1c.3 2.1.4 4.4 1.9 4.4 1.1 0 1.6-1.3 2-3.1.5-2.2.5-4.1 1.4-6.5 1.8-4.5 2.4-8.8.3-11.4-1.8-2.3-5.4-1.9-7.8-.4Z" fill="#fff"/>
+          <path d="M27.5 13.2c1 1.7 1 4.2.1 6.6" stroke="#c08a2e" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+        <span><b>NEODENT</b><i data-i18n="brand_sub">Тетово · од 2002</i></span>
+      </a>
+      <nav class="menu" id="menu">
+        <a href="#lab" data-i18n="nav_lab">Лабораторија</a>
+        <a href="#services" data-i18n="nav_svc">Услуги</a>
+        <a href="#certs" data-i18n="nav_certs">Сертификати</a>
+        <a href="#ortho" data-i18n="nav_ortho">Ортодонција</a>
+        <a href="#contact" data-i18n="nav_contact">Контакт</a>
+      </nav>
+      <div class="nav-r">
+        <div class="langs"><button data-lang="mk" class="on">МК</button><button data-lang="sq">SQ</button></div>
+        <a href="#contact" class="btn btn-p" data-i18n="cta_book">Закажи термин</a>
+        <button class="burger" id="burger" aria-label="Menu"><i></i></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker" data-i18n="hero_kicker">ПЗУ Неодент · Тетово · од 2002</div>
+        <h1><span data-i18n="hero_h1a">Вашата коронка се изработува</span> <u data-i18n="hero_h1b">овде.</u> <span data-i18n="hero_h1c">Не се испраќа никаде.</span></h1>
+        <p data-i18n="hero_p">Од 2005 година имаме сопствена забнотехничка лабораторија во ординацијата — опремена за металкерамички мостови и коронки, како и тотални и парцијални протези. Тоа значи пократок рок, поточна боја и поправка истиот ден.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-p" data-i18n="hero_cta1">Закажи термин</a>
+          <a href="#lab" class="btn btn-o" data-i18n="hero_cta2">Како работи лабораторијата</a>
+        </div>
+        <div class="chips">
+          <span class="chip"><span class="dot"></span><span data-i18n="chip1">Сопствена лабораторија од 2005</span></span>
+          <span class="chip"><span class="dot"></span><span data-i18n="chip2">Договор со ФЗО</span></span>
+          <span class="chip"><span class="dot"></span><span data-i18n="chip3">Ivoclar · Schulz Dental · Noritake</span></span>
+        </div>
+      </div>
+      <div style="position:relative">
+        <div class="crownbox">
+          <div class="cap"><span data-i18n="cb_cap">Металкерамичка коронка</span><span data-i18n="cb_days">4 слоја</span></div>
+          <div class="layer"><span class="n">1</span><div><b data-i18n="cb1t">Отисок и боја</b><span data-i18n="cb1s">Земени во ординацијата, истиот ден</span></div></div>
+          <div class="layer"><span class="n">2</span><div><b data-i18n="cb2t">Метална основа</b><span data-i18n="cb2s">Леана и обработена во нашата лабораторија</span></div></div>
+          <div class="layer"><span class="n">3</span><div><b data-i18n="cb3t">Керамика Noritake</b><span data-i18n="cb3s">Моделирање слој по слој по сертифициран метод</span></div></div>
+          <div class="layer"><span class="n">4</span><div><b data-i18n="cb4t">Проба и поставување</b><span data-i18n="cb4s">Корекции на лице место — без праќање назад</span></div></div>
+        </div>
+        <div class="stamp"><span data-i18n="stamp_s">Лабораторија</span><b>2005</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="sv"><b>2002</b><span data-i18n="sv1">Година на основање</span></div>
+    <div class="sv"><b>2005</b><span data-i18n="sv2">Сопствена лабораторија</span></div>
+    <div class="sv"><b>3</b><span data-i18n="sv3">Меѓународни сертификати</span></div>
+    <div class="sv"><b>ФЗО</b><span data-i18n="sv4">Договор со Фондот</span></div>
+  </div>
+</div>
+
+<section class="proc" id="lab">
+  <div class="wrap">
+    <div class="reveal" style="max-width:62ch">
+      <div class="kicker" data-i18n="pr_kicker">Сопствена забнотехничка лабораторија</div>
+      <h2 data-i18n="pr_h2">Од отисок до готов заб — сè под ист покрив.</h2>
+      <p class="lead" style="margin-top:16px" data-i18n="pr_p">Во 2005 година ја отворивме сопствената забнотехничка лабораторија, опремена за изработка на металкерамички мостови и коронки, како и тотални и парцијални протези. Кога техничарот и стоматологот се во иста зграда, корекциите траат минути наместо недели.</p>
+    </div>
+    <div class="track reveal" id="track"></div>
+    <div class="procnote reveal">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="#c08a2e" stroke-width="1.7"/><path d="M11 6.5V11l3 1.8" stroke="#c08a2e" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+      <p data-i18n="pr_note_html"><b>Практична разлика:</b> кога коронката треба корекција, кај нас се враќа во лабораторијата во истата зграда. Кај ординации без лабораторија, се пакува и се праќа во друг град — и пациентот чека следен термин.</p>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <div class="kicker" data-i18n="sv_kicker">Услуги</div>
+      <h2 data-i18n="sv_h2">Општа стоматологија, протетика и импланти.</h2>
+      <p class="lead" style="margin-top:16px" data-i18n="sv_p">Ординација по општа стоматологија со договор со Фондот за здравствено осигурување — работиме со здравствени картони и сини картони.</p>
+    </div>
+    <div class="sgrid reveal" id="sgrid"></div>
+  </div>
+</section>
+
+<section class="certs" id="certs">
+  <div class="wrap">
+    <div class="reveal" style="max-width:60ch">
+      <div class="kicker" data-i18n="ct_kicker">Сертификати</div>
+      <h2 data-i18n="ct_h2">Обучени таму каде што се прави материјалот.</h2>
+      <p class="lead" style="color:#a9bcdb;margin-top:16px" data-i18n="ct_p">Не работиме по туѓо упатство прочитано онлајн. Тимот има завршено обуки директно кај производителите на материјалите и системите што ги користиме секој ден.</p>
+    </div>
+    <div class="cgrid reveal" id="cgrid"></div>
+  </div>
+</section>
+
+<section id="ortho">
+  <div class="wrap">
+    <div class="split reveal">
+      <div>
+        <div class="kicker" data-i18n="or_kicker">Ортодонција</div>
+        <h2 data-i18n="or_h2">Специјализација завршена на УКЦ „Св. Пантелејмон“.</h2>
+        <p class="lead" style="margin:16px 0 24px" data-i18n="or_p">Ортодонтските третмани ги води стоматолог со завршена специјализација на Универзитетскиот клинички центар „Св. Пантелејмон“ во Скопје, во периодот 2010–2013 година.</p>
+        <div class="olist">
+          <div><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" fill="#eef3fb"/><path d="M5.5 9.2 8 11.7l4.5-5" stroke="#17356b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="or1">Фиксни протези (брекети) за адолесценти и возрасни</span></div>
+          <div><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" fill="#eef3fb"/><path d="M5.5 9.2 8 11.7l4.5-5" stroke="#17356b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="or2">Мобилни ортодонтски апарати за деца</span></div>
+          <div><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" fill="#eef3fb"/><path d="M5.5 9.2 8 11.7l4.5-5" stroke="#17356b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="or3">Контроли и корекции во сопствената лабораторија</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="qbox">
+          <div class="yr"><b>2010–2013</b><span data-i18n="qb_label">Специјализација</span></div>
+          <p data-i18n="qb_p">Универзитетски клинички центар „Св. Пантелејмон“, Скопје — тригодишна специјализација по ортодонција.</p>
+          <div style="height:1px;background:rgba(23,53,107,.15);margin:22px 0"></div>
+          <div class="yr"><b>2005</b><span data-i18n="qb_label2">Лабораторија</span></div>
+          <p data-i18n="qb_p2">Сопствена забнотехничка лабораторија, опремена за металкерамика, тотални и парцијални протези.</p>
+          <div style="height:1px;background:rgba(23,53,107,.15);margin:22px 0"></div>
+          <div class="yr"><b>2002</b><span data-i18n="qb_label3">Основање</span></div>
+          <p data-i18n="qb_p3">ПЗУ Неодент отвора врати на ул. ЈНА 32 во Тетово како ординација по општа стоматологија.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="ic"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="6" width="20" height="14" rx="3" stroke="#fff" stroke-width="1.8"/><path d="M3 11h20" stroke="#fff" stroke-width="1.8"/><path d="M7 15.5h4.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+    <div>
+      <h3 data-i18n="fz_h">Работиме со здравствени и сини картони</h3>
+      <p data-i18n="fz_p">ПЗУ Неодент има договор со Фондот за здравствено осигурување за услугите од општа стоматологија. Понесете ја здравствената книшка на прегледот.</p>
+    </div>
+  </div>
+</div>
+
+<section class="book" id="contact">
+  <div class="wrap">
+    <div class="bgrid reveal">
+      <div>
+        <div class="kicker" data-i18n="bk_kicker">Контакт</div>
+        <h2 data-i18n="bk_h2">Јавете се — одговараме истиот ден.</h2>
+        <p class="lead" style="margin:16px 0 26px" data-i18n="bk_p">Термините се закажуваат по телефон или на Viber и WhatsApp. За итни случаи, јавете се директно.</p>
+        <div class="cinfo">
+          <div class="ci">
+            <div class="ic"><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><path d="M17.5 14.2v2.3a1.4 1.4 0 0 1-1.5 1.4 13.8 13.8 0 0 1-6-2.1 13.6 13.6 0 0 1-4.2-4.2 13.8 13.8 0 0 1-2.1-6.1A1.4 1.4 0 0 1 5 4h2.3a1.4 1.4 0 0 1 1.4 1.2c.1.7.3 1.3.5 2a1.4 1.4 0 0 1-.3 1.5l-1 1a11.2 11.2 0 0 0 4.2 4.2l1-1a1.4 1.4 0 0 1 1.5-.3c.6.2 1.3.4 2 .5a1.4 1.4 0 0 1 1.2 1.4Z" stroke="#17356b" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <div><b data-i18n="ci_phone">Телефон</b><a href="tel:+38970279310">070 279 310</a><small data-i18n="ci_phone_s">Повици и Viber во работно време</small></div>
+          </div>
+          <div class="ci">
+            <div class="ic"><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><path d="M16.5 8.3c0 4.6-6.5 9.2-6.5 9.2s-6.5-4.6-6.5-9.2a6.5 6.5 0 0 1 13 0Z" stroke="#17356b" stroke-width="1.6" stroke-linejoin="round"/><circle cx="10" cy="8.2" r="2.2" stroke="#17356b" stroke-width="1.6"/></svg></div>
+            <div><b data-i18n="ci_addr">Адреса</b><p>ул. ЈНА 32, Тетово</p><small data-i18n="ci_addr_s">Ординација и лабораторија на иста локација</small></div>
+          </div>
+          <div class="ci">
+            <div class="ic"><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.2" stroke="#17356b" stroke-width="1.6"/><path d="M10 5.8V10l2.8 1.7" stroke="#17356b" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <div><b data-i18n="ci_hours">Работно време</b><p data-i18n="ci_hours_v">Пон–Пет 08:00–20:00</p><small data-i18n="ci_hours_s">Сабота по договор · Недела затворено</small></div>
+          </div>
+          <div class="msgbtns">
+            <a class="msgbtn wa" href="https://wa.me/38970279310" target="_blank" rel="noopener">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.3 8.3 0 1 1 7.2 3.9Zm4.5-5.9c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7l1.3.5c.6.2 1.1.2 1.5.1.4-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.6-.4Z"/></svg>WhatsApp</a>
+            <a class="msgbtn vb" href="viber://chat?number=%2B38970279310">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C7 2 3 5.3 3 9.4c0 2.3 1.2 4.3 3.2 5.6v3.4c0 .4.5.7.9.4l2.3-1.7c.8.2 1.7.3 2.6.3 5 0 9-3.3 9-7.4S17 2 12 2Zm4.6 10.8c-.2.5-1 1-1.4 1-.4.1-.8.1-1.3-.1a11 11 0 0 1-1.2-.5c-2-.9-3.4-3-3.5-3.1-.1-.2-.9-1.2-.9-2.2 0-1.1.6-1.6.8-1.8.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4l.7 1.7c0 .1.1.3 0 .4l-.2.4-.3.3c-.1.1-.2.2-.1.4.1.2.5.9 1.1 1.4.8.7 1.4.9 1.6 1 .2.1.3.1.4 0l.7-.8c.2-.2.3-.2.5-.1l1.6.7c.2.1.3.2.4.3v.9Z"/></svg>Viber</a>
+          </div>
+        </div>
+      </div>
+      <div class="cpanel">
+        <div class="callbox">
+          <span data-i18n="cb_label">За термин, јавете се</span>
+          <a href="tel:+38970279310">070 279 310</a>
+          <p data-i18n="cb_note">Термините се закажуваат по телефон или на Viber, во работно време. За протетика ви кажуваме и приближен рок веднаш.</p>
+        </div>
+        <div class="pblock">
+          <h4 data-i18n="hrs_h">Работно време</h4>
+          <div id="hrsList"></div>
+        </div>
+        <div class="pblock">
+          <h4 data-i18n="bring_h">Понесете со себе</h4>
+          <ul class="blist" id="bringList"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="#" class="brand">
+          <svg class="mark" viewBox="0 0 42 42" fill="none">
+            <rect width="42" height="42" rx="10" fill="#17356b"/>
+            <path d="M21 9.6c-2.4-1.5-6-1.9-7.8.4-2.1 2.6-1.5 6.9.3 11.4.9 2.4.9 4.3 1.4 6.5.4 1.8.9 3.1 2 3.1 1.5 0 1.6-2.3 1.9-4.4.2-1.7.5-3.1 2.2-3.1s2 1.4 2.2 3.1c.3 2.1.4 4.4 1.9 4.4 1.1 0 1.6-1.3 2-3.1.5-2.2.5-4.1 1.4-6.5 1.8-4.5 2.4-8.8.3-11.4-1.8-2.3-5.4-1.9-7.8-.4Z" fill="#fff"/>
+            <path d="M27.5 13.2c1 1.7 1 4.2.1 6.6" stroke="#c08a2e" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+          <span><b style="color:#fff">NEODENT</b><i style="color:#9db1d0" data-i18n="brand_sub2">Тетово · од 2002</i></span>
+        </a>
+        <p data-i18n="ft_p">Ординација по општа стоматологија со сопствена забнотехничка лабораторија. ул. ЈНА 32, Тетово.</p>
+        <span class="newdom">◆ neodent.mk</span>
+      </div>
+      <div>
+        <h4 data-i18n="ft_h1">Услуги</h4>
+        <a href="#services" data-i18n="ft_a1">Општа стоматологија</a>
+        <a href="#services" data-i18n="ft_a2">Протетика</a>
+        <a href="#services" data-i18n="ft_a3">Импланти</a>
+        <a href="#ortho" data-i18n="ft_a4">Ортодонција</a>
+        <a href="#lab" data-i18n="ft_a5">Забнотехничка лабораторија</a>
+      </div>
+      <div>
+        <h4 data-i18n="ft_h2">Установа</h4>
+        <a href="#lab" data-i18n="ft_b1">За нас</a>
+        <a href="#certs" data-i18n="ft_b2">Сертификати</a>
+        <a href="#contact" data-i18n="ft_b3">Контакт</a>
+        <a href="https://www.facebook.com/neodent.tetovo" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <div>
+        <h4 data-i18n="ft_h3">Контакт</h4>
+        <a href="tel:+38970279310">070 279 310</a>
+        <a style="cursor:default">ул. ЈНА 32<br>1200 Тетово</a>
+        <a style="cursor:default" data-i18n="ft_hours">Пон–Пет 08:00–20:00</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 ПЗУ Неодент — Тетово. <span data-i18n="ft_rights">Сите права задржани.</span></span>
+      <span class="jba"><em>◆</em> <span data-i18n="ft_jba">Концепт-дизајн:</span> JBA Ventures</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobar">
+  <a href="tel:+38970279310"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M17.5 14.2v2.3a1.4 1.4 0 0 1-1.5 1.4 13.8 13.8 0 0 1-6-2.1 13.6 13.6 0 0 1-4.2-4.2 13.8 13.8 0 0 1-2.1-6.1A1.4 1.4 0 0 1 5 4h2.3a1.4 1.4 0 0 1 1.4 1.2c.1.7.3 1.3.5 2a1.4 1.4 0 0 1-.3 1.5l-1 1a11.2 11.2 0 0 0 4.2 4.2l1-1a1.4 1.4 0 0 1 1.5-.3c.6.2 1.3.4 2 .5a1.4 1.4 0 0 1 1.2 1.4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span data-i18n="mb1">Јави се</span></a>
+  <a href="https://wa.me/38970279310" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.3 8.3 0 1 1 7.2 3.9Zm4.5-5.9c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7l1.3.5c.6.2 1.1.2 1.5.1.4-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.6-.4Z"/></svg>WhatsApp</a>
+  <a href="#contact" class="acc"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="4.5" width="14" height="13" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 8.5h14M7 2.5v3M13 2.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span data-i18n="mb3">Закажи</span></a>
+</div>
+
+<script>
+const T={
+mk:{
+ tb_addr:"ул. ЈНА 32, Тетово", tb_hours:"Пон–Пет 08:00–20:00",
+ brand_sub:"Тетово · од 2002", brand_sub2:"Тетово · од 2002",
+ nav_lab:"Лабораторија", nav_svc:"Услуги", nav_certs:"Сертификати", nav_ortho:"Ортодонција", nav_contact:"Контакт",
+ cta_book:"Закажи термин",
+ hero_kicker:"ПЗУ Неодент · Тетово · од 2002",
+ hero_h1a:"Вашата коронка се изработува", hero_h1b:"овде.", hero_h1c:"Не се испраќа никаде.",
+ hero_p:"Од 2005 година имаме сопствена забнотехничка лабораторија во ординацијата — опремена за металкерамички мостови и коронки, како и тотални и парцијални протези. Тоа значи пократок рок, поточна боја и поправка истиот ден.",
+ hero_cta1:"Закажи термин", hero_cta2:"Како работи лабораторијата",
+ chip1:"Сопствена лабораторија од 2005", chip2:"Договор со ФЗО", chip3:"Ivoclar · Schulz Dental · Noritake",
+ cb_cap:"Металкерамичка коронка", cb_days:"4 слоја",
+ cb1t:"Отисок и боја", cb1s:"Земени во ординацијата, истиот ден",
+ cb2t:"Метална основа", cb2s:"Леана и обработена во нашата лабораторија",
+ cb3t:"Керамика Noritake", cb3s:"Моделирање слој по слој по сертифициран метод",
+ cb4t:"Проба и поставување", cb4s:"Корекции на лице место — без праќање назад",
+ stamp_s:"Лабораторија",
+ sv1:"Година на основање", sv2:"Сопствена лабораторија", sv3:"Меѓународни сертификати", sv4:"Договор со Фондот",
+ pr_kicker:"Сопствена забнотехничка лабораторија",
+ pr_h2:"Од отисок до готов заб — сè под ист покрив.",
+ pr_p:"Во 2005 година ја отворивме сопствената забнотехничка лабораторија, опремена за изработка на металкерамички мостови и коронки, како и тотални и парцијални протези. Кога техничарот и стоматологот се во иста зграда, корекциите траат минути наместо недели.",
+ pr_note_html:"<b>Практична разлика:</b> кога коронката треба корекција, кај нас се враќа во лабораторијата во истата зграда. Кај ординации без лабораторија, се пакува и се праќа во друг град — и пациентот чека следен термин.",
+ sv_kicker:"Услуги", sv_h2:"Општа стоматологија, протетика и импланти.",
+ sv_p:"Ординација по општа стоматологија со договор со Фондот за здравствено осигурување — работиме со здравствени картони и сини картони.",
+ ct_kicker:"Сертификати", ct_h2:"Обучени таму каде што се прави материјалот.",
+ ct_p:"Не работиме по туѓо упатство прочитано онлајн. Тимот има завршено обуки директно кај производителите на материјалите и системите што ги користиме секој ден.",
+ or_kicker:"Ортодонција", or_h2:"Специјализација завршена на УКЦ „Св. Пантелејмон“.",
+ or_p:"Ортодонтските третмани ги води стоматолог со завршена специјализација на Универзитетскиот клинички центар „Св. Пантелејмон“ во Скопје, во периодот 2010–2013 година.",
+ or1:"Фиксни протези (брекети) за адолесценти и возрасни",
+ or2:"Мобилни ортодонтски апарати за деца",
+ or3:"Контроли и корекции во сопствената лабораторија",
+ qb_label:"Специјализација", qb_p:"Универзитетски клинички центар „Св. Пантелејмон“, Скопје — тригодишна специјализација по ортодонција.",
+ qb_label2:"Лабораторија", qb_p2:"Сопствена забнотехничка лабораторија, опремена за металкерамика, тотални и парцијални протези.",
+ qb_label3:"Основање", qb_p3:"ПЗУ Неодент отвора врати на ул. ЈНА 32 во Тетово како ординација по општа стоматологија.",
+ fz_h:"Работиме со здравствени и сини картони",
+ fz_p:"ПЗУ Неодент има договор со Фондот за здравствено осигурување за услугите од општа стоматологија. Понесете ја здравствената книшка на прегледот.",
+ bk_kicker:"Контакт", bk_h2:"Јавете се — одговараме истиот ден.",
+ bk_p:"Термините се закажуваат по телефон или на Viber и WhatsApp. За итни случаи, јавете се директно.",
+ ci_phone:"Телефон", ci_phone_s:"Повици и Viber во работно време",
+ ci_addr:"Адреса", ci_addr_s:"Ординација и лабораторија на иста локација",
+ ci_hours:"Работно време", ci_hours_v:"Пон–Пет 08:00–20:00", ci_hours_s:"Сабота по договор · Недела затворено",
+ cb_label:"За термин, јавете се",
+ cb_note:"Термините се закажуваат по телефон или на Viber, во работно време. За протетика ви кажуваме и приближен рок веднаш.",
+ hrs_h:"Работно време", bring_h:"Понесете со себе",
+ ft_p:"Ординација по општа стоматологија со сопствена забнотехничка лабораторија. ул. ЈНА 32, Тетово.",
+ ft_h1:"Услуги", ft_a1:"Општа стоматологија", ft_a2:"Протетика", ft_a3:"Импланти", ft_a4:"Ортодонција", ft_a5:"Забнотехничка лабораторија",
+ ft_h2:"Установа", ft_b1:"За нас", ft_b2:"Сертификати", ft_b3:"Контакт",
+ ft_h3:"Контакт", ft_hours:"Пон–Пет 08:00–20:00", ft_rights:"Сите права задржани.", ft_jba:"Концепт-дизајн:",
+ mb1:"Јави се", mb3:"Закажи",
+ hours:[["Понеделник – Петок","08:00 – 20:00",0],["Сабота","По договор",0],["Недела","Затворено",1]],
+ bring:["Здравствена книшка или син картон","Лична карта","Претходни снимки, ако имате","Список на лекови што ги земате"]
+},
+sq:{
+ tb_addr:"rr. JNA 32, Tetovë", tb_hours:"Hën–Pre 08:00–20:00",
+ brand_sub:"Tetovë · që nga 2002", brand_sub2:"Tetovë · që nga 2002",
+ nav_lab:"Laboratori", nav_svc:"Shërbimet", nav_certs:"Certifikatat", nav_ortho:"Ortodonci", nav_contact:"Kontakt",
+ cta_book:"Cakto terminin",
+ hero_kicker:"ISHP Neodent · Tetovë · që nga 2002",
+ hero_h1a:"Kurora juaj punohet", hero_h1b:"këtu.", hero_h1c:"Nuk dërgohet askund.",
+ hero_p:"Që nga viti 2005 kemi laborator tonin dentar brenda ordinancës — të pajisur për ura dhe kurora metalo-qeramike, si dhe proteza totale e parciale. Kjo do të thotë afat më i shkurtër, ngjyrë më e saktë dhe korrigjim po atë ditë.",
+ hero_cta1:"Cakto terminin", hero_cta2:"Si punon laboratori",
+ chip1:"Laborator i vetin që nga 2005", chip2:"Marrëveshje me FSSH", chip3:"Ivoclar · Schulz Dental · Noritake",
+ cb_cap:"Kurorë metalo-qeramike", cb_days:"4 shtresa",
+ cb1t:"Masa dhe ngjyra", cb1s:"Merren në ordinancë, po atë ditë",
+ cb2t:"Baza metalike", cb2s:"E derdhur dhe e përpunuar në laboratorin tonë",
+ cb3t:"Qeramikë Noritake", cb3s:"Modelim shtresë pas shtrese sipas metodës së certifikuar",
+ cb4t:"Prova dhe vendosja", cb4s:"Korrigjime në vend — pa u dërguar mbrapsht",
+ stamp_s:"Laborator",
+ sv1:"Viti i themelimit", sv2:"Laborator i vetin", sv3:"Certifikata ndërkombëtare", sv4:"Marrëveshje me Fondin",
+ pr_kicker:"Laborator dentar i yni",
+ pr_h2:"Nga masa deri te dhëmbi i gatshëm — gjithçka nën një çati.",
+ pr_p:"Në vitin 2005 hapëm laboratorin tonë dentar, të pajisur për punimin e urave dhe kurorave metalo-qeramike, si dhe protezave totale e parciale. Kur teknikieni dhe stomatologu janë në të njëjtën ndërtesë, korrigjimet zgjasin minuta në vend të javëve.",
+ pr_note_html:"<b>Ndryshimi praktik:</b> kur kurora ka nevojë për korrigjim, tek ne kthehet në laboratorin në të njëjtën ndërtesë. Tek ordinancat pa laborator, paketohet dhe dërgohet në qytet tjetër — dhe pacienti pret terminin e radhës.",
+ sv_kicker:"Shërbimet", sv_h2:"Stomatologji e përgjithshme, protetikë dhe implante.",
+ sv_p:"Ordinancë e stomatologjisë së përgjithshme me marrëveshje me Fondin e Sigurimit Shëndetësor — punojmë me kartela shëndetësore dhe kartela blu.",
+ ct_kicker:"Certifikatat", ct_h2:"Të trajnuar atje ku prodhohet materiali.",
+ ct_p:"Nuk punojmë sipas udhëzimeve të huaja të lexuara në internet. Ekipi ka përfunduar trajnime direkt te prodhuesit e materialeve dhe sistemeve që i përdorim çdo ditë.",
+ or_kicker:"Ortodonci", or_h2:"Specializim i përfunduar në QKU „Sh. Pantelejmon“.",
+ or_p:"Trajtimet ortodontike i udhëheq stomatolog me specializim të përfunduar në Qendrën Klinike Universitare „Sh. Pantelejmon“ në Shkup, në periudhën 2010–2013.",
+ or1:"Proteza fikse (aparate) për adoleshentë dhe të rritur",
+ or2:"Aparate ortodontike të lëvizshme për fëmijë",
+ or3:"Kontrolle dhe korrigjime në laboratorin tonë",
+ qb_label:"Specializim", qb_p:"Qendra Klinike Universitare „Sh. Pantelejmon“, Shkup — specializim trevjeçar në ortodonci.",
+ qb_label2:"Laboratori", qb_p2:"Laborator dentar i yni, i pajisur për metalo-qeramikë, proteza totale dhe parciale.",
+ qb_label3:"Themelimi", qb_p3:"ISHP Neodent hap dyert në rr. JNA 32 në Tetovë si ordinancë e stomatologjisë së përgjithshme.",
+ fz_h:"Punojmë me kartela shëndetësore dhe blu",
+ fz_p:"ISHP Neodent ka marrëveshje me Fondin e Sigurimit Shëndetësor për shërbimet e stomatologjisë së përgjithshme. Merrni me vete librezën shëndetësore.",
+ bk_kicker:"Kontakt", bk_h2:"Telefononi — përgjigjemi po atë ditë.",
+ bk_p:"Terminët caktohen me telefon ose në Viber dhe WhatsApp. Për raste urgjente, telefononi direkt.",
+ ci_phone:"Telefoni", ci_phone_s:"Telefonata dhe Viber gjatë orarit",
+ ci_addr:"Adresa", ci_addr_s:"Ordinanca dhe laboratori në të njëjtin lokacion",
+ ci_hours:"Orari i punës", ci_hours_v:"Hën–Pre 08:00–20:00", ci_hours_s:"E shtunë me marrëveshje · E diel mbyllur",
+ cb_label:"Për termin, telefononi",
+ cb_note:"Terminët caktohen me telefon ose në Viber, gjatë orarit. Për protetikë ju themi edhe afatin e përafërt menjëherë.",
+ hrs_h:"Orari i punës", bring_h:"Merrni me vete",
+ ft_p:"Ordinancë e stomatologjisë së përgjithshme me laborator dentar të vetin. rr. JNA 32, Tetovë.",
+ ft_h1:"Shërbimet", ft_a1:"Stomatologji e përgjithshme", ft_a2:"Protetikë", ft_a3:"Implante", ft_a4:"Ortodonci", ft_a5:"Laborator dentar",
+ ft_h2:"Institucioni", ft_b1:"Rreth nesh", ft_b2:"Certifikatat", ft_b3:"Kontakt",
+ ft_h3:"Kontakt", ft_hours:"Hën–Pre 08:00–20:00", ft_rights:"Të gjitha të drejtat e rezervuara.", ft_jba:"Koncept-dizajn:",
+ mb1:"Telefono", mb3:"Termin",
+ hours:[["E hënë – E premte","08:00 – 20:00",0],["E shtunë","Me marrëveshje",0],["E diel","Mbyllur",1]],
+ bring:["Librezën shëndetësore ose kartelën blu","Letërnjoftimin","Radiografitë e mëparshme, nëse keni","Listën e barnave që merrni"]
+}};
+
+const TRACK=[
+ {n:"01",mk:["Преглед","Дијагноза и план на терапија со јасна цена пред да почнеме."],sq:["Kontrolli","Diagnozë dhe plan trajtimi me çmim të qartë para se të fillojmë."]},
+ {n:"02",mk:["Отисок","Земање отисок и одредување на боја во ординацијата."],sq:["Masa","Marrja e masës dhe përcaktimi i ngjyrës në ordinancë."]},
+ {n:"03",hi:1,mk:["Лабораторија","Изработка кај нашиот забен техничар — во истата зграда."],sq:["Laboratori","Punimi te teknikieni ynë dentar — në të njëjtën ndërtesë."]},
+ {n:"04",mk:["Проба","Проверка на налегнување и боја. Корекции веднаш."],sq:["Prova","Kontroll i uljes dhe ngjyrës. Korrigjime menjëherë."]},
+ {n:"05",mk:["Поставување","Финално цементирање и упатства за одржување."],sq:["Vendosja","Cimentimi final dhe udhëzime për mirëmbajtje."]}
+];
+
+const IC={
+ gen:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 4.2c-1.6-1-4.2-1.4-5.6.2-1.6 1.8-1.2 5 .1 8.4.8 2 .8 3.5 1.2 5.4.3 1.5.7 2.6 1.6 2.6 1.2 0 1.3-1.9 1.5-3.6.2-1.4.4-2.6 1.2-2.6s1 1.2 1.2 2.6c.2 1.7.3 3.6 1.5 3.6.9 0 1.3-1.1 1.6-2.6.4-1.9.4-3.4 1.2-5.4 1.3-3.4 1.7-6.6.1-8.4-1.4-1.6-4-1.2-5.6-.2Z" stroke="#17356b" stroke-width="1.6" stroke-linejoin="round"/></svg>',
+ pro:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 9.5C4 6.5 7.6 5 12 5s8 1.5 8 4.5c0 2.2-1.2 3-1.7 5.2-.4 1.7-.6 4.3-2.3 4.3-1.5 0-1.4-2.6-1.8-4-.3-1-.9-1.6-2.2-1.6s-1.9.6-2.2 1.6c-.4 1.4-.3 4-1.8 4-1.7 0-1.9-2.6-2.3-4.3C5.2 12.5 4 11.7 4 9.5Z" stroke="#17356b" stroke-width="1.6" stroke-linejoin="round"/></svg>',
+ imp:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3.5a4 4 0 0 1 4 4v1.2H8V7.5a4 4 0 0 1 4-4Z" stroke="#17356b" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 12h4M10 15h4M10.5 18h3M12 8.7v11" stroke="#17356b" stroke-width="1.6" stroke-linecap="round"/></svg>',
+ chi:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#17356b" stroke-width="1.6"/><circle cx="9.3" cy="10" r="1" fill="#17356b"/><circle cx="14.7" cy="10" r="1" fill="#17356b"/><path d="M8.8 14.2a4.2 4.2 0 0 0 6.4 0" stroke="#17356b" stroke-width="1.6" stroke-linecap="round"/></svg>',
+ sur:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m4 20 8.5-8.5M14 10l6-6M14.5 9.5 19 14" stroke="#17356b" stroke-width="1.6" stroke-linecap="round"/><circle cx="16.5" cy="7.5" r="2.6" stroke="#17356b" stroke-width="1.6"/></svg>',
+ est:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.4 5.3 5.6.6-4.2 3.8 1.2 5.6-5-2.9-5 2.9 1.2-5.6L4 9.4l5.6-.6L12 3.5Z" stroke="#17356b" stroke-width="1.6" stroke-linejoin="round"/></svg>'
+};
+
+const SVCS=[
+ {i:'gen',mk:["Општа стоматологија","Прегледи, пломби и лекување на заби со здравствени картони.",["Композитни пломби","Ендодонција (лекување канали)","Чистење забен камен"]],
+        sq:["Stomatologji e përgjithshme","Kontrolle, mbushje dhe mjekim dhëmbësh me kartela shëndetësore.",["Mbushje kompozite","Endodonci (mjekim kanalesh)","Heqje e gurit dentar"]]},
+ {i:'pro',mk:["Протетика","Мостови, коронки и протези изработени во нашата лабораторија.",["Металкерамички коронки и мостови","Тотални протези","Парцијални протези"]],
+        sq:["Protetikë","Ura, kurora dhe proteza të punuara në laboratorin tonë.",["Kurora dhe ura metalo-qeramike","Proteza totale","Proteza parciale"]]},
+ {i:'imp',mk:["Импланти","Поставување на импланти по сертифициран Schulz Dental метод.",["Планирање и снимка","Поставување на имплант","Протетска надградба"]],
+        sq:["Implante","Vendosje implantesh sipas metodës së certifikuar Schulz Dental.",["Planifikim dhe radiografi","Vendosje e implantit","Mbindërtim protetik"]]},
+ {i:'chi',mk:["Детска стоматологија","Мирен прв контакт со забарот и превентива што спречува кариес.",["Залевање фисури","Флуоризација","Пломби на млечни заби"]],
+        sq:["Stomatologji për fëmijë","Kontakt i qetë i parë me dentistin dhe parandalim që ndalon kariesin.",["Mbyllje fisurash","Fluorizim","Mbushje në dhëmbë qumështi"]]},
+ {i:'sur',mk:["Орална хирургија","Екстракции и мали интервенции во контролирани услови.",["Вадење заби","Вадење заостанати корени","Обработка на апсцеси"]],
+        sq:["Kirurgji orale","Nxjerrje dhe ndërhyrje të vogla në kushte të kontrolluara.",["Nxjerrje dhëmbësh","Nxjerrje rrënjësh të mbetura","Trajtim i abseseve"]]},
+ {i:'est',mk:["Естетска стоматологија","Форма и боја што одговараат на вашето лице, не на каталог.",["Естетски пломби","Белење на заби","Керамички фасети"]],
+        sq:["Stomatologji estetike","Formë dhe ngjyrë që i përshtaten fytyrës suaj, jo katalogut.",["Mbushje estetike","Zbardhim dhëmbësh","Faseta qeramike"]]}
+];
+
+const CERTS=[
+ {org:"Ivoclar",loc:"Liechtenstein",mk:"Сертификат за препараторски работи — техника на подготовка на заб пред коронка или фасета.",sq:"Certifikatë për punë preparuese — teknikë e përgatitjes së dhëmbit para kurorës ose fasetës."},
+ {org:"Schulz Dental",loc:"Deutschland",mk:"Сертификат за поставување на забни импланти по нивниот систем и протокол.",sq:"Certifikatë për vendosjen e implanteve dentare sipas sistemit dhe protokollit të tyre."},
+ {org:"Noritake",loc:"Japan",mk:"Сертификат за моделирање на керамички коронки и мостови по јапонски метод.",sq:"Certifikatë për modelimin e kurorave dhe urave qeramike sipas metodës japoneze."}
+];
+
+let LANG='mk';
+function renderTrack(){
+  document.getElementById('track').innerHTML=TRACK.map(t=>{
+    const c=t[LANG];
+    return '<div class="node'+(t.hi?' hi':'')+'"><div class="b">'+t.n+'</div><h3>'+c[0]+'</h3><p>'+c[1]+'</p></div>';
+  }).join('');
+}
+function renderSvcs(){
+  document.getElementById('sgrid').innerHTML=SVCS.map(s=>{
+    const c=s[LANG];
+    return '<div class="card"><div class="ic">'+IC[s.i]+'</div><h3>'+c[0]+'</h3><p>'+c[1]+'</p><ul>'+c[2].map(x=>'<li>'+x+'</li>').join('')+'</ul></div>';
+  }).join('');
+}
+function renderCerts(){
+  document.getElementById('cgrid').innerHTML=CERTS.map(c=>
+    '<div class="cert"><div class="sealwrap"><div class="seal"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8.5 8.2 11.7 15 5" stroke="#c08a2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 10a6.5 6.5 0 1 1-3-5.5" stroke="#c08a2e" stroke-width="1.6" stroke-linecap="round"/></svg></div><div><div class="org">'+c.org+'</div><div class="loc">'+c.loc+'</div></div></div><p>'+c[LANG]+'</p></div>').join('');
+}
+function renderPanel(){
+  document.getElementById('hrsList').innerHTML=T[LANG].hours.map(h=>
+    '<div class="hrow'+(h[2]?' off':'')+'"><b>'+h[0]+'</b><span>'+h[1]+'</span></div>').join('');
+  document.getElementById('bringList').innerHTML=T[LANG].bring.map(b=>
+    '<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#eef3fb"/><path d="M4.8 8.2 7 10.4l4.2-4.6" stroke="#17356b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>'+b+'</span></li>').join('');
+}
+function setLang(l){
+  LANG=l; document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.dataset.i18n, v=T[l][k];
+    if(typeof v!=='string') return;
+    if(k.endsWith('_html')) el.innerHTML=v; else el.textContent=v;
+  });
+  document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  renderTrack();renderSvcs();renderCerts();renderPanel();
+}
+document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+document.getElementById('burger').onclick=()=>document.getElementById('menu').classList.toggle('open');
+document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>document.getElementById('menu').classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+setLang('mk');
+</script>
+</body>
+</html>

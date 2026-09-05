@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ПЗУ Бами Кор Медика — Тетово | Прва приватна здравствена установа во Тетово</title>
+<meta name="description" content="ПЗУ Бами Кор Медика, Тетово — општа и интерна медицина, биохемиска лабораторија, аптека и стоматологија (Бами Дент) под ист покрив. Од 1993 година.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a1c25; --ink-2:#12303c; --teal:#0d6b73; --teal-d:#084a51; --teal-l:#e6f2f2;
+  --coral:#d9544a; --coral-l:#fdeeec; --sand:#f7f5f1; --paper:#ffffff;
+  --line:#e2e8ea; --muted:#5c7079; --gold:#b8894a;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --sans:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --sh:0 1px 2px rgba(10,28,37,.04),0 8px 28px rgba(10,28,37,.07);
+  --sh-lg:0 2px 6px rgba(10,28,37,.05),0 24px 60px rgba(10,28,37,.12);
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16.5px;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:88px 0;position:relative}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4vw,42px)}
+h3{font-size:20px}
+.kicker{font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.kicker::before{content:"";width:26px;height:2px;background:var(--coral);flex:none}
+.lead{font-size:17.5px;color:var(--muted);max-width:62ch}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.topbar{background:var(--ink);color:#cfe0e3;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:38px}
+.topbar a{color:#fff;font-weight:600}
+.topbar .tb-r{display:flex;gap:18px;align-items:center}
+.secure{display:inline-flex;align-items:center;gap:6px;color:#7fd6b0;font-weight:700;font-size:12px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;flex:none}
+.brand .mark{width:44px;height:44px;flex:none}
+.brand b{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:-.01em;display:block;line-height:1.1}
+.brand span{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.menu{display:flex;gap:30px;align-items:center}
+.menu a{font-size:14.5px;font-weight:600;color:var(--ink-2);position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--coral);transition:width .25s}
+.menu a:hover::after{width:100%}
+.nav-r{display:flex;align-items:center;gap:14px;flex:none}
+.langs{display:flex;background:var(--sand);border-radius:99px;padding:3px;gap:2px}
+.langs button{font-size:11.5px;font-weight:800;letter-spacing:.06em;padding:6px 11px;border-radius:99px;color:var(--muted);transition:.2s}
+.langs button.on{background:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;padding:13px 24px;border-radius:99px;transition:.22s;white-space:nowrap}
+.btn-p{background:var(--coral);color:#fff;box-shadow:0 8px 22px rgba(217,84,74,.3)}
+.btn-p:hover{background:#c34439;transform:translateY(-1px)}
+.btn-d{background:var(--ink);color:#fff}
+.btn-d:hover{background:var(--teal-d)}
+.btn-o{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-o:hover{background:rgba(255,255,255,.12)}
+.btn-g{border:1.5px solid var(--line);color:var(--ink)}
+.btn-g:hover{border-color:var(--teal);color:var(--teal)}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);align-items:center;justify-content:center}
+.burger i{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
+.burger i::before{top:-6px}.burger i::after{top:6px}
+
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(160deg,#0a1c25 0%,#0d3b44 52%,#0d6b73 100%);color:#fff;padding:0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;min-height:600px;padding:80px 0}
+.hero h1{font-size:clamp(36px,5.2vw,60px);color:#fff;margin-bottom:22px}
+.hero h1 em{font-style:italic;color:#8fd3d3}
+.hero p{color:#b9d3d6;font-size:18px;max-width:52ch;margin-bottom:32px}
+.hero .kicker{color:#8fd3d3}
+.hero .kicker::before{background:var(--coral)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:8px 14px;border-radius:99px;font-size:13px;font-weight:600;color:#dbeced}
+.chip svg{flex:none}
+.hero-art{position:relative}
+.card-clinic{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:26px;backdrop-filter:blur(6px)}
+.facade{border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#0f4550,#0a2b33)}
+.badge-year{position:absolute;top:-16px;right:-10px;background:var(--coral);color:#fff;border-radius:18px;padding:14px 20px;text-align:center;box-shadow:0 14px 34px rgba(217,84,74,.4)}
+.badge-year b{display:block;font-family:var(--serif);font-size:28px;line-height:1;margin-top:2px}
+.badge-year span{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;opacity:.85}
+.badge-fzom{position:absolute;left:-14px;bottom:26px;background:#fff;color:var(--ink);border-radius:14px;padding:12px 16px;box-shadow:var(--sh-lg);display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;max-width:210px}
+.badge-fzom .dot{width:8px;height:8px;border-radius:99px;background:#25a06a;flex:none;box-shadow:0 0 0 4px rgba(37,160,106,.18)}
+
+/* ---------- stats ---------- */
+.stats{background:var(--sand);border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat{text-align:center;padding:34px 12px}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(30px,4vw,44px);color:var(--teal-d);line-height:1}
+.stat span{display:block;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.namebox{background:var(--sand);border-radius:var(--r);padding:30px;border-left:4px solid var(--coral)}
+.namerow{display:flex;gap:16px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.namerow:last-child{border:0;padding-bottom:0}
+.namerow b{font-family:var(--serif);font-size:21px;color:var(--coral);flex:none;width:112px;letter-spacing:-.01em}
+.namerow p{font-size:14.5px;color:var(--muted)}
+
+/* ---------- departments ---------- */
+.depts{background:var(--sand)}
+.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.dept{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.28s;position:relative;overflow:hidden}
+.dept::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:.35s}
+.dept:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);border-color:transparent}
+.dept:hover::after{transform:scaleX(1)}
+.dept .ico{width:52px;height:52px;border-radius:14px;background:var(--teal-l);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.dept h3{margin-bottom:8px}
+.dept p{font-size:14.5px;color:var(--muted)}
+.dept.feat{background:var(--ink);color:#fff;border-color:transparent}
+.dept.feat h3{color:#fff}
+.dept.feat p{color:#a9c4c8}
+.dept.feat .ico{background:rgba(255,255,255,.1)}
+
+/* ---------- dental tabs ---------- */
+.tabs{display:grid;grid-template-columns:300px 1fr;gap:44px;margin-top:44px;align-items:start}
+.tablist{display:flex;flex-direction:column;gap:6px;position:sticky;top:130px}
+.tablist button{text-align:left;padding:15px 18px;border-radius:12px;font-size:14.5px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:12px;transition:.2s;border:1px solid transparent}
+.tablist button:hover{background:var(--sand);color:var(--ink)}
+.tablist button.on{background:var(--ink);color:#fff}
+.tablist button i{font-style:normal;font-size:11px;font-weight:800;opacity:.5;width:18px;flex:none}
+.tabpanel{background:var(--sand);border-radius:20px;padding:38px;min-height:340px}
+.tabpanel h3{font-size:26px;margin-bottom:8px}
+.tabpanel .sub{font-size:14px;color:var(--muted);margin-bottom:24px}
+.tabpanel ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.tabpanel li{display:flex;gap:11px;font-size:15px;align-items:flex-start;line-height:1.5}
+.tabpanel li svg{flex:none;margin-top:4px}
+
+/* ---------- split feature ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.equip{display:grid;gap:12px}
+.equip div{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 18px;font-size:15px;font-weight:600}
+.equip div svg{flex:none}
+.labchips{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.labchip{background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 15px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+
+/* ---------- tourism ---------- */
+.tourism{background:linear-gradient(150deg,#0a1c25,#0d5158);color:#fff}
+.tourism h2{color:#fff}
+.tourism .lead{color:#b9d3d6}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:26px;position:relative}
+.step b{font-family:var(--serif);font-size:34px;color:rgba(255,255,255,.22);display:block;line-height:1;margin-bottom:12px}
+.step h3{font-size:17px;color:#fff;margin-bottom:7px}
+.step p{font-size:14px;color:#a9c4c8}
+
+/* ---------- fzom band ---------- */
+.band{background:var(--coral-l);border-top:1px solid #f6d9d6;border-bottom:1px solid #f6d9d6}
+.band .wrap{display:flex;align-items:center;gap:28px;padding:30px 24px}
+.band .ico{width:56px;height:56px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:var(--sh)}
+.band h3{font-size:19px;margin-bottom:5px}
+.band p{font-size:14.5px;color:#7d4b45}
+
+/* ---------- booking ---------- */
+.book{background:var(--sand)}
+.book-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+.cpanel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:var(--sh)}
+.callbox{background:linear-gradient(150deg,var(--teal),var(--teal-d));border-radius:16px;padding:28px;text-align:center;color:#fff;margin-bottom:26px}
+.callbox span{display:block;font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;opacity:.82;margin-bottom:9px}
+.callbox a{display:block;font-family:var(--serif);font-size:clamp(27px,3.4vw,35px);font-weight:700;color:#fff;line-height:1.1}
+.callbox a.sec{font-size:17px;font-weight:600;opacity:.9;margin-top:6px}
+.callbox p{font-size:13.5px;color:rgba(255,255,255,.84);margin-top:12px;line-height:1.5}
+.pblock+.pblock{margin-top:26px;padding-top:26px;border-top:1px solid var(--line)}
+.pblock h4{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:15px;font-family:var(--sans)}
+.hrow{display:flex;justify-content:space-between;gap:16px;padding:9px 0;font-size:14.5px;border-bottom:1px dashed var(--line)}
+.hrow:last-child{border:0}
+.hrow b{font-weight:700}
+.hrow span{color:var(--muted)}
+.hrow.off span{color:var(--coral)}
+.blist{list-style:none;display:grid;gap:9px}
+.blist li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--ink)}
+.blist li svg{flex:none;margin-top:4px}
+.contactcard{display:grid;gap:14px}
+.cc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;gap:16px;align-items:flex-start}
+.cc .ico{width:44px;height:44px;border-radius:12px;background:var(--teal-l);display:flex;align-items:center;justify-content:center;flex:none}
+.cc b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;font-weight:800}
+.cc p,.cc a{font-size:16px;font-weight:600;color:var(--ink)}
+.cc a:hover{color:var(--teal)}
+.cc small{display:block;font-size:13.5px;color:var(--muted);font-weight:500;margin-top:3px}
+.msgbtns{display:flex;gap:10px;margin-top:4px}
+.msgbtn{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;padding:15px;border-radius:12px;font-weight:700;font-size:14.5px;color:#fff;transition:.2s}
+.wa{background:#25d366}.wa:hover{background:#1eb457}
+.vb{background:#7360f2}.vb:hover{background:#5f4de0}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#93aeb4;padding:66px 0 0}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:44px;padding-bottom:48px}
+footer h4{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px;font-weight:800}
+footer a{display:block;font-size:14.5px;padding:5px 0;color:#93aeb4}
+footer a:hover{color:#fff}
+.fbrand p{font-size:14.5px;margin:16px 0;max-width:34ch}
+.fbot{border-top:1px solid rgba(255,255,255,.1);padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:13px}
+.jba{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:99px;padding:8px 16px;font-size:12.5px;font-weight:700;color:#fff}
+.jba span{color:#8fd3d3}
+
+/* ---------- mobile bar ---------- */
+.mobar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:90;background:#fff;border-top:1px solid var(--line);padding:9px;gap:8px;box-shadow:0 -6px 22px rgba(10,28,37,.1)}
+.mobar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;border-radius:12px;font-size:11px;font-weight:700;color:var(--ink)}
+.mobar a.acc{background:var(--coral);color:#fff}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:1040px){
+  .hero-grid,.about-grid,.split,.book-grid{grid-template-columns:1fr;gap:40px}
+  .dept-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .tabs{grid-template-columns:1fr}
+  .tablist{position:static;flex-direction:row;overflow-x:auto;padding-bottom:6px}
+  .tablist button{white-space:nowrap}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  section{padding:60px 0}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:10px 24px 20px;border-bottom:1px solid var(--line);box-shadow:var(--sh)}
+  .menu.open{display:flex}
+  .menu a{padding:14px 0;border-bottom:1px solid var(--line);width:100%}
+  .burger{display:flex}
+  .nav{position:relative;height:66px;gap:10px}
+  .nav-r{gap:8px}
+  .nav-r .btn-p{display:none}
+  .langs{padding:2px}
+  .langs button{padding:6px 8px;font-size:11px}
+  .brand{flex:1 1 auto;min-width:0;gap:9px}
+  .brand>span{min-width:0;overflow:hidden}
+  .brand .mark{width:38px;height:38px}
+  .brand b{font-size:15.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand span{font-size:9.5px;letter-spacing:.1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .topbar .tb-l{display:none}
+  .topbar .wrap{justify-content:center}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .dept-grid,.steps{grid-template-columns:1fr}
+  .tabpanel{padding:26px}
+  .tabpanel ul{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr;gap:32px}
+  .mobar{display:flex}
+  body{padding-bottom:74px}
+  .badge-year{top:-10px;right:0;padding:10px 15px}
+  .badge-fzom{left:0;bottom:12px}
+  .band .wrap{flex-direction:column;text-align:center}
+  .hero-grid{min-height:0;padding:52px 0}
+  .cpanel{padding:22px}
+  .callbox{padding:22px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l"><span class="secure">
+      <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1 1.5 3v3.5c0 3 1.9 5.4 4.5 6.3 2.6-.9 4.5-3.3 4.5-6.3V3L6 1Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="m4.2 6.9 1.3 1.3 2.4-2.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-i18n="tb_secure">Безбедна врска · HTTPS</span></span></div>
+    <div class="tb-r">
+      <span data-i18n="tb_hours">Пон–Пет 07:00–20:00 · Саб 08:00–14:00</span>
+      <a href="tel:+38944335747">044 335 747</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <a href="#" class="brand">
+        <svg class="mark" viewBox="0 0 44 44" fill="none">
+          <rect width="44" height="44" rx="12" fill="#0d6b73"/>
+          <path d="M22 33s-8.6-5.2-8.6-11.1A4.8 4.8 0 0 1 22 19.4a4.8 4.8 0 0 1 8.6 2.5C30.6 27.8 22 33 22 33Z" fill="#d9544a"/>
+          <path d="M9 22h6.2l2-4 3 8 2.4-5.4 1.9 3.6H35" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span><b>Бами Кор Медика</b><span data-i18n="brand_sub">Тетово · од 1993</span></span>
+      </a>
+      <nav class="menu" id="menu">
+        <a href="#about" data-i18n="nav_about">За нас</a>
+        <a href="#depts" data-i18n="nav_depts">Дејности</a>
+        <a href="#dental" data-i18n="nav_dental">Стоматологија</a>
+        <a href="#tourism" data-i18n="nav_tourism">Дентален туризам</a>
+        <a href="#contact" data-i18n="nav_contact">Контакт</a>
+      </nav>
+      <div class="nav-r">
+        <div class="langs">
+          <button data-lang="mk" class="on">МК</button>
+          <button data-lang="sq">SQ</button>
+          <button data-lang="en">EN</button>
+        </div>
+        <a href="#contact" class="btn btn-p" data-i18n="cta_book">Закажи термин</a>
+        <button class="burger" id="burger" aria-label="Menu"><i></i></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker" data-i18n="hero_kicker">Прва приватна здравствена установа во Тетово</div>
+        <h1><span data-i18n="hero_h1a">Здравството во Тетово</span><br><em data-i18n="hero_h1b">почна кај нас.</em></h1>
+        <p data-i18n="hero_p">Од 15 март 1993 година се грижиме за здравјето на тетовци. Денес, на 1.000 m² наменски граден простор, под ист покрив ги имате општата и интерната медицина, биохемиската лабораторија, аптеката и стоматологијата.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-p" data-i18n="hero_cta1">Закажи термин онлајн</a>
+          <a href="#depts" class="btn btn-o" data-i18n="hero_cta2">Види ги дејностите</a>
+        </div>
+        <div class="chips">
+          <span class="chip"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#8fd3d3" stroke-width="1.4"/><path d="M7 3.6V7l2.2 1.3" stroke="#8fd3d3" stroke-width="1.4" stroke-linecap="round"/></svg><span data-i18n="chip1">32 години работа</span></span>
+          <span class="chip"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1.8 12.2h10.4M3 12.2V5.6l4-3 4 3v6.6" stroke="#8fd3d3" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="chip2">1.000 m² наменски објект</span></span>
+          <span class="chip"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.4 5.4 10.8 12 4.2" stroke="#8fd3d3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="chip3">Договор со ФЗОМ</span></span>
+          <span class="chip"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12.6s-5.2-3.1-5.2-6.7A2.9 2.9 0 0 1 7 4.4a2.9 2.9 0 0 1 5.2 1.5c0 3.6-5.2 6.7-5.2 6.7Z" stroke="#8fd3d3" stroke-width="1.4" stroke-linejoin="round"/></svg><span data-i18n="chip4">5 дејности на едно место</span></span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="card-clinic">
+          <div class="facade">
+            <svg viewBox="0 0 520 340" fill="none" style="width:100%;height:auto">
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0f4c57"/><stop offset="1" stop-color="#0a2b33"/>
+                </linearGradient>
+                <linearGradient id="win" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#7fd0d0" stop-opacity=".85"/><stop offset="1" stop-color="#2f8f96" stop-opacity=".35"/>
+                </linearGradient>
+              </defs>
+              <rect width="520" height="340" fill="url(#sky)"/>
+              <circle cx="430" cy="66" r="120" fill="#0d6b73" opacity=".28"/>
+              <circle cx="430" cy="66" r="72" fill="#0d6b73" opacity=".3"/>
+              <rect x="64" y="96" width="392" height="212" rx="10" fill="#103943"/>
+              <rect x="64" y="96" width="392" height="16" rx="6" fill="#0d6b73"/>
+              <g fill="url(#win)">
+                <rect x="90" y="132" width="60" height="44" rx="4"/><rect x="166" y="132" width="60" height="44" rx="4"/>
+                <rect x="242" y="132" width="60" height="44" rx="4"/><rect x="318" y="132" width="60" height="44" rx="4"/>
+                <rect x="90" y="196" width="60" height="44" rx="4"/><rect x="166" y="196" width="60" height="44" rx="4"/>
+                <rect x="318" y="196" width="60" height="44" rx="4"/>
+                <rect x="90" y="260" width="60" height="30" rx="4"/><rect x="166" y="260" width="60" height="30" rx="4"/>
+                <rect x="318" y="260" width="60" height="30" rx="4"/>
+              </g>
+              <rect x="394" y="132" width="46" height="158" rx="5" fill="#0d6b73" opacity=".55"/>
+              <rect x="242" y="196" width="60" height="94" rx="4" fill="#d9544a" opacity=".9"/>
+              <path d="M266 226h12v10h10v12h-10v10h-12v-10h-10v-12h10v-10Z" fill="#fff" opacity=".95"/>
+              <rect x="40" y="304" width="440" height="8" rx="4" fill="#0d6b73" opacity=".5"/>
+              <path d="M20 296h70l14-26 22 52 18-40 12 22h94" stroke="#7fd0d0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity=".55" fill="none"/>
+            </svg>
+          </div>
+        </div>
+        <div class="badge-year"><span data-i18n="badge_since">Од</span><b>1993</b></div>
+        <div class="badge-fzom"><span class="dot"></span><span data-i18n="badge_fzom">Договор со Фондот за здравствено осигурување</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>1993</b><span data-i18n="st1">Година на основање</span></div>
+    <div class="stat"><b>1.000 m²</b><span data-i18n="st2">Наменски граден објект</span></div>
+    <div class="stat"><b>5</b><span data-i18n="st3">Дејности под ист покрив</span></div>
+    <div class="stat"><b>24/7</b><span data-i18n="st4">Избран матичен стоматолог</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid reveal">
+      <div>
+        <div class="kicker" data-i18n="ab_kicker">За нас</div>
+        <h2 data-i18n="ab_h2">Прва приватна здравствена установа во Тетово — и меѓу првите во Македонија.</h2>
+        <p class="lead" style="margin:22px 0" data-i18n="ab_p1">ПЗУ „Бами Кор Медика“ започна со работа на 15 март 1993 година, во ординација адаптирана од стамбен простор. Од 7 април 2004 година — на Светскиот ден на здравјето — работиме во новоизграден, наменски граден здравствен објект од околу 1.000 квадратни метри.</p>
+        <p class="lead" data-i18n="ab_p2">Со потпишувањето на првиот договор во државата со Фондот за здравствено осигурување, установата се изедначи по права и обврски со јавните здравствени установи. Тоа значи едно: нашите пациенти ја добиваат здравствената заштита под исти услови како во јавните установи.</p>
+        <div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap">
+          <a href="#depts" class="btn btn-d" data-i18n="ab_cta">Нашите дејности</a>
+          <a href="#contact" class="btn btn-g" data-i18n="ab_cta2">Најди нè во Тетово</a>
+        </div>
+      </div>
+      <div>
+        <div class="namebox">
+          <div class="kicker" style="margin-bottom:18px" data-i18n="name_kicker">Зад името</div>
+          <div class="namerow"><b>БАМИ</b><p data-i18n="nm1">Првите букви од името Бранкица (Бане) и презимето Митовска — ќерката на основачот.</p></div>
+          <div class="namerow"><b>КОР</b><p data-i18n="nm2">Срце — субспецијалноста на основачот. „Срце е и Бане“, вели тој.</p></div>
+          <div class="namerow"><b>МЕДИКА</b><p data-i18n="nm3">Лекување — за да асоцира на медицинска установа.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="depts" id="depts">
+  <div class="wrap">
+    <div class="reveal" style="max-width:62ch">
+      <div class="kicker" data-i18n="dp_kicker">Дејности</div>
+      <h2 data-i18n="dp_h2">Пет дејности. Еден објект. Едно досие за пациентот.</h2>
+      <p class="lead" style="margin-top:18px" data-i18n="dp_p">Прегледот, анализата, терапијата и лекот — без да излезете од зградата и без да чекате упат од една установа во друга.</p>
+    </div>
+    <div class="dept-grid reveal" id="deptGrid"></div>
+  </div>
+</section>
+
+<section id="dental">
+  <div class="wrap">
+    <div class="reveal" style="max-width:64ch">
+      <div class="kicker" data-i18n="dn_kicker">Бами Дент · Стоматологија</div>
+      <h2 data-i18n="dn_h2">Стоматолошка ординација во склоп на установата, од 1 декември 2012.</h2>
+      <p class="lead" style="margin-top:18px" data-i18n="dn_p">Од превентива кај децата до циркониум коронки и импланти. Сите услуги од општата стоматологија се пружаат со здравствени картони, со можност за избор на матичен стоматолог.</p>
+    </div>
+    <div class="tabs reveal">
+      <div class="tablist" id="tablist"></div>
+      <div class="tabpanel" id="tabpanel"></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="ico">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="7" width="22" height="15" rx="3" stroke="#d9544a" stroke-width="1.8"/><path d="M3 12h22" stroke="#d9544a" stroke-width="1.8"/><path d="M7 17h5" stroke="#d9544a" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </div>
+    <div>
+      <h3 data-i18n="fz_h">ПЗУ Бами Дент има договор со Фондот за здравствено осигурување</h3>
+      <p data-i18n="fz_p">Сите пациенти осигуреници на ФЗОМ ги добиваат услугите од општа стоматологија по цени определени од Фондот. Понесете ја здравствената картичка.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="split reveal">
+      <div>
+        <div class="kicker" data-i18n="eq_kicker">Интерна медицина</div>
+        <h2 data-i18n="eq_h2">Дијагностика што ја добивате истиот ден.</h2>
+        <p class="lead" style="margin:20px 0 28px" data-i18n="eq_p">Ординацијата по интерна медицина работи со 12-канален ЕКГ апарат и ултразвучна дијагностика. Резултатите од лабораторијата се обработуваат во истата зграда.</p>
+        <div class="equip">
+          <div><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 10h3.5l1.6-4.5 2.8 9 2-6 1.4 3H18" stroke="#0d6b73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="eq1">12-канален ЕКГ апарат со интерпретација</span></div>
+          <div><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 17s-6-3.7-6-8a3.4 3.4 0 0 1 6-1.8A3.4 3.4 0 0 1 16 9c0 4.3-6 8-6 8Z" stroke="#0d6b73" stroke-width="1.7" stroke-linejoin="round"/></svg><span data-i18n="eq2">Ехо на срце и периферен Doppler на крвни садови</span></div>
+          <div><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#0d6b73" stroke-width="1.7"/><circle cx="10" cy="10" r="2.6" stroke="#0d6b73" stroke-width="1.7"/></svg><span data-i18n="eq3">Ехо на стомак, тироидна жлезда и дојка</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="kicker" data-i18n="lb_kicker">Биохемиска лабораторија</div>
+        <h2 style="font-size:clamp(24px,3vw,32px)" data-i18n="lb_h2">Анализите што ги правиме</h2>
+        <p class="lead" style="margin-top:16px" data-i18n="lb_p">Во новиот блок лабораториската дејност е сместена во наменски изградени, современи просторни услови.</p>
+        <div class="labchips" id="labchips"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tourism" id="tourism">
+  <div class="wrap">
+    <div class="reveal" style="max-width:64ch">
+      <div class="kicker" style="color:#8fd3d3" data-i18n="tr_kicker">Dental tourism</div>
+      <h2 data-i18n="tr_h2">Дојдете на аеродром. За останатото се грижиме ние.</h2>
+      <p class="lead" style="margin-top:18px" data-i18n="tr_p">Нудиме услуги предвидени со стандардите на денталниот туризам — целосна организација од пристигнување на аеродром, сместување и анимација за времетраењето на третманот.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><b>01</b><h3 data-i18n="tr1h">Пречек</h3><p data-i18n="tr1p">Ве пречекуваме на аеродромот во Скопје и ве носиме до Тетово.</p></div>
+      <div class="step"><b>02</b><h3 data-i18n="tr2h">План на третман</h3><p data-i18n="tr2p">Преглед, снимка и јасна пресметка пред да почне работата.</p></div>
+      <div class="step"><b>03</b><h3 data-i18n="tr3h">Сместување</h3><p data-i18n="tr3p">Организирано сместување и придружба за целото времетраење.</p></div>
+      <div class="step"><b>04</b><h3 data-i18n="tr4h">Слободно време</h3><p data-i18n="tr4p">Шар Планина, Попова Шапка и старото Тетово — на 20 минути.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="contact">
+  <div class="wrap">
+    <div class="book-grid reveal">
+      <div>
+        <div class="kicker" data-i18n="bk_kicker">Контакт</div>
+        <h2 data-i18n="bk_h2">Јавете се и добивате термин.</h2>
+        <p class="lead" style="margin:18px 0 28px" data-i18n="bk_p">Термините се закажуваат по телефон или преку Viber и WhatsApp. Ви одговараме во текот на работниот ден.</p>
+        <div class="contactcard">
+          <div class="cc">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.5 14.2v2.3a1.4 1.4 0 0 1-1.5 1.4 13.8 13.8 0 0 1-6-2.1 13.6 13.6 0 0 1-4.2-4.2 13.8 13.8 0 0 1-2.1-6.1A1.4 1.4 0 0 1 5 4h2.3a1.4 1.4 0 0 1 1.4 1.2c.1.7.3 1.3.5 2a1.4 1.4 0 0 1-.3 1.5l-1 1a11.2 11.2 0 0 0 4.2 4.2l1-1a1.4 1.4 0 0 1 1.5-.3c.6.2 1.3.4 2 .5a1.4 1.4 0 0 1 1.2 1.4Z" stroke="#0d6b73" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <div><b data-i18n="cc_phone">Телефон</b><a href="tel:+38944335747">044 / 335 - 747</a><small><a href="tel:+38970209039">Моб: 070 / 209 - 039</a></small></div>
+          </div>
+          <div class="cc">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.5 8.3c0 4.6-6.5 9.2-6.5 9.2s-6.5-4.6-6.5-9.2a6.5 6.5 0 0 1 13 0Z" stroke="#0d6b73" stroke-width="1.6" stroke-linejoin="round"/><circle cx="10" cy="8.2" r="2.2" stroke="#0d6b73" stroke-width="1.6"/></svg></div>
+            <div><b data-i18n="cc_addr">Адреса</b><p>ул. Благоја Тоска ББ, 1200 Тетово</p><small data-i18n="cc_addr_note">Веднаш под Хируршкиот блок на Медицински Центар — Тетово</small></div>
+          </div>
+          <div class="cc">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.2" stroke="#0d6b73" stroke-width="1.6"/><path d="M10 5.8V10l2.8 1.7" stroke="#0d6b73" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <div><b data-i18n="cc_hours">Работно време</b><p data-i18n="cc_hours_v">Пон–Пет 07:00–20:00</p><small data-i18n="cc_hours_s">Сабота 08:00–14:00 · Недела затворено</small></div>
+          </div>
+          <div class="msgbtns">
+            <a class="msgbtn wa" href="https://wa.me/38970209039" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7l1.3.5c.6.2 1.1.2 1.5.1.4-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.6-.4ZM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.3 8.3 0 1 1 7.2 3.9Z"/></svg>
+              WhatsApp</a>
+            <a class="msgbtn vb" href="viber://chat?number=%2B38970209039">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C7 2 3 5.3 3 9.4c0 2.3 1.2 4.3 3.2 5.6v3.4c0 .4.5.7.9.4l2.3-1.7c.8.2 1.7.3 2.6.3 5 0 9-3.3 9-7.4S17 2 12 2Zm4.6 10.8c-.2.5-1 1-1.4 1-.4.1-.8.1-1.3-.1a11 11 0 0 1-1.2-.5c-2-.9-3.4-3-3.5-3.1-.1-.2-.9-1.2-.9-2.2 0-1.1.6-1.6.8-1.8.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4l.7 1.7c0 .1.1.3 0 .4l-.2.4-.3.3c-.1.1-.2.2-.1.4.1.2.5.9 1.1 1.4.8.7 1.4.9 1.6 1 .2.1.3.1.4 0l.7-.8c.2-.2.3-.2.5-.1l1.6.7c.2.1.3.2.4.3v.9Z"/></svg>
+              Viber</a>
+          </div>
+        </div>
+      </div>
+      <div class="cpanel">
+        <div class="callbox">
+          <span data-i18n="cb_label">За термин, јавете се</span>
+          <a href="tel:+38944335747">044 / 335 - 747</a>
+          <a class="sec" href="tel:+38970209039">070 / 209 - 039</a>
+          <p data-i18n="cb_note">Термините се закажуваат по телефон, во работно време. Изберете дејност при јавувањето и ве упатуваме на слободен термин.</p>
+        </div>
+        <div class="pblock">
+          <h4 data-i18n="hrs_h">Работно време</h4>
+          <div id="hrsList"></div>
+        </div>
+        <div class="pblock">
+          <h4 data-i18n="bring_h">Понесете со себе</h4>
+          <ul class="blist" id="bringList"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="#" class="brand" style="color:#fff">
+          <svg class="mark" viewBox="0 0 44 44" fill="none">
+            <rect width="44" height="44" rx="12" fill="#0d6b73"/>
+            <path d="M22 33s-8.6-5.2-8.6-11.1A4.8 4.8 0 0 1 22 19.4a4.8 4.8 0 0 1 8.6 2.5C30.6 27.8 22 33 22 33Z" fill="#d9544a"/>
+            <path d="M9 22h6.2l2-4 3 8 2.4-5.4 1.9 3.6H35" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span><b style="color:#fff">Бами Кор Медика</b><span style="color:#93aeb4" data-i18n="brand_sub2">Тетово · од 1993</span></span>
+        </a>
+        <p data-i18n="ft_p">Прва приватна здравствена установа во Тетово. Општа и интерна медицина, лабораторија, аптека и стоматологија под ист покрив.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft_h1">Дејности</h4>
+        <a href="#depts" data-i18n="ft_a1">Општа медицина</a>
+        <a href="#depts" data-i18n="ft_a2">Интерна медицина</a>
+        <a href="#depts" data-i18n="ft_a3">Биохемиска лабораторија</a>
+        <a href="#depts" data-i18n="ft_a4">Аптека</a>
+        <a href="#dental" data-i18n="ft_a5">Стоматологија — Бами Дент</a>
+      </div>
+      <div>
+        <h4 data-i18n="ft_h2">Информации</h4>
+        <a href="#about" data-i18n="ft_b1">За нас</a>
+        <a href="#tourism" data-i18n="ft_b2">Дентален туризам</a>
+        <a href="#contact" data-i18n="ft_b3">Контакт и локација</a>
+        <a href="https://www.facebook.com/p/PZU-BAMI-KOR-Medika-100063840751171" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <div>
+        <h4 data-i18n="ft_h3">Контакт</h4>
+        <a href="tel:+38944335747">044 / 335 - 747</a>
+        <a href="tel:+38970209039">070 / 209 - 039</a>
+        <a href="mailto:bamikor@yahoo.com">bamikor@yahoo.com</a>
+        <a style="cursor:default">ул. Благоја Тоска ББ<br>1200 Тетово</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 ПЗУ Бами Кор Медика — Тетово. <span data-i18n="ft_rights">Сите права задржани.</span></span>
+      <span class="jba"><span>◆</span> <span data-i18n="ft_jba">Концепт-дизајн:</span> JBA Ventures</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobar">
+  <a href="tel:+38944335747"><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><path d="M17.5 14.2v2.3a1.4 1.4 0 0 1-1.5 1.4 13.8 13.8 0 0 1-6-2.1 13.6 13.6 0 0 1-4.2-4.2 13.8 13.8 0 0 1-2.1-6.1A1.4 1.4 0 0 1 5 4h2.3a1.4 1.4 0 0 1 1.4 1.2c.1.7.3 1.3.5 2a1.4 1.4 0 0 1-.3 1.5l-1 1a11.2 11.2 0 0 0 4.2 4.2l1-1a1.4 1.4 0 0 1 1.5-.3c.6.2 1.3.4 2 .5a1.4 1.4 0 0 1 1.2 1.4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span data-i18n="mb1">Јави се</span></a>
+  <a href="https://wa.me/38970209039" target="_blank" rel="noopener"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.3 8.3 0 1 1 7.2 3.9Zm4.5-5.9c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7l1.3.5c.6.2 1.1.2 1.5.1.4-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.6-.4Z"/></svg>WhatsApp</a>
+  <a href="#contact" class="acc"><svg width="19" height="19" viewBox="0 0 20 20" fill="none"><rect x="3" y="4.5" width="14" height="13" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 8.5h14M7 2.5v3M13 2.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span data-i18n="mb3">Закажи</span></a>
+</div>
+
+<script>
+/* ============ i18n dictionary ============ */
+const T={
+mk:{
+ tb_secure:"Безбедна врска · HTTPS", tb_hours:"Пон–Пет 07:00–20:00 · Саб 08:00–14:00",
+ brand_sub:"Тетово · од 1993", brand_sub2:"Тетово · од 1993",
+ nav_about:"За нас", nav_depts:"Дејности", nav_dental:"Стоматологија", nav_tourism:"Дентален туризам", nav_contact:"Контакт",
+ cta_book:"Закажи термин",
+ hero_kicker:"Прва приватна здравствена установа во Тетово",
+ hero_h1a:"Здравството во Тетово", hero_h1b:"почна кај нас.",
+ hero_p:"Од 15 март 1993 година се грижиме за здравјето на тетовци. Денес, на 1.000 m² наменски граден простор, под ист покрив ги имате општата и интерната медицина, биохемиската лабораторија, аптеката и стоматологијата.",
+ hero_cta1:"Закажи термин онлајн", hero_cta2:"Види ги дејностите",
+ chip1:"32 години работа", chip2:"1.000 m² наменски објект", chip3:"Договор со ФЗОМ", chip4:"5 дејности на едно место",
+ badge_since:"Од", badge_fzom:"Договор со Фондот за здравствено осигурување",
+ st1:"Година на основање", st2:"Наменски граден објект", st3:"Дејности под ист покрив", st4:"Избран матичен стоматолог",
+ ab_kicker:"За нас",
+ ab_h2:"Прва приватна здравствена установа во Тетово — и меѓу првите во Македонија.",
+ ab_p1:"ПЗУ „Бами Кор Медика“ започна со работа на 15 март 1993 година, во ординација адаптирана од стамбен простор. Од 7 април 2004 година — на Светскиот ден на здравјето — работиме во новоизграден, наменски граден здравствен објект од околу 1.000 квадратни метри.",
+ ab_p2:"Со потпишувањето на првиот договор во државата со Фондот за здравствено осигурување, установата се изедначи по права и обврски со јавните здравствени установи. Тоа значи едно: нашите пациенти ја добиваат здравствената заштита под исти услови како во јавните установи.",
+ ab_cta:"Нашите дејности", ab_cta2:"Најди нè во Тетово",
+ name_kicker:"Зад името",
+ nm1:"Првите букви од името Бранкица (Бане) и презимето Митовска — ќерката на основачот.",
+ nm2:"Срце — субспецијалноста на основачот. „Срце е и Бане“, вели тој.",
+ nm3:"Лекување — за да асоцира на медицинска установа.",
+ dp_kicker:"Дејности", dp_h2:"Пет дејности. Еден објект. Едно досие за пациентот.",
+ dp_p:"Прегледот, анализата, терапијата и лекот — без да излезете од зградата и без да чекате упат од една установа во друга.",
+ dn_kicker:"Бами Дент · Стоматологија",
+ dn_h2:"Стоматолошка ординација во склоп на установата, од 1 декември 2012.",
+ dn_p:"Од превентива кај децата до циркониум коронки и импланти. Сите услуги од општата стоматологија се пружаат со здравствени картони, со можност за избор на матичен стоматолог.",
+ fz_h:"ПЗУ Бами Дент има договор со Фондот за здравствено осигурување",
+ fz_p:"Сите пациенти осигуреници на ФЗОМ ги добиваат услугите од општа стоматологија по цени определени од Фондот. Понесете ја здравствената картичка.",
+ eq_kicker:"Интерна медицина", eq_h2:"Дијагностика што ја добивате истиот ден.",
+ eq_p:"Ординацијата по интерна медицина работи со 12-канален ЕКГ апарат и ултразвучна дијагностика. Резултатите од лабораторијата се обработуваат во истата зграда.",
+ eq1:"12-канален ЕКГ апарат со интерпретација", eq2:"Ехо на срце и периферен Doppler на крвни садови", eq3:"Ехо на стомак, тироидна жлезда и дојка",
+ lb_kicker:"Биохемиска лабораторија", lb_h2:"Анализите што ги правиме",
+ lb_p:"Во новиот блок лабораториската дејност е сместена во наменски изградени, современи просторни услови.",
+ tr_kicker:"Дентален туризам", tr_h2:"Дојдете на аеродром. За останатото се грижиме ние.",
+ tr_p:"Нудиме услуги предвидени со стандардите на денталниот туризам — целосна организација од пристигнување на аеродром, сместување и анимација за времетраењето на третманот.",
+ tr1h:"Пречек", tr1p:"Ве пречекуваме на аеродромот во Скопје и ве носиме до Тетово.",
+ tr2h:"План на третман", tr2p:"Преглед, снимка и јасна пресметка пред да почне работата.",
+ tr3h:"Сместување", tr3p:"Организирано сместување и придружба за целото времетраење.",
+ tr4h:"Слободно време", tr4p:"Шар Планина, Попова Шапка и старото Тетово — на 20 минути.",
+ bk_kicker:"Контакт", bk_h2:"Јавете се и добивате термин.",
+ bk_p:"Термините се закажуваат по телефон или преку Viber и WhatsApp. Ви одговараме во текот на работниот ден.",
+ cc_phone:"Телефон", cc_addr:"Адреса", cc_addr_note:"Веднаш под Хируршкиот блок на Медицински Центар — Тетово",
+ cc_hours:"Работно време", cc_hours_v:"Пон–Пет 07:00–20:00", cc_hours_s:"Сабота 08:00–14:00 · Недела затворено",
+ cb_label:"За термин, јавете се",
+ cb_note:"Термините се закажуваат по телефон, во работно време. Изберете дејност при јавувањето и ве упатуваме на слободен термин.",
+ hrs_h:"Работно време", bring_h:"Понесете со себе",
+ ft_p:"Прва приватна здравствена установа во Тетово. Општа и интерна медицина, лабораторија, аптека и стоматологија под ист покрив.",
+ ft_h1:"Дејности", ft_a1:"Општа медицина", ft_a2:"Интерна медицина", ft_a3:"Биохемиска лабораторија", ft_a4:"Аптека", ft_a5:"Стоматологија — Бами Дент",
+ ft_h2:"Информации", ft_b1:"За нас", ft_b2:"Дентален туризам", ft_b3:"Контакт и локација",
+ ft_h3:"Контакт", ft_rights:"Сите права задржани.", ft_jba:"Концепт-дизајн:",
+ mb1:"Јави се", mb3:"Закажи",
+ hours:[["Понеделник – Петок","07:00 – 20:00",0],["Сабота","08:00 – 14:00",0],["Недела","Затворено",1]],
+ bring:["Здравствена картичка","Лична карта","Претходни наоди и снимки","Список на лекови што ги земате"]
+},
+sq:{
+ tb_secure:"Lidhje e sigurt · HTTPS", tb_hours:"Hën–Pre 07:00–20:00 · Sht 08:00–14:00",
+ brand_sub:"Tetovë · që nga 1993", brand_sub2:"Tetovë · që nga 1993",
+ nav_about:"Rreth nesh", nav_depts:"Veprimtaritë", nav_dental:"Stomatologji", nav_tourism:"Turizëm dentar", nav_contact:"Kontakt",
+ cta_book:"Cakto terminin",
+ hero_kicker:"Institucioni i parë privat shëndetësor në Tetovë",
+ hero_h1a:"Shëndetësia në Tetovë", hero_h1b:"filloi tek ne.",
+ hero_p:"Që nga 15 marsi i vitit 1993 kujdesemi për shëndetin e tetovarëve. Sot, në 1.000 m² hapësirë të ndërtuar posaçërisht, nën një çati keni mjekësinë e përgjithshme dhe internen, laboratorin biokimik, barnatoren dhe stomatologjinë.",
+ hero_cta1:"Cakto terminin online", hero_cta2:"Shiko veprimtaritë",
+ chip1:"32 vjet punë", chip2:"1.000 m² objekt i dedikuar", chip3:"Marrëveshje me FSSH", chip4:"5 veprimtari në një vend",
+ badge_since:"Që nga", badge_fzom:"Marrëveshje me Fondin e Sigurimit Shëndetësor",
+ st1:"Viti i themelimit", st2:"Objekt i ndërtuar posaçërisht", st3:"Veprimtari nën një çati", st4:"Stomatolog amë i zgjedhur",
+ ab_kicker:"Rreth nesh",
+ ab_h2:"Institucioni i parë privat shëndetësor në Tetovë — dhe ndër të parët në Maqedoni.",
+ ab_p1:"ISHP „Bami Kor Medika“ filloi punën më 15 mars 1993, në një ordinancë të përshtatur nga hapësirë banimi. Që nga 7 prilli i vitit 2004 — në Ditën Botërore të Shëndetit — punojmë në një objekt shëndetësor të ri, të ndërtuar posaçërisht, me rreth 1.000 metra katrorë.",
+ ab_p2:"Me nënshkrimin e marrëveshjes së parë në vend me Fondin e Sigurimit Shëndetësor, institucioni u barazua në të drejta dhe detyrime me institucionet publike shëndetësore. Kjo do të thotë një gjë: pacientët tanë e marrin mbrojtjen shëndetësore me kushte të njëjta si në institucionet publike.",
+ ab_cta:"Veprimtaritë tona", ab_cta2:"Na gjeni në Tetovë",
+ name_kicker:"Prapa emrit",
+ nm1:"Shkronjat e para të emrit Brankica (Bane) dhe mbiemrit Mitovska — vajza e themeluesit.",
+ nm2:"Zemra — nënspecialiteti i themeluesit. „Zemër është edhe Bane“, thotë ai.",
+ nm3:"Mjekim — për të asociuar në institucion mjekësor.",
+ dp_kicker:"Veprimtaritë", dp_h2:"Pesë veprimtari. Një objekt. Një dosje për pacientin.",
+ dp_p:"Kontrolli, analiza, terapia dhe barna — pa dalë nga ndërtesa dhe pa pritur referim nga një institucion në tjetrin.",
+ dn_kicker:"Bami Dent · Stomatologji",
+ dn_h2:"Ordinancë stomatologjike brenda institucionit, që nga 1 dhjetori 2012.",
+ dn_p:"Nga parandalimi tek fëmijët deri te kurorat prej zirkoni dhe implantet. Të gjitha shërbimet e stomatologjisë së përgjithshme ofrohen me kartela shëndetësore, me mundësi zgjedhjeje të stomatologut amë.",
+ fz_h:"ISHP Bami Dent ka marrëveshje me Fondin e Sigurimit Shëndetësor",
+ fz_p:"Të gjithë pacientët e siguruar në FSSH i marrin shërbimet e stomatologjisë së përgjithshme me çmime të përcaktuara nga Fondi. Merrni me vete kartelën shëndetësore.",
+ eq_kicker:"Mjekësi interne", eq_h2:"Diagnostikë që e merrni po atë ditë.",
+ eq_p:"Ordinanca e mjekësisë interne punon me aparat EKG me 12 kanale dhe diagnostikë me ultratinguj. Rezultatet e laboratorit përpunohen në të njëjtën ndërtesë.",
+ eq1:"Aparat EKG me 12 kanale me interpretim", eq2:"Eko e zemrës dhe Doppler periferik i enëve të gjakut", eq3:"Eko e barkut, gjëndrës tiroide dhe gjirit",
+ lb_kicker:"Laborator biokimik", lb_h2:"Analizat që i kryejmë",
+ lb_p:"Në bllokun e ri veprimtaria laboratorike është vendosur në kushte moderne hapësinore, të ndërtuara posaçërisht.",
+ tr_kicker:"Turizëm dentar", tr_h2:"Ejani në aeroport. Për pjesën tjetër kujdesemi ne.",
+ tr_p:"Ofrojmë shërbime sipas standardeve të turizmit dentar — organizim të plotë nga mbërritja në aeroport, akomodimi dhe animacioni gjatë kohëzgjatjes së trajtimit.",
+ tr1h:"Pritja", tr1p:"Ju presim në aeroportin e Shkupit dhe ju sjellim deri në Tetovë.",
+ tr2h:"Plani i trajtimit", tr2p:"Kontroll, radiografi dhe llogaritje e qartë para se të fillojë puna.",
+ tr3h:"Akomodimi", tr3p:"Akomodim i organizuar dhe shoqërim gjatë gjithë kohëzgjatjes.",
+ tr4h:"Koha e lirë", tr4p:"Mali Sharr, Popova Shapka dhe Tetova e vjetër — 20 minuta larg.",
+ bk_kicker:"Kontakt", bk_h2:"Telefononi dhe merrni terminin.",
+ bk_p:"Terminët caktohen me telefon ose përmes Viber dhe WhatsApp. Ju përgjigjemi gjatë ditës së punës.",
+ cc_phone:"Telefoni", cc_addr:"Adresa", cc_addr_note:"Menjëherë poshtë Bllokut Kirurgjik të Qendrës Mjekësore — Tetovë",
+ cc_hours:"Orari i punës", cc_hours_v:"Hën–Pre 07:00–20:00", cc_hours_s:"E shtunë 08:00–14:00 · E diel mbyllur",
+ cb_label:"Për termin, telefononi",
+ cb_note:"Terminët caktohen me telefon, gjatë orarit të punës. Thoni veprimtarinë kur telefononi dhe ju drejtojmë te një termin i lirë.",
+ hrs_h:"Orari i punës", bring_h:"Merrni me vete",
+ ft_p:"Institucioni i parë privat shëndetësor në Tetovë. Mjekësi e përgjithshme dhe interne, laborator, barnatore dhe stomatologji nën një çati.",
+ ft_h1:"Veprimtaritë", ft_a1:"Mjekësi e përgjithshme", ft_a2:"Mjekësi interne", ft_a3:"Laborator biokimik", ft_a4:"Barnatore", ft_a5:"Stomatologji — Bami Dent",
+ ft_h2:"Informacione", ft_b1:"Rreth nesh", ft_b2:"Turizëm dentar", ft_b3:"Kontakt dhe lokacion",
+ ft_h3:"Kontakt", ft_rights:"Të gjitha të drejtat e rezervuara.", ft_jba:"Koncept-dizajn:",
+ mb1:"Telefono", mb3:"Termin",
+ hours:[["E hënë – E premte","07:00 – 20:00",0],["E shtunë","08:00 – 14:00",0],["E diel","Mbyllur",1]],
+ bring:["Kartelën shëndetësore","Letërnjoftimin","Gjetjet dhe radiografitë e mëparshme","Listën e barnave që merrni"]
+},
+en:{
+ tb_secure:"Secure connection · HTTPS", tb_hours:"Mon–Fri 07:00–20:00 · Sat 08:00–14:00",
+ brand_sub:"Tetovo · since 1993", brand_sub2:"Tetovo · since 1993",
+ nav_about:"About", nav_depts:"Departments", nav_dental:"Dentistry", nav_tourism:"Dental tourism", nav_contact:"Contact",
+ cta_book:"Book appointment",
+ hero_kicker:"The first private healthcare institution in Tetovo",
+ hero_h1a:"Private healthcare in Tetovo", hero_h1b:"started here.",
+ hero_p:"Since 15 March 1993 we have cared for the people of Tetovo. Today, across 1,000 m² of purpose-built space, you will find general and internal medicine, a biochemical laboratory, a pharmacy and dentistry under one roof.",
+ hero_cta1:"Book online", hero_cta2:"See departments",
+ chip1:"32 years of practice", chip2:"1,000 m² purpose-built", chip3:"Contracted with the national fund", chip4:"5 departments in one place",
+ badge_since:"Since", badge_fzom:"Contracted with the Health Insurance Fund",
+ st1:"Year founded", st2:"Purpose-built facility", st3:"Departments under one roof", st4:"Your chosen family dentist",
+ ab_kicker:"About us",
+ ab_h2:"The first private healthcare institution in Tetovo — and among the first in Macedonia.",
+ ab_p1:"Bami Kor Medika opened on 15 March 1993 in a practice converted from a residential space. Since 7 April 2004 — World Health Day — we have operated from a newly built, purpose-designed medical facility of roughly 1,000 square metres.",
+ ab_p2:"By signing the first contract in the country with the Health Insurance Fund, the institution became equal in rights and obligations to public healthcare institutions. That means one thing: our patients receive care on the same terms as in the public system.",
+ ab_cta:"Our departments", ab_cta2:"Find us in Tetovo",
+ name_kicker:"Behind the name",
+ nm1:"The first letters of the name Brankica (Bane) and the surname Mitovska — the founder's daughter.",
+ nm2:"Heart — the founder's sub-speciality. \"Bane is a heart too,\" he says.",
+ nm3:"Healing — so the name reads as a medical institution.",
+ dp_kicker:"Departments", dp_h2:"Five departments. One building. One patient file.",
+ dp_p:"Examination, analysis, therapy and medication — without leaving the building and without waiting on a referral from one institution to another.",
+ dn_kicker:"Bami Dent · Dentistry",
+ dn_h2:"A dental practice inside the institution, since 1 December 2012.",
+ dn_p:"From children's prevention to zirconia crowns and implants. All general dentistry is provided with health cards, with the option to register us as your family dentist.",
+ fz_h:"Bami Dent is contracted with the Health Insurance Fund",
+ fz_p:"All insured patients receive general dentistry services at the prices set by the Fund. Please bring your health card.",
+ eq_kicker:"Internal medicine", eq_h2:"Diagnostics you receive the same day.",
+ eq_p:"The internal medicine practice runs a 12-channel ECG and ultrasound diagnostics. Laboratory results are processed in the same building.",
+ eq1:"12-channel ECG with interpretation", eq2:"Cardiac echo and peripheral vascular Doppler", eq3:"Abdominal, thyroid and breast ultrasound",
+ lb_kicker:"Biochemical laboratory", lb_h2:"The analyses we run",
+ lb_p:"In the new block, laboratory work is housed in modern, purpose-built facilities.",
+ tr_kicker:"Dental tourism", tr_h2:"Land at the airport. We handle the rest.",
+ tr_p:"We offer services provided by the standards of dental tourism. We provide full organisation from arrival at the airport, accommodation and animation during the treatment.",
+ tr1h:"Pick-up", tr1p:"We meet you at Skopje airport and drive you to Tetovo.",
+ tr2h:"Treatment plan", tr2p:"Examination, imaging and a clear quote before any work begins.",
+ tr3h:"Accommodation", tr3p:"Organised accommodation and support for the whole stay.",
+ tr4h:"Free time", tr4p:"Šar Mountain, Popova Šapka and old Tetovo — 20 minutes away.",
+ bk_kicker:"Contact", bk_h2:"Call us and get an appointment.",
+ bk_p:"Appointments are made by phone, or via Viber and WhatsApp. We reply within the working day.",
+ cc_phone:"Phone", cc_addr:"Address", cc_addr_note:"Directly below the Surgical Block of the Medical Centre — Tetovo",
+ cc_hours:"Opening hours", cc_hours_v:"Mon–Fri 07:00–20:00", cc_hours_s:"Saturday 08:00–14:00 · Sunday closed",
+ cb_label:"To book, call us",
+ cb_note:"Appointments are made by phone during opening hours. Tell us the department when you call and we will place you in a free slot.",
+ hrs_h:"Opening hours", bring_h:"Bring with you",
+ ft_p:"The first private healthcare institution in Tetovo. General and internal medicine, laboratory, pharmacy and dentistry under one roof.",
+ ft_h1:"Departments", ft_a1:"General medicine", ft_a2:"Internal medicine", ft_a3:"Biochemical laboratory", ft_a4:"Pharmacy", ft_a5:"Dentistry — Bami Dent",
+ ft_h2:"Information", ft_b1:"About us", ft_b2:"Dental tourism", ft_b3:"Contact and location",
+ ft_h3:"Contact", ft_rights:"All rights reserved.", ft_jba:"Concept design:",
+ mb1:"Call", mb3:"Book",
+ hours:[["Monday – Friday","07:00 – 20:00",0],["Saturday","08:00 – 14:00",0],["Sunday","Closed",1]],
+ bring:["Your health card","ID document","Previous findings and imaging","A list of medication you take"]
+}};
+
+/* ============ data ============ */
+const ICONS={
+ gen:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.4 4.2 4.2 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10Z" stroke="#0d6b73" stroke-width="1.7" stroke-linejoin="round"/><path d="M11 12.6h2M12 11.6v2" stroke="#0d6b73" stroke-width="1.7" stroke-linecap="round"/></svg>',
+ int:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-5.5L13 18l2.4-6 1.6 3H21" stroke="#0d6b73" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+ lab:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 3v6.2L4.8 17a2.4 2.4 0 0 0 2 3.6h10.4a2.4 2.4 0 0 0 2-3.6l-4.7-7.8V3" stroke="#0d6b73" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.5 3h7M7 14.5h10" stroke="#0d6b73" stroke-width="1.7" stroke-linecap="round"/></svg>',
+ pha:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="7.5" width="17" height="13" rx="3" stroke="#0d6b73" stroke-width="1.7"/><path d="M7.5 7.5V6a2.5 2.5 0 0 1 2.5-2.5h4A2.5 2.5 0 0 1 16.5 6v1.5" stroke="#0d6b73" stroke-width="1.7"/><path d="M12 11v6M9 14h6" stroke="#0d6b73" stroke-width="1.7" stroke-linecap="round"/></svg>',
+ den:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 4.2c-1.6-1-4.2-1.4-5.6.2-1.6 1.8-1.2 5 .1 8.4.8 2 .8 3.5 1.2 5.4.3 1.5.7 2.6 1.6 2.6 1.2 0 1.3-1.9 1.5-3.6.2-1.4.4-2.6 1.2-2.6s1 1.2 1.2 2.6c.2 1.7.3 3.6 1.5 3.6.9 0 1.3-1.1 1.6-2.6.4-1.9.4-3.4 1.2-5.4 1.3-3.4 1.7-6.6.1-8.4-1.4-1.6-4-1.2-5.6-.2Z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+ recep:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#0d6b73" stroke-width="1.7"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke="#0d6b73" stroke-width="1.7" stroke-linecap="round"/></svg>',
+ chk:'<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#0d6b73" opacity=".1"/><path d="M4.8 8.2 7 10.4l4.2-4.6" stroke="#0d6b73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+
+const DEPTS=[
+ {i:'gen',mk:["Општа ординација","Матичен лекар, дијагностицирање, ЕКГ со интерпретација, итна медицинска помош, домашна посета, ампуларна терапија и инфузиони раствори, дневна болница."],
+        sq:["Ordinanca e përgjithshme","Mjek amë, diagnostikim, EKG me interpretim, ndihmë urgjente mjekësore, vizitë në shtëpi, terapi ampulare dhe tretje infuzioni, spital ditor."],
+        en:["General practice","Family doctor, diagnostics, ECG with interpretation, emergency care, home visits, ampoule therapy and infusions, day hospital."]},
+ {i:'int',mk:["Интерна медицина","12-канален ЕКГ апарат и ултразвучна дијагностика: ехо на срце, стомак, тироидна жлезда и дојка, како и периферен Doppler на крвни садови."],
+        sq:["Mjekësi interne","Aparat EKG me 12 kanale dhe diagnostikë me ultratinguj: eko e zemrës, barkut, gjëndrës tiroide dhe gjirit, si dhe Doppler periferik i enëve të gjakut."],
+        en:["Internal medicine","A 12-channel ECG and ultrasound diagnostics: cardiac, abdominal, thyroid and breast echo, plus peripheral vascular Doppler."]},
+ {i:'lab',mk:["Биохемиска лабораторија","Во новиот блок, во наменски изградени современи просторни услови. Крвна слика, липиден статус, хормони, тумор маркери, тестови за хепатитис и повеќе."],
+        sq:["Laborator biokimik","Në bllokun e ri, në kushte moderne të ndërtuara posaçërisht. Pasqyrë gjaku, status lipidik, hormone, markues tumoralë, teste për hepatit dhe më shumë."],
+        en:["Biochemical laboratory","In the new block, in purpose-built modern facilities. Blood count, lipid panel, hormones, tumour markers, hepatitis tests and more."]},
+ {i:'pha',mk:["Аптека","Во склоп на установата функционира аптека во наменски изграден простор во новиот објект — рецептот го подигате пред да излезете."],
+        sq:["Barnatore","Brenda institucionit funksionon barnatorja në hapësirë të ndërtuar posaçërisht në objektin e ri — recetën e merrni para se të dilni."],
+        en:["Pharmacy","A pharmacy operates within the institution in purpose-built space in the new building — collect your prescription before you leave."]},
+ {i:'recep',mk:["Приемно одделение","Едно место за закажување, картон и упат. Пациентското досие останува во установата — не носите папки од шалтер до шалтер."],
+        sq:["Pranimi","Një vend për terminin, kartelën dhe referimin. Dosja e pacientit mbetet në institucion — nuk bartni dosje nga sporteli në sportel."],
+        en:["Reception","One place for appointments, records and referrals. The patient file stays in the institution — no carrying folders from desk to desk."]},
+ {i:'den',feat:true,mk:["Стоматологија · Бами Дент","Од 1 декември 2012 година. Детска и превентивна, конзервативна и естетска стоматологија, протетика, парадонтологија, орална хирургија, импланти и ортодонција."],
+        sq:["Stomatologji · Bami Dent","Që nga 1 dhjetori 2012. Stomatologji për fëmijë dhe parandaluese, konservative dhe estetike, protetikë, parodontologji, kirurgji orale, implante dhe ortodonci."],
+        en:["Dentistry · Bami Dent","Since 1 December 2012. Paediatric and preventive, conservative and aesthetic dentistry, prosthetics, periodontology, oral surgery, implants and orthodontics."]}
+];
+
+const DENTAL=[
+ {mk:{t:"Детска и превентивна стоматологија",s:"Првиот однос со забарот го одредува целиот живот потоа.",l:["Превентивни прегледи и совети за оралното здравје","Санација на кариозни лезии на млечни заби со гласјономерни полнења што испуштаат флуор","Ендодонтски третман на млечни и млади трајни заби","Залевање на фисури — спречување на појава на кариес","Превентивна флуоризација","Чистење на меки и тврди наслаги на забите","Екстракција на млечни заби"]},
+  sq:{t:"Stomatologji për fëmijë dhe parandaluese",s:"Marrëdhënia e parë me dentistin e përcakton gjithë jetën më pas.",l:["Kontrolle parandaluese dhe këshilla për shëndetin oral","Sanim i lezioneve karioze në dhëmbët e qumështit me mbushje glasjonomerike që lëshojnë fluor","Trajtim endodontik i dhëmbëve të qumështit dhe të përhershëm të rinj","Mbyllje e fisurave — parandalim i shfaqjes së karies","Fluorizim parandalues","Pastrim i depozitimeve të buta dhe të forta në dhëmbë","Nxjerrje e dhëmbëve të qumështit"]},
+  en:{t:"Paediatric and preventive dentistry",s:"A child's first relationship with the dentist shapes every year that follows.",l:["Preventive check-ups and oral health advice","Treatment of carious lesions in milk teeth with fluoride-releasing glass ionomer fillings","Endodontic treatment of milk and young permanent teeth","Fissure sealing — preventing the onset of caries","Preventive fluoridation","Removal of soft and hard deposits","Extraction of milk teeth"]}},
+ {mk:{t:"Конзервативна и естетска стоматологија",s:"Пломби што не се препознаваат и заби што издржуваат.",l:["Апликација на композитни и високоестетски нанокомпозитни пломби","Ендодонтски третман — лекување на заби, умртвување на нервот и полнење на каналите","Санација на фрактурирани (скршени) заби","Поставување на забни циркони — украси на забите"]},
+  sq:{t:"Stomatologji konservative dhe estetike",s:"Mbushje që nuk dallohen dhe dhëmbë që qëndrojnë.",l:["Aplikim i mbushjeve kompozite dhe nanokompozite me estetikë të lartë","Trajtim endodontik — mjekim i dhëmbit, mpirje e nervit dhe mbushje e kanaleve","Sanim i dhëmbëve të frakturuar (të thyer)","Vendosje e zirkoneve dentare — zbukurime në dhëmbë"]},
+  en:{t:"Conservative and aesthetic dentistry",s:"Fillings nobody notices and teeth that last.",l:["Composite and high-aesthetic nanocomposite fillings","Endodontic treatment — devitalisation and root canal filling","Restoration of fractured teeth","Dental zircon placement — tooth jewellery"]}},
+ {mk:{t:"Протетика",s:"Металкерамика, циркониум и мобилни решенија.",l:["Металкерамички (порцелански) коронки и мостови","Безметални (циркониум) коронки и мостови","Парцијални и тотални мобилни протези","Поставување на колчиња и леани надградби","Мобилни визил протези со атечмени","Термопрес (еластични) валпласт протези"]},
+  sq:{t:"Protetikë",s:"Metalo-qeramikë, zirkon dhe zgjidhje të lëvizshme.",l:["Kurora dhe ura metalo-qeramike (porcelani)","Kurora dhe ura pa metal (zirkon)","Proteza të lëvizshme parciale dhe totale","Vendosje e kunjave dhe mbindërtimeve të derdhura","Proteza vizil të lëvizshme me atashime","Proteza termopres (elastike) valplast"]},
+  en:{t:"Prosthetics",s:"Metal-ceramic, zirconia and removable solutions.",l:["Metal-ceramic (porcelain) crowns and bridges","Metal-free (zirconia) crowns and bridges","Partial and full removable dentures","Posts and cast core build-ups","Removable Vitallium dentures with attachments","Thermopress (flexible) Valplast dentures"]}},
+ {mk:{t:"Болести на уста и парадонт",s:"Крварење на непцата не е нормално — тоа е сигнал.",l:["Дијагноза, план и терапија на парадонтопатија","Терапија на воспаление на непцата (гингивит)","Чистење и обработка на парадонтални џебови","Чистење на забен камен со ултразвук","Чистење на меки наслаги и полирање на заби"]},
+  sq:{t:"Sëmundjet e gojës dhe parodontit",s:"Gjakderdhja e mishrave nuk është normale — është sinjal.",l:["Diagnozë, plan dhe terapi e parodontopatisë","Terapi e inflamacionit të mishrave (gingivit)","Pastrim dhe përpunim i xhepave parodontalë","Heqje e gurit dentar me ultratinguj","Pastrim i depozitimeve të buta dhe polirim i dhëmbëve"]},
+  en:{t:"Oral and periodontal disease",s:"Bleeding gums are not normal — they are a signal.",l:["Diagnosis, planning and therapy of periodontal disease","Treatment of gum inflammation (gingivitis)","Cleaning and debridement of periodontal pockets","Ultrasonic scaling of tartar","Removal of soft deposits and tooth polishing"]}},
+ {mk:{t:"Орална хирургија и имплантологија",s:"Во соработка со реномирани специјалисти имплантолози.",l:["Екстракција на заби","Екстракција на заостанати корени","Инцизија на интраорални апсцеси","Поставување на титаниумски импланти"]},
+  sq:{t:"Kirurgji orale dhe implantologji",s:"Në bashkëpunim me specialistë të njohur të implantologjisë.",l:["Nxjerrje e dhëmbëve","Nxjerrje e rrënjëve të mbetura","Incizion i abseseve intraorale","Vendosje e implanteve prej titani"]},
+  en:{t:"Oral surgery and implantology",s:"In cooperation with established implantology specialists.",l:["Tooth extraction","Removal of retained roots","Incision of intraoral abscesses","Placement of titanium implants"]}},
+ {mk:{t:"Ортодонција",s:"Во соработка со врвни специјалисти ортодонти од Скопје.",l:["Мобилни протези за деца","Фиксни протези","Изработка на фиксни протези што не се гледаат"]},
+  sq:{t:"Ortodonci",s:"Në bashkëpunim me ortodontë specialistë të nivelit të lartë nga Shkupi.",l:["Proteza të lëvizshme për fëmijë","Proteza fikse","Punim i protezave fikse që nuk duken"]},
+  en:{t:"Orthodontics",s:"In cooperation with leading orthodontic specialists from Skopje.",l:["Removable appliances for children","Fixed appliances","Invisible fixed appliances"]}}
+];
+
+const LAB=["SE","Диференцијална крвна слика (KS)","Урина","Липиден статус (HOL, TG, HDL, LDL)","Гликемија","ASAT","ALAT","FE","Urea","Creatinin","GGT","ALP","Bilirubin","Protein","AC / URIKUM","Тест за бременост","Хормони","Тумор маркери","H. Pylori","Тестови за хепатитис","D-димери"];
+const LAB_SQ=["SE","Pasqyrë diferenciale e gjakut (KS)","Urinë","Status lipidik (HOL, TG, HDL, LDL)","Glikemi","ASAT","ALAT","FE","Urea","Creatinin","GGT","ALP","Bilirubin","Protein","AC / URIKUM","Test shtatzënie","Hormone","Markues tumoralë","H. Pylori","Teste për hepatit","D-dimerë"];
+const LAB_EN=["ESR","Differential blood count","Urinalysis","Lipid panel (CHOL, TG, HDL, LDL)","Glycaemia","AST","ALT","Iron","Urea","Creatinine","GGT","ALP","Bilirubin","Protein","Uric acid","Pregnancy test","Hormones","Tumour markers","H. Pylori","Hepatitis tests","D-dimer"];
+
+/* ============ render ============ */
+let LANG='mk', TAB=0;
+
+function renderDepts(){
+  document.getElementById('deptGrid').innerHTML=DEPTS.map(d=>{
+    const c=d[LANG];
+    return '<div class="dept'+(d.feat?' feat':'')+'"><div class="ico">'+ICONS[d.i]+'</div><h3>'+c[0]+'</h3><p>'+c[1]+'</p></div>';
+  }).join('');
+}
+function renderTabs(){
+  document.getElementById('tablist').innerHTML=DENTAL.map((d,i)=>
+    '<button data-t="'+i+'" class="'+(i===TAB?'on':'')+'"><i>0'+(i+1)+'</i>'+d[LANG].t+'</button>').join('');
+  const c=DENTAL[TAB][LANG];
+  document.getElementById('tabpanel').innerHTML='<h3>'+c.t+'</h3><p class="sub">'+c.s+'</p><ul>'+
+    c.l.map(x=>'<li>'+ICONS.chk+'<span>'+x+'</span></li>').join('')+'</ul>';
+  document.querySelectorAll('#tablist button').forEach(b=>b.onclick=()=>{TAB=+b.dataset.t;renderTabs();});
+}
+function renderLab(){
+  const arr=LANG==='mk'?LAB:LANG==='sq'?LAB_SQ:LAB_EN;
+  document.getElementById('labchips').innerHTML=arr.map(x=>'<span class="labchip">'+x+'</span>').join('');
+}
+function renderPanel(){
+  document.getElementById('hrsList').innerHTML=T[LANG].hours.map(h=>
+    '<div class="hrow'+(h[2]?' off':'')+'"><b>'+h[0]+'</b><span>'+h[1]+'</span></div>').join('');
+  document.getElementById('bringList').innerHTML=T[LANG].bring.map(b=>
+    '<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#e6f2f2"/><path d="M4.8 8.2 7 10.4l4.2-4.6" stroke="#0d6b73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>'+b+'</span></li>').join('');
+}
+function setLang(l){
+  LANG=l;
+  document.documentElement.lang=(l==='sq'?'sq':l==='en'?'en':'mk');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const v=T[l][el.dataset.i18n]; if(typeof v==='string') el.textContent=v;
+  });
+  document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  renderDepts();renderTabs();renderLab();renderPanel();
+}
+document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+
+/* nav */
+document.getElementById('burger').onclick=()=>document.getElementById('menu').classList.toggle('open');
+document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>document.getElementById('menu').classList.remove('open'));
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+setLang('mk');
+</script>
+</body>
+</html>
