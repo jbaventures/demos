@@ -1,0 +1,5 @@
+# These are client concept pages, not published sites. Several present a
+# company's own brand and photography in a proposed redesign, so they should
+# not be indexed or surfaced in search.
+User-agent: *
+Disallow: /
