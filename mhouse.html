@@ -50,14 +50,15 @@ section{padding:96px 0}
 
 /* hero */
 .hero{position:relative;min-height:100svh;display:grid;align-items:end;color:#fff;background:#1a120e}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%}
+.hero>img.mb{display:none}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 40%,rgba(0,0,0,.55) 100%)}
 .hero .wrap{position:relative;z-index:1;padding:140px 0 64px;display:grid;gap:26px}
 .hero h1{font-size:clamp(64px,11vw,168px);line-height:.9}
 .hero h1 i{font-style:italic;color:#FFD9B0}
 .hero p{font-size:18px;max-width:46ch;color:#efe6da}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:10px}
-@media(min-width:960px){.hero .wrap{grid-template-columns:1.2fr .8fr;align-items:end;padding-bottom:80px}.hero .side{display:grid;gap:18px;justify-self:end;max-width:440px}}
+@media(min-width:960px){.hero .wrap{grid-template-columns:1.2fr .8fr;align-items:end;padding-bottom:56px}.hero .side{display:grid;gap:18px;justify-self:end;max-width:440px}}
 
 /* combo collage */
 .combo{background:var(--cream);padding:8px}
@@ -157,9 +158,10 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .nav .wrap{height:64px}
   .logo img{height:44px}
   .hero{min-height:0;display:block;background:#1a120e}
-  .hero>img.hd{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:62% 20%}
+  .hero>img.hd{display:none}
+  .hero>img.mb{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 70%}
   .hero::after{display:none}
-  .hero .wrap{padding:28px 0 40px;gap:18px}
+  .hero .wrap{padding:24px 0 24px;gap:24px}
   .hero h1{font-size:clamp(56px,17vw,84px);line-height:.9}
   .hero p{font-size:16px;color:#e9e0d4}
   .hero .sub{gap:24px}
@@ -215,14 +217,15 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
 <main id="top">
 <section class="hero">
-  <img class="hd" src="https://www.mhouse.mk/assets/index-photo1-TNRKy3Hq.png" alt="">
+  <img class="hd" src="mhouse/table.jpg" alt="">
+  <img class="mb" src="mhouse/table.jpg" alt="Coffee, juice and pastries on a table at M House">
   <div class="wrap">
     <div>
       <span class="eye" style="color:#FFD9B0">Juice · Coffee · Bakery · Nights</span>
       <h1 class="serif" style="margin-top:16px">think <i>healthy.</i></h1>
     </div>
     <div class="side">
-      <p>Fresh juice, Danish-style bakes and proper coffee. Six shops across Tetovo, Skopje, Gostivar and Tirana. Somewhere you stay, not somewhere you grab and go.</p>
+      <p>Fresh juice, Danish-style bakes and proper coffee. Six shops across Tetovë, Skopje, Gostivar and Tirana. Somewhere you stay, not somewhere you grab and go.</p>
       <div class="ctas"><a class="btn btn-wh" href="#shops">Find your nearest shop</a><a class="btn btn-line" href="#menu">The menu</a></div>
     </div>
   </div>
@@ -231,8 +234,8 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <div class="combo">
   <div class="cgrid">
     <div class="q"><small>House rule</small><span class="serif">What you drink says what you stand for.</span></div>
-    <img src="https://www.mhouse.mk/assets/index-community3-DFv2uvh6.png" alt="">
-    <img src="https://www.mhouse.mk/assets/featured-favorites-1-C6r6nxsk.jpg" alt="">
+    <img src="mhouse/friends.jpg" alt="">
+    <img src="mhouse/redjuice.jpg" alt="">
     <img src="https://www.mhouse.mk/assets/featured-favorites-2-B43OQNNj.jpg" alt="">
   </div>
 </div>
@@ -240,7 +243,7 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <section class="mani">
   <div class="wrap">
     <span class="eye">The idea</span>
-    <h2 class="serif" style="margin-top:12px">Rooted in hygge. Made in Tetovo. Served with a straw.</h2>
+    <h2 class="serif" style="margin-top:12px">Rooted in hygge. Made in Tetovë. Served with a straw.</h2>
     <p>A café should be somewhere you stay. Warm rooms, honest ingredients, fresh juice pressed in front of you, and the kind of bakes that make you order a second coffee just to keep sitting there.</p>
   </div>
 </section>
@@ -248,7 +251,7 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <section class="shops" id="shops">
   <div class="wrap">
     <div class="head"><h2 class="serif h2">Six doors.<br>Four cities.</h2><p>Pick a city. The dot tells you whether we're open right now, from each shop's own hours.</p></div>
-    <div class="tabs"><button class="on" data-c="all">All</button><button data-c="Tetovo">Tetovo</button><button data-c="Skopje">Skopje</button><button data-c="Gostivar">Gostivar</button><button data-c="Tirana">Tirana</button></div>
+    <div class="tabs"><button class="on" data-c="all">All</button><button data-c="Tetovë">Tetovë</button><button data-c="Skopje">Skopje</button><button data-c="Gostivar">Gostivar</button><button data-c="Tirana">Tirana</button></div>
     <div class="sgrid" id="shoplist"></div>
   </div>
 </section>
@@ -257,7 +260,7 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   <div class="wrap">
     <div class="head"><h2 class="serif h2">Twenty-one juices.<br>Pressed today.</h2><p>Plus coffee, Danish bakes, breakfast and desserts on the full menu.</p></div>
     <div class="jfeat">
-      <div class="big"><img src="https://www.mhouse.mk/assets/featured-favorites-1-C6r6nxsk.jpg" alt=""></div>
+      <div class="big"><img src="mhouse/redjuice.jpg" alt=""></div>
       <img src="https://www.mhouse.mk/assets/polaroid-2-Dpqm4XT4.jpg" alt="">
       <img src="https://www.mhouse.mk/assets/featured-favorites-2-B43OQNNj.jpg" alt="">
     </div>
@@ -281,7 +284,7 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <div>
       <span class="eye">The story</span>
       <h2 class="serif h2" style="margin-top:14px">One shop, a juicer,<br>and a Danish idea.</h2>
-      <p>M House started in Tetovo with a conviction that healthy and homely aren't opposites. Six shops later, two countries, and the first door outside North Macedonia open in Tirana. Still family. Still fresh every morning.</p>
+      <p>M House started in Tetovë with a conviction that healthy and homely aren't opposites. Six shops later, two countries, and the first door outside North Macedonia open in Tirana. Still family. Still fresh every morning.</p>
       <div class="stats"><div><b>6</b><span>shops</span></div><div><b>4</b><span>cities</span></div><div><b>21</b><span>juices</span></div></div>
       <div style="margin-top:32px"><a class="btn btn-rust" href="https://www.mhouse.mk/careers">Join the team</a></div>
     </div>
@@ -293,8 +296,8 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <footer>
   <div class="wrap">
     <div class="top">
-      <div><div class="big">M House</div><p style="margin-top:14px;opacity:.85;max-width:34ch">think healthy.<br>Tetovo · Skopje · Gostivar · Tirana</p></div>
-      <div><h4>Shops</h4><ul><li><a href="#shops">Tetovo</a></li><li><a href="#shops">Skopje</a></li><li><a href="#shops">Gostivar</a></li><li><a href="#shops">Tirana</a></li></ul></div>
+      <div><div class="big">M House</div><p style="margin-top:14px;opacity:.85;max-width:34ch">think healthy.<br>Tetovë · Skopje · Gostivar · Tirana</p></div>
+      <div><h4>Shops</h4><ul><li><a href="#shops">Tetovë</a></li><li><a href="#shops">Skopje</a></li><li><a href="#shops">Gostivar</a></li><li><a href="#shops">Tirana</a></li></ul></div>
       <div><h4>Menu</h4><ul><li><a href="#menu">Juices</a></li><li><a href="https://www.mhouse.mk/menu">Coffee</a></li><li><a href="https://www.mhouse.mk/menu">Bakery</a></li><li><a href="https://www.mhouse.mk/menu">Breakfast</a></li></ul></div>
       <div><h4>M House</h4><ul><li><a href="https://instagram.com/mhouseofficial">Instagram</a></li><li><a href="https://www.facebook.com/profile.php?id=100064291316068">Facebook</a></li><li><a href="https://www.mhouse.mk/careers">Careers</a></li></ul></div>
     </div>
@@ -305,8 +308,8 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <script>
 const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>innerHeight*.75),{passive:true});
 const SHOPS=[
- {n:"M House 3",c:"Tetovo",s:"Flagship",a:"Str. Marshal Tito 45",t:"+38975300849",h:"Mon–Sat 08–00 · Sun 11–00",o:{ms:[8,24],su:[11,24]}},
- {n:"M House 2",c:"Tetovo",s:"By the universities",a:"Str. Ilindenska 12",t:"+38975300327",h:"Mon–Sat 08–00 · Sun closed",o:{ms:[8,24],su:null}},
+ {n:"M House 3",c:"Tetovë",s:"Flagship",a:"Str. Marshal Tito 45",t:"+38975300849",h:"Mon–Sat 08–00 · Sun 11–00",o:{ms:[8,24],su:[11,24]}},
+ {n:"M House 2",c:"Tetovë",s:"By the universities",a:"Str. Ilindenska 12",t:"+38975300327",h:"Mon–Sat 08–00 · Sun closed",o:{ms:[8,24],su:null}},
  {n:"M House 5",c:"Skopje",s:"Diamond Mall, Gourmet Avenue",a:"Jordan Mijalkov 31",t:"+38975238702",h:"Mon–Sat 08–00 · Sun 10–00",o:{ms:[8,24],su:[10,24]}},
  {n:"M House 7",c:"Skopje",s:"Skopje City Mall, food court",a:"Ljubljanska 4",t:"+38922234568",h:"Daily 10–22",o:{ms:[10,22],su:[10,22]}},
  {n:"M House 4",c:"Gostivar",s:"By the river",a:"Str. 11 Oktomvri 23",t:"+38975361604",h:"Mon–Sat 08–00 · Sun 11–00",o:{ms:[8,24],su:[11,24]}},
