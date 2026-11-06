@@ -236,7 +236,7 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <div class="q"><small>House rule</small><span class="serif">What you drink says what you stand for.</span></div>
     <img src="mhouse/friends.jpg" alt="">
     <img src="mhouse/redjuice.jpg" alt="">
-    <img src="https://www.mhouse.mk/assets/featured-favorites-2-B43OQNNj.jpg" alt="">
+    <img src="mhouse/croissant.jpg" alt="">
   </div>
 </div>
 
@@ -261,8 +261,8 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <div class="head"><h2 class="serif h2">Twenty-one juices.<br>Pressed today.</h2><p>Plus coffee, Danish bakes, breakfast and desserts on the full menu.</p></div>
     <div class="jfeat">
       <div class="big"><img src="mhouse/redjuice.jpg" alt=""></div>
-      <img src="https://www.mhouse.mk/assets/polaroid-2-Dpqm4XT4.jpg" alt="">
-      <img src="https://www.mhouse.mk/assets/featured-favorites-2-B43OQNNj.jpg" alt="">
+      <img src="mhouse/avocado.jpg" alt="">
+      <img src="mhouse/pinkcup.jpg" alt="">
     </div>
     <div class="jgrid" id="juices"></div>
     <div style="margin-top:40px"><a class="btn btn-ink" href="https://www.mhouse.mk/menu">Full menu</a></div>
@@ -288,7 +288,7 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="stats"><div><b>6</b><span>shops</span></div><div><b>4</b><span>cities</span></div><div><b>21</b><span>juices</span></div></div>
       <div style="margin-top:32px"><a class="btn btn-rust" href="https://www.mhouse.mk/careers">Join the team</a></div>
     </div>
-    <img src="https://www.mhouse.mk/assets/index-community2-BJr_iltO.png" alt="">
+    <img src="mhouse/storefront.jpg" alt="">
   </div>
 </section>
 </main>
@@ -316,7 +316,7 @@ const SHOPS=[
  {n:"M House 6",c:"Tirana",s:"First shop in Albania",a:"Rruga Ismail Qemali",t:"+355696971778",h:"Mon–Sat 07–22 · Sun 07–16",o:{ms:[7,22],su:[7,16]}},
 ];
 const open=o=>{const d=new Date(),r=d.getDay()===0?o.su:o.ms,h=d.getHours()+d.getMinutes()/60;return r?h>=r[0]&&h<r[1]:false};
-const PH=["https://www.mhouse.mk/assets/wild-nights-2-fFob2SIo.png","https://www.mhouse.mk/assets/index-community3-DFv2uvh6.png","https://www.mhouse.mk/assets/wild-nights-1-Dyyq3JC_.png","https://www.mhouse.mk/assets/index-community1-B80alcvd.png","https://www.mhouse.mk/assets/wild-nights-4-DDLpENE5.png","https://www.mhouse.mk/assets/index-community2-BJr_iltO.png"];
+const PH=["mhouse/interior.jpg","mhouse/storefront.jpg","https://www.mhouse.mk/assets/wild-nights-1-Dyyq3JC_.png","https://www.mhouse.mk/assets/index-community1-B80alcvd.png","https://www.mhouse.mk/assets/wild-nights-4-DDLpENE5.png","mhouse/bwcup.jpg"];
 shoplist.innerHTML=SHOPS.map((s,i)=>`<div class="card" data-c="${s.c}"><img src="${PH[i]}" alt=""><span class="st ${open(s.o)?'':'closed'}">${open(s.o)?'Open now':'Closed now'}</span><div><div class="name">${s.n} · ${s.s}</div><div class="city">${s.c}</div><div class="meta">${s.a}, ${s.c}<br>${s.h}</div><div class="acts"><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.a+', '+s.c)}">Directions</a><a class="ghost" href="tel:${s.t}">Call</a></div></div></div>`).join('');
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.card').forEach(r=>r.classList.toggle('hide',b.dataset.c!=='all'&&r.dataset.c!==b.dataset.c&&r.dataset.c!=='all'))});
 const J=[["M House Juice","Blackberry, apple, ginger, grapefruit","#7B3F98"],["Pick Me Up","Apple, raspberry, banana","#E23D5B"],["Stress Down","Strawberry, apple, banana, mint","#FF5A7A"],["Green Life","Apple, kiwi, lime","#5DBB46"],["ABC Juice","Orange, carrot, ginger","#FF7E01"],["Recovery","Cucumber, apple, lemon","#A7D94E"],["Daily Juice","Orange, apple, banana","#FFB01F"],["Iron Man","Apple, pineapple, spinach","#2E8B57"],["Energizer","Orange, grapefruit, lime","#FF6A2B"],["Ginger Sensation","Apple, ginger, mint","#D9C25B"],["Femme Fatale","Orange, carrot, beetroot, chili","#B81F3B"],["Life Saver","Apple, celery, banana, parsley","#7BC96F"],["Raspberry Glow","Apple, banana, yogurt, vanilla, raspberry","#E8738F"],["Brunch Energizer","Milk, honey, banana, raspberry, yogurt","#F2B8C6"],["On Your Mark","Milk, avocado, lime, yogurt, honey","#9ACD6B"],["Ginger Shot","Ginger, apple","#E9C46A"],["Orange Butterfly","Apple, orange, banana, ice cream","#FFA64D"],["Oreo Milkshake","Milk, coconut, Oreo, ice cream","#444"]];
