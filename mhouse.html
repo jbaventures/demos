@@ -49,16 +49,17 @@ section{padding:96px 0}
 .sheet .close{align-self:flex-end;width:44px;height:44px;font-size:30px}
 
 /* hero */
-.hero{position:relative;min-height:100svh;display:grid;align-items:end;color:#fff;background:#1a120e}
+.hero{padding:0;position:relative;min-height:100svh;display:grid;align-items:end;color:#fff;background:#1a120e}
 .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%}
 .hero>img.mb{display:none}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 40%,rgba(0,0,0,.55) 100%)}
 .hero .wrap{position:relative;z-index:1;padding:140px 0 64px;display:grid;gap:26px}
+.hero .sub{display:grid;gap:28px;max-width:520px}
 .hero h1{font-size:clamp(64px,11vw,168px);line-height:.9}
 .hero h1 i{font-style:italic;color:#FFD9B0}
 .hero p{font-size:18px;max-width:46ch;color:#efe6da}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:10px}
-@media(min-width:960px){.hero .wrap{grid-template-columns:1.2fr .8fr;align-items:end;padding-bottom:56px}.hero .side{display:grid;gap:18px;justify-self:end;max-width:440px}}
+@media(min-width:960px){.hero .wrap{grid-template-columns:1.2fr .8fr;align-items:end;padding-bottom:56px}.hero .sub{justify-self:end;max-width:440px}}
 
 /* combo collage */
 .combo{background:var(--cream);padding:8px}
@@ -161,10 +162,10 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .hero>img.hd{display:none}
   .hero>img.mb{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 70%}
   .hero::after{display:none}
-  .hero .wrap{padding:24px 0 24px;gap:24px}
+  .hero .wrap{padding:28px 0 28px;gap:28px}
   .hero h1{font-size:clamp(56px,17vw,84px);line-height:.9}
   .hero p{font-size:16px;color:#e9e0d4}
-  .hero .sub{gap:24px}
+  .hero .sub{gap:28px}
   .hero .ctas .btn{height:48px;padding:0 20px;font-size:14px}
   .nav{position:sticky}
   .eye{font-size:11px;letter-spacing:.14em}
@@ -224,7 +225,7 @@ footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <span class="eye" style="color:#FFD9B0">Juice · Coffee · Bakery · Nights</span>
       <h1 class="serif" style="margin-top:16px">think <i>healthy.</i></h1>
     </div>
-    <div class="side">
+    <div class="sub">
       <p>Fresh juice, Danish-style bakes and proper coffee. Six shops across Tetovë, Skopje, Gostivar and Tirana. Somewhere you stay, not somewhere you grab and go.</p>
       <div class="ctas"><a class="btn btn-wh" href="#shops">Find your nearest shop</a><a class="btn btn-line" href="#menu">The menu</a></div>
     </div>
