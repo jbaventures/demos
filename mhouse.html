@@ -149,6 +149,51 @@ footer h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.
 footer ul{list-style:none;display:grid;gap:10px;font-weight:500}
 footer .big{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(48px,8vw,104px);line-height:.95}
 footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.3);padding-top:20px;font-size:13px;opacity:.85}
+
+/* ───── mobile ───── */
+@media(max-width:767px){
+  .nav{background:rgba(244,237,227,.94);color:var(--ink);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav:not(.solid) .logo img{filter:none}
+  .nav .wrap{height:64px}
+  .logo img{height:44px}
+  .hero{min-height:88svh}
+  .hero>img{object-position:72% 35%}
+  .hero::after{background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 35%,rgba(0,0,0,.78) 65%,rgba(0,0,0,.92) 100%)}
+  .hero .wrap{padding:96px 0 36px;gap:16px}
+  .hero h1{font-size:clamp(56px,17vw,84px);line-height:.9}
+  .hero p{font-size:16px;color:#f1eae0}
+  .hero .ctas .btn{height:48px;padding:0 20px;font-size:14px}
+  .eye{font-size:11px;letter-spacing:.14em}
+  section{padding:64px 0}
+  .h2{font-size:clamp(40px,12vw,56px)}
+  .head{margin-bottom:24px}
+  .head p{font-size:15px}
+  .mani{padding:44px 0}
+  .mani .serif{font-size:clamp(24px,6.6vw,30px)}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-inline:-24px;padding-inline:24px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:0 0 auto}
+  .card{aspect-ratio:4/3;padding:16px;border-radius:8px}
+  .card::after{background:linear-gradient(180deg,rgba(0,0,0,0) 20%,rgba(0,0,0,.6) 50%,rgba(0,0,0,.94) 100%)}
+  .card .city{font-size:40px;margin-bottom:4px}
+  .card .name{font-size:10px;letter-spacing:.1em}
+  .card .meta{font-size:13px;margin-top:4px}
+  .card .acts{margin-top:10px}
+  .card .acts a{height:44px;padding:0 16px;font-size:13px}
+  .card .st{top:12px;left:12px;padding:7px 10px;font-size:11px}
+  .cgrid{gap:6px}
+  .q{padding:18px;min-height:0}
+  .q .serif{font-size:26px}
+  .combo{padding:6px}
+  .jfeat img{aspect-ratio:1}
+  .jfeat .big img{aspect-ratio:4/3}
+  .night{min-height:70svh}
+  .night .wrap{padding:64px 0 48px}
+  .night h2{font-size:clamp(56px,18vw,88px)}
+  .stats b{font-size:40px}
+  footer{padding:56px 0 24px}
+  footer .big{font-size:clamp(44px,14vw,64px)}
+}
 </style>
 </head>
 <body>
