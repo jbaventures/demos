@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>M House — think healthy — Design Concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Oswald:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rust:#A8432A;--rust-d:#8F3620;--cream:#F4EDE3;--sand:#E9DFD0;--ink:#161412;--mute:#75706A;--line:#DDD3C5;--or:#FF7E01}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5;font-size:16px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1280px,100% - 48px);margin-inline:auto}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:.98}
+.h2{font-size:clamp(44px,6.5vw,92px)}
+.eye{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--rust)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 24px;border-radius:999px;font-weight:600;font-size:15px;white-space:nowrap;transition:opacity .15s,transform .15s}
+.btn:hover{opacity:.9}.btn:active{transform:scale(.98)}
+.btn-rust{background:var(--rust);color:#fff}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-wh{background:#fff;color:var(--ink)}
+.btn-line{border:1.5px solid currentColor}
+.lnk{font-weight:600;border-bottom:1.5px solid currentColor;padding-bottom:1px}
+section{padding:96px 0}
+@media(min-width:960px){section{padding:136px 0}}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;color:#fff;transition:.25s}
+.nav.solid{background:rgba(244,237,227,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--ink);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center}
+.logo img{height:52px;width:auto;object-fit:contain}
+.brand{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.nav:not(.solid) .logo img{filter:brightness(0) invert(1)}
+.nav ul{display:none;list-style:none;gap:34px;font-weight:500;font-size:15px}
+.nav ul a{opacity:.85}.nav ul a:hover{opacity:1}
+.nav .cta{display:none;height:44px;padding:0 20px;font-size:14px}
+.burger{width:44px;height:44px;display:grid;place-items:center}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;box-shadow:0 -7px 0 currentColor,0 7px 0 currentColor}
+@media(min-width:960px){.nav ul{display:flex}.nav .cta{display:inline-flex}.burger{display:none}}
+.sheet{position:fixed;inset:0;background:var(--rust);color:#fff;z-index:60;display:none;flex-direction:column;padding:24px}
+.sheet.open{display:flex}
+.sheet a{font-family:'Instrument Serif',serif;font-size:56px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.sheet .close{align-self:flex-end;width:44px;height:44px;font-size:30px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;color:#fff;background:#1a120e}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 40%,rgba(0,0,0,.55) 100%)}
+.hero .wrap{position:relative;z-index:1;padding:140px 0 64px;display:grid;gap:26px}
+.hero h1{font-size:clamp(64px,11vw,168px);line-height:.9}
+.hero h1 i{font-style:italic;color:#FFD9B0}
+.hero p{font-size:18px;max-width:46ch;color:#efe6da}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px}
+@media(min-width:960px){.hero .wrap{grid-template-columns:1.2fr .8fr;align-items:end;padding-bottom:80px}.hero .side{display:grid;gap:18px;justify-self:end;max-width:440px}}
+
+/* combo collage */
+.combo{background:var(--cream);padding:8px}
+.cgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(min-width:800px){.cgrid{grid-template-columns:repeat(4,1fr);grid-auto-rows:min(420px,30vw)}}
+.cgrid>*{border-radius:4px;overflow:hidden;position:relative;min-height:220px}
+.cgrid img{width:100%;height:100%;object-fit:cover;aspect-ratio:1}
+@media(min-width:800px){.cgrid img{aspect-ratio:auto}}
+.tall{grid-row:span 2}.wide{grid-column:span 2}
+.q{background:var(--rust);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:26px}
+.q.sand{background:var(--sand);color:var(--ink)}
+.q.ink{background:var(--ink);color:#fff}
+.q .serif{font-size:clamp(30px,3.2vw,46px);line-height:1}
+.q small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;font-weight:600}
+.cap{position:absolute;left:14px;bottom:12px;color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+
+/* manifesto */
+.mani{background:var(--cream);text-align:center;padding:56px 0}
+@media(min-width:960px){.mani{padding:72px 0}}
+.mani .serif{font-size:clamp(28px,3.4vw,46px);max-width:30ch;margin:0 auto}
+.mani p{display:none}
+
+/* shops */
+.shops{background:var(--ink);color:#fff}
+.head{display:grid;gap:14px;margin-bottom:36px}
+@media(min-width:960px){.head{grid-template-columns:1fr 1fr;align-items:end}.head p{justify-self:end;max-width:44ch}}
+.head p{color:#bdb4a8;font-size:17px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tabs button{padding:0 18px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,.25);font-weight:600;font-size:14px;color:#fff}
+.tabs button.on{background:#fff;color:var(--ink);border-color:#fff}
+.sgrid{display:grid;gap:10px}
+@media(min-width:640px){.sgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.sgrid{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:#222;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff}
+.card.hide{display:none}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.05)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.55) 60%,rgba(0,0,0,.92) 100%)}
+.card>*{position:relative;z-index:1}
+.card .city{font-family:'Instrument Serif',serif;font-size:clamp(40px,4.4vw,64px);line-height:.9;margin-bottom:8px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.card .name{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#FFD9B0;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.card .st{position:absolute;top:18px;left:18px;display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);padding:8px 12px;border-radius:999px}
+.card .st::before{content:"";width:8px;height:8px;border-radius:50%;background:#2ECC71}
+.card .st.closed::before{background:#E74C3C}
+.card .meta{color:#fff;font-size:15px;font-weight:500;margin-top:8px;text-shadow:0 1px 3px rgba(0,0,0,.8);line-height:1.4}
+.card .acts{display:flex;gap:8px;margin-top:14px}
+.card .acts a{height:42px;padding:0 16px;border-radius:999px;display:inline-flex;align-items:center;font-weight:600;font-size:14px;background:#fff;color:var(--ink)}
+.card .acts a.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.card.soon{background:var(--rust);justify-content:space-between}
+.card.soon::after{display:none}
+.card.soon .serif{font-size:clamp(34px,3.6vw,52px);line-height:1}
+
+/* juice */
+.juice{background:var(--sand)}
+.jgrid{display:grid;gap:0 48px}
+@media(min-width:700px){.jgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.jgrid{grid-template-columns:1fr 1fr 1fr}}
+.j{display:grid;grid-template-columns:12px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid rgba(0,0,0,.1);align-items:start}
+.j i{width:12px;height:12px;border-radius:50%;background:var(--c);margin-top:9px}
+.j b{font-family:'Instrument Serif',serif;font-weight:400;font-size:24px;display:block;line-height:1.1}
+.j span{color:var(--mute);font-size:14px}
+.jfeat{display:grid;gap:8px;margin-bottom:48px}
+@media(min-width:800px){.jfeat{grid-template-columns:1.4fr 1fr 1fr}}
+.jfeat img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:4/5}
+.jfeat .big img{aspect-ratio:auto;height:100%}
+
+/* night */
+.night{position:relative;color:#fff;background:#0e0b0a;padding:0;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden}
+.night>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:grayscale(1) contrast(1.05);opacity:.7}
+.night::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,11,10,.1),rgba(14,11,10,.9))}
+.night .wrap{position:relative;z-index:1;padding:96px 0 80px;display:grid;gap:18px}
+.night h2{font-size:clamp(56px,10vw,150px)}
+.night p{max-width:46ch;color:#e0d7cb;font-size:17px}
+
+/* story */
+.story{background:var(--cream)}
+.story .wrap{display:grid;gap:40px}
+@media(min-width:960px){.story .wrap{grid-template-columns:1fr 1fr;gap:88px;align-items:center}}
+.story p{color:var(--mute);font-size:18px;margin-top:18px;max-width:48ch}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;border-top:1px solid var(--line);padding-top:22px}
+.stats b{font-family:'Instrument Serif',serif;font-weight:400;font-size:56px;display:block;line-height:1}
+.stats span{font-size:13px;color:var(--mute)}
+.story img{border-radius:4px;aspect-ratio:4/5;object-fit:cover;width:100%}
+
+footer{background:var(--rust);color:#fff;padding:80px 0 28px}
+footer .top{display:grid;gap:32px;margin-bottom:56px}
+@media(min-width:960px){footer .top{grid-template-columns:2fr 1fr 1fr 1fr}}
+footer h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-bottom:14px;font-weight:600}
+footer ul{list-style:none;display:grid;gap:10px;font-weight:500}
+footer .big{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(48px,8vw,104px);line-height:.95}
+footer .base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.3);padding-top:20px;font-size:13px;opacity:.85}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="M House"><img src="https://www.mhouse.mk/assets/HeaderLogo-4oF0Umdx.png" alt="M House"></a>
+    <ul><li><a href="#shops">Shops</a></li><li><a href="#menu">Menu</a></li><li><a href="#nights">Nights</a></li><li><a href="#story">Story</a></li><li><a href="https://www.mhouse.mk/careers">Careers</a></li></ul>
+    <a class="btn btn-wh cta" href="#shops">Find a shop</a>
+    <button class="burger" aria-label="Open menu" onclick="sheet.classList.add('open')"><span></span></button>
+  </div>
+</header>
+<nav id="sheet" class="sheet">
+  <button class="close" aria-label="Close menu" onclick="sheet.classList.remove('open')">×</button>
+  <a href="#shops" onclick="sheet.classList.remove('open')">Shops</a><a href="#menu" onclick="sheet.classList.remove('open')">Menu</a><a href="#nights" onclick="sheet.classList.remove('open')">Nights</a><a href="#story" onclick="sheet.classList.remove('open')">Story</a><a href="https://www.mhouse.mk/careers">Careers</a>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <img src="https://www.mhouse.mk/assets/index-photo1-TNRKy3Hq.png" alt="Coffee and a cookie on a wooden board at M House">
+  <div class="wrap">
+    <div>
+      <span class="eye" style="color:#FFD9B0">Juice · Coffee · Bakery · Nights</span>
+      <h1 class="serif" style="margin-top:16px">think <i>healthy.</i></h1>
+    </div>
+    <div class="side">
+      <p>Fresh juice, Danish-style bakes and proper coffee. Six shops across Tetovo, Skopje, Gostivar and Tirana. Somewhere you stay, not somewhere you grab and go.</p>
+      <div class="ctas"><a class="btn btn-wh" href="#shops">Find your nearest shop</a><a class="btn btn-line" href="#menu">The menu</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="combo">
+  <div class="cgrid">
+    <div class="q"><small>House rule</small><span class="serif">What you drink says what you stand for.</span></div>
+    <img src="https://www.mhouse.mk/assets/index-community3-DFv2uvh6.png" alt="">
+    <img src="https://www.mhouse.mk/assets/featured-favorites-1-C6r6nxsk.jpg" alt="">
+    <img src="https://www.mhouse.mk/assets/featured-favorites-2-B43OQNNj.jpg" alt="">
+  </div>
+</div>
+
+<section class="mani">
+  <div class="wrap">
+    <span class="eye">The idea</span>
+    <h2 class="serif" style="margin-top:12px">Rooted in hygge. Made in Tetovo. Served with a straw.</h2>
+    <p>A café should be somewhere you stay. Warm rooms, honest ingredients, fresh juice pressed in front of you, and the kind of bakes that make you order a second coffee just to keep sitting there.</p>
+  </div>
+</section>
+
+<section class="shops" id="shops">
+  <div class="wrap">
+    <div class="head"><h2 class="serif h2">Six doors.<br>Four cities.</h2><p>Pick a city. The dot tells you whether we're open right now, from each shop's own hours.</p></div>
+    <div class="tabs"><button class="on" data-c="all">All</button><button data-c="Tetovo">Tetovo</button><button data-c="Skopje">Skopje</button><button data-c="Gostivar">Gostivar</button><button data-c="Tirana">Tirana</button></div>
+    <div class="sgrid" id="shoplist"></div>
+  </div>
+</section>
+
+<section class="juice" id="menu">
+  <div class="wrap">
+    <div class="head"><h2 class="serif h2">Twenty-one juices.<br>Pressed today.</h2><p>Plus coffee, Danish bakes, breakfast and desserts on the full menu.</p></div>
+    <div class="jfeat">
+      <div class="big"><img src="https://www.mhouse.mk/assets/featured-favorites-1-C6r6nxsk.jpg" alt=""></div>
+      <img src="https://www.mhouse.mk/assets/polaroid-2-Dpqm4XT4.jpg" alt="">
+      <img src="https://www.mhouse.mk/assets/featured-favorites-2-B43OQNNj.jpg" alt="">
+    </div>
+    <div class="jgrid" id="juices"></div>
+    <div style="margin-top:40px"><a class="btn btn-ink" href="https://www.mhouse.mk/menu">Full menu</a></div>
+  </div>
+</section>
+
+<section class="night" id="nights">
+  <img src="https://www.mhouse.mk/assets/wild-nights-3-SXox7_96.png" alt="">
+  <div class="wrap">
+    <span class="eye" style="color:#FFD9B0">Friday + Saturday · from 21:00</span>
+    <h2 class="serif">Wild <i>Nights.</i></h2>
+    <p>When the sun goes down the juice bar becomes the room. House music, a full floor, and the same people you had coffee with this morning.</p>
+    <div><a class="btn btn-wh" href="#shops">Which shops go late</a></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div>
+      <span class="eye">The story</span>
+      <h2 class="serif h2" style="margin-top:14px">One shop, a juicer,<br>and a Danish idea.</h2>
+      <p>M House started in Tetovo with a conviction that healthy and homely aren't opposites. Six shops later, two countries, and the first door outside North Macedonia open in Tirana. Still family. Still fresh every morning.</p>
+      <div class="stats"><div><b>6</b><span>shops</span></div><div><b>4</b><span>cities</span></div><div><b>21</b><span>juices</span></div></div>
+      <div style="margin-top:32px"><a class="btn btn-rust" href="https://www.mhouse.mk/careers">Join the team</a></div>
+    </div>
+    <img src="https://www.mhouse.mk/assets/index-community2-BJr_iltO.png" alt="">
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div><div class="big">M House</div><p style="margin-top:14px;opacity:.85;max-width:34ch">think healthy.<br>Tetovo · Skopje · Gostivar · Tirana</p></div>
+      <div><h4>Shops</h4><ul><li><a href="#shops">Tetovo</a></li><li><a href="#shops">Skopje</a></li><li><a href="#shops">Gostivar</a></li><li><a href="#shops">Tirana</a></li></ul></div>
+      <div><h4>Menu</h4><ul><li><a href="#menu">Juices</a></li><li><a href="https://www.mhouse.mk/menu">Coffee</a></li><li><a href="https://www.mhouse.mk/menu">Bakery</a></li><li><a href="https://www.mhouse.mk/menu">Breakfast</a></li></ul></div>
+      <div><h4>M House</h4><ul><li><a href="https://instagram.com/mhouseofficial">Instagram</a></li><li><a href="https://www.facebook.com/profile.php?id=100064291316068">Facebook</a></li><li><a href="https://www.mhouse.mk/careers">Careers</a></li></ul></div>
+    </div>
+    <div class="base"><span>© M House</span><span>Design concept by Nexeras. Not the live site.</span></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>innerHeight*.75),{passive:true});
+const SHOPS=[
+ {n:"M House 3",c:"Tetovo",s:"Flagship",a:"Str. Marshal Tito 45",t:"+38975300849",h:"Mon–Sat 08–00 · Sun 11–00",o:{ms:[8,24],su:[11,24]}},
+ {n:"M House 2",c:"Tetovo",s:"By the universities",a:"Str. Ilindenska 12",t:"+38975300327",h:"Mon–Sat 08–00 · Sun closed",o:{ms:[8,24],su:null}},
+ {n:"M House 5",c:"Skopje",s:"Diamond Mall, Gourmet Avenue",a:"Jordan Mijalkov 31",t:"+38975238702",h:"Mon–Sat 08–00 · Sun 10–00",o:{ms:[8,24],su:[10,24]}},
+ {n:"M House 7",c:"Skopje",s:"Skopje City Mall, food court",a:"Ljubljanska 4",t:"+38922234568",h:"Daily 10–22",o:{ms:[10,22],su:[10,22]}},
+ {n:"M House 4",c:"Gostivar",s:"By the river",a:"Str. 11 Oktomvri 23",t:"+38975361604",h:"Mon–Sat 08–00 · Sun 11–00",o:{ms:[8,24],su:[11,24]}},
+ {n:"M House 6",c:"Tirana",s:"First shop in Albania",a:"Rruga Ismail Qemali",t:"+355696971778",h:"Mon–Sat 07–22 · Sun 07–16",o:{ms:[7,22],su:[7,16]}},
+];
+const open=o=>{const d=new Date(),r=d.getDay()===0?o.su:o.ms,h=d.getHours()+d.getMinutes()/60;return r?h>=r[0]&&h<r[1]:false};
+const PH=["https://www.mhouse.mk/assets/wild-nights-2-fFob2SIo.png","https://www.mhouse.mk/assets/index-community3-DFv2uvh6.png","https://www.mhouse.mk/assets/wild-nights-1-Dyyq3JC_.png","https://www.mhouse.mk/assets/index-community1-B80alcvd.png","https://www.mhouse.mk/assets/wild-nights-4-DDLpENE5.png","https://www.mhouse.mk/assets/index-community2-BJr_iltO.png"];
+shoplist.innerHTML=SHOPS.map((s,i)=>`<div class="card" data-c="${s.c}"><img src="${PH[i]}" alt=""><span class="st ${open(s.o)?'':'closed'}">${open(s.o)?'Open now':'Closed now'}</span><div><div class="name">${s.n} · ${s.s}</div><div class="city">${s.c}</div><div class="meta">${s.a}, ${s.c}<br>${s.h}</div><div class="acts"><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.a+', '+s.c)}">Directions</a><a class="ghost" href="tel:${s.t}">Call</a></div></div></div>`).join('');
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.card').forEach(r=>r.classList.toggle('hide',b.dataset.c!=='all'&&r.dataset.c!==b.dataset.c&&r.dataset.c!=='all'))});
+const J=[["M House Juice","Blackberry, apple, ginger, grapefruit","#7B3F98"],["Pick Me Up","Apple, raspberry, banana","#E23D5B"],["Stress Down","Strawberry, apple, banana, mint","#FF5A7A"],["Green Life","Apple, kiwi, lime","#5DBB46"],["ABC Juice","Orange, carrot, ginger","#FF7E01"],["Recovery","Cucumber, apple, lemon","#A7D94E"],["Daily Juice","Orange, apple, banana","#FFB01F"],["Iron Man","Apple, pineapple, spinach","#2E8B57"],["Energizer","Orange, grapefruit, lime","#FF6A2B"],["Ginger Sensation","Apple, ginger, mint","#D9C25B"],["Femme Fatale","Orange, carrot, beetroot, chili","#B81F3B"],["Life Saver","Apple, celery, banana, parsley","#7BC96F"],["Raspberry Glow","Apple, banana, yogurt, vanilla, raspberry","#E8738F"],["Brunch Energizer","Milk, honey, banana, raspberry, yogurt","#F2B8C6"],["On Your Mark","Milk, avocado, lime, yogurt, honey","#9ACD6B"],["Ginger Shot","Ginger, apple","#E9C46A"],["Orange Butterfly","Apple, orange, banana, ice cream","#FFA64D"],["Oreo Milkshake","Milk, coconut, Oreo, ice cream","#444"]];
+juices.innerHTML=J.map(j=>`<div class="j" style="--c:${j[2]}"><i></i><div><b>${j[0]}</b><span>${j[1]}</span></div></div>`).join('');
+</script>
+</body>
+</html>
