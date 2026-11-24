@@ -166,3 +166,24 @@
     items[i].classList.remove("on"); i=(i+1)%items.length; show(items[i]);
   },6500);
 })();
+
+/* Track record: single line, one milestone shown at a time on wide screens */
+(function(){
+  var tl=document.getElementById("tl"), p=document.getElementById("tlp"); if(!tl||!p) return;
+  var lis=tl.children, wide=window.matchMedia("(min-width:1000px)");
+  function pick(li){
+    for(var i=0;i<lis.length;i++){lis[i].classList.remove("on");lis[i].querySelector(".tn").setAttribute("aria-pressed","false");}
+    li.classList.add("on"); li.querySelector(".tn").setAttribute("aria-pressed","true");
+    p.querySelector(".yr").textContent=li.querySelector(".yr").textContent;
+    p.querySelector(".pl").textContent=li.querySelector(".pl").textContent;
+    p.querySelector(".tx").textContent=li.querySelector(".tx").textContent;
+  }
+  function sync(){ p.hidden=!wide.matches; }
+  for(var i=0;i<lis.length;i++){(function(li){
+    var b=li.querySelector(".tn");
+    b.addEventListener("click",function(){pick(li);});
+    b.addEventListener("mouseenter",function(){if(wide.matches)pick(li);});
+    b.addEventListener("focus",function(){if(wide.matches)pick(li);});
+  })(lis[i]);}
+  pick(lis[0]); sync(); (wide.addEventListener?wide.addEventListener("change",sync):wide.addListener(sync));
+})();
