@@ -600,3 +600,23 @@ button.btn{font-family:inherit}
 .pair.four .card:hover .more .arw{transform:translateX(5px)}
 .pair.four .card:focus-within{outline:2px solid var(--amber);outline-offset:4px}
 .pair.four .card .more:focus-visible{outline:none}
+
+/* AMS logo (supplied artwork) */
+.mark.logo{gap:0;min-height:44px}
+.mark.logo img{height:46px;width:auto;display:block}
+.mark.logo.big img{height:64px}
+@media(max-width:699px){.mark.logo img{height:40px}}
+
+/* Second photo row sits closer to the first */
+.gal.second{margin-top:-60px}
+@media(min-width:1000px){.gal.second{margin-top:-98px}}
+
+/* Map (supplied artwork, shown on a white panel) */
+.map{margin:56px 0 0}
+.map .mapimg{background:#fff;padding:18px}
+@media(min-width:768px){.map .mapimg{padding:34px 40px}}
+.map img{width:100%;height:auto;display:block}
+.map .key{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:20px;font-size:.8125rem;color:#C7CBCE}
+.map .key span{display:inline-flex;align-items:center;gap:10px}
+.map .key i{width:12px;height:12px;border-radius:50%;display:block}
+.map+.offices{margin-top:32px}
