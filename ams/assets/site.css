@@ -587,3 +587,16 @@ button.btn{font-family:inherit}
 .pr .b{margin-top:16px;font-weight:600;color:#08090B}
 .pr .p{margin-top:12px;color:#3A3E45;font-size:.9375rem}
 .pr .ru{margin-top:auto;background:var(--amber);color:#08090B;font-weight:600;padding:20px 28px}
+
+/* 24 Nov 2026 batch: equal amber rule strips; whole service card clickable; stat rows aligned */
+.pr .ru{display:flex;align-items:center;min-height:6em}
+.pair.four .card{display:flex;flex-direction:column;cursor:pointer}
+.pair.four .card .cbody{display:flex;flex-direction:column;flex:1;position:static}
+.pair.four .card .stat{margin-top:auto}
+.pair.four .card .cbody>p{margin-bottom:24px}
+.pair.four .card .more{align-self:flex-start}
+.pair.four .card .more::after{content:"";position:absolute;inset:0;z-index:4}
+.pair.four .card:hover .more{color:var(--amber);border-color:var(--amber)}
+.pair.four .card:hover .more .arw{transform:translateX(5px)}
+.pair.four .card:focus-within{outline:2px solid var(--amber);outline-offset:4px}
+.pair.four .card .more:focus-visible{outline:none}
