@@ -684,6 +684,7 @@ body{font-family:Tahoma,Verdana,Geneva,"DejaVu Sans",sans-serif}
 .stats li{min-width:0}
 .stats.inline .v{font-size:clamp(2.125rem,1rem + 2.9vw,3.625rem);letter-spacing:-.03em}
 
-/* Top menu: option A (larger, white), chosen 24 Nov 2026 */
-nav.main a{font-size:1.0625rem;color:#F6F6F4}
+/* Top menu: option C (larger, bold, white), chosen 24 Nov 2026 after trying A */
+nav.main{gap:34px}
+nav.main a{font-size:1.0625rem;font-weight:700;color:#F6F6F4}
 nav.main a:hover{color:var(--amber)}
