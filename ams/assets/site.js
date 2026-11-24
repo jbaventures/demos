@@ -157,6 +157,7 @@
   var items=box.children, i=0; if(!items.length) return;
   items[0].classList.add("on");
   if(window.matchMedia("(prefers-reduced-motion: reduce)").matches||items.length<2) return;
+  if(items[0].tagName==="IMG") items[0].classList.add("mv");
   function show(el){
     if(el.tagName==="IMG"){ el.classList.remove("mv"); void el.offsetWidth; el.classList.add("mv"); }
     el.classList.add("on");

@@ -620,3 +620,9 @@ button.btn{font-family:inherit}
 .map .key span{display:inline-flex;align-items:center;gap:10px}
 .map .key i{width:12px;height:12px;border-radius:50%;display:block}
 .map+.offices{margin-top:32px}
+
+/* Lead hero still (first slide) */
+.plate .slides>img:first-child.mv{animation-name:kb-lead;transform-origin:52% 42%}
+@keyframes kb-lead{from{transform:scale(.86)}to{transform:scale(.91)}}
+.plate .slides>img:first-child{transform:scale(.86)}
+.plate .slides>img:first-child{object-position:50% 40%}
