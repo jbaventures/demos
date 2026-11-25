@@ -187,3 +187,32 @@
   })(lis[i]);}
   pick(lis[0]); sync(); (wide.addEventListener?wide.addEventListener("change",sync):wide.addListener(sync));
 })();
+
+/* Review record v1 fixes, 25 Nov 2026 */
+(function(){
+  /* r16: menu button label follows state; Escape closes */
+  var b=document.getElementById("burger"), m=document.getElementById("menu");
+  if(b&&m){
+    var sync=function(){b.setAttribute("aria-label",b.getAttribute("aria-expanded")==="true"?"Close menu":"Open menu")};
+    b.addEventListener("click",function(){setTimeout(sync,0)});
+    m.addEventListener("click",function(){setTimeout(sync,0)});
+    document.addEventListener("keydown",function(e){
+      if(e.key==="Escape"&&b.getAttribute("aria-expanded")==="true"){b.setAttribute("aria-expanded","false");m.classList.remove("open");sync();b.focus()}
+    });
+  }
+  /* r13: on narrow screens the briefing link lands on the form, not the text above it */
+  var toForm=function(){
+    var f=document.querySelector("#briefing form");
+    if(f&&window.innerWidth<1000){f.scrollIntoView({block:"start"})}
+  };
+  if(location.hash==="#briefing"){window.addEventListener("load",function(){setTimeout(toForm,60)})}
+  Array.prototype.forEach.call(document.querySelectorAll('a[href$="#briefing"]'),function(a){
+    a.addEventListener("click",function(e){
+      var here=a.getAttribute("href").charAt(0)==="#"||a.pathname===location.pathname;
+      if(here&&window.innerWidth<1000&&document.querySelector("#briefing form")){e.preventDefault();history.replaceState(null,"","#briefing");toForm()}
+    });
+  });
+  /* r10: below 1000px the timeline list is fully shown, so its buttons leave the tab order */
+  var tl=function(){Array.prototype.forEach.call(document.querySelectorAll(".tl .tn"),function(t){if(window.innerWidth<1000){t.setAttribute("tabindex","-1")}else{t.removeAttribute("tabindex")}})};
+  tl(); window.addEventListener("resize",tl);
+})();
